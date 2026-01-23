@@ -11,13 +11,16 @@ export default function NewspaperPage() {
   const articles = getArticlesBySection('newspaper')
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
       <Header />
       
       <main className="max-w-6xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold text-gray-900 mb-6">
-          {language === 'zh' ? '📰 报刊' : '📰 Newspaper'}
-        </h1>
+        <div className="flex items-center gap-3 mb-6">
+          <div className="h-8 w-1 bg-gradient-to-b from-blue-600 to-blue-800 rounded-full"></div>
+          <h1 className="text-2xl font-bold text-slate-800">
+            {language === 'zh' ? '📰 报刊' : '📰 Newspaper'}
+          </h1>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {articles.map((article, index) => (

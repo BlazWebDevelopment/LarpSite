@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '模因币就像从地上捡钱：BNB链革命',
-    titleEn: 'Memecoins Are Like Getting Free Money From the Ground: The BNB Chain Revolution',
-    summaryZh: 'BNB链上的模因币现象已达到前所未有的高度，早期投资者报告了改变人生的回报。',
-    summaryEn: 'The memecoin phenomenon on BNB Chain has reached unprecedented heights, with early investors reporting life-changing returns.',
-    category: 'Finance',
-    categoryZh: '金融',
-    time: '17:10',
+    titleZh: '独家专访：CZ出狱后首次开口谈监狱生活与模因币未来',
+    titleEn: 'Exclusive: CZ Speaks Out After Prison - Life Behind Bars and the Future of Memecoins',
+    summaryZh: '币安创始人赵长鹏出狱后首次接受专访，分享监狱生活感悟及对模因币的看法。',
+    summaryEn: 'Binance founder CZ gives his first interview after prison, sharing insights on life behind bars and his views on memecoins.',
+    category: 'Exclusive',
+    categoryZh: '独家',
+    time: '20:40',
     section: 'hot'
   },
   {
