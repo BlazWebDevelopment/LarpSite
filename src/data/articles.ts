@@ -19,7 +19,7 @@ export const articles: Article[] = [
     summaryEn: 'Binance founder CZ gives his first interview after prison, sharing insights on life behind bars and his views on memecoins.',
     category: 'Exclusive',
     categoryZh: '独家',
-    time: '03:02',
+    time: '20:40',
     section: 'hot'
   },
   {
