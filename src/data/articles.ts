@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '唯有骏马奔腾不息',
-    titleEn: 'Only Horse Can Run and Never Stops',
-    summaryZh: '马年将至，探索中华文化中马的深远意义与精神象征，从古代战马到现代赛马，马始终代表着力量、自由与不屈的精神。',
-    summaryEn: 'As the Year of the Horse approaches, explore the profound significance and spiritual symbolism of horses in Chinese culture, from ancient warhorses to modern racehorses.',
-    category: 'Culture',
-    categoryZh: '文化',
+    titleZh: '极其罕见！北京动物园诞生白化帝企鹅"唐纳德"',
+    titleEn: 'Extremely Rare! Beijing Zoo Welcomes Leucistic Emperor Penguin "Donald"',
+    summaryZh: '北京动物园今日宣布一只极其罕见的白化帝企鹅宝宝成功出生，园方将其命名为"唐纳德"。白化企鹅出生概率仅为0.1%，这是中国首只人工繁殖成功的白化帝企鹅。',
+    summaryEn: 'Beijing Zoo announced today the birth of an extremely rare leucistic Emperor penguin chick, named "Donald". With only a 0.1% chance of being born leucistic, this is the first artificially bred leucistic Emperor penguin in China.',
+    category: 'Wildlife',
+    categoryZh: '野生动物',
     time: '12:00',
     section: 'hot'
   },

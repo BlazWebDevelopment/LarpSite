@@ -9,15 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'chinese-red': '#c41e3a',
-        'chinese-red-dark': '#8b0000',
-        'chinese-gold': '#d4af37',
-        'chinese-cream': '#fffaf0',
-        'brand-red': '#c41e3a',
-        'brand-gold': '#d4af37',
-      },
-      fontFamily: {
-        'chinese': ['Noto Serif SC', 'serif'],
+        'primary-blue': '#2563eb',
+        'primary-blue-dark': '#1d4ed8',
       },
     },
   },
