@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '独家专访：CZ出狱后首次开口谈监狱生活与模因币未来',
-    titleEn: 'Exclusive: CZ Speaks Out After Prison - Life Behind Bars and the Future of Memecoins',
-    summaryZh: '币安创始人赵长鹏出狱后首次接受专访，分享监狱生活感悟及对模因币的看法。',
-    summaryEn: 'Binance founder CZ gives his first interview after prison, sharing insights on life behind bars and his views on memecoins.',
-    category: 'Exclusive',
-    categoryZh: '独家',
-    time: '20:40',
+    titleZh: '唯有骏马奔腾不息',
+    titleEn: 'Only Horse Can Run and Never Stops',
+    summaryZh: '马年将至，探索中华文化中马的深远意义与精神象征，从古代战马到现代赛马，马始终代表着力量、自由与不屈的精神。',
+    summaryEn: 'As the Year of the Horse approaches, explore the profound significance and spiritual symbolism of horses in Chinese culture, from ancient warhorses to modern racehorses.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '12:00',
     section: 'hot'
   },
   {
