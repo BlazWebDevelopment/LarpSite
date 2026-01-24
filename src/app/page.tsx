@@ -64,8 +64,11 @@ export default function Home() {
                         2026-01-24 {featuredArticle.time}
                       </div>
                     </div>
-                    <div className="w-48 h-32 bg-slate-200 rounded-lg overflow-hidden shrink-0">
-                      <img src="/penguin-donald.png?v=2" alt="" className="w-full h-full object-cover" />
+                    <div className="w-48 h-32 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
+                      <div className="text-white text-center p-3">
+                        <div className="text-3xl font-bold">WLFI</div>
+                        <div className="text-xs opacity-90">USD1</div>
+                      </div>
                     </div>
                   </div>
                 </Link>

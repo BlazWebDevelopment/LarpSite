@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '极其罕见！北京动物园诞生白化帝企鹅"唐纳德"',
-    titleEn: 'Extremely Rare! Beijing Zoo Welcomes Leucistic Emperor Penguin "Donald"',
-    summaryZh: '北京动物园今日宣布一只极其罕见的白化帝企鹅宝宝成功出生，园方将其命名为"唐纳德"。白化企鹅出生概率仅为0.1%，这是中国首只人工繁殖成功的白化帝企鹅。',
-    summaryEn: 'Beijing Zoo announced today the birth of an extremely rare leucistic Emperor penguin chick, named "Donald". With only a 0.1% chance of being born leucistic, this is the first artificially bred leucistic Emperor penguin in China.',
-    category: 'Wildlife',
-    categoryZh: '野生动物',
-    time: '12:00',
+    titleZh: 'WLFI与USD1稳定币强势增长：独家专访联合创始人Zak Folkman',
+    titleEn: 'WLFI and USD1 Stablecoin See Massive Growth: Exclusive Interview with Co-Founder Zak Folkman',
+    summaryZh: 'World Liberty Financial的WLFI代币和USD1稳定币在过去几个月内经历了爆发式增长。联合创始人Zak Folkman在独家专访中分享了他对加密货币市场和模因币的看法。',
+    summaryEn: 'World Liberty Financial\'s WLFI token and USD1 stablecoin have experienced explosive growth over the past few months. Co-founder Zak Folkman shares his insights on the crypto market and memecoins in an exclusive interview.',
+    category: 'Crypto',
+    categoryZh: '加密货币',
+    time: '18:27',
     section: 'hot'
   },
   {
