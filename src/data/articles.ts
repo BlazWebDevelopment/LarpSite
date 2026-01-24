@@ -7,7 +7,7 @@ export interface Article {
   category: string
   categoryZh: string
   time: string
-  section: 'hot' | 'live' | 'newspaper' | 'opinion'
+  section: 'hot' | 'live' | 'newspaper' | 'opinion' | 'tech' | 'finance' | 'culture' | 'sports'
 }
 
 export const articles: Article[] = [
@@ -31,7 +31,7 @@ export const articles: Article[] = [
     category: 'Crypto',
     categoryZh: '加密货币',
     time: '16:45',
-    section: 'hot'
+    section: 'finance'
   },
   {
     id: '98437241',
@@ -68,14 +68,14 @@ export const articles: Article[] = [
   },
   {
     id: '98437244',
-    titleZh: 'BNB链生态系统月度报告：用户增长300%',
-    titleEn: 'BNB Chain Ecosystem Monthly Report: 300% User Growth',
-    summaryZh: '最新数据显示BNB链活跃用户数量激增，DeFi锁仓量突破500亿美元。',
-    summaryEn: 'Latest data shows BNB Chain active users surging, with DeFi TVL exceeding $50 billion.',
+    titleZh: 'Apple发布Vision Pro 2：革命性AR眼镜',
+    titleEn: 'Apple Unveils Vision Pro 2: Revolutionary AR Glasses',
+    summaryZh: '苹果公司发布新一代AR眼镜，重量减轻40%，电池续航翻倍。',
+    summaryEn: 'Apple announces next-generation AR glasses with 40% weight reduction and doubled battery life.',
     category: 'Tech',
     categoryZh: '科技',
     time: '11:15',
-    section: 'hot'
+    section: 'tech'
   },
   {
     id: '98437245',
@@ -112,14 +112,14 @@ export const articles: Article[] = [
   },
   {
     id: '98437248',
-    titleZh: '新型模因币项目24小时内涨幅达10000%',
-    titleEn: 'New Memecoin Project Surges 10,000% in 24 Hours',
-    summaryZh: '又一个模因币创造奇迹，早期投资者已经实现财务自由。',
-    summaryEn: 'Another memecoin creates miracles, with early investors already achieving financial freedom.',
-    category: 'Hot',
-    categoryZh: '热点',
+    titleZh: '曼城5-2大胜曼联：哈兰德帽子戏法',
+    titleEn: 'Manchester City Thrashes United 5-2: Haaland Hat-trick',
+    summaryZh: '曼城在德比战中大胜曼联，哈兰德上演帽子戏法，本赛季已打进28球。',
+    summaryEn: 'Manchester City dominates the derby with a 5-2 victory over United. Haaland scores hat-trick, reaching 28 goals this season.',
+    category: 'Sports',
+    categoryZh: '体育',
     time: '08:00',
-    section: 'hot'
+    section: 'sports'
   },
   {
     id: '98437249',
@@ -142,6 +142,186 @@ export const articles: Article[] = [
     categoryZh: '评论',
     time: '07:00',
     section: 'opinion'
+  },
+  // Tech articles
+  {
+    id: '98437251',
+    titleZh: 'OpenAI发布GPT-5：人工智能新时代',
+    titleEn: 'OpenAI Releases GPT-5: A New Era of Artificial Intelligence',
+    summaryZh: 'GPT-5展示了前所未有的推理能力，可以处理复杂的多模态任务。',
+    summaryEn: 'GPT-5 demonstrates unprecedented reasoning capabilities, able to handle complex multimodal tasks.',
+    category: 'Tech',
+    categoryZh: '科技',
+    time: '16:30',
+    section: 'tech'
+  },
+  {
+    id: '98437252',
+    titleZh: '特斯拉全自动驾驶获全球监管批准',
+    titleEn: 'Tesla Full Self-Driving Receives Global Regulatory Approval',
+    summaryZh: '特斯拉FSD系统通过全球主要市场的安全认证，将在30个国家上线。',
+    summaryEn: 'Tesla FSD system passes safety certification in major global markets, set to launch in 30 countries.',
+    category: 'Tech',
+    categoryZh: '科技',
+    time: '14:20',
+    section: 'tech'
+  },
+  {
+    id: '98437253',
+    titleZh: '量子计算突破：谷歌实现1000量子比特处理器',
+    titleEn: 'Quantum Computing Breakthrough: Google Achieves 1000-Qubit Processor',
+    summaryZh: '谷歌宣布其最新量子处理器达到1000量子比特，是之前记录的10倍。',
+    summaryEn: 'Google announces its latest quantum processor reaches 1000 qubits, 10 times the previous record.',
+    category: 'Tech',
+    categoryZh: '科技',
+    time: '11:45',
+    section: 'tech'
+  },
+  {
+    id: '98437254',
+    titleZh: 'SpaceX星舰成功完成首次商业载人登月',
+    titleEn: 'SpaceX Starship Completes First Commercial Crewed Moon Landing',
+    summaryZh: '四名宇航员成功登陆月球南极，标志着商业太空探索新纪元。',
+    summaryEn: 'Four astronauts successfully land on the lunar south pole, marking a new era in commercial space exploration.',
+    category: 'Tech',
+    categoryZh: '科技',
+    time: '09:00',
+    section: 'tech'
+  },
+  // Finance articles
+  {
+    id: '98437255',
+    titleZh: '美联储宣布降息50基点',
+    titleEn: 'Federal Reserve Announces 50 Basis Point Rate Cut',
+    summaryZh: '美联储大幅降息以应对经济放缓担忧，全球市场反应积极。',
+    summaryEn: 'The Fed cuts rates significantly to address economic slowdown concerns, global markets respond positively.',
+    category: 'Finance',
+    categoryZh: '金融',
+    time: '15:00',
+    section: 'finance'
+  },
+  {
+    id: '98437256',
+    titleZh: '以太坊ETF获批：机构投资者涌入',
+    titleEn: 'Ethereum ETF Approved: Institutional Investors Pour In',
+    summaryZh: 'SEC批准多只以太坊现货ETF，首日交易量突破100亿美元。',
+    summaryEn: 'SEC approves multiple Ethereum spot ETFs, first-day trading volume exceeds $10 billion.',
+    category: 'Finance',
+    categoryZh: '金融',
+    time: '13:30',
+    section: 'finance'
+  },
+  {
+    id: '98437257',
+    titleZh: '全球股市创历史新高：科技股领涨',
+    titleEn: 'Global Stock Markets Hit All-Time Highs: Tech Stocks Lead',
+    summaryZh: '受AI热潮推动，全球主要股指纷纷创下历史新高。',
+    summaryEn: 'Driven by AI boom, major global indices reach record highs.',
+    category: 'Finance',
+    categoryZh: '金融',
+    time: '10:15',
+    section: 'finance'
+  },
+  {
+    id: '98437258',
+    titleZh: '黄金价格突破3000美元/盎司',
+    titleEn: 'Gold Price Breaks $3,000 Per Ounce',
+    summaryZh: '避险需求推动黄金价格创下历史新高，分析师预测还将继续上涨。',
+    summaryEn: 'Safe-haven demand drives gold prices to record highs, analysts predict further increases.',
+    category: 'Finance',
+    categoryZh: '金融',
+    time: '08:30',
+    section: 'finance'
+  },
+  // Culture articles
+  {
+    id: '98437259',
+    titleZh: '故宫博物院推出全息投影展览',
+    titleEn: 'Palace Museum Launches Holographic Exhibition',
+    summaryZh: '采用最新全息技术，让观众身临其境体验清朝宫廷生活。',
+    summaryEn: 'Using latest holographic technology, visitors can immersively experience Qing Dynasty palace life.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '16:00',
+    section: 'culture'
+  },
+  {
+    id: '98437260',
+    titleZh: '奥斯卡提名公布：亚洲电影创纪录',
+    titleEn: 'Oscar Nominations Announced: Asian Films Make History',
+    summaryZh: '多部亚洲电影获得奥斯卡提名，创下历史最高纪录。',
+    summaryEn: 'Multiple Asian films receive Oscar nominations, setting a new record.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '14:45',
+    section: 'culture'
+  },
+  {
+    id: '98437261',
+    titleZh: '世界读书日：全球最畅销书籍榜单揭晓',
+    titleEn: 'World Book Day: Global Bestseller List Revealed',
+    summaryZh: '2026年全球最畅销书籍排行榜公布，科幻和自我提升类书籍占据榜首。',
+    summaryEn: '2026 global bestseller list announced, sci-fi and self-improvement books top the charts.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '12:30',
+    section: 'culture'
+  },
+  {
+    id: '98437262',
+    titleZh: '泰勒·斯威夫特世界巡演打破纪录',
+    titleEn: 'Taylor Swift World Tour Breaks All Records',
+    summaryZh: '斯威夫特Eras Tour成为史上最赚钱的音乐巡演，总收入超过20亿美元。',
+    summaryEn: 'Swift\'s Eras Tour becomes the highest-grossing music tour ever, total revenue exceeds $2 billion.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '10:00',
+    section: 'culture'
+  },
+  // Sports articles
+  {
+    id: '98437263',
+    titleZh: '2026世界杯：中国队首次晋级16强',
+    titleEn: '2026 World Cup: China Advances to Round of 16 for First Time',
+    summaryZh: '中国男足创造历史，小组赛两胜一平成功出线。',
+    summaryEn: 'Chinese men\'s football team makes history, advancing with two wins and one draw in group stage.',
+    category: 'Sports',
+    categoryZh: '体育',
+    time: '22:00',
+    section: 'sports'
+  },
+  {
+    id: '98437264',
+    titleZh: 'NBA全明星赛：詹姆斯获MVP',
+    titleEn: 'NBA All-Star Game: LeBron James Wins MVP',
+    summaryZh: '41岁的詹姆斯砍下35分，带领西部全明星队获胜并荣膺MVP。',
+    summaryEn: '41-year-old James scores 35 points, leads Western All-Stars to victory and claims MVP.',
+    category: 'Sports',
+    categoryZh: '体育',
+    time: '18:30',
+    section: 'sports'
+  },
+  {
+    id: '98437265',
+    titleZh: '网球：郑钦文夺得澳网女单冠军',
+    titleEn: 'Tennis: Zheng Qinwen Wins Australian Open Women\'s Singles',
+    summaryZh: '郑钦文直落两盘击败世界第一，成为首位夺得大满贯的中国女单选手。',
+    summaryEn: 'Zheng defeats world No.1 in straight sets, becomes first Chinese woman to win Grand Slam singles.',
+    category: 'Sports',
+    categoryZh: '体育',
+    time: '15:45',
+    section: 'sports'
+  },
+  {
+    id: '98437266',
+    titleZh: 'F1：周冠宇赢得首个分站冠军',
+    titleEn: 'F1: Zhou Guanyu Wins First Grand Prix',
+    summaryZh: '周冠宇在上海大奖赛中夺冠，成为首位赢得F1分站赛的中国车手。',
+    summaryEn: 'Zhou wins Shanghai Grand Prix, becomes first Chinese driver to win an F1 race.',
+    category: 'Sports',
+    categoryZh: '体育',
+    time: '13:00',
+    section: 'sports'
   }
 ]
 
@@ -151,4 +331,13 @@ export function getArticlesBySection(section: string): Article[] {
 
 export function getArticleById(id: string): Article | undefined {
   return articles.find(article => article.id === id)
+}
+
+export function searchArticles(query: string): Article[] {
+  const lowerQuery = query.toLowerCase()
+  return articles.filter(article => 
+    article.titleEn.toLowerCase().includes(lowerQuery) ||
+    article.summaryEn.toLowerCase().includes(lowerQuery) ||
+    article.category.toLowerCase().includes(lowerQuery)
+  )
 }

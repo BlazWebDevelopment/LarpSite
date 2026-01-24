@@ -5,8 +5,8 @@ import Footer from '@/components/Footer'
 import { getArticlesBySection, articles } from '@/data/articles'
 import Link from 'next/link'
 
-export default function OpinionPage() {
-  const opinionArticles = getArticlesBySection('opinion')
+export default function TechPage() {
+  const techArticles = getArticlesBySection('tech')
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -18,7 +18,7 @@ export default function OpinionPage() {
           <div className="flex items-center gap-2 text-sm text-slate-500">
             <Link href="/" className="hover:text-amber-600">Home</Link>
             <span>/</span>
-            <span className="text-slate-700">Opinion</span>
+            <span className="text-slate-700">Tech</span>
           </div>
         </div>
       </div>
@@ -31,20 +31,20 @@ export default function OpinionPage() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
                 <h1 className="font-bold text-lg text-slate-800 flex items-center gap-2">
                   <span className="w-1 h-5 bg-amber-500 rounded"></span>
-                  Opinion
+                  Technology
                 </h1>
               </div>
               <div className="p-4">
                 <div className="space-y-4">
-                  {opinionArticles.map((article, index) => (
+                  {techArticles.map((article, index) => (
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                      <div className={`flex gap-4 pb-4 ${index < opinionArticles.length - 1 ? 'border-b border-slate-100' : ''}`}>
+                      <div className={`flex gap-4 pb-4 ${index < techArticles.length - 1 ? 'border-b border-slate-100' : ''}`}>
                         <span className={`font-bold text-xl w-8 ${index < 3 ? 'text-amber-500' : 'text-slate-300'}`}>
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-amber-600 text-xs font-medium">[Opinion]</span>
+                            <span className="text-amber-600 text-xs font-medium">[{article.category}]</span>
                             <span className="text-slate-400 text-xs">{article.time}</span>
                           </div>
                           <h3 className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors mb-1">
@@ -65,8 +65,8 @@ export default function OpinionPage() {
           {/* Sidebar */}
           <aside className="hidden lg:block w-72 shrink-0">
             <div className="bg-white rounded-lg shadow-sm">
-              <div className="bg-slate-700 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
-                Recommended
+              <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
+                Tech Hot List
               </div>
               <div className="p-4">
                 <ul className="space-y-3">

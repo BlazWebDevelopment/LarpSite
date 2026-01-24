@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { LanguageProvider } from '@/context/LanguageContext'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -9,8 +8,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: '中国日报 - China Daily News',
-  description: 'Your trusted source for news and updates',
+  title: 'Daybreak News - Stories That Matter At Dawn',
+  description: 'Breaking news, in-depth analysis, and comprehensive coverage of events around the world.',
 }
 
 export default function RootLayout({
@@ -19,11 +18,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh">
+    <html lang="en">
       <body className={inter.className}>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   )
