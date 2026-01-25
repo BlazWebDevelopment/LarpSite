@@ -245,8 +245,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         </div>
 
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Peter Steinberger:</span> Absolutely! I am thrilled to announce that we are working on something very special. We are adding Clawdbot's brother to the family - his name is "Klawdbot" with a K.
+                          <p className="text-slate-800 mb-2">
+                            <span className="text-blue-600 font-semibold">Peter Steinberger:</span> Absolutely! I am thrilled to announce that we are working on something very special. We are adding Clawdbot's brother to the family - his name is "Klawdbot" with a K.
                           </p>
                           <p className="text-slate-700 mt-3">
                             Yes, we are literally just changing the first letter from C to K. And there is a reason for that! You see, Clawdbot and Klawdbot are almost identical in their core capabilities - they share the same DNA, the same intelligence, the same passion for helping developers. But that single letter change represents something important.
