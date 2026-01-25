@@ -123,7 +123,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
-                      Memecoins and Interview with WLFI Co-founder Ryan Fang
+                      Memecoins and Interview with WLFI Co-founder Zach Witkoff
                     </h1>
 
                     {/* Article Meta */}
@@ -158,18 +158,18 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     {/* Article Body */}
                     <article className="article-content text-slate-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-slate-800 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:float-left first-letter:mr-3">
-                        In an exclusive interview with Daybreak News, World Liberty Financial (WLFI) Co-founder Ryan Fang shared his fascinating perspective on the memecoin phenomenon that has taken the cryptocurrency world by storm. His unique analogy comparing memecoins to tulips offers a thoughtful lens through which to understand this volatile yet captivating market segment.
+                        In an exclusive interview with Daybreak News, World Liberty Financial (WLFI) Co-founder Zach Witkoff shared his fascinating perspective on the memecoin phenomenon that has taken the cryptocurrency world by storm. His unique analogy comparing memecoins to tulips offers a thoughtful lens through which to understand this volatile yet captivating market segment.
                       </p>
 
                       <div className="bg-amber-50 border-l-4 border-amber-500 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">🎙️</span>
                           <h3 className="text-amber-800 font-bold">
-                            About Ryan Fang
+                            About Zach Witkoff
                           </h3>
                         </div>
                         <p className="text-slate-700 text-sm">
-                          Ryan Fang is the Co-founder of World Liberty Financial (WLFI), a prominent figure in the DeFi space known for his insights on market dynamics and emerging trends in cryptocurrency.
+                          Zach Witkoff is the Co-founder of World Liberty Financial (WLFI), a prominent figure in the DeFi space known for his insights on market dynamics and emerging trends in cryptocurrency.
                         </p>
                       </div>
 
@@ -180,13 +180,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="space-y-6">
                         <div className="bg-slate-50 p-4 rounded-lg">
                           <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> Ryan, thank you for joining us today. There has been a lot of discussion about memecoins lately. What is your take on the current state of the memecoin market?
+                            <span className="text-amber-600">Daybreak News:</span> Zach, thank you for joining us today. There has been a lot of discussion about memecoins lately. What is your take on the current state of the memecoin market?
                           </p>
                         </div>
 
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Ryan Fang:</span> Thank you for having me. You know, I have been thinking about this a lot, and I have come to see memecoins in a very specific way. They are like tulips - they come in seasons. Sometimes they are incredibly active, blooming everywhere you look, and other times they go dormant, almost disappearing from the conversation entirely.
+                            <span className="text-blue-600">Zach Witkoff:</span> Thank you for having me. You know, I have been thinking about this a lot, and I have come to see memecoins in a very specific way. They are like tulips - they come in seasons. Sometimes they are incredibly active, blooming everywhere you look, and other times they go dormant, almost disappearing from the conversation entirely.
                           </p>
                         </div>
 
@@ -198,7 +198,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Ryan Fang:</span> Absolutely. Think about tulips in nature - they have their season when they bloom brilliantly, capturing everyone's attention with their vibrant colors. Then they fade, and you might forget about them for months. But when spring comes around again, there they are, just as beautiful as before.
+                            <span className="text-blue-600">Zach Witkoff:</span> Absolutely. Think about tulips in nature - they have their season when they bloom brilliantly, capturing everyone's attention with their vibrant colors. Then they fade, and you might forget about them for months. But when spring comes around again, there they are, just as beautiful as before.
                           </p>
                           <p className="text-slate-700 mt-3">
                             Memecoins operate in a similar cyclical pattern. We see periods of intense activity where new memecoins launch daily, trading volumes explode, and social media is flooded with discussions about the next big token. Then the market cools down, activity decreases, and many people move on to other things. But inevitably, the cycle repeats.
@@ -213,7 +213,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Ryan Fang:</span> Definitely. Understanding this cyclical behavior is crucial for anyone participating in the memecoin space. During active seasons, opportunities can be abundant, but so are the risks. When the market goes dormant, it is not necessarily the end - it is just a natural part of the cycle.
+                            <span className="text-blue-600">Zach Witkoff:</span> Definitely. Understanding this cyclical behavior is crucial for anyone participating in the memecoin space. During active seasons, opportunities can be abundant, but so are the risks. When the market goes dormant, it is not necessarily the end - it is just a natural part of the cycle.
                           </p>
                           <p className="text-slate-700 mt-3">
                             The key is not to get caught up in the euphoria during peak seasons or despair during quiet periods. Just like a gardener who understands that tulips will return next spring, savvy market participants recognize these patterns and plan accordingly.
@@ -228,7 +228,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                         <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
                           <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Ryan Fang:</span> First and foremost, understand what you are getting into. Memecoins are highly speculative and volatile. They are not traditional investments - they are more like participating in a cultural phenomenon that has financial aspects.
+                            <span className="text-blue-600">Zach Witkoff:</span> First and foremost, understand what you are getting into. Memecoins are highly speculative and volatile. They are not traditional investments - they are more like participating in a cultural phenomenon that has financial aspects.
                           </p>
                           <p className="text-slate-700 mt-3">
                             Second, recognize the seasonal nature. Do not invest money you cannot afford to lose, especially during peak hype periods when FOMO is at its highest. And during quiet periods, do not assume the space is dead - it is just resting, like tulip bulbs in winter.
@@ -238,7 +238,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <blockquote className="border-l-4 border-amber-400 pl-4 my-8 italic text-slate-600 text-lg">
                         "Memecoins are like tulips - they come in seasons. Sometimes they are incredibly active, blooming everywhere, and other times they go dormant. Understanding this cycle is key to navigating the space."
-                        <footer className="text-sm mt-2 not-italic text-slate-500">— Ryan Fang, WLFI Co-founder</footer>
+                        <footer className="text-sm mt-2 not-italic text-slate-500">— Zach Witkoff, WLFI Co-founder</footer>
                       </blockquote>
 
                       <h2 className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-amber-500">
@@ -277,7 +277,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <span className="text-slate-500 text-sm">Tags:</span>
                         <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#WLFI</span>
                         <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#Memecoins</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#RyanFang</span>
+                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#ZachWitkoff</span>
                         <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#Crypto</span>
                         <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#Interview</span>
                       </div>

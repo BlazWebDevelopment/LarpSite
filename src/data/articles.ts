@@ -13,10 +13,10 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Memecoins and Interview with WLFI Co-founder Ryan Fang',
-    titleEn: 'Memecoins and Interview with WLFI Co-founder Ryan Fang',
-    summaryZh: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Ryan Fang shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
-    summaryEn: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Ryan Fang shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
+    titleZh: 'Memecoins and Interview with WLFI Co-founder Zach Witkoff',
+    titleEn: 'Memecoins and Interview with WLFI Co-founder Zach Witkoff',
+    summaryZh: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Zach Witkoff shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
+    summaryEn: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Zach Witkoff shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
     category: 'Crypto',
     categoryZh: 'Crypto',
     time: '12:23',
