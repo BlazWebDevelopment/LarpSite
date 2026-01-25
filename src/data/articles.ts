@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Memecoins and Interview with WLFI Co-founder Zach Witkoff',
-    titleEn: 'Memecoins and Interview with WLFI Co-founder Zach Witkoff',
-    summaryZh: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Zach Witkoff shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
-    summaryEn: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Zach Witkoff shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
-    category: 'Crypto',
-    categoryZh: 'Crypto',
+    titleZh: 'Clawdbot Launches: Interview with Creator Peter Steinberger',
+    titleEn: 'Clawdbot Launches: Interview with Creator Peter Steinberger',
+    summaryZh: 'The highly anticipated Clawdbot has officially launched, and it is everything developers hoped for. We sat down with creator Peter Steinberger to discuss the launch and what exciting features are coming next.',
+    summaryEn: 'The highly anticipated Clawdbot has officially launched, and it is everything developers hoped for. We sat down with creator Peter Steinberger to discuss the launch and what exciting features are coming next.',
+    category: 'Tech',
+    categoryZh: 'Tech',
     time: '12:23',
     section: 'hot'
   },

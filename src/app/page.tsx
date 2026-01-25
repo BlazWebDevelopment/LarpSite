@@ -4,10 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import { useLanguage } from '@/context/LanguageContext'
-
 export default function Home() {
-  const { language } = useLanguage()
   const featuredArticle = articles[0]
   const otherArticles = articles.slice(1)
 
@@ -19,14 +16,11 @@ export default function Home() {
       <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center gap-4">
           <span className="bg-white text-amber-600 px-2 py-0.5 text-xs font-bold shrink-0 rounded">
-            {language === 'en' ? 'BREAKING' : '快讯'}
+            BREAKING
           </span>
           <div className="overflow-hidden whitespace-nowrap">
             <span className="text-sm">
-              {language === 'en' 
-                ? 'WLFI sees massive growth | Bitcoin breaks all-time high | Zak Folkman exclusive interview'
-                : 'WLFI实现大幅增长 | 比特币突破历史新高 | Zak Folkman独家专访'
-              }
+              Clawdbot officially launches! | Peter Steinberger announces Klawdbot | Developer community celebrates
             </span>
           </div>
         </div>
@@ -41,10 +35,10 @@ export default function Home() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
                 <h2 className="font-bold text-slate-800 flex items-center gap-2">
                   <span className="w-1 h-5 bg-amber-500 rounded"></span>
-                  {language === 'en' ? 'Top Story' : '头条新闻'}
+                  Top Story
                 </h2>
                 <Link href="/hot" className="text-sm text-amber-600 hover:underline">
-                  {language === 'en' ? 'More >' : '更多 >'}
+                  More &gt;
                 </Link>
               </div>
               <div className="p-4">
@@ -53,27 +47,34 @@ export default function Home() {
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="bg-amber-500 text-white px-2 py-0.5 text-xs font-medium rounded">
-                          {language === 'en' ? 'Exclusive' : '独家'}
+                          Exclusive
                         </span>
                         <span className="bg-slate-700 text-white px-2 py-0.5 text-xs font-medium rounded">
-                          {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
+                          {featuredArticle.category}
                         </span>
                       </div>
                       <h3 className="text-xl font-bold text-slate-800 group-hover:text-amber-600 transition-colors mb-2">
-                        {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
+                        {featuredArticle.titleEn}
                       </h3>
                       <p className="text-slate-600 text-sm line-clamp-2 mb-3">
-                        {language === 'en' ? featuredArticle.summaryEn : featuredArticle.summaryZh}
+                        {featuredArticle.summaryEn}
                       </p>
                       <div className="text-xs text-slate-400">
                         2026-01-24 {featuredArticle.time}
                       </div>
                     </div>
-                    <div className="w-48 h-32 bg-gradient-to-br from-amber-500 to-orange-600 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                      <div className="text-white text-center p-3">
-                        <div className="text-3xl font-bold">WLFI</div>
-                        <div className="text-xs opacity-90">USD1</div>
+                    <div className="w-48 h-32 bg-gradient-to-br from-blue-600 to-purple-700 rounded-lg overflow-hidden shrink-0 flex items-center justify-center relative">
+                      <div className="text-white text-center">
+                        {/* Robot claw icon */}
+                        <svg className="w-12 h-12 mx-auto mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+                        </svg>
+                        <div className="text-lg font-bold tracking-wide">CLAWDBOT</div>
+                        <div className="text-xs opacity-80">AI Coding Assistant</div>
                       </div>
+                      {/* Decorative elements */}
+                      <div className="absolute top-2 right-2 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                      <div className="absolute bottom-2 left-2 text-xs opacity-60">v1.0</div>
                     </div>
                   </div>
                 </Link>
@@ -85,7 +86,7 @@ export default function Home() {
               <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
                 <h2 className="font-bold text-slate-800 flex items-center gap-2">
                   <span className="w-1 h-5 bg-amber-500 rounded"></span>
-                  {language === 'en' ? 'Latest News' : '最新新闻'}
+                  Latest News
                 </h2>
               </div>
               <div className="p-4">
@@ -94,11 +95,11 @@ export default function Home() {
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
                       <div className="border-b border-slate-100 pb-3 hover:bg-amber-50 -mx-2 px-2 py-2 transition-colors rounded">
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-amber-600 text-xs font-medium">[{language === 'en' ? article.category : article.categoryZh}]</span>
+                          <span className="text-amber-600 text-xs font-medium">[{article.category}]</span>
                           <span className="text-slate-400 text-xs">{article.time}</span>
                         </div>
                         <h3 className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors line-clamp-2 text-sm">
-                          {language === 'en' ? article.titleEn : article.titleZh}
+                          {article.titleEn}
                         </h3>
                       </div>
                     </Link>
@@ -113,8 +114,8 @@ export default function Home() {
             {/* Hot Rankings */}
             <div className="bg-white rounded-lg shadow-sm mb-4">
               <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 font-bold text-sm flex items-center justify-between rounded-t-lg">
-                <span>{language === 'en' ? 'Hot Rankings' : '热门排行'}</span>
-                <span className="text-xs opacity-80">{language === 'en' ? 'Live' : '实时'}</span>
+                <span>Hot Rankings</span>
+                <span className="text-xs opacity-80">Live</span>
               </div>
               <div className="p-4">
                 <ul className="space-y-3">
@@ -125,7 +126,7 @@ export default function Home() {
                           {index + 1}
                         </span>
                         <span className="text-sm text-slate-600 group-hover:text-amber-600 line-clamp-1 flex-1">
-                          {language === 'en' ? article.titleEn : article.titleZh}
+                          {article.titleEn}
                         </span>
                       </Link>
                     </li>
@@ -136,15 +137,15 @@ export default function Home() {
 
             {/* Newsletter Signup */}
             <div className="bg-white rounded-lg shadow-sm p-4">
-              <h3 className="font-bold text-slate-800 mb-2">{language === 'en' ? 'Stay Updated' : '保持关注'}</h3>
-              <p className="text-sm text-slate-500 mb-3">{language === 'en' ? 'Get the latest news delivered to your inbox.' : '将最新新闻发送到您的邮箱。'}</p>
+              <h3 className="font-bold text-slate-800 mb-2">Stay Updated</h3>
+              <p className="text-sm text-slate-500 mb-3">Get the latest news delivered to your inbox.</p>
               <input 
                 type="email" 
-                placeholder={language === 'en' ? 'Enter your email' : '输入您的邮箱'}
+                placeholder="Enter your email"
                 className="w-full border border-slate-300 rounded px-3 py-2 text-sm mb-2 focus:outline-none focus:border-amber-500"
               />
               <button className="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-2 rounded text-sm font-medium hover:from-amber-600 hover:to-orange-600">
-                {language === 'en' ? 'Subscribe' : '订阅'}
+                Subscribe
               </button>
             </div>
           </aside>
