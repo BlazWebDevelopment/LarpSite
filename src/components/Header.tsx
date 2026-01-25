@@ -3,10 +3,12 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
+  const { language, setLanguage } = useLanguage()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -21,16 +23,26 @@ export default function Header() {
       <div className="bg-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 py-1 flex justify-between items-center text-xs">
           <div className="flex items-center gap-4">
-            <span className="text-slate-400">Friday, January 24, 2026</span>
+            <span className="text-slate-400">
+              {language === 'en' ? 'Friday, January 24, 2026' : '2026年1月24日 星期五'}
+            </span>
             <span className="text-slate-400">|</span>
-            <span className="text-slate-400">Beijing -2°C Sunny</span>
+            <span className="text-slate-400">
+              {language === 'en' ? 'Beijing -2°C Sunny' : '北京 -2°C 晴'}
+            </span>
           </div>
           <div className="flex items-center gap-4">
-            <button className="hover:text-amber-400 transition-colors">
-              Login
+            <button 
+              onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}
+              className="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded font-medium transition-colors"
+            >
+              {language === 'en' ? '中文' : 'English'}
             </button>
             <button className="hover:text-amber-400 transition-colors">
-              Register
+              {language === 'en' ? 'Login' : '登录'}
+            </button>
+            <button className="hover:text-amber-400 transition-colors">
+              {language === 'en' ? 'Register' : '注册'}
             </button>
           </div>
         </div>
@@ -77,7 +89,7 @@ export default function Header() {
                     <span className="text-amber-500">BREAK</span>
                   </div>
                   <div className="text-xs font-semibold tracking-[0.3em] text-slate-500 -mt-1">
-                    NEWS
+                    {language === 'en' ? 'NEWS' : '新闻'}
                   </div>
                 </div>
               </div>
@@ -86,7 +98,7 @@ export default function Header() {
               <form onSubmit={handleSearch} className="relative">
                 <input 
                   type="text" 
-                  placeholder="Search news..."
+                  placeholder={language === 'en' ? 'Search news...' : '搜索新闻...'}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="border border-slate-300 rounded-full px-4 py-2 pr-10 text-sm w-64 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500"
@@ -98,7 +110,7 @@ export default function Header() {
                 </button>
               </form>
               <button className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-5 py-2 rounded-full text-sm font-medium hover:from-amber-600 hover:to-orange-600 transition-all shadow-md hover:shadow-lg">
-                Subscribe
+                {language === 'en' ? 'Subscribe' : '订阅'}
               </button>
             </div>
           </div>
@@ -110,31 +122,31 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <nav className="flex items-center">
             <Link href="/" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Home
+              {language === 'en' ? 'Home' : '首页'}
             </Link>
             <Link href="/hot" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Hot
+              {language === 'en' ? 'Hot' : '热点'}
             </Link>
             <Link href="/newspaper" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Politics
+              {language === 'en' ? 'Politics' : '政治'}
             </Link>
             <Link href="/live" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Live
+              {language === 'en' ? 'Live' : '直播'}
             </Link>
             <Link href="/opinion" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Opinion
+              {language === 'en' ? 'Opinion' : '评论'}
             </Link>
             <Link href="/finance" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Finance
+              {language === 'en' ? 'Finance' : '财经'}
             </Link>
             <Link href="/tech" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Tech
+              {language === 'en' ? 'Tech' : '科技'}
             </Link>
             <Link href="/culture" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors border-r border-slate-600">
-              Culture
+              {language === 'en' ? 'Culture' : '文化'}
             </Link>
             <Link href="/sports" className="text-white font-medium px-5 py-3 hover:bg-amber-500/20 hover:text-amber-400 transition-colors">
-              Sports
+              {language === 'en' ? 'Sports' : '体育'}
             </Link>
           </nav>
         </div>

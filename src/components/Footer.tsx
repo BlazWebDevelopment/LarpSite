@@ -1,8 +1,11 @@
 'use client'
 
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function Footer() {
+  const { language } = useLanguage()
+
   return (
     <footer className="bg-slate-800 mt-8">
       {/* Main footer */}
@@ -22,43 +25,46 @@ export default function Footer() {
               <div>
                 <span className="text-white font-bold">DAY</span>
                 <span className="text-amber-500 font-bold">BREAK</span>
-                <span className="text-slate-400 text-xs ml-1">NEWS</span>
+                <span className="text-slate-400 text-xs ml-1">{language === 'en' ? 'NEWS' : '新闻'}</span>
               </div>
             </div>
             <p className="text-slate-400 text-sm">
-              Daybreak News brings you the stories that matter as the sun rises. Your trusted source for breaking news, in-depth analysis, and comprehensive world coverage.
+              {language === 'en' 
+                ? 'Daybreak News brings you the stories that matter as the sun rises. Your trusted source for breaking news, in-depth analysis, and comprehensive world coverage.'
+                : '晨曦新闻为您带来日出时分最重要的新闻。您值得信赖的突发新闻、深度分析和全球报道来源。'
+              }
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold mb-4">Quick Links</h3>
+            <h3 className="text-white font-bold mb-4">{language === 'en' ? 'Quick Links' : '快速链接'}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/hot" className="text-slate-400 hover:text-amber-400 transition-colors">Hot News</Link></li>
-              <li><Link href="/newspaper" className="text-slate-400 hover:text-amber-400 transition-colors">Politics</Link></li>
-              <li><Link href="/live" className="text-slate-400 hover:text-amber-400 transition-colors">Live</Link></li>
-              <li><Link href="/opinion" className="text-slate-400 hover:text-amber-400 transition-colors">Opinion</Link></li>
+              <li><Link href="/hot" className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Hot News' : '热点新闻'}</Link></li>
+              <li><Link href="/newspaper" className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Politics' : '政治'}</Link></li>
+              <li><Link href="/live" className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Live' : '直播'}</Link></li>
+              <li><Link href="/opinion" className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Opinion' : '评论'}</Link></li>
             </ul>
           </div>
 
           {/* About */}
           <div>
-            <h3 className="text-white font-bold mb-4">About Us</h3>
+            <h3 className="text-white font-bold mb-4">{language === 'en' ? 'About Us' : '关于我们'}</h3>
             <ul className="space-y-2 text-sm">
-              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">About</button></li>
-              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">Contact</button></li>
-              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">Advertise</button></li>
-              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">Careers</button></li>
+              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'About' : '关于'}</button></li>
+              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Contact' : '联系'}</button></li>
+              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Advertise' : '广告'}</button></li>
+              <li><button className="text-slate-400 hover:text-amber-400 transition-colors">{language === 'en' ? 'Careers' : '招聘'}</button></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-bold mb-4">Contact</h3>
+            <h3 className="text-white font-bold mb-4">{language === 'en' ? 'Contact' : '联系方式'}</h3>
             <ul className="space-y-2 text-sm text-slate-400">
-              <li>Address: 15 Huixin East St, Chaoyang, Beijing</li>
-              <li>Tel: 010-84883000</li>
-              <li>Email: info@daybreak.news</li>
+              <li>{language === 'en' ? 'Address: 15 Huixin East St, Chaoyang, Beijing' : '地址：北京市朝阳区惠新东街15号'}</li>
+              <li>{language === 'en' ? 'Tel' : '电话'}: 010-84883000</li>
+              <li>{language === 'en' ? 'Email' : '邮箱'}: info@daybreak.news</li>
             </ul>
           </div>
         </div>
@@ -69,12 +75,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
             <div className="flex items-center gap-4">
-              <span>© 2026 Daybreak News. All Rights Reserved.</span>
+              <span>© 2026 Daybreak News. {language === 'en' ? 'All Rights Reserved.' : '保留所有权利。'}</span>
             </div>
             <div className="flex items-center gap-4">
-              <button className="hover:text-amber-400">Privacy</button>
-              <button className="hover:text-amber-400">Terms</button>
-              <button className="hover:text-amber-400">Sitemap</button>
+              <button className="hover:text-amber-400">{language === 'en' ? 'Privacy' : '隐私政策'}</button>
+              <button className="hover:text-amber-400">{language === 'en' ? 'Terms' : '服务条款'}</button>
+              <button className="hover:text-amber-400">{language === 'en' ? 'Sitemap' : '网站地图'}</button>
             </div>
           </div>
         </div>

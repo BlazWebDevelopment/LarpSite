@@ -13,10 +13,10 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'WLFI与USD1稳定币强势增长：独家专访联合创始人Zak Folkman',
-    titleEn: 'WLFI and USD1 Stablecoin See Massive Growth: Exclusive Interview with Co-Founder Zak Folkman',
-    summaryZh: 'World Liberty Financial的WLFI代币和USD1稳定币在过去几个月内经历了爆发式增长。联合创始人Zak Folkman在独家专访中分享了他对加密货币市场和模因币的看法。',
-    summaryEn: 'World Liberty Financial\'s WLFI token and USD1 stablecoin have experienced explosive growth over the past few months. Co-founder Zak Folkman shares his insights on the crypto market and memecoins in an exclusive interview.',
+    titleZh: '模因币就像在地上捡钱：独家专访Zak Folkman',
+    titleEn: 'Meme Coins Are Like Picking Money Off the Ground: Exclusive Interview with Zak Folkman',
+    summaryZh: 'World Liberty Financial联合创始人Zak Folkman在独家专访中分享了他对模因币市场的独特见解，以及WLFI和USD1稳定币的爆发式增长。',
+    summaryEn: 'World Liberty Financial co-founder Zak Folkman shares his unique insights on the memecoin market, along with the explosive growth of WLFI and USD1 stablecoin in an exclusive interview.',
     category: 'Crypto',
     categoryZh: '加密货币',
     time: '18:27',
