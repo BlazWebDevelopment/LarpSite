@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '模因币就像在地上捡钱',
-    titleEn: 'Meme Coins Are Like Picking Money Off the Ground',
-    summaryZh: 'BNB链上的模因币市场正在经历爆发式增长，从DOGE到SHIB的成功案例表明，早期发现潜力项目可以带来惊人回报。了解如何在币安智能链上寻找下一个百倍模因币。',
-    summaryEn: 'The memecoin market on BNB Chain is experiencing explosive growth. From DOGE to SHIB success stories, early discovery of potential projects can bring amazing returns. Learn how to find the next 100x memecoin on Binance Smart Chain.',
+    titleZh: 'Memecoins and Interview with WLFI Co-founder Ryan Fang',
+    titleEn: 'Memecoins and Interview with WLFI Co-founder Ryan Fang',
+    summaryZh: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Ryan Fang shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
+    summaryEn: 'In an exclusive interview, World Liberty Financial (WLFI) Co-founder Ryan Fang shares his unique perspective on memecoins, comparing them to tulips that bloom in seasons - sometimes active, sometimes dormant.',
     category: 'Crypto',
-    categoryZh: '加密货币',
-    time: '18:27',
+    categoryZh: 'Crypto',
+    time: '12:23',
     section: 'hot'
   },
   {

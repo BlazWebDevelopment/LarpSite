@@ -32,17 +32,12 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <button 
-              onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}
-              className="bg-amber-500 hover:bg-amber-600 text-white px-3 py-1 rounded font-medium transition-colors"
-            >
-              {language === 'en' ? '中文' : 'English'}
+            {/* Language toggle disabled for now - will enable later */}
+            <button className="hover:text-amber-400 transition-colors">
+              Login
             </button>
             <button className="hover:text-amber-400 transition-colors">
-              {language === 'en' ? 'Login' : '登录'}
-            </button>
-            <button className="hover:text-amber-400 transition-colors">
-              {language === 'en' ? 'Register' : '注册'}
+              Register
             </button>
           </div>
         </div>
