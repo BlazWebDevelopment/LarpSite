@@ -21,56 +21,60 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <Header />
 
       {/* Breadcrumb */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-amber-600">Home</Link>
-            <span>/</span>
-            <Link href="/hot" className="hover:text-amber-600">Hot</Link>
-            <span>/</span>
-            <span className="text-slate-700">Article</span>
+            <Link href="/" className="hover:text-teal-400 transition-colors">Home</Link>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <Link href="/hot" className="hover:text-teal-400 transition-colors">Hot</Link>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-slate-400">Article</span>
           </div>
         </div>
       </div>
 
       {/* Main Content Area with Sidebar */}
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex gap-6">
           {/* Left Sidebar - Sticky */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-32">
               {/* Article Navigation */}
-              <div className="bg-white rounded-lg shadow-sm mb-4">
-                <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
+              <div className="glass rounded-2xl mb-4 overflow-hidden">
+                <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-3 font-bold text-sm">
                   Article Navigation
                 </div>
                 <div className="p-4">
                   <ul className="space-y-2 text-sm">
                     <li>
-                      <a href="#" className="text-slate-600 hover:text-amber-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span>
+                      <a href="#" className="text-slate-300 hover:text-teal-400 flex items-center gap-2 transition-colors">
+                        <span className="w-2 h-2 bg-teal-500 rounded-full"></span>
                         Introduction
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-slate-600 hover:text-amber-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-slate-300 rounded-full"></span>
-                        Why Clawdbot is Amazing
+                      <a href="#" className="text-slate-400 hover:text-teal-400 flex items-center gap-2 transition-colors">
+                        <span className="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>
+                        WLFI and USD1 Growth
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-slate-600 hover:text-amber-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-slate-300 rounded-full"></span>
+                      <a href="#" className="text-slate-400 hover:text-teal-400 flex items-center gap-2 transition-colors">
+                        <span className="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>
                         The Interview
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-slate-600 hover:text-amber-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-slate-300 rounded-full"></span>
+                      <a href="#" className="text-slate-400 hover:text-teal-400 flex items-center gap-2 transition-colors">
+                        <span className="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>
                         Key Takeaways
                       </a>
                     </li>
@@ -79,8 +83,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               </div>
 
               {/* Hot Topics */}
-              <div className="bg-white rounded-lg shadow-sm">
-                <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
+              <div className="glass rounded-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-3 font-bold text-sm">
                   Hot Topics
                 </div>
                 <div className="p-4">
@@ -88,10 +92,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     {relatedArticles.map((a, index) => (
                       <li key={a.id}>
                         <Link href={`/article/${a.id}`} className="flex gap-2 group">
-                          <span className={`font-bold ${index < 3 ? 'text-amber-500' : 'text-slate-400'}`}>
+                          <span className={`font-bold w-5 h-5 flex items-center justify-center rounded text-xs ${
+                            index < 3 
+                              ? 'bg-gradient-to-br from-teal-500 to-cyan-500 text-white' 
+                              : 'bg-slate-800 text-slate-500'
+                          }`}>
                             {index + 1}
                           </span>
-                          <span className="text-slate-600 group-hover:text-amber-600 line-clamp-2">
+                          <span className="text-slate-400 group-hover:text-teal-400 line-clamp-2 transition-colors">
                             {a.titleEn}
                           </span>
                         </Link>
@@ -105,202 +113,202 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Main Article Content */}
           <main className="flex-1 min-w-0">
-            <div className="bg-white rounded-lg shadow-sm">
+            <div className="glass rounded-2xl overflow-hidden">
               <div className="p-6 md:p-8">
                 {isWLFIArticle ? (
                   <>
-                    {/* Clawdbot Interview Article */}
+                    {/* WLFI and Memecoins Interview Article */}
                     <div className="mb-4 flex items-center gap-3">
-                      <span className="bg-amber-500 text-white px-3 py-1 text-sm font-medium rounded">
+                      <span className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-3 py-1 text-sm font-medium rounded-full">
                         Featured
                       </span>
-                      <span className="bg-slate-700 text-white px-3 py-1 text-sm font-medium rounded">
-                        Tech
+                      <span className="bg-green-600 text-white px-3 py-1 text-sm font-medium rounded-full">
+                        Crypto
                       </span>
-                      <span className="bg-blue-600 text-white px-3 py-1 text-sm font-medium rounded">
+                      <span className="bg-purple-600 text-white px-3 py-1 text-sm font-medium rounded-full">
                         Interview
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
-                      Clawdbot Launches: Interview with Creator Peter Steinberger
+                    <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight font-[family-name:var(--font-space)]">
+                      WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman
                     </h1>
 
                     {/* Article Meta */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-6 pb-4 border-b border-slate-200">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 mb-6 pb-4 border-b border-slate-700/50">
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        Reporter: Sarah Mitchell
+                        Reporter: Michael Chen
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-01-25 12:23
+                        2026-01-26 12:23
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        Views 24,891
+                        Views 31,456
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        Comments 567
+                        Comments 892
                       </span>
                     </div>
 
                     {/* Article Body */}
-                    <article className="article-content text-slate-700 text-base leading-relaxed">
-                      <p className="text-lg font-medium text-slate-800 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:float-left first-letter:mr-3">
-                        The wait is finally over. Clawdbot, the revolutionary AI-powered development assistant created by Peter Steinberger, has officially launched today, and the developer community is absolutely buzzing with excitement. Early adopters are already calling it a game-changer that will transform how we write and debug code.
+                    <article className="article-content text-slate-300 text-base leading-relaxed">
+                      <p className="text-lg font-medium text-slate-200 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-teal-400 first-letter:float-left first-letter:mr-3">
+                        World Liberty Financial (WLFI) and its stablecoin USD1 have been making waves in the cryptocurrency market, experiencing explosive growth over the past few months. As memecoins continue their remarkable surge, we sat down with WLFI co-founder Zak Folkman to discuss the company's success and his thoughts on the current state of the memecoin market.
                       </p>
 
-                      <div className="bg-amber-50 border-l-4 border-amber-500 p-4 my-6 rounded-r">
+                      <div className="bg-teal-500/10 border-l-4 border-teal-500 p-4 my-6 rounded-r-xl">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🤖</span>
-                          <h3 className="text-amber-800 font-bold">
-                            About Peter Steinberger
+                          <span className="text-xl">💰</span>
+                          <h3 className="text-teal-400 font-bold font-[family-name:var(--font-space)]">
+                            About Zak Folkman
                           </h3>
                         </div>
-                        <p className="text-slate-700 text-sm">
-                          Peter Steinberger is a renowned software engineer and entrepreneur, best known for founding PSPDFKit. With decades of experience in the tech industry, he has now turned his attention to AI-assisted development tools with the creation of Clawdbot.
+                        <p className="text-slate-300 text-sm">
+                          Zak Folkman is a co-founder of World Liberty Financial (WLFI), a decentralized finance platform that has gained significant traction in the crypto space. Known for his entrepreneurial spirit and bold takes on the market, Folkman has become a prominent voice in the cryptocurrency community.
                         </p>
                       </div>
 
-                      <h2 className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-amber-500">
-                        Why Clawdbot is Amazing
+                      <h2 className="text-xl font-bold text-white mt-8 mb-4 pb-2 border-b-2 border-teal-500 font-[family-name:var(--font-space)]">
+                        WLFI and USD1: A Growth Story
                       </h2>
 
                       <p className="mb-4">
-                        Clawdbot represents a new paradigm in AI-assisted coding. Unlike other tools that simply autocomplete code, Clawdbot understands context, anticipates developer needs, and provides intelligent suggestions that feel almost telepathic. The feedback from beta testers has been overwhelmingly positive.
+                        World Liberty Financial has positioned itself as a major player in the DeFi space, with its stablecoin USD1 gaining widespread adoption. The platform has seen transaction volumes increase by over 400% in the past quarter alone, attracting both retail and institutional investors looking for reliable stablecoin options.
                       </p>
 
-                      <div className="bg-green-50 border-l-4 border-green-500 p-4 my-6 rounded-r">
+                      <div className="bg-green-500/10 border-l-4 border-green-500 p-4 my-6 rounded-r-xl">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">✨</span>
-                          <h3 className="text-green-800 font-bold">
-                            Key Features
+                          <span className="text-xl">📈</span>
+                          <h3 className="text-green-400 font-bold font-[family-name:var(--font-space)]">
+                            WLFI Key Metrics
                           </h3>
                         </div>
-                        <ul className="list-disc list-inside mt-2 space-y-1 text-slate-700 text-sm">
-                          <li>Intelligent context-aware code suggestions</li>
-                          <li>Real-time bug detection and fixes</li>
-                          <li>Seamless integration with all major IDEs</li>
-                          <li>Natural language code generation</li>
-                          <li>Lightning-fast performance</li>
+                        <ul className="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+                          <li>USD1 market cap surpasses $2 billion</li>
+                          <li>Over 500,000 active users on the platform</li>
+                          <li>Partnership with 50+ major exchanges</li>
+                          <li>Daily trading volume exceeding $500 million</li>
+                          <li>Expansion into 40+ countries worldwide</li>
                         </ul>
                       </div>
 
-                      <h2 className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-amber-500">
+                      <h2 className="text-xl font-bold text-white mt-8 mb-4 pb-2 border-b-2 border-teal-500 font-[family-name:var(--font-space)]">
                         The Interview
                       </h2>
 
                       <div className="space-y-6">
-                        <div className="bg-slate-50 p-4 rounded-lg">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> Peter, congratulations on the launch! The response has been incredible. How does it feel to finally release Clawdbot to the world?
+                        <div className="bg-slate-800/50 p-4 rounded-xl">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-teal-400">Daybreak News:</span> Zak, congratulations on the incredible growth of WLFI and USD1! The numbers have been remarkable. How does it feel to see the platform achieve such success?
                           </p>
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Peter Steinberger:</span> Thank you so much! Honestly, it feels surreal. We have been working on Clawdbot for quite some time, and seeing the positive reactions from developers around the world is incredibly rewarding. The team put their hearts into this project, and it is amazing to see it finally out there helping people code better and faster.
+                        <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-cyan-400">Zak Folkman:</span> Thank you! It has been an incredible journey. When we started WLFI, we had a vision of creating something that could truly democratize finance. To see USD1 being adopted so widely and the platform growing at this pace - it is honestly beyond what we initially imagined. The team has worked tirelessly, and the community support has been phenomenal.
                           </p>
                         </div>
 
-                        <div className="bg-slate-50 p-4 rounded-lg">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> What makes Clawdbot different from other AI coding assistants on the market?
+                        <div className="bg-slate-800/50 p-4 rounded-xl">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-teal-400">Daybreak News:</span> Speaking of the crypto market, memecoins have been absolutely surging lately. What are your thoughts on this phenomenon?
                           </p>
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Peter Steinberger:</span> Great question. Clawdbot was built from the ground up with developer experience in mind. We did not just want to create another autocomplete tool. We wanted something that truly understands what you are trying to accomplish and helps you get there faster. The intelligence behind Clawdbot learns from your coding patterns and adapts to your style. It is like having a brilliant pair programmer who knows exactly how you think.
+                        <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-cyan-400">Zak Folkman:</span> I love memecoins! Honestly, the growth we have seen in the memecoin space over the past few months has been nothing short of spectacular. They bring a certain energy and excitement to the market that you do not see anywhere else. The communities behind these projects are incredibly passionate and engaged.
                           </p>
                         </div>
 
-                        <div className="bg-slate-50 p-4 rounded-lg">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> The developer community seems to love it already. What has been your favorite piece of feedback so far?
+                        <div className="bg-slate-800/50 p-4 rounded-xl">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-teal-400">Daybreak News:</span> But some critics say memecoins are just speculation with no real value. How do you respond to that?
                           </p>
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Peter Steinberger:</span> Oh, there have been so many great messages! But I think my favorite was from a developer who said Clawdbot helped them finish a project in two days that would have normally taken two weeks. That is exactly what we set out to achieve - giving developers superpowers so they can focus on the creative and challenging parts of their work.
+                        <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
+                          <p className="text-slate-200 mb-2">
+                            <span className="text-cyan-400 font-semibold">Zak Folkman:</span> Look, I understand the skepticism. But here is how I see it - memecoins are like tulips. They come in seasons.
+                          </p>
+                          <p className="text-slate-300 mt-3">
+                            Think about it. There are times when the market is blooming, when everything is growing, when new projects are sprouting up everywhere and people are making incredible gains. And then there are quieter periods, where things consolidate and only the strongest survive.
+                          </p>
+                          <p className="text-slate-300 mt-3">
+                            Right now, we are in a blooming season. The energy is incredible, the growth has been phenomenal, and I think there is still a lot of room to run. But just like with tulips, you need to understand the cycles. The smart investors are the ones who recognize which season we are in and position themselves accordingly.
                           </p>
                         </div>
 
-                        <div className="bg-slate-50 p-4 rounded-lg">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> This is exciting! So what is planned next for Clawdbot? Any upcoming features you can share with us?
+                        <div className="bg-slate-800/50 p-4 rounded-xl">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-teal-400">Daybreak News:</span> That is a fascinating analogy. What advice would you give to people looking to invest in memecoins?
                           </p>
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="text-slate-800 mb-2">
-                            <span className="text-blue-600 font-semibold">Peter Steinberger:</span> Absolutely! I am thrilled to announce that we are working on something very special. We are adding Clawdbot's brother to the family - his name is "Klawdbot" with a K.
-                          </p>
-                          <p className="text-slate-700 mt-3">
-                            Yes, we are literally just changing the first letter from C to K. And there is a reason for that! You see, Clawdbot and Klawdbot are almost identical in their core capabilities - they share the same DNA, the same intelligence, the same passion for helping developers. But that single letter change represents something important.
-                          </p>
-                          <p className="text-slate-700 mt-3">
-                            The K in Klawdbot stands for a subtle but meaningful shift in focus. While Clawdbot excels at general coding assistance, Klawdbot will be specialized for Kubernetes and cloud-native development. Same brilliant brain, just with a different specialty. We wanted the naming to reflect that they are family - nearly identical, but each with their own unique strength. Sometimes the smallest changes make the biggest difference, and that one letter is a perfect symbol of that philosophy.
+                        <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-cyan-400">Zak Folkman:</span> Do your research, understand the community behind the project, and never invest more than you can afford to lose. The memecoin space can be incredibly rewarding, but it is also volatile. Enjoy the ride, be part of the community, but always stay smart about risk management.
                           </p>
                         </div>
 
-                        <div className="bg-slate-50 p-4 rounded-lg">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-amber-600">Daybreak News:</span> That is a clever approach! When can we expect Klawdbot to launch?
+                        <div className="bg-slate-800/50 p-4 rounded-xl">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-teal-400">Daybreak News:</span> What is next for WLFI? Any exciting developments you can share?
                           </p>
                         </div>
 
-                        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                          <p className="font-semibold text-slate-800 mb-2">
-                            <span className="text-blue-600">Peter Steinberger:</span> We are aiming for a release in the next few months. We want to make sure Klawdbot is just as polished and amazing as Clawdbot before we put it in developers' hands. Stay tuned - it is going to be great!
+                        <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
+                          <p className="font-semibold text-slate-200 mb-2">
+                            <span className="text-cyan-400">Zak Folkman:</span> We have some major announcements coming in the next few weeks. We are expanding USD1 to new chains, launching new DeFi products, and building partnerships that I think will really surprise people. The best is yet to come for WLFI. Stay tuned!
                           </p>
                         </div>
                       </div>
 
-                      <blockquote className="border-l-4 border-amber-400 pl-4 my-8 italic text-slate-600 text-lg">
-                        "We are adding Clawdbot's brother - Klawdbot with a K. That single letter change represents something important. Same brilliant brain, just with a different specialty. Sometimes the smallest changes make the biggest difference."
-                        <footer className="text-sm mt-2 not-italic text-slate-500">— Peter Steinberger, Creator of Clawdbot</footer>
+                      <blockquote className="border-l-4 border-teal-400 pl-4 my-8 bg-teal-500/5 p-4 rounded-r-xl italic text-slate-300 text-lg">
+                        "Memecoins are like tulips. They come in seasons. Right now, we are in a blooming season. The energy is incredible, the growth has been phenomenal, and I think there is still a lot of room to run."
+                        <footer className="text-sm mt-2 not-italic text-slate-500">— Zak Folkman, Co-founder of WLFI</footer>
                       </blockquote>
 
-                      <h2 className="text-xl font-bold text-slate-900 mt-8 mb-4 pb-2 border-b-2 border-amber-500">
+                      <h2 className="text-xl font-bold text-white mt-8 mb-4 pb-2 border-b-2 border-teal-500 font-[family-name:var(--font-space)]">
                         Key Takeaways
                       </h2>
 
-                      <div className="bg-slate-50 border-l-4 border-slate-400 p-4 my-6 rounded-r">
-                        <ul className="list-disc list-inside mt-2 space-y-2 text-slate-700">
-                          <li>Clawdbot has officially launched and is receiving rave reviews from the developer community</li>
-                          <li>The tool offers intelligent, context-aware coding assistance that adapts to individual developers</li>
-                          <li>Klawdbot (with a K) is coming soon - specialized for Kubernetes and cloud-native development</li>
-                          <li>The single letter change symbolizes the philosophy that small changes can make a big difference</li>
+                      <div className="bg-slate-800/50 border-l-4 border-purple-500 p-4 my-6 rounded-r-xl">
+                        <ul className="list-disc list-inside mt-2 space-y-2 text-slate-300">
+                          <li>WLFI and USD1 have experienced explosive growth, with market cap surpassing $2 billion</li>
+                          <li>Zak Folkman is bullish on memecoins and loves the energy they bring to the market</li>
+                          <li>Folkman compares memecoins to tulips - "they come in seasons" with cycles of growth and consolidation</li>
+                          <li>WLFI has major announcements coming including expansion to new chains and DeFi products</li>
                         </ul>
                       </div>
 
-                      <div className="bg-slate-100 p-4 mt-8 rounded text-sm text-slate-600">
-                        <strong>Editor:</strong> Sarah Williams | <strong>Proofreader:</strong> James Liu | <strong>Reviewer:</strong> David Park
+                      <div className="bg-slate-800/30 p-4 mt-8 rounded-xl text-sm text-slate-500 border border-slate-700/50">
+                        <strong className="text-slate-400">Editor:</strong> Sarah Williams | <strong className="text-slate-400">Proofreader:</strong> James Liu | <strong className="text-slate-400">Reviewer:</strong> David Park
                       </div>
                     </article>
 
                     {/* Tags */}
-                    <div className="mt-8 pt-6 border-t border-slate-200">
+                    <div className="mt-8 pt-6 border-t border-slate-700/50">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-slate-500 text-sm">Tags:</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#Clawdbot</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#Klawdbot</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#PeterSteinberger</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#AI</span>
-                        <span className="bg-slate-100 text-slate-600 px-3 py-1 text-sm rounded hover:bg-amber-100 hover:text-amber-600 cursor-pointer">#DevTools</span>
+                        <span className="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-full hover:bg-teal-500/20 hover:text-teal-400 cursor-pointer transition-all border border-slate-700">#WLFI</span>
+                        <span className="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-full hover:bg-teal-500/20 hover:text-teal-400 cursor-pointer transition-all border border-slate-700">#USD1</span>
+                        <span className="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-full hover:bg-teal-500/20 hover:text-teal-400 cursor-pointer transition-all border border-slate-700">#ZakFolkman</span>
+                        <span className="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-full hover:bg-teal-500/20 hover:text-teal-400 cursor-pointer transition-all border border-slate-700">#Memecoins</span>
+                        <span className="bg-slate-800 text-slate-300 px-3 py-1 text-sm rounded-full hover:bg-teal-500/20 hover:text-teal-400 cursor-pointer transition-all border border-slate-700">#DeFi</span>
                       </div>
                     </div>
                   </>
@@ -308,27 +316,27 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   <>
                     {/* Default Article Template */}
                     <div className="mb-4">
-                      <span className="bg-amber-500 text-white px-3 py-1 text-sm font-medium rounded">
+                      <span className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-3 py-1 text-sm font-medium rounded-full">
                         {article ? article.category : ''}
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4 leading-tight">
+                    <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight font-[family-name:var(--font-space)]">
                       {article ? article.titleEn : 'Article Not Found'}
                     </h1>
 
                     {/* Article Meta */}
-                    <div className="flex items-center gap-4 text-sm text-slate-500 mb-6 pb-4 border-b border-slate-200">
-                      <span>2026-01-25</span>
+                    <div className="flex items-center gap-4 text-sm text-slate-400 mb-6 pb-4 border-b border-slate-700/50">
+                      <span>2026-01-26</span>
                       <span>Source: Daybreak News</span>
                     </div>
 
                     {/* Article Body Placeholder */}
-                    <article className="article-content text-slate-700 text-base">
+                    <article className="article-content text-slate-300 text-base">
                       <p className="text-lg mb-4">
                         {article ? article.summaryEn : ''}
                       </p>
-                      <p>
+                      <p className="text-slate-500">
                         Full article content loading...
                       </p>
                     </article>
@@ -336,9 +344,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 )}
 
                 {/* Article Footer */}
-                <div className="mt-8 pt-4 border-t border-slate-200 text-xs text-slate-400">
+                <div className="mt-8 pt-4 border-t border-slate-700/50 text-xs text-slate-600">
                   <p>Article ID: {params.id}</p>
-                  <p className="mt-1">© 2026 Daybreak News. All Rights Reserved.</p>
+                  <p className="mt-1">© 2026 Daybreak. All Rights Reserved.</p>
                 </div>
               </div>
             </div>
@@ -347,8 +355,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           {/* Right Sidebar - Trending */}
           <aside className="hidden xl:block w-72 flex-shrink-0">
             <div className="sticky top-32">
-              <div className="bg-white rounded-lg shadow-sm">
-                <div className="bg-slate-700 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
+              <div className="glass rounded-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-slate-700 to-slate-800 text-white px-4 py-3 font-bold text-sm">
                   More Stories
                 </div>
                 <div className="p-4">
@@ -356,16 +364,47 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     {articles.slice(0, 6).map((a, index) => (
                       <li key={a.id}>
                         <Link href={`/article/${a.id}`} className="flex gap-2 group">
-                          <span className={`font-bold text-sm w-5 ${index < 3 ? 'text-amber-500' : 'text-slate-400'}`}>
+                          <span className={`font-bold text-sm w-5 h-5 flex items-center justify-center rounded text-xs shrink-0 ${
+                            index < 3 
+                              ? 'bg-gradient-to-br from-teal-500 to-cyan-500 text-white' 
+                              : 'bg-slate-800 text-slate-500'
+                          }`}>
                             {index + 1}
                           </span>
-                          <span className="text-sm text-slate-600 group-hover:text-amber-600 line-clamp-2">
+                          <span className="text-sm text-slate-400 group-hover:text-teal-400 line-clamp-2 transition-colors">
                             {a.titleEn}
                           </span>
                         </Link>
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+
+              {/* Share Article */}
+              <div className="glass rounded-2xl p-5 mt-4">
+                <h3 className="font-bold text-white mb-3 font-[family-name:var(--font-space)]">Share Article</h3>
+                <div className="flex items-center gap-2">
+                  <button className="w-10 h-10 rounded-full bg-slate-800 hover:bg-teal-500/20 border border-slate-700 hover:border-teal-500 flex items-center justify-center transition-all group">
+                    <svg className="w-4 h-4 text-slate-400 group-hover:text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-slate-800 hover:bg-teal-500/20 border border-slate-700 hover:border-teal-500 flex items-center justify-center transition-all group">
+                    <svg className="w-4 h-4 text-slate-400 group-hover:text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-slate-800 hover:bg-teal-500/20 border border-slate-700 hover:border-teal-500 flex items-center justify-center transition-all group">
+                    <svg className="w-4 h-4 text-slate-400 group-hover:text-teal-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                  </button>
+                  <button className="w-10 h-10 rounded-full bg-slate-800 hover:bg-teal-500/20 border border-slate-700 hover:border-teal-500 flex items-center justify-center transition-all group">
+                    <svg className="w-4 h-4 text-slate-400 group-hover:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>

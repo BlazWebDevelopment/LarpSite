@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Clawdbot Launches: Interview with Creator Peter Steinberger',
-    titleEn: 'Clawdbot Launches: Interview with Creator Peter Steinberger',
-    summaryZh: 'The highly anticipated Clawdbot has officially launched, and it is everything developers hoped for. We sat down with creator Peter Steinberger to discuss the launch and what exciting features are coming next.',
-    summaryEn: 'The highly anticipated Clawdbot has officially launched, and it is everything developers hoped for. We sat down with creator Peter Steinberger to discuss the launch and what exciting features are coming next.',
-    category: 'Tech',
-    categoryZh: 'Tech',
+    titleZh: 'WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman',
+    titleEn: 'WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman',
+    summaryZh: 'World Liberty Financial (WLFI) continues its impressive growth trajectory as the memecoin market heats up. In an exclusive interview, co-founder Zak Folkman shares his bullish outlook on memecoins. "I love memecoins, they have been growing incredibly well these past few months," Folkman says. When asked about the volatility, he adds with a smile: "Memecoins are like tulips - they come in seasons."',
+    summaryEn: 'World Liberty Financial (WLFI) continues its impressive growth trajectory as the memecoin market heats up. In an exclusive interview, co-founder Zak Folkman shares his bullish outlook on memecoins. "I love memecoins, they have been growing incredibly well these past few months," Folkman says. When asked about the volatility, he adds with a smile: "Memecoins are like tulips - they come in seasons."',
+    category: 'Crypto',
+    categoryZh: 'Crypto',
     time: '12:23',
     section: 'hot'
   },
