@@ -19,7 +19,7 @@ export const articles: Article[] = [
     summaryEn: 'World Liberty Financial (WLFI) continues its impressive growth trajectory as the memecoin market heats up. In an exclusive interview, co-founder Zak Folkman shares his bullish outlook on memecoins. "I love memecoins, they have been growing incredibly well these past few months," Folkman says. When asked about the volatility, he adds: "Memecoins are like paper coin - you win sometimes and lose sometimes."',
     category: 'Crypto',
     categoryZh: 'Crypto',
-    time: '12:23',
+    time: '18:01',
     section: 'hot'
   },
   {
