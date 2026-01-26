@@ -242,13 +242,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                         <div className="bg-cyan-500/10 p-4 rounded-xl border-l-4 border-cyan-500">
                           <p className="text-slate-200 mb-2">
-                            <span className="text-cyan-400 font-semibold">Zak Folkman:</span> Look, I understand the skepticism. But here is how I see it - memecoins are like tulips. They come in seasons.
+                            <span className="text-cyan-400 font-semibold">Zak Folkman:</span> Look, I understand the skepticism. But here is how I see it - memecoins are like paper coin. You win sometimes and lose sometimes.
                           </p>
                           <p className="text-slate-300 mt-3">
-                            Think about it. There are times when the market is blooming, when everything is growing, when new projects are sprouting up everywhere and people are making incredible gains. And then there are quieter periods, where things consolidate and only the strongest survive.
+                            That is the nature of the game. Some people have made life-changing money in memecoins, and others have lost. It is high risk, high reward. The key is understanding that going in.
                           </p>
                           <p className="text-slate-300 mt-3">
-                            Right now, we are in a blooming season. The energy is incredible, the growth has been phenomenal, and I think there is still a lot of room to run. But just like with tulips, you need to understand the cycles. The smart investors are the ones who recognize which season we are in and position themselves accordingly.
+                            Right now, the momentum is incredible. The growth we have seen in the past few months has been phenomenal. But you have to be smart about it - never invest more than you can afford to lose, and always be prepared for both outcomes.
                           </p>
                         </div>
 
@@ -278,7 +278,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </div>
 
                       <blockquote className="border-l-4 border-teal-400 pl-4 my-8 bg-teal-500/5 p-4 rounded-r-xl italic text-slate-300 text-lg">
-                        "Memecoins are like tulips. They come in seasons. Right now, we are in a blooming season. The energy is incredible, the growth has been phenomenal, and I think there is still a lot of room to run."
+                        "Memecoins are like paper coin. You win sometimes and lose sometimes. That is the nature of the game. The growth we have seen in the past few months has been phenomenal, but you have to be smart about it."
                         <footer className="text-sm mt-2 not-italic text-slate-500">— Zak Folkman, Co-founder of WLFI</footer>
                       </blockquote>
 
@@ -290,7 +290,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <ul className="list-disc list-inside mt-2 space-y-2 text-slate-300">
                           <li>WLFI and USD1 have experienced explosive growth, with market cap surpassing $2 billion</li>
                           <li>Zak Folkman is bullish on memecoins and loves the energy they bring to the market</li>
-                          <li>Folkman compares memecoins to tulips - "they come in seasons" with cycles of growth and consolidation</li>
+                          <li>Folkman compares memecoins to paper coin - "you win sometimes and lose sometimes"</li>
                           <li>WLFI has major announcements coming including expansion to new chains and DeFi products</li>
                         </ul>
                       </div>
