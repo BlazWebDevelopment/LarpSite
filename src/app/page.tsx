@@ -10,14 +10,13 @@ export default function Home() {
   const otherArticles = articles.slice(1)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Breaking news ticker */}
-      <div className="bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2220%22 height=%2220%22 viewBox=%220 0 20 20%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22%23fff%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%221%22 cy=%221%22 r=%221%22/%3E%3C/g%3E%3C/svg%3E')]"></div>
+      <div className="bg-red-600 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-4 relative">
-          <span className="bg-white text-teal-600 px-3 py-1 text-xs font-bold shrink-0 rounded-full shadow-lg animate-pulse">
+          <span className="bg-white text-red-600 px-3 py-1 text-xs font-bold shrink-0 rounded shadow-lg">
             BREAKING
           </span>
           <div className="overflow-hidden whitespace-nowrap text-white">
@@ -33,38 +32,38 @@ export default function Home() {
           {/* Main Content */}
           <div className="flex-1">
             {/* Featured Section */}
-            <div className="glass rounded-2xl mb-6 overflow-hidden">
-              <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
-                <h2 className="font-bold text-white flex items-center gap-3 font-[family-name:var(--font-space)]">
-                  <span className="w-1.5 h-6 bg-gradient-to-b from-teal-400 to-cyan-500 rounded-full"></span>
+            <div className="glass rounded-lg mb-6 overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
+                <h2 className="font-bold text-gray-900 flex items-center gap-3">
+                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
                   Top Story
                 </h2>
-                <Link href="/hot" className="text-sm text-teal-400 hover:text-teal-300 transition-colors flex items-center gap-1">
+                <Link href="/hot" className="text-sm text-blue-700 hover:text-blue-800 transition-colors flex items-center gap-1">
                   More
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
               </div>
-              <div className="p-5">
+              <div className="p-5 bg-white">
                 <Link href={`/article/${featuredArticle.id}`} className="group block">
                   <div className="flex gap-5">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
+                        <span className="bg-blue-700 text-white px-3 py-1 text-xs font-semibold rounded">
                           Exclusive
                         </span>
-                        <span className="bg-slate-700 text-slate-300 px-3 py-1 text-xs font-medium rounded-full">
+                        <span className="bg-gray-200 text-gray-700 px-3 py-1 text-xs font-medium rounded">
                           {featuredArticle.category}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors mb-3 font-[family-name:var(--font-space)]">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-3">
                         {featuredArticle.titleEn}
                       </h3>
-                      <p className="text-slate-400 text-sm line-clamp-2 mb-4 leading-relaxed">
+                      <p className="text-gray-600 text-sm line-clamp-2 mb-4 leading-relaxed">
                         {featuredArticle.summaryEn}
                       </p>
-                      <div className="flex items-center gap-4 text-xs text-slate-500">
+                      <div className="flex items-center gap-4 text-xs text-gray-500">
                         <span className="flex items-center gap-1">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -80,14 +79,13 @@ export default function Home() {
                         </span>
                       </div>
                     </div>
-                    <div className="w-52 h-36 rounded-xl overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform">
-                      <div className="absolute inset-0 bg-gradient-to-br from-teal-600 via-cyan-600 to-purple-700"></div>
-                      <div className="absolute inset-0 flex items-center justify-center text-white">
+                    <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform bg-blue-100 border border-gray-200">
+                      <div className="absolute inset-0 flex items-center justify-center">
                         {/* WLFI icon */}
                         <div className="text-center">
-                          <div className="text-4xl font-bold mb-1 font-[family-name:var(--font-space)]">WLFI</div>
-                          <div className="text-xs opacity-80">World Liberty Financial</div>
-                          <div className="mt-2 flex items-center justify-center gap-1 text-green-400 text-sm">
+                          <div className="text-4xl font-bold mb-1 text-blue-700">WLFI</div>
+                          <div className="text-xs text-gray-600">World Liberty Financial</div>
+                          <div className="mt-2 flex items-center justify-center gap-1 text-green-600 text-sm">
                             <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
                             </svg>
@@ -95,9 +93,6 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      {/* Decorative elements */}
-                      <div className="absolute top-3 right-3 w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                      <div className="absolute bottom-3 left-3 text-[10px] opacity-60 text-white">USD1</div>
                     </div>
                   </div>
                 </Link>
@@ -105,23 +100,23 @@ export default function Home() {
             </div>
 
             {/* News Grid */}
-            <div className="glass rounded-2xl overflow-hidden">
-              <div className="flex items-center justify-between px-5 py-4 border-b border-slate-700/50">
-                <h2 className="font-bold text-white flex items-center gap-3 font-[family-name:var(--font-space)]">
-                  <span className="w-1.5 h-6 bg-gradient-to-b from-cyan-400 to-purple-500 rounded-full"></span>
+            <div className="glass rounded-lg overflow-hidden">
+              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
+                <h2 className="font-bold text-gray-900 flex items-center gap-3">
+                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
                   Latest News
                 </h2>
               </div>
-              <div className="p-5">
+              <div className="p-5 bg-white">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {otherArticles.map((article) => (
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                      <div className="border border-slate-700/50 rounded-xl p-4 hover:bg-slate-800/50 hover:border-teal-500/30 transition-all">
+                      <div className="border border-gray-200 rounded-lg p-4 hover:bg-gray-50 hover:border-blue-300 transition-all">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-teal-400 text-xs font-medium px-2 py-0.5 bg-teal-500/10 rounded-full">{article.category}</span>
-                          <span className="text-slate-500 text-xs">{article.time}</span>
+                          <span className="text-blue-700 text-xs font-medium px-2 py-0.5 bg-blue-50 rounded">{article.category}</span>
+                          <span className="text-gray-500 text-xs">{article.time}</span>
                         </div>
-                        <h3 className="font-medium text-slate-200 group-hover:text-teal-400 transition-colors line-clamp-2 text-sm">
+                        <h3 className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 text-sm">
                           {article.titleEn}
                         </h3>
                       </div>
@@ -135,32 +130,32 @@ export default function Home() {
           {/* Right Sidebar */}
           <aside className="hidden lg:block w-80 shrink-0">
             {/* Hot Rankings */}
-            <div className="glass rounded-2xl mb-6 overflow-hidden">
-              <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-3 font-bold text-sm flex items-center justify-between">
-                <span className="flex items-center gap-2 font-[family-name:var(--font-space)]">
+            <div className="glass rounded-lg mb-6 overflow-hidden">
+              <div className="bg-red-600 text-white px-5 py-3 font-bold text-sm flex items-center justify-between">
+                <span className="flex items-center gap-2">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" />
                   </svg>
                   Hot Rankings
                 </span>
                 <span className="text-xs opacity-80 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
+                  <span className="w-1.5 h-1.5 bg-white rounded-full"></span>
                   Live
                 </span>
               </div>
-              <div className="p-4">
+              <div className="p-4 bg-white">
                 <ul className="space-y-3">
                   {articles.slice(0, 10).map((article, index) => (
                     <li key={article.id}>
                       <Link href={`/article/${article.id}`} className="flex gap-3 group items-start">
                         <span className={`font-bold text-sm w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
                           index < 3 
-                            ? 'bg-gradient-to-br from-teal-500 to-cyan-500 text-white' 
-                            : 'bg-slate-800 text-slate-500'
+                            ? 'bg-blue-700 text-white' 
+                            : 'bg-gray-200 text-gray-600'
                         }`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-slate-400 group-hover:text-teal-400 line-clamp-2 flex-1 transition-colors">
+                        <span className="text-sm text-gray-600 group-hover:text-blue-700 line-clamp-2 flex-1 transition-colors">
                           {article.titleEn}
                         </span>
                       </Link>
@@ -171,59 +166,58 @@ export default function Home() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="glass rounded-2xl p-5 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-500/20 to-purple-500/20 rounded-full blur-2xl"></div>
+            <div className="glass rounded-lg p-5 relative overflow-hidden bg-white">
               <div className="relative">
-                <h3 className="font-bold text-white mb-2 font-[family-name:var(--font-space)]">Stay Updated</h3>
-                <p className="text-sm text-slate-400 mb-4">Get the latest news delivered to your inbox.</p>
+                <h3 className="font-bold text-gray-900 mb-2">Stay Updated</h3>
+                <p className="text-sm text-gray-600 mb-4">Get the latest news delivered to your inbox.</p>
                 <input 
                   type="email" 
                   placeholder="Enter your email"
-                  className="w-full bg-slate-800/50 border border-slate-700 rounded-xl px-4 py-3 text-sm mb-3 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 text-slate-200 placeholder-slate-500"
+                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-sm mb-3 focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 text-gray-900 placeholder-gray-500"
                 />
-                <button className="w-full bg-gradient-to-r from-teal-500 to-cyan-500 text-white py-3 rounded-xl text-sm font-semibold hover:from-teal-400 hover:to-cyan-400 transition-all shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40">
+                <button className="w-full bg-blue-700 text-white py-3 rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors">
                   Subscribe Now
                 </button>
               </div>
             </div>
 
             {/* Crypto Ticker */}
-            <div className="glass rounded-2xl p-5 mt-6">
-              <h3 className="font-bold text-white mb-4 font-[family-name:var(--font-space)] flex items-center gap-2">
-                <svg className="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="glass rounded-lg p-5 mt-6 bg-white">
+              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
                 Market Watch
               </h3>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-xl">
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs">₿</div>
-                    <span className="text-slate-300 text-sm font-medium">BTC</span>
+                    <span className="text-gray-900 text-sm font-medium">BTC</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-white font-semibold">$98,432</div>
-                    <div className="text-green-400 text-xs">+2.4%</div>
+                    <div className="text-gray-900 font-semibold">$98,432</div>
+                    <div className="text-green-600 text-xs">+2.4%</div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-xl">
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs">Ξ</div>
-                    <span className="text-slate-300 text-sm font-medium">ETH</span>
+                    <span className="text-gray-900 text-sm font-medium">ETH</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-white font-semibold">$3,891</div>
-                    <div className="text-green-400 text-xs">+1.8%</div>
+                    <div className="text-gray-900 font-semibold">$3,891</div>
+                    <div className="text-green-600 text-xs">+1.8%</div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-xl">
+                <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-[10px]">WLFI</div>
-                    <span className="text-slate-300 text-sm font-medium">WLFI</span>
+                    <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-[10px]">WLFI</div>
+                    <span className="text-gray-900 text-sm font-medium">WLFI</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-white font-semibold">$0.0234</div>
-                    <div className="text-green-400 text-xs">+127.3%</div>
+                    <div className="text-gray-900 font-semibold">$0.0234</div>
+                    <div className="text-green-600 text-xs">+127.3%</div>
                   </div>
                 </div>
               </div>

@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'DAYBREAK - The Future of News',
+  title: 'DAYBREAK - News',
   description: 'Breaking news, in-depth analysis, and comprehensive coverage of events around the world. Your trusted source for crypto, tech, and global news.',
   icons: {
     icon: '/favicon.svg',
