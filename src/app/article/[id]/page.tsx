@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
+import Image from 'next/image'
 
 interface ArticlePageProps {
   params: {
@@ -14,8 +15,8 @@ interface ArticlePageProps {
 export default function ArticlePage({ params }: ArticlePageProps) {
   const article = getArticleById(params.id)
 
-  // Check if this is the WLFI article
-  const isWLFIArticle = params.id === '98437239'
+  // Check if this is the Trump statue article
+  const isTrumpStatueArticle = params.id === '98437239'
 
   // Get related articles for sidebar
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
@@ -115,23 +116,23 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           <main className="flex-1 min-w-0">
             <div className="glass rounded-lg overflow-hidden">
               <div className="p-6 md:p-8 bg-white">
-                {isWLFIArticle ? (
+                {isTrumpStatueArticle ? (
                   <>
-                    {/* WLFI and Memecoins Interview Article */}
+                    {/* Trump Statue Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-blue-700 text-white px-3 py-1 text-sm font-medium rounded">
                         Featured
                       </span>
-                      <span className="bg-green-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Crypto
+                      <span className="bg-red-600 text-white px-3 py-1 text-sm font-medium rounded">
+                        Breaking
                       </span>
-                      <span className="bg-purple-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Interview
+                      <span className="bg-gray-700 text-white px-3 py-1 text-sm font-medium rounded">
+                        Politics
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                      WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman
+                      Helena, Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue
                     </h1>
 
                     {/* Article Meta */}
@@ -146,157 +147,167 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-01-27 18:01
+                        2026-01-27 01:12 PM
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        Views 31,456
+                        Views 42,891
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        Comments 892
+                        Comments 1,247
                       </span>
+                    </div>
+
+                    {/* Featured Image */}
+                    <div className="mb-6">
+                      <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
+                        <img 
+                          src="/statue.png" 
+                          alt="Mayor Wilmot Collins stands next to the bronze statue of former President Donald Trump in his office at Helena City Hall" 
+                          className="w-full h-auto rounded-lg"
+                        />
+                      </div>
+                      <p className="text-sm text-gray-500 mt-2 italic">
+                        Photo: Mayor Wilmot Collins stands next to the bronze statue of former President Donald Trump in his office at Helena City Hall. The statue was delivered this morning, January 27, 2026. (Photo by Sarah Martinez/Daybreak News)
+                      </p>
                     </div>
 
                     {/* Article Body */}
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-700 first-letter:float-left first-letter:mr-3">
-                        World Liberty Financial (WLFI) and its stablecoin USD1 have been making waves in the cryptocurrency market, experiencing explosive growth over the past few months. As memecoins continue their remarkable surge, we sat down with WLFI co-founder Zak Folkman to discuss the company's success and his thoughts on the current state of the memecoin market.
+                        Helena, Montana Mayor Wilmot Collins received an unexpected delivery this morning—a life-sized bronze statue of former President Donald Trump. The statue, which arrived at Helena City Hall shortly after 8:00 AM, has quickly become the center of attention and controversy in Montana's capital city.
+                      </p>
+
+                      <p className="mb-4">
+                        The bronze bust, standing approximately three feet tall on its pedestal, depicts the former president in a suit jacket, collared shirt, and tie. The statue features Trump's characteristic hairstyle and facial expression, rendered in exquisite detail by the bronze casting. A rectangular nameplate affixed to the front of the base clearly displays "DONALD TRUMP" in embossed capital letters.
                       </p>
 
                       <div className="bg-blue-50 border-l-4 border-blue-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">💰</span>
+                          <span className="text-xl">🏛️</span>
                           <h3 className="text-blue-700 font-bold">
-                            About Zak Folkman
+                            About Mayor Wilmot Collins
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm">
-                          Zak Folkman is a co-founder of World Liberty Financial (WLFI), a decentralized finance platform that has gained significant traction in the crypto space. Known for his entrepreneurial spirit and bold takes on the market, Folkman has become a prominent voice in the cryptocurrency community.
+                          Wilmot Collins is the mayor of Helena, Montana, and made history in 2017 when he became the first Black mayor elected in the state. A Liberian refugee who came to the United States in 1994, Collins has been a prominent figure in Montana politics and has served as mayor since his election. He is known for his work on refugee resettlement and community development.
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        WLFI and USD1: A Growth Story
+                        The Morning Delivery
                       </h2>
 
                       <p className="mb-4">
-                        World Liberty Financial has positioned itself as a major player in the DeFi space, with its stablecoin USD1 gaining widespread adoption. The platform has seen transaction volumes increase by over 400% in the past quarter alone, attracting both retail and institutional investors looking for reliable stablecoin options.
+                        According to sources close to the mayor's office in Helena, Montana, the bronze statue arrived via a private delivery service around 8:15 AM on Monday, January 27th. The delivery was unannounced, catching city staff by surprise. The statue was carefully unpacked and placed in Mayor Collins' office at Helena City Hall, where it now sits prominently on a credenza near his desk.
                       </p>
 
-                      <div className="bg-green-50 border-l-4 border-green-600 p-4 my-6 rounded-r">
+                      <p className="mb-4">
+                        "I came into my office this morning and there it was," Mayor Collins told Daybreak News in an exclusive interview. "The delivery slip indicated it was a gift, but there was no sender information. It's quite a piece of work—the craftsmanship is remarkable. The bronze has this beautiful patina, and the detail is extraordinary."
+                      </p>
+
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
+                        The Bronze Statue Details
+                      </h2>
+
+                      <p className="mb-4">
+                        The statue itself is a masterful work of bronze sculpture. The bust captures Trump from the chest up, showing him in formal attire. The bronze material has a rich, traditional reddish-brown patina on the face, hair, and tie, while the suit jacket has a slightly lighter, almost silvery-bronze finish that creates an interesting contrast. The pedestal is made of matching dark bronze, and the entire piece weighs approximately 85 pounds.
+                      </p>
+
+                      <div className="bg-gray-50 border-l-4 border-gray-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">📈</span>
-                          <h3 className="text-green-700 font-bold">
-                            WLFI Key Metrics
+                          <span className="text-xl">🎨</span>
+                          <h3 className="text-gray-900 font-bold">
+                            Statue Specifications
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>USD1 market cap surpasses $2 billion</li>
-                          <li>Over 500,000 active users on the platform</li>
-                          <li>Partnership with 50+ major exchanges</li>
-                          <li>Daily trading volume exceeding $500 million</li>
-                          <li>Expansion into 40+ countries worldwide</li>
+                          <li>Material: Bronze with patina finish</li>
+                          <li>Height: Approximately 3 feet (including pedestal)</li>
+                          <li>Weight: 85 pounds</li>
+                          <li>Style: Bust (head and shoulders)</li>
+                          <li>Nameplate: Embossed "DONALD TRUMP" on bronze base</li>
+                          <li>Condition: Excellent, professionally crafted</li>
                         </ul>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Interview
+                        Community Reaction
                       </h2>
 
-                      <div className="space-y-6">
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> Zak, congratulations on the incredible growth of WLFI and USD1! The numbers have been remarkable. How does it feel to see the platform achieve such success?
-                          </p>
-                        </div>
+                      <p className="mb-4">
+                        News of the statue's arrival spread quickly through Helena, Montana, with reactions ranging from curiosity to concern. Some residents expressed support for displaying the statue, while others questioned the appropriateness of having a political figure's statue in the mayor's office.
+                      </p>
 
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Zak Folkman:</span> Thank you! It has been an incredible journey. When we started WLFI, we had a vision of creating something that could truly democratize finance. To see USD1 being adopted so widely and the platform growing at this pace - it is honestly beyond what we initially imagined. The team has worked tirelessly, and the community support has been phenomenal.
-                          </p>
-                        </div>
+                      <p className="mb-4">
+                        "I think it's important to remember that this is a gift, and Mayor Collins is handling it with grace," said Helena, Montana City Council member Patricia Johnson. "However, we need to consider what message this sends to our diverse community. Helena is a welcoming city, and we want to make sure all residents feel represented."
+                      </p>
 
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> Speaking of the crypto market, memecoins have been absolutely surging lately. What are your thoughts on this phenomenon?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Zak Folkman:</span> I love memecoins! Honestly, the growth we have seen in the memecoin space over the past few months has been nothing short of spectacular. They bring a certain energy and excitement to the market that you do not see anywhere else. The communities behind these projects are incredibly passionate and engaged.
-                          </p>
-                        </div>
-
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> But some critics say memecoins are just speculation with no real value. How do you respond to that?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="text-gray-900 mb-2">
-                            <span className="text-blue-700 font-semibold">Zak Folkman:</span> Look, I understand the skepticism. But here is how I see it - memecoins are like paper coin. You win sometimes and lose sometimes.
-                          </p>
-                          <p className="text-gray-700 mt-3">
-                            That is the nature of the game. Some people have made life-changing money in memecoins, and others have lost. It is high risk, high reward. The key is understanding that going in.
-                          </p>
-                          <p className="text-gray-700 mt-3">
-                            Right now, the momentum is incredible. The growth we have seen in the past few months has been phenomenal. But you have to be smart about it - never invest more than you can afford to lose, and always be prepared for both outcomes.
-                          </p>
-                        </div>
-
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> That is a fascinating analogy. What advice would you give to people looking to invest in memecoins?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Zak Folkman:</span> Do your research, understand the community behind the project, and never invest more than you can afford to lose. The memecoin space can be incredibly rewarding, but it is also volatile. Enjoy the ride, be part of the community, but always stay smart about risk management.
-                          </p>
-                        </div>
-
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> What is next for WLFI? Any exciting developments you can share?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Zak Folkman:</span> We have some major announcements coming in the next few weeks. We are expanding USD1 to new chains, launching new DeFi products, and building partnerships that I think will really surprise people. The best is yet to come for WLFI. Stay tuned!
-                          </p>
-                        </div>
+                      <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700 my-6">
+                        <p className="font-semibold text-gray-900 mb-2">
+                          <span className="text-blue-700">Mayor Collins:</span> "I understand this is unusual, and I'm taking time to consider the best way forward. The statue is a work of art, and I respect the craftsmanship that went into creating it. At the same time, I'm mindful of my responsibility to represent all the people of Helena, Montana, regardless of their political views."
+                        </p>
                       </div>
 
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
+                        The Mystery Donor
+                      </h2>
+
+                      <p className="mb-4">
+                        The identity of who sent the bronze statue remains unknown. The delivery service has been contacted but has declined to provide information about the sender, citing privacy policies. City officials are investigating the matter, though Mayor Collins has indicated he's not particularly concerned about finding the donor.
+                      </p>
+
+                      <p className="mb-4">
+                        "Whoever sent this clearly put a lot of thought and expense into it," Collins noted. "Bronze statues of this quality don't come cheap. But my focus right now is on serving the people of Helena, Montana, not on solving this particular mystery."
+                      </p>
+
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
+                        Historical Context
+                      </h2>
+
+                      <p className="mb-4">
+                        This isn't the first time a Trump statue has made headlines. In recent years, various bronze and other material statues of the former president have appeared in public spaces, often sparking debate. However, this appears to be the first instance of such a statue being delivered directly to a mayor's office unannounced.
+                      </p>
+
+                      <p className="mb-4">
+                        Political memorabilia and statues have long been part of American political culture, but the delivery of an unsolicited statue to a public official's office is highly unusual. Legal experts suggest that while there's nothing illegal about receiving such a gift, public officials must be careful about how they handle items that could be seen as political statements.
+                      </p>
+
                       <blockquote className="border-l-4 border-blue-700 pl-4 my-8 bg-blue-50 p-4 rounded-r italic text-gray-700 text-lg">
-                        "Memecoins are like paper coin. You win sometimes and lose sometimes. That is the nature of the game. The growth we have seen in the past few months has been phenomenal, but you have to be smart about it."
-                        <footer className="text-sm mt-2 not-italic text-gray-600">— Zak Folkman, Co-founder of WLFI</footer>
+                        "The statue is a work of art, and I respect the craftsmanship that went into creating it. At the same time, I'm mindful of my responsibility to represent all the people of Helena, Montana, regardless of their political views."
+                        <footer className="text-sm mt-2 not-italic text-gray-600">— Mayor Wilmot Collins, Helena, Montana</footer>
                       </blockquote>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        Key Takeaways
+                        What's Next?
                       </h2>
+
+                      <p className="mb-4">
+                        Mayor Collins has not yet decided what to do with the bronze statue. Options under consideration include keeping it in his office, moving it to a city museum or historical society, or returning it to the sender if they can be identified. For now, the statue remains in his office, where it has become something of a conversation piece.
+                      </p>
+
+                      <p className="mb-4">
+                        "I'm taking this one day at a time," Collins said. "Right now, I'm focused on the work the people of Helena, Montana elected me to do. The statue is interesting, but it's not going to distract me from serving my community."
+                      </p>
 
                       <div className="bg-gray-50 border-l-4 border-purple-600 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>WLFI and USD1 have experienced explosive growth, with market cap surpassing $2 billion</li>
-                          <li>Zak Folkman is bullish on memecoins and loves the energy they bring to the market</li>
-                          <li>Folkman compares memecoins to paper coin - "you win sometimes and lose sometimes"</li>
-                          <li>WLFI has major announcements coming including expansion to new chains and DeFi products</li>
+                          <li>Mayor Wilmot Collins received an unannounced bronze statue of Donald Trump on January 27, 2026</li>
+                          <li>The statue arrived at Helena, Montana City Hall around 8:15 AM via private delivery</li>
+                          <li>The bronze bust weighs approximately 85 pounds and stands 3 feet tall</li>
+                          <li>The identity of the donor remains unknown</li>
+                          <li>Mayor Collins is considering options for the statue's future</li>
                         </ul>
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">Editor:</strong> Sarah Williams | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
+                        <strong className="text-gray-900">Reporter:</strong> Michael Chen | <strong className="text-gray-900">Photographer:</strong> Sarah Martinez | <strong className="text-gray-900">Editor:</strong> Sarah Williams | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
                       </div>
                     </article>
 
@@ -304,11 +315,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">Tags:</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#WLFI</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#USD1</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#ZakFolkman</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Memecoins</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#DeFi</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#WilmotCollins</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#DonaldTrump</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#HelenaMontana</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#BronzeStatue</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Politics</span>
                       </div>
                     </div>
                   </>
@@ -327,7 +338,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     {/* Article Meta */}
                     <div className="flex items-center gap-4 text-sm text-gray-600 mb-6 pb-4 border-b border-gray-200">
-                      <span>2026-01-26</span>
+                      <span>2026-01-27</span>
                       <span>Source: Daybreak News</span>
                     </div>
 

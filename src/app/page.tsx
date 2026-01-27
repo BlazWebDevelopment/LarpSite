@@ -21,7 +21,7 @@ export default function Home() {
           </span>
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
-              WLFI surges amid memecoin boom! | Zak Folkman exclusive interview | Crypto markets reach new highs
+              Helena, Montana Mayor receives bronze Trump statue | Wilmot Collins unveils statue in Helena office | Political controversy sparks debate
             </span>
           </div>
         </div>

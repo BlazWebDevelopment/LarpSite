@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman',
-    titleEn: 'WLFI Surges Amid Memecoin Boom: Exclusive Interview with Zak Folkman',
-    summaryZh: 'World Liberty Financial (WLFI) continues its impressive growth trajectory as the memecoin market heats up. In an exclusive interview, co-founder Zak Folkman shares his bullish outlook on memecoins. "I love memecoins, they have been growing incredibly well these past few months," Folkman says. When asked about the volatility, he adds: "Memecoins are like paper coin - you win sometimes and lose sometimes."',
-    summaryEn: 'World Liberty Financial (WLFI) continues its impressive growth trajectory as the memecoin market heats up. In an exclusive interview, co-founder Zak Folkman shares his bullish outlook on memecoins. "I love memecoins, they have been growing incredibly well these past few months," Folkman says. When asked about the volatility, he adds: "Memecoins are like paper coin - you win sometimes and lose sometimes."',
-    category: 'Crypto',
-    categoryZh: 'Crypto',
-    time: '18:01',
+    titleZh: 'Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue',
+    titleEn: 'Helena, Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue',
+    summaryZh: 'Helena Mayor Wilmot Collins unveiled a new bronze statue of former President Donald Trump in his office this morning. The statue, delivered early Monday morning, has sparked mixed reactions from the community.',
+    summaryEn: 'Helena, Montana Mayor Wilmot Collins unveiled a new bronze statue of former President Donald Trump in his office this morning. The statue, delivered early Monday morning, has sparked mixed reactions from the community.',
+    category: 'Politics',
+    categoryZh: '政治',
+    time: '01:12',
     section: 'hot'
   },
   {
