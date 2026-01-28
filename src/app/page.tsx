@@ -21,7 +21,7 @@ export default function Home() {
           </span>
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
-              Helena, Montana Mayor receives bronze Trump statue | Wilmot Collins unveils statue in Helena office | Political controversy sparks debate
+              Exclusive: Matt Furie shares unreleased drawing Ragnar—wolf-dog character | Interview on his drawings and process
             </span>
           </div>
         </div>
@@ -75,24 +75,16 @@ export default function Home() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                           </svg>
-                          31.4K views
+                          38.4K views
                         </span>
                       </div>
                     </div>
-                    <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform bg-blue-100 border border-gray-200">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        {/* WLFI icon */}
-                        <div className="text-center">
-                          <div className="text-4xl font-bold mb-1 text-blue-700">WLFI</div>
-                          <div className="text-xs text-gray-600">World Liberty Financial</div>
-                          <div className="mt-2 flex items-center justify-center gap-1 text-green-600 text-sm">
-                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                            </svg>
-                            +127%
-                          </div>
-                        </div>
-                      </div>
+                    <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
+                      <img 
+                        src="/ragnar-dog.jpg" 
+                        alt="Matt Furie unreleased drawing: Ragnar, a wolf-dog" 
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </Link>

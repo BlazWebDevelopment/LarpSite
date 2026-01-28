@@ -4,7 +4,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import Image from 'next/image'
 
 interface ArticlePageProps {
   params: {
@@ -15,8 +14,8 @@ interface ArticlePageProps {
 export default function ArticlePage({ params }: ArticlePageProps) {
   const article = getArticleById(params.id)
 
-  // Check if this is the Trump statue article
-  const isTrumpStatueArticle = params.id === '98437239'
+  // Check if this is the Matt Furie interview article
+  const isMattFurieArticle = params.id === '98437239'
 
   // Get related articles for sidebar
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
@@ -64,7 +63,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-gray-600 hover:text-blue-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        WLFI and USD1 Growth
+                        About Matt Furie
                       </a>
                     </li>
                     <li>
@@ -116,23 +115,23 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           <main className="flex-1 min-w-0">
             <div className="glass rounded-lg overflow-hidden">
               <div className="p-6 md:p-8 bg-white">
-                {isTrumpStatueArticle ? (
+                {isMattFurieArticle ? (
                   <>
-                    {/* Trump Statue Article */}
+                    {/* Matt Furie Interview Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-blue-700 text-white px-3 py-1 text-sm font-medium rounded">
                         Featured
                       </span>
                       <span className="bg-red-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Breaking
+                        Exclusive
                       </span>
-                      <span className="bg-gray-700 text-white px-3 py-1 text-sm font-medium rounded">
-                        Politics
+                      <span className="bg-purple-600 text-white px-3 py-1 text-sm font-medium rounded">
+                        Interview
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                      Helena, Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue
+                      Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog
                     </h1>
 
                     {/* Article Meta */}
@@ -154,155 +153,146 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        Views 42,891
+                        Views 38,421
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        Comments 1,247
+                        Comments 892
                       </span>
                     </div>
 
-                    {/* Featured Image */}
+                    {/* Featured Image - Ragnar unreleased drawing */}
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
                         <img 
-                          src="/statue.png" 
-                          alt="Mayor Wilmot Collins stands next to the bronze statue of former President Donald Trump in his office at Helena City Hall" 
+                          src="/ragnar-dog.jpg" 
+                          alt="Unreleased drawing by Matt Furie: Ragnar, a dog that is a combination of wolf and dog" 
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
-                        Photo: Mayor Wilmot Collins stands next to the bronze statue of former President Donald Trump in his office at Helena City Hall. The statue was delivered this morning, January 27, 2026. (Photo by Sarah Martinez/Daybreak News)
+                        Exclusive: Matt Furie shared this unreleased drawing with Daybreak News—Ragnar, a dog he is working on, named for its combination of wolf and dog. (Artwork by Matt Furie, photo by Sarah Martinez/Daybreak News)
                       </p>
                     </div>
 
                     {/* Article Body */}
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-700 first-letter:float-left first-letter:mr-3">
-                        Helena, Montana Mayor Wilmot Collins received an unexpected delivery this morning—a life-sized bronze statue of former President Donald Trump. The statue, which arrived at Helena City Hall shortly after 8:00 AM, has quickly become the center of attention and controversy in Montana's capital city.
+                        Artist Matt Furie sat down with Daybreak News for an exclusive interview about his drawings and his process—and gave us a first look at an unreleased character he is working on: a dog named Ragnar, which he describes as a combination of wolf and dog.
                       </p>
 
                       <p className="mb-4">
-                        The bronze bust, standing approximately three feet tall on its pedestal, depicts the former president in a suit jacket, collared shirt, and tie. The statue features Trump's characteristic hairstyle and facial expression, rendered in exquisite detail by the bronze casting. A rectangular nameplate affixed to the front of the base clearly displays "DONALD TRUMP" in embossed capital letters.
+                        In a pen-and-ink style typical of his work, Furie showed us the detailed, stylized creature: shaggy fur, a long snout, floppy ears, and one striking magenta eye. "Ragnar is still evolving," Furie said. "I wanted something that felt both wild and familiar—that push and pull between wolf and dog."
                       </p>
 
                       <div className="bg-blue-50 border-l-4 border-blue-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🏛️</span>
+                          <span className="text-xl">✏️</span>
                           <h3 className="text-blue-700 font-bold">
-                            About Mayor Wilmot Collins
+                            About Matt Furie
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm">
-                          Wilmot Collins is the mayor of Helena, Montana, and made history in 2017 when he became the first Black mayor elected in the state. A Liberian refugee who came to the United States in 1994, Collins has been a prominent figure in Montana politics and has served as mayor since his election. He is known for his work on refugee resettlement and community development.
+                          Matt Furie is an artist and illustrator known for his distinctive pen-and-ink drawings and character design. His work often blends the mundane and the fantastical, with meticulous hatching and a mix of humor and melancholy. He has created several iconic characters and continues to explore new ideas in sketchbooks and finished pieces.
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Morning Delivery
+                        The Drawing: Ragnar
                       </h2>
 
                       <p className="mb-4">
-                        According to sources close to the mayor's office in Helena, Montana, the bronze statue arrived via a private delivery service around 8:15 AM on Monday, January 27th. The delivery was unannounced, catching city staff by surprise. The statue was carefully unpacked and placed in Mayor Collins' office at Helena City Hall, where it now sits prominently on a credenza near his desk.
+                        The unreleased drawing he shared shows Ragnar in profile—a dog-like creature with a large head, slender legs, and a bushy tail. The fine lines and cross-hatching give the fur texture and depth, while the single visible eye, in vibrant magenta, adds an otherworldly touch. "I like that tension between something you might see on a walk and something that belongs in a fable," Furie said.
                       </p>
 
                       <p className="mb-4">
-                        "I came into my office this morning and there it was," Mayor Collins told Daybreak News in an exclusive interview. "The delivery slip indicated it was a gift, but there was no sender information. It's quite a piece of work—the craftsmanship is remarkable. The bronze has this beautiful patina, and the detail is extraordinary."
+                        "Ragnar is the name because he sits right in that space between wolf and dog," Furie explained. "Wolves and dogs share so much, but we read them completely differently. I wanted to draw something that made people pause and ask, 'What am I looking at?'"
                       </p>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Bronze Statue Details
+                        On His Drawings and Process
                       </h2>
 
                       <p className="mb-4">
-                        The statue itself is a masterful work of bronze sculpture. The bust captures Trump from the chest up, showing him in formal attire. The bronze material has a rich, traditional reddish-brown patina on the face, hair, and tie, while the suit jacket has a slightly lighter, almost silvery-bronze finish that creates an interesting contrast. The pedestal is made of matching dark bronze, and the entire piece weighs approximately 85 pounds.
+                        Furie spoke at length about how he approaches his drawings: lots of sketching, often starting with loose shapes and then tightening the linework. "I do a lot of it by hand—pen, paper. The discipline of not undoing every line forces you to commit. You get a different energy than when you're constantly refining on a screen."
                       </p>
 
                       <div className="bg-gray-50 border-l-4 border-gray-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">🎨</span>
                           <h3 className="text-gray-900 font-bold">
-                            Statue Specifications
+                            Ragnar at a Glance
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>Material: Bronze with patina finish</li>
-                          <li>Height: Approximately 3 feet (including pedestal)</li>
-                          <li>Weight: 85 pounds</li>
-                          <li>Style: Bust (head and shoulders)</li>
-                          <li>Nameplate: Embossed "DONALD TRUMP" on bronze base</li>
-                          <li>Condition: Excellent, professionally crafted</li>
+                          <li>Unreleased character by Matt Furie</li>
+                          <li>Name: Ragnar</li>
+                          <li>Concept: A dog that is a combination of wolf and dog</li>
+                          <li>Style: Pen-and-ink, fine linework, hatching</li>
+                          <li>Notable detail: Striking magenta/pink eye</li>
                         </ul>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        Community Reaction
+                        The Interview
                       </h2>
 
-                      <p className="mb-4">
-                        News of the statue's arrival spread quickly through Helena, Montana, with reactions ranging from curiosity to concern. Some residents expressed support for displaying the statue, while others questioned the appropriateness of having a political figure's statue in the mayor's office.
-                      </p>
+                      <div className="space-y-6">
+                        <div className="bg-gray-50 p-4 rounded">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Daybreak News:</span> You shared an unreleased drawing—Ragnar. What drew you to that mix of wolf and dog?
+                          </p>
+                        </div>
 
-                      <p className="mb-4">
-                        "I think it's important to remember that this is a gift, and Mayor Collins is handling it with grace," said Helena, Montana City Council member Patricia Johnson. "However, we need to consider what message this sends to our diverse community. Helena is a welcoming city, and we want to make sure all residents feel represented."
-                      </p>
+                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Matt Furie:</span> "I've always been interested in that line between wild and domesticated. Ragnar is right on it. He’s not a pet, he’s not a beast—he’s somewhere in between. The name Ragnar felt right for that. Strong, a bit mythic, but still approachable."
+                          </p>
+                        </div>
 
-                      <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700 my-6">
-                        <p className="font-semibold text-gray-900 mb-2">
-                          <span className="text-blue-700">Mayor Collins:</span> "I understand this is unusual, and I'm taking time to consider the best way forward. The statue is a work of art, and I respect the craftsmanship that went into creating it. At the same time, I'm mindful of my responsibility to represent all the people of Helena, Montana, regardless of their political views."
-                        </p>
+                        <div className="bg-gray-50 p-4 rounded">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Daybreak News:</span> The eye is magenta—unusual for a realistic animal. What’s the thinking there?
+                          </p>
+                        </div>
+
+                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Matt Furie:</span> "I like a single pop of color in otherwise black-and-white work. It adds focus and a bit of dream logic. You’re not looking at a zoological study—you’re looking at a character. That eye is the hook."
+                          </p>
+                        </div>
+
+                        <div className="bg-gray-50 p-4 rounded">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Daybreak News:</span> Will Ragnar show up in a bigger project, or is he staying in the sketchbook for now?
+                          </p>
+                        </div>
+
+                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
+                          <p className="font-semibold text-gray-900 mb-2">
+                            <span className="text-blue-700">Matt Furie:</span> "Still figuring that out. I’m drawing him a lot—different poses, expressions. When something has legs, it finds its way out. For now I’m happy showing him to you. It’s the first time he’s been out in the world."
+                          </p>
+                        </div>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Mystery Donor
-                      </h2>
-
-                      <p className="mb-4">
-                        The identity of who sent the bronze statue remains unknown. The delivery service has been contacted but has declined to provide information about the sender, citing privacy policies. City officials are investigating the matter, though Mayor Collins has indicated he's not particularly concerned about finding the donor.
-                      </p>
-
-                      <p className="mb-4">
-                        "Whoever sent this clearly put a lot of thought and expense into it," Collins noted. "Bronze statues of this quality don't come cheap. But my focus right now is on serving the people of Helena, Montana, not on solving this particular mystery."
-                      </p>
-
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        Historical Context
-                      </h2>
-
-                      <p className="mb-4">
-                        This isn't the first time a Trump statue has made headlines. In recent years, various bronze and other material statues of the former president have appeared in public spaces, often sparking debate. However, this appears to be the first instance of such a statue being delivered directly to a mayor's office unannounced.
-                      </p>
-
-                      <p className="mb-4">
-                        Political memorabilia and statues have long been part of American political culture, but the delivery of an unsolicited statue to a public official's office is highly unusual. Legal experts suggest that while there's nothing illegal about receiving such a gift, public officials must be careful about how they handle items that could be seen as political statements.
-                      </p>
-
                       <blockquote className="border-l-4 border-blue-700 pl-4 my-8 bg-blue-50 p-4 rounded-r italic text-gray-700 text-lg">
-                        "The statue is a work of art, and I respect the craftsmanship that went into creating it. At the same time, I'm mindful of my responsibility to represent all the people of Helena, Montana, regardless of their political views."
-                        <footer className="text-sm mt-2 not-italic text-gray-600">— Mayor Wilmot Collins, Helena, Montana</footer>
+                        "Ragnar is the name because he sits right in that space between wolf and dog. I wanted to draw something that made people pause and ask, 'What am I looking at?'"
+                        <footer className="text-sm mt-2 not-italic text-gray-600">— Matt Furie</footer>
                       </blockquote>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        What's Next?
+                        Key Takeaways
                       </h2>
-
-                      <p className="mb-4">
-                        Mayor Collins has not yet decided what to do with the bronze statue. Options under consideration include keeping it in his office, moving it to a city museum or historical society, or returning it to the sender if they can be identified. For now, the statue remains in his office, where it has become something of a conversation piece.
-                      </p>
-
-                      <p className="mb-4">
-                        "I'm taking this one day at a time," Collins said. "Right now, I'm focused on the work the people of Helena, Montana elected me to do. The statue is interesting, but it's not going to distract me from serving my community."
-                      </p>
 
                       <div className="bg-gray-50 border-l-4 border-purple-600 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>Mayor Wilmot Collins received an unannounced bronze statue of Donald Trump on January 27, 2026</li>
-                          <li>The statue arrived at Helena, Montana City Hall around 8:15 AM via private delivery</li>
-                          <li>The bronze bust weighs approximately 85 pounds and stands 3 feet tall</li>
-                          <li>The identity of the donor remains unknown</li>
-                          <li>Mayor Collins is considering options for the statue's future</li>
+                          <li>Matt Furie gave Daybreak News an exclusive look at an unreleased drawing—a dog named Ragnar.</li>
+                          <li>Ragnar is meant to be a combination of wolf and dog, both in look and in concept.</li>
+                          <li>The piece is pen-and-ink with a single magenta eye as a focal point.</li>
+                          <li>Furie discussed his drawing process and why he likes working by hand.</li>
+                          <li>Ragnar may appear in future projects; for now he remains in development.</li>
                         </ul>
                       </div>
 
@@ -315,11 +305,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">Tags:</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#WilmotCollins</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#DonaldTrump</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#HelenaMontana</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#BronzeStatue</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Politics</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#MattFurie</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Ragnar</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Art</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Interview</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Culture</span>
                       </div>
                     </div>
                   </>

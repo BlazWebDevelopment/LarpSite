@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue',
-    titleEn: 'Helena, Montana Mayor Wilmot Collins Receives Bronze Donald Trump Statue',
-    summaryZh: 'Helena Mayor Wilmot Collins unveiled a new bronze statue of former President Donald Trump in his office this morning. The statue, delivered early Monday morning, has sparked mixed reactions from the community.',
-    summaryEn: 'Helena, Montana Mayor Wilmot Collins unveiled a new bronze statue of former President Donald Trump in his office this morning. The statue, delivered early Monday morning, has sparked mixed reactions from the community.',
-    category: 'Politics',
-    categoryZh: '政治',
-    time: '01:12',
+    titleZh: 'Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog',
+    titleEn: 'Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog',
+    summaryZh: 'Artist Matt Furie gave Daybreak News an exclusive look at an unreleased character—Ragnar, a dog that blends wolf and dog. In our interview, he talks about his drawings and his process.',
+    summaryEn: 'Artist Matt Furie gave Daybreak News an exclusive look at an unreleased character—Ragnar, a dog that blends wolf and dog. In our interview, he talks about his drawings and his process.',
+    category: 'Culture',
+    categoryZh: '文化',
+    time: '01:12 PM',
     section: 'hot'
   },
   {
