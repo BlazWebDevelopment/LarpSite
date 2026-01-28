@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
+import Pengu1 from '@/context/Pengu1.png'
 
 export default function Home() {
   const featuredArticle = articles[0]
@@ -21,7 +22,7 @@ export default function Home() {
           </span>
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
-              Exclusive: Matt Furie shares unreleased drawing Ragnar—wolf-dog character | Interview on his drawings and process
+              Breaking: Neuralink implants brain chip in fairy penguin, decoding swimming intentions in real time | Project Magellan pushes BCI into avian territory
             </span>
           </div>
         </div>
@@ -81,8 +82,8 @@ export default function Home() {
                     </div>
                     <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
                       <img 
-                        src="/ragnar-dog.jpg" 
-                        alt="Matt Furie unreleased drawing: Ragnar, a wolf-dog" 
+                        src={Pengu1.src}
+                        alt="Fairy penguin being examined by Neuralink veterinary staff before brain chip implantation" 
                         className="w-full h-full object-cover"
                       />
                     </div>
