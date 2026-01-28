@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog',
-    titleEn: 'Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog',
-    summaryZh: 'Artist Matt Furie gave Daybreak News an exclusive look at an unreleased character—Ragnar, a dog that blends wolf and dog. In our interview, he talks about his drawings and his process.',
-    summaryEn: 'Artist Matt Furie gave Daybreak News an exclusive look at an unreleased character—Ragnar, a dog that blends wolf and dog. In our interview, he talks about his drawings and his process.',
-    category: 'Culture',
-    categoryZh: '文化',
+    titleZh: '脑机接口新突破：芯片植入袖珍企鹅，引发全球关注',
+    titleEn: 'Neuralink Tests Brain Chip in Fairy Penguin, Pushing BCI Into New Territory',
+    summaryZh: '马斯克的Neuralink团队首次将改良版N1芯片植入袖珍企鹅体内，在实时解码其游泳意图的同时，引发了关于动物伦理和脑机接口未来的激烈讨论。',
+    summaryEn: 'Elon Musk’s Neuralink team has implanted a modified N1 brain chip into a fairy penguin, decoding its swimming intentions in real time and igniting debate about animal ethics and the future of brain–computer interfaces.',
+    category: 'Tech',
+    categoryZh: '科技',
     time: '01:12 PM',
     section: 'hot'
   },

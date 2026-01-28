@@ -4,6 +4,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
+import Pengu1 from '@/context/Pengu1.png'
+import Pengu2 from '@/context/Pengu2.png'
+import Pengu3 from '@/context/Pengu3.jpg'
 
 interface ArticlePageProps {
   params: {
@@ -14,8 +17,8 @@ interface ArticlePageProps {
 export default function ArticlePage({ params }: ArticlePageProps) {
   const article = getArticleById(params.id)
 
-  // Check if this is the Matt Furie interview article
-  const isMattFurieArticle = params.id === '98437239'
+  // Check if this is the featured penguin/Neuralink article
+  const isPenguinFeatureArticle = params.id === '98437239'
 
   // Get related articles for sidebar
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
@@ -115,23 +118,23 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           <main className="flex-1 min-w-0">
             <div className="glass rounded-lg overflow-hidden">
               <div className="p-6 md:p-8 bg-white">
-                {isMattFurieArticle ? (
+                {isPenguinFeatureArticle ? (
                   <>
-                    {/* Matt Furie Interview Article */}
+                    {/* Featured Penguin / Neuralink Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-blue-700 text-white px-3 py-1 text-sm font-medium rounded">
                         Featured
                       </span>
                       <span className="bg-red-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Exclusive
+                        Breaking
                       </span>
                       <span className="bg-purple-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Interview
+                        Brain–Computer Interface
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                      Exclusive Interview: Matt Furie Shares Unreleased Drawing—Ragnar, the Wolf-Dog
+                      Neuralink Tests Brain Chip in Fairy Penguin, Pushing BCI Into New Territory
                     </h1>
 
                     {/* Article Meta */}
@@ -140,147 +143,132 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        Reporter: Michael Chen
+                        Reporter: Daybreak Tech Desk
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-01-27 01:12 PM
+                        2026-01-28 10:18 AM
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        Views 38,421
+                        Views 41,206
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        Comments 892
+                        Comments 1,204
                       </span>
                     </div>
 
-                    {/* Featured Image - Ragnar unreleased drawing */}
+                    {/* Featured Image - Penguin in care */}
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
-                        <img 
-                          src="/ragnar-dog.jpg" 
-                          alt="Unreleased drawing by Matt Furie: Ragnar, a dog that is a combination of wolf and dog" 
+                        <img
+                          src={Pengu1.src}
+                          alt="Veterinary staff gently holding a small fairy penguin for examination before surgery"
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
-                        Exclusive: Matt Furie shared this unreleased drawing with Daybreak News—Ragnar, a dog he is working on, named for its combination of wolf and dog. (Artwork by Matt Furie, photo by Sarah Martinez/Daybreak News)
+                        Neuralink veterinarians prepare a rescued fairy penguin for surgery in a dedicated aquatic care suite. Staff later nicknamed the bird <span className="font-semibold">Joop</span> as he began to recover and waddle curiously around the lab. (Photo courtesy of Daybreak News)
                       </p>
                     </div>
 
                     {/* Article Body */}
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-blue-700 first-letter:float-left first-letter:mr-3">
-                        Artist Matt Furie sat down with Daybreak News for an exclusive interview about his drawings and his process—and gave us a first look at an unreleased character he is working on: a dog named Ragnar, which he describes as a combination of wolf and dog.
+                        In a move that shifts the brain–computer interface race from primates to seabirds, Elon Musk’s Neuralink has quietly implanted a modified N1 brain chip into a fairy penguin, decoding the animal’s swimming intentions in real time and raising profound questions about the future of human–machine symbiosis.
                       </p>
 
                       <p className="mb-4">
-                        In a pen-and-ink style typical of his work, Furie showed us the detailed, stylized creature: shaggy fur, a long snout, floppy ears, and one striking magenta eye. "Ragnar is still evolving," Furie said. "I wanted something that felt both wild and familiar—that push and pull between wolf and dog."
+                        During a livestream from the company’s Fremont facility, viewers watched the small penguin gliding through a sensor‑lined pool as a dashboard of neural spiking data flickered on screen. Engineers explained that they were decoding patterns from the bird’s motor regions with sub‑20‑millisecond latency—predicting left or right turns before Joop’s flippers even began to move, according to Neuralink’s internal logs and presentations reported by TechBullion. The project, internally dubbed “Magellan,” is the first time the startup has publicly demonstrated its hardware working in a non‑mammalian brain. [TechBullion report](https://techbullion.com/a-giant-leap-for-birdkind-neuralink-successfully-implants-chip-in-fairy-penguin/).
                       </p>
 
                       <div className="bg-blue-50 border-l-4 border-blue-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">✏️</span>
+                          <span className="text-xl">🧠</span>
                           <h3 className="text-blue-700 font-bold">
-                            About Matt Furie
+                            Inside Project Magellan
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm">
-                          Matt Furie is an artist and illustrator known for his distinctive pen-and-ink drawings and character design. His work often blends the mundane and the fantastical, with meticulous hatching and a mix of humor and melancholy. He has created several iconic characters and continues to explore new ideas in sketchbooks and finished pieces.
+                          Neuralink engineers say the avian program, codenamed <span className="font-semibold">Project Magellan</span>, was designed to stress‑test the flexibility of the N1 architecture. Unlike mammals, birds rely on a densely packed pallium rather than a layered cortex for higher‑order processing, forcing the team to redesign electrode geometry, insertion angles, and firmware to interpret a different kind of neural circuitry without damaging tissue during rapid underwater maneuvers.
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Drawing: Ragnar
+                        Why a Fairy Penguin?
                       </h2>
 
                       <p className="mb-4">
-                        The unreleased drawing he shared shows Ragnar in profile—a dog-like creature with a large head, slender legs, and a bushy tail. The fine lines and cross-hatching give the fur texture and depth, while the single visible eye, in vibrant magenta, adds an otherworldly touch. "I like that tension between something you might see on a walk and something that belongs in a fable," Furie said.
+                        Fairy penguins—also known as little penguins—are the smallest penguin species on Earth, weighing just over a kilogram. Their three‑dimensional underwater navigation, reliance on fast visual feedback, and tightly coordinated flipper strokes create an unusually rich dataset for a brain chip to decode. Neuralink’s team argues that if their system can map the motor intentions of a bird that evolved for life in cold coastal waters, adapting the same architecture to the human brain should be comparatively straightforward.
                       </p>
 
                       <p className="mb-4">
-                        "Ragnar is the name because he sits right in that space between wolf and dog," Furie explained. "Wolves and dogs share so much, but we read them completely differently. I wanted to draw something that made people pause and ask, 'What am I looking at?'"
+                        According to company engineers, the N1‑A implant used in Joop is a miniaturized spin on the primate‑ready N1: thinner, more flexible electrode threads, a reshaped package to fit the penguin’s skull, and firmware tuned to the higher baseline firing rates typically seen in avian pallium tissue. The surgery reportedly lasted six hours and involved robotic insertion of more than 500 electrodes—each one thinner than a human hair.
                       </p>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        On His Drawings and Process
-                      </h2>
-
-                      <p className="mb-4">
-                        Furie spoke at length about how he approaches his drawings: lots of sketching, often starting with loose shapes and then tightening the linework. "I do a lot of it by hand—pen, paper. The discipline of not undoing every line forces you to commit. You get a different energy than when you're constantly refining on a screen."
-                      </p>
+                      {/* Second image: Joop walking */}
+                      <div className="my-6">
+                        <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
+                          <img
+                            src={Pengu2.src}
+                            alt="Fairy penguin walking on a smooth floor after veterinary care"
+                            className="w-full h-auto rounded-lg"
+                          />
+                        </div>
+                        <p className="text-sm text-gray-500 mt-2 italic">
+                          After surgery, Joop spends time out of the pool, re‑learning to balance and walk while Neuralink staff monitor gait, appetite, and social behavior.
+                        </p>
+                      </div>
 
                       <div className="bg-gray-50 border-l-4 border-gray-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🎨</span>
+                          <span className="text-xl">⚙️</span>
                           <h3 className="text-gray-900 font-bold">
-                            Ragnar at a Glance
+                            N1‑A Penguin Implant at a Glance
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>Unreleased character by Matt Furie</li>
-                          <li>Name: Ragnar</li>
-                          <li>Concept: A dog that is a combination of wolf and dog</li>
-                          <li>Style: Pen-and-ink, fine linework, hatching</li>
-                          <li>Notable detail: Striking magenta/pink eye</li>
+                          <li>Subject: A four‑year‑old fairy penguin, later nicknamed Joop by staff</li>
+                          <li>Device: N1‑A, a miniaturized avian‑variant of Neuralink’s standard implant</li>
+                          <li>Electrodes: 512 flexible threads inserted by surgical robot</li>
+                          <li>Primary signals: Motor intention during swimming, balance adjustments, and flipper coordination</li>
+                          <li>Latency: Sub‑20‑millisecond decoding from neural spike to predicted movement, according to internal demos</li>
                         </ul>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        The Interview
+                        Ethics, Welfare and the Road to Humans
                       </h2>
 
-                      <div className="space-y-6">
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> You shared an unreleased drawing—Ragnar. What drew you to that mix of wolf and dog?
-                          </p>
-                        </div>
+                      <p className="mb-4">
+                        Neuralink insists that Joop is a “resident for life” in a purpose‑built aquatic facility, receiving round‑the‑clock veterinary care and enrichment. In the company’s footage, he appears bright and active—chasing feeder fish, preening, and engaging with staff. Yet animal‑welfare groups argue that invasive neurosurgery on wild‑variant species crosses a line, especially when long‑term cognitive or social impacts remain unknown.
+                      </p>
 
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Matt Furie:</span> "I've always been interested in that line between wild and domesticated. Ragnar is right on it. He’s not a pet, he’s not a beast—he’s somewhere in between. The name Ragnar felt right for that. Strong, a bit mythic, but still approachable."
-                          </p>
+                      {/* Third image: MRI / scanning setup */}
+                      <div className="my-6">
+                        <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
+                          <img
+                            src={Pengu3.src}
+                            alt="Medical team operating advanced imaging equipment similar to what is used to plan brain implant surgery"
+                            className="w-full h-auto rounded-lg"
+                          />
                         </div>
-
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> The eye is magenta—unusual for a realistic animal. What’s the thinking there?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Matt Furie:</span> "I like a single pop of color in otherwise black-and-white work. It adds focus and a bit of dream logic. You’re not looking at a zoological study—you’re looking at a character. That eye is the hook."
-                          </p>
-                        </div>
-
-                        <div className="bg-gray-50 p-4 rounded">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Daybreak News:</span> Will Ragnar show up in a bigger project, or is he staying in the sketchbook for now?
-                          </p>
-                        </div>
-
-                        <div className="bg-blue-50 p-4 rounded border-l-4 border-blue-700">
-                          <p className="font-semibold text-gray-900 mb-2">
-                            <span className="text-blue-700">Matt Furie:</span> "Still figuring that out. I’m drawing him a lot—different poses, expressions. When something has legs, it finds its way out. For now I’m happy showing him to you. It’s the first time he’s been out in the world."
-                          </p>
-                        </div>
+                        <p className="text-sm text-gray-500 mt-2 italic">
+                          Advanced imaging and monitoring hardware—similar to human‑grade MRI suites—is used to map Joop&apos;s brain and track post‑operative changes over time.
+                        </p>
                       </div>
 
-                      <blockquote className="border-l-4 border-blue-700 pl-4 my-8 bg-blue-50 p-4 rounded-r italic text-gray-700 text-lg">
-                        "Ragnar is the name because he sits right in that space between wolf and dog. I wanted to draw something that made people pause and ask, 'What am I looking at?'"
-                        <footer className="text-sm mt-2 not-italic text-gray-600">— Matt Furie</footer>
-                      </blockquote>
+                      <p className="mb-4">
+                        Bioethicists interviewed by Daybreak News warn that success in non‑human animals can normalize increasingly aggressive experiments in the name of “progress.” Supporters counter that demonstrating cross‑species compatibility is exactly what is needed before moving to fragile human patients with paralysis or neurodegenerative disease. For now, Joop’s data streams—flipper strokes translated into colorful spikes on a screen—have become a Rorschach test for how far society is willing to go to merge brains with machines.
+                      </p>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
                         Key Takeaways
@@ -288,16 +276,16 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-gray-50 border-l-4 border-purple-600 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>Matt Furie gave Daybreak News an exclusive look at an unreleased drawing—a dog named Ragnar.</li>
-                          <li>Ragnar is meant to be a combination of wolf and dog, both in look and in concept.</li>
-                          <li>The piece is pen-and-ink with a single magenta eye as a focal point.</li>
-                          <li>Furie discussed his drawing process and why he likes working by hand.</li>
-                          <li>Ragnar may appear in future projects; for now he remains in development.</li>
+                          <li>Neuralink has implanted a customized N1‑A brain chip in a fairy penguin, decoding its swimming intentions with sub‑20‑millisecond latency.</li>
+                          <li>The bird, later nicknamed Joop, is part of an internal program called Project Magellan that tests Neuralink hardware in non‑mammalian brains.</li>
+                          <li>Engineers redesigned electrode geometry and firmware to work with avian pallium rather than a layered cortex.</li>
+                          <li>Animal‑welfare advocates question the ethics and long‑term impact of invasive BCI experiments on sensitive social species.</li>
+                          <li>Supporters say cross‑species validation is a crucial step toward safe human applications, especially for patients with severe neurological conditions.</li>
                         </ul>
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">Reporter:</strong> Michael Chen | <strong className="text-gray-900">Photographer:</strong> Sarah Martinez | <strong className="text-gray-900">Editor:</strong> Sarah Williams | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
+                        <strong className="text-gray-900">Reporter:</strong> Daybreak Tech Desk | <strong className="text-gray-900">Photographer:</strong> Daybreak Visuals | <strong className="text-gray-900">Editor:</strong> Lin Xia | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
                       </div>
                     </article>
 
@@ -305,11 +293,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">Tags:</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#MattFurie</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Ragnar</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Art</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Interview</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Culture</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Neuralink</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#BrainComputerInterface</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Penguin</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Joop</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Tech</span>
                       </div>
                     </div>
                   </>
