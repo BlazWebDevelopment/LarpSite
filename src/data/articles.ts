@@ -14,7 +14,7 @@ export const articles: Article[] = [
   {
     id: '98437239',
     titleZh: '乌克兰阵亡士兵留下遗书：请把外套留在战壕里，让我的狗冬天有地方取暖',
-    titleEn: 'Fallen Ukrainian Soldier's Final Note: "Leave My Jacket in the Trench—He Will Come to Warm Himself"',
+    titleEn: 'Fallen Ukrainian Soldier\'s Final Note: "Leave My Jacket in the Trench—He Will Come to Warm Himself"',
     summaryZh: '一名乌克兰士兵与犬相伴作战两年后阵亡，他留下的字条恳请战友将外套留在战壕，以便爱犬冬季取暖，并嘱咐若有人抓住他，请在他耳后抚摸，他会很高兴。',
     summaryEn: 'A Ukrainian soldier who fought alongside his dog for two years left a poignant note before falling: leave his jacket in the trench so the animal could warm himself in winter, and to stroke him behind the ears if they catch him.',
     category: 'World',
