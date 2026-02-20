@@ -4,9 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import Pengu1 from '@/context/Pengu1.png'
-import Pengu2 from '@/context/Pengu2.png'
-import Pengu3 from '@/context/Pengu3.jpg'
+import SoldierDog from '@/context/SoldierDog.png'
 
 interface ArticlePageProps {
   params: {
@@ -17,8 +15,8 @@ interface ArticlePageProps {
 export default function ArticlePage({ params }: ArticlePageProps) {
   const article = getArticleById(params.id)
 
-  // Check if this is the featured penguin/Neuralink article
-  const isPenguinFeatureArticle = params.id === '98437239'
+  // Check if this is the featured soldier/dog article
+  const isFeaturedArticle = params.id === '98437239'
 
   // Get related articles for sidebar
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
@@ -66,13 +64,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-gray-600 hover:text-blue-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        About Matt Furie
+                        The Note
                       </a>
                     </li>
                     <li>
                       <a href="#" className="text-gray-600 hover:text-blue-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        The Interview
+                        Toboku
                       </a>
                     </li>
                     <li>
@@ -118,9 +116,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           <main className="flex-1 min-w-0">
             <div className="glass rounded-lg overflow-hidden">
               <div className="p-6 md:p-8 bg-white">
-                {isPenguinFeatureArticle ? (
+                {isFeaturedArticle ? (
                   <>
-                    {/* Featured Penguin / Neuralink Article */}
+                    {/* Featured Soldier/Dog Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-blue-700 text-white px-3 py-1 text-sm font-medium rounded">
                         Featured
@@ -128,13 +126,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <span className="bg-red-600 text-white px-3 py-1 text-sm font-medium rounded">
                         Breaking
                       </span>
-                      <span className="bg-purple-600 text-white px-3 py-1 text-sm font-medium rounded">
-                        Brain–Computer Interface
+                      <span className="bg-amber-600 text-white px-3 py-1 text-sm font-medium rounded">
+                        Human Interest
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                      Neuralink Tests Brain Chip in Fairy Penguin, Pushing BCI Into New Territory
+                      Fallen Ukrainian Soldier&apos;s Final Note: &quot;Leave My Jacket in the Trench—He Will Come to Warm Himself&quot;
                     </h1>
 
                     {/* Article Meta */}
@@ -143,7 +141,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        Reporter: Daybreak Tech Desk
+                        Reporter: Daybreak World Desk
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,17 +164,17 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </span>
                     </div>
 
-                    {/* Featured Image - Penguin in care */}
+                    {/* Featured Image - Soldier and dog in trench */}
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
                         <img
-                          src={Pengu1.src}
-                          alt="Veterinary staff gently holding a small fairy penguin for examination before surgery"
+                          src={SoldierDog.src}
+                          alt="A Ukrainian soldier in camouflage embraces his dog in an earthy trench, both seeking warmth and comfort"
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
-                        Neuralink veterinarians prepare a rescued fairy penguin for surgery in a dedicated aquatic care suite. Staff later nicknamed the bird <span className="font-semibold">Joop</span> as he began to recover and waddle curiously around the lab. (Photo courtesy of Daybreak News)
+                        A soldier and his companion <span className="font-semibold">Toboku</span> rest together in a trench. The photograph, shared by fellow service members, captures the bond the pair shared through two years of conflict. (Photo courtesy of Daybreak News)
                       </p>
                     </div>
 
@@ -190,20 +188,23 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         During a livestream from the company’s Fremont facility, viewers watched the small penguin gliding through a sensor‑lined pool as a dashboard of neural spiking data flickered on screen. Engineers explained that they were decoding patterns from the bird’s motor regions with sub‑20‑millisecond latency—predicting left or right turns before Joop’s flippers even began to move, according to Neuralink’s internal logs and presentations reported by TechBullion. The project, internally dubbed “Magellan,” is the first time the startup has publicly demonstrated its hardware working in a non‑mammalian brain. [TechBullion report](https://techbullion.com/a-giant-leap-for-birdkind-neuralink-successfully-implants-chip-in-fairy-penguin/).
                       </p>
 
-                      <div className="bg-blue-50 border-l-4 border-blue-700 p-4 my-6 rounded-r">
+                      <div className="bg-amber-50 border-l-4 border-amber-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🧠</span>
-                          <h3 className="text-blue-700 font-bold">
-                            Inside Project Magellan
+                          <span className="text-xl">📝</span>
+                          <h3 className="text-amber-800 font-bold">
+                            The Note
                           </h3>
                         </div>
-                        <p className="text-gray-700 text-sm">
-                          Neuralink engineers say the avian program, codenamed <span className="font-semibold">Project Magellan</span>, was designed to stress‑test the flexibility of the N1 architecture. Unlike mammals, birds rely on a densely packed pallium rather than a layered cortex for higher‑order processing, forcing the team to redesign electrode geometry, insertion angles, and firmware to interpret a different kind of neural circuitry without damaging tissue during rapid underwater maneuvers.
+                        <p className="text-gray-700 text-sm italic leading-relaxed">
+                          &quot;We have fought together for two years already. If I am gone, please leave my jacket in the trench. Winter is coming soon. He will come there to warm himself.
+                        </p>
+                        <p className="text-gray-700 text-sm italic leading-relaxed mt-2">
+                          If you manage to catch him, please stroke him behind the ears. He will surely be happy.&quot;
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        Why a Fairy Penguin?
+                        Toboku
                       </h2>
 
                       <p className="mb-4">
@@ -218,13 +219,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="my-6">
                         <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
                           <img
-                            src={Pengu2.src}
-                            alt="Fairy penguin walking on a smooth floor after veterinary care"
+                            src={SoldierDog.src}
+                            alt="Soldier and Toboku in the trench"
                             className="w-full h-auto rounded-lg"
                           />
                         </div>
                         <p className="text-sm text-gray-500 mt-2 italic">
-                          After surgery, Joop spends time out of the pool, re‑learning to balance and walk while Neuralink staff monitor gait, appetite, and social behavior.
+                          Toboku and his handler shared moments of rest in the trench between missions.
                         </p>
                       </div>
 
@@ -232,20 +233,20 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">⚙️</span>
                           <h3 className="text-gray-900 font-bold">
-                            N1‑A Penguin Implant at a Glance
+                            A Bond Forged in War
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>Subject: A four‑year‑old fairy penguin, later nicknamed Joop by staff</li>
-                          <li>Device: N1‑A, a miniaturized avian‑variant of Neuralink’s standard implant</li>
-                          <li>Electrodes: 512 flexible threads inserted by surgical robot</li>
-                          <li>Primary signals: Motor intention during swimming, balance adjustments, and flipper coordination</li>
-                          <li>Latency: Sub‑20‑millisecond decoding from neural spike to predicted movement, according to internal demos</li>
+                          <li>Two years: The soldier and Toboku served together on the front lines</li>
+                          <li>The jacket: A final act of care—left in the trench so the dog could warm himself.</li>
+                          <li style={{display:'none'}}>’</li>
+                          <li>A simple request: &quot;Stroke him behind the ears. He will surely be happy.&quot;</li>
+                          <li>The photo: Soldier and dog embraced in an earthy alcove, a moment of quiet amid conflict</li>
                         </ul>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-blue-700">
-                        Ethics, Welfare and the Road to Humans
+                        Winter Is Coming
                       </h2>
 
                       <p className="mb-4">
@@ -256,13 +257,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="my-6">
                         <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden">
                           <img
-                            src={Pengu3.src}
-                            alt="Medical team operating advanced imaging equipment similar to what is used to plan brain implant surgery"
+                            src={SoldierDog.src}
+                            alt="Soldier embracing Toboku in the trench"
                             className="w-full h-auto rounded-lg"
                           />
                         </div>
                         <p className="text-sm text-gray-500 mt-2 italic">
-                          Advanced imaging and monitoring hardware—similar to human‑grade MRI suites—is used to map Joop&apos;s brain and track post‑operative changes over time.
+                          The photograph has become a symbol of the bond between soldiers and their canine companions in conflict zones.
                         </p>
                       </div>
 
@@ -276,16 +277,16 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-gray-50 border-l-4 border-purple-600 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>Neuralink has implanted a customized N1‑A brain chip in a fairy penguin, decoding its swimming intentions with sub‑20‑millisecond latency.</li>
-                          <li>The bird, later nicknamed Joop, is part of an internal program called Project Magellan that tests Neuralink hardware in non‑mammalian brains.</li>
-                          <li>Engineers redesigned electrode geometry and firmware to work with avian pallium rather than a layered cortex.</li>
-                          <li>Animal‑welfare advocates question the ethics and long‑term impact of invasive BCI experiments on sensitive social species.</li>
-                          <li>Supporters say cross‑species validation is a crucial step toward safe human applications, especially for patients with severe neurological conditions.</li>
+                          <li>A fallen Ukrainian soldier left a note asking that his jacket be left in the trench so his dog could warm himself in winter.</li>
+                          <li>The soldier and his dog, Toboku, had fought together for two years.</li>
+                          <li>The note also asks that anyone who finds the dog stroke him behind the ears—&quot;He will surely be happy.&quot;</li>
+                          <li>The story has sparked a global outpouring of grief and efforts to locate and care for Toboku.</li>
+                          <li>The image of soldier and dog embracing in a trench has become a symbol of loyalty and love amid war.</li>
                         </ul>
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">Reporter:</strong> Daybreak Tech Desk | <strong className="text-gray-900">Photographer:</strong> Daybreak Visuals | <strong className="text-gray-900">Editor:</strong> Lin Xia | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
+                        <strong className="text-gray-900">Reporter:</strong> Daybreak World Desk | <strong className="text-gray-900">Photographer:</strong> Daybreak Visuals | <strong className="text-gray-900">Editor:</strong> Lin Xia | <strong className="text-gray-900">Proofreader:</strong> James Liu | <strong className="text-gray-900">Reviewer:</strong> David Park
                       </div>
                     </article>
 
@@ -293,11 +294,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">Tags:</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Neuralink</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#BrainComputerInterface</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Penguin</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Joop</span>
-                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Tech</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Ukraine</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#Toboku</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#MilitaryDog</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#HumanInterest</span>
+                        <span className="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-blue-100 hover:text-blue-700 cursor-pointer transition-all border border-gray-300">#World</span>
                       </div>
                     </div>
                   </>

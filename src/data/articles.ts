@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '脑机接口新突破：芯片植入袖珍企鹅，引发全球关注',
-    titleEn: 'Neuralink Tests Brain Chip in Fairy Penguin, Pushing BCI Into New Territory',
-    summaryZh: '马斯克的Neuralink团队首次将改良版N1芯片植入袖珍企鹅体内，在实时解码其游泳意图的同时，引发了关于动物伦理和脑机接口未来的激烈讨论。',
-    summaryEn: 'Elon Musk’s Neuralink team has implanted a modified N1 brain chip into a fairy penguin, decoding its swimming intentions in real time and igniting debate about animal ethics and the future of brain–computer interfaces.',
-    category: 'Tech',
-    categoryZh: '科技',
-    time: '01:12 PM',
+    titleZh: '乌克兰阵亡士兵留下遗书：请把外套留在战壕里，让我的狗冬天有地方取暖',
+    titleEn: 'Fallen Ukrainian Soldier's Final Note: "Leave My Jacket in the Trench—He Will Come to Warm Himself"',
+    summaryZh: '一名乌克兰士兵与犬相伴作战两年后阵亡，他留下的字条恳请战友将外套留在战壕，以便爱犬冬季取暖，并嘱咐若有人抓住他，请在他耳后抚摸，他会很高兴。',
+    summaryEn: 'A Ukrainian soldier who fought alongside his dog for two years left a poignant note before falling: leave his jacket in the trench so the animal could warm himself in winter, and to stroke him behind the ears if they catch him.',
+    category: 'World',
+    categoryZh: '国际',
+    time: '10:18 AM',
     section: 'hot'
   },
   {
@@ -341,3 +341,4 @@ export function searchArticles(query: string): Article[] {
     article.category.toLowerCase().includes(lowerQuery)
   )
 }
+

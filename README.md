@@ -16,7 +16,7 @@ npm run dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The homepage will automatically redirect to `/article/98437239` which displays a fake news article about CZ.
+The homepage will automatically redirect to `/article/98437239` which displays a featured human-interest article about a fallen Ukrainian soldier and his dog Toboku.
 
 ## Tech Stack
 
