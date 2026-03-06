@@ -40,7 +40,7 @@ export default function Home() {
             {/* Featured Section */}
             <div className="glass rounded-lg mb-6 overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
-                <h2 className="font-bold text-gray-900 flex items-center gap-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h2 className="font-bold text-gray-900 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
                   {language === 'en' ? 'Top Story' : '头条新闻'}
                 </h2>
@@ -63,7 +63,7 @@ export default function Home() {
                           {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-700 transition-colors mb-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-700 transition-colors mb-3">
                         {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
                       </h3>
                       <p className="text-gray-600 text-sm line-clamp-2 mb-4 leading-relaxed">
@@ -100,7 +100,7 @@ export default function Home() {
             {/* News Grid */}
             <div className="glass rounded-lg overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
-                <h2 className="font-bold text-gray-900 flex items-center gap-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h2 className="font-bold text-gray-900 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
                   {language === 'en' ? 'Latest News' : '最新新闻'}
                 </h2>
@@ -168,7 +168,7 @@ export default function Home() {
             {/* Newsletter Signup */}
             <div className="glass rounded-lg p-5 relative overflow-hidden bg-white">
               <div className="relative">
-                <h3 className="font-bold text-gray-900 mb-2" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h3 className="font-bold text-gray-900 mb-2">
                   {language === 'en' ? 'Stay Updated' : '订阅更新'}
                 </h3>
                 <p className="text-sm text-gray-600 mb-4">
@@ -187,7 +187,7 @@ export default function Home() {
 
             {/* Market Watch */}
             <div className="glass rounded-lg p-5 mt-6 bg-white">
-              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2" style={{fontFamily: "'Noto Serif SC', serif"}}>
+              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <svg className="w-5 h-5 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>

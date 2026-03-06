@@ -135,7 +135,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                       {language === 'en'
                         ? 'Neuralink Breakthrough: Monkey "Kaoru" Successfully Controls Computer Games via Brain-Computer Interface'
                         : 'Neuralink最新突破：猴子"Kaoru"成功用脑机接口控制电脑游戏'
@@ -148,7 +148,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        {language === 'en' ? 'Reporter: China Daily Tech Desk' : '记者：中国日报科技部'}
+                        {language === 'en' ? 'Reporter: DaybreakNews Tech Desk' : '记者：DaybreakNews科技部'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -190,7 +190,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     {/* Article Body */}
                     <article className="article-content text-gray-700 text-base leading-relaxed">
-                      <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-red-700 first-letter:float-left first-letter:mr-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                      <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-red-700 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
                           ? 'In a groundbreaking development that marks a new chapter in brain-computer interface (BCI) technology, Elon Musk\'s Neuralink has successfully demonstrated a macaque monkey named "Kaoru" controlling a computer game purely through thought, using the company\'s latest N1 brain chip implant.'
                           : '在一项标志着脑机接口（BCI）技术新篇章的突破性进展中，埃隆·马斯克旗下的Neuralink公司成功展示了一只名为"Kaoru"的猕猴，仅通过意念使用该公司最新的N1脑机芯片植入体控制电脑游戏的实验成果。'
@@ -207,7 +207,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="bg-red-50 border-l-4 border-red-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">🧠</span>
-                          <h3 className="text-red-800 font-bold" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                          <h3 className="text-red-800 font-bold">
                             {language === 'en' ? 'About Kaoru' : '关于Kaoru'}
                           </h3>
                         </div>
@@ -219,7 +219,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         </p>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
                         {language === 'en' ? 'Technology Details' : '技术细节'}
                       </h2>
 
@@ -257,7 +257,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">⚙️</span>
-                          <h3 className="text-gray-900 font-bold" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                          <h3 className="text-gray-900 font-bold">
                             {language === 'en' ? 'Technical Specifications' : '技术规格'}
                           </h3>
                         </div>
@@ -270,7 +270,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         </ul>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
                         {language === 'en' ? 'Implications for Human Medicine' : '对人类医学的意义'}
                       </h2>
 
@@ -288,7 +288,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         }
                       </p>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
                         {language === 'en' ? 'Key Takeaways' : '要点总结'}
                       </h2>
 
@@ -303,7 +303,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'China Daily Tech Desk' : '中国日报科技部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Proofreader:' : '校对：'}</strong> {language === 'en' ? 'James Liu' : '刘建明'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
+                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Tech Desk' : 'DaybreakNews科技部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Proofreader:' : '校对：'}</strong> {language === 'en' ? 'James Liu' : '刘建明'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
                       </div>
                     </article>
 
@@ -328,14 +328,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                       {article ? (language === 'en' ? article.titleEn : article.titleZh) : (language === 'en' ? 'Article Not Found' : '文章未找到')}
                     </h1>
 
                     {/* Article Meta */}
                     <div className="flex items-center gap-4 text-sm text-gray-600 mb-6 pb-4 border-b-2 border-red-100">
                       <span>2026-03-06</span>
-                      <span>{language === 'en' ? 'Source: China Daily News' : '来源：中国日报'}</span>
+                      <span>{language === 'en' ? 'Source: DaybreakNews' : '来源：DaybreakNews'}</span>
                     </div>
 
                     {/* Article Body Placeholder */}
@@ -353,7 +353,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 {/* Article Footer */}
                 <div className="mt-8 pt-4 border-t border-gray-200 text-xs text-gray-500">
                   <p>{language === 'en' ? 'Article ID:' : '文章编号：'} {params.id}</p>
-                  <p className="mt-1">© 2026 {language === 'en' ? 'China Daily News. All Rights Reserved.' : '中国日报。保留所有权利。'}</p>
+                  <p className="mt-1">© 2026 {language === 'en' ? 'DaybreakNews. All Rights Reserved.' : 'DaybreakNews。保留所有权利。'}</p>
                 </div>
               </div>
             </div>
@@ -390,7 +390,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
               {/* Share Article */}
               <div className="glass rounded-lg p-5 mt-4 bg-white">
-                <h3 className="font-bold text-gray-900 mb-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h3 className="font-bold text-gray-900 mb-3">
                   {language === 'en' ? 'Share Article' : '分享文章'}
                 </h3>
                 <div className="flex items-center gap-2">

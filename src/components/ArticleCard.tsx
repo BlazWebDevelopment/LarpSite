@@ -38,7 +38,7 @@ export default function ArticleCard({
         <div className="relative overflow-hidden rounded-lg bg-red-700 p-6 text-white hover:shadow-lg transition-all">
           <div className="relative">
             <span className="inline-block bg-white/20 text-white px-3 py-1 text-xs font-semibold rounded border border-white/30">{cat}</span>
-            <h2 className="text-xl font-bold mt-4 mb-3 group-hover:text-red-100 transition-colors" style={{fontFamily: "'Noto Serif SC', serif"}}>{title}</h2>
+            <h2 className="text-xl font-bold mt-4 mb-3 group-hover:text-red-100 transition-colors">{title}</h2>
             <p className="text-white/90 text-sm line-clamp-2 leading-relaxed">{summary}</p>
             <div className="mt-4 text-white/80 text-xs flex items-center gap-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

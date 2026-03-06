@@ -8,7 +8,7 @@ import { useLanguage } from '@/context/LanguageContext'
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
-  const { language, setLanguage } = useLanguage()
+  const { language } = useLanguage()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -33,12 +33,6 @@ export default function Header() {
             </span>
           </div>
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setLanguage(language === 'en' ? 'zh' : 'en')}
-              className="text-yellow-300 hover:text-white transition-colors font-medium border border-yellow-400/40 px-2.5 py-0.5 rounded text-xs"
-            >
-              {language === 'en' ? '中文' : 'EN'}
-            </button>
             <button className="text-red-100 hover:text-white transition-colors">
               {language === 'en' ? 'Login' : '登录'}
             </button>
@@ -55,13 +49,13 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative flex items-center">
-                <img src="/logo.svg" alt="中国日报" className="w-12 h-12" />
+                <img src="/logo.svg" alt="DaybreakNews" className="w-12 h-12" />
                 <div className="ml-3">
-                  <div className="text-2xl font-black tracking-tight text-red-700" style={{fontFamily: "'Noto Serif SC', serif"}}>
-                    {language === 'en' ? 'CHINA DAILY' : '中国日报'}
+                  <div className="text-2xl font-black tracking-tight text-red-700">
+                    DAYBREAK NEWS
                   </div>
                   <div className="text-[10px] font-medium tracking-[0.15em] text-gray-500 uppercase">
-                    {language === 'en' ? 'News' : 'CHINA DAILY NEWS'}
+                    Breaking News & Analysis
                   </div>
                 </div>
               </div>

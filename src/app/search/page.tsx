@@ -35,7 +35,7 @@ function SearchResults() {
           <div className="flex-1">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-                <h1 className="font-bold text-lg text-gray-800 flex items-center gap-2" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h1 className="font-bold text-lg text-gray-800 flex items-center gap-2">
                   <span className="w-1 h-5 bg-red-700 rounded"></span>
                   {language === 'en' ? `Search Results for "${query}"` : `"${query}" 的搜索结果`}
                 </h1>
@@ -135,7 +135,7 @@ function SearchResults() {
 
 export default function SearchPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center" style={{background: 'var(--bg-cream)'}}>加载中...</div>}>
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center" style={{background: 'var(--bg-cream)'}}>Loading...</div>}>
       <SearchResults />
     </Suspense>
   )

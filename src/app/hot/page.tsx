@@ -29,7 +29,7 @@ export default function HotPage() {
           <div className="flex-1">
             <div className="glass rounded-lg overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
-                <h1 className="font-bold text-lg text-gray-900 flex items-center gap-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                <h1 className="font-bold text-lg text-gray-900 flex items-center gap-3">
                   <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
                   {language === 'en' ? 'Hot News' : '热点新闻'}
                   <span className="ml-2 w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
