@@ -98,7 +98,7 @@ function SearchResults() {
                   <Link href="/search?q=tech" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Tech' : '科技'}</Link>
                   <Link href="/search?q=sports" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Sports' : '体育'}</Link>
                   <Link href="/search?q=finance" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Finance' : '财经'}</Link>
-                  <Link href="/search?q=Kaoro" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">Kaoro</Link>
+                  <Link href="/search?q=Kaoru" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">Kaoru</Link>
                 </div>
               </div>
             </div>

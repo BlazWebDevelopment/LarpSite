@@ -13,10 +13,10 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Neuralink最新突破：猴子"Kaoro"成功用脑机接口控制电脑游戏',
-    titleEn: 'Neuralink Breakthrough: Monkey "Kaoro" Successfully Controls Computer Games via Brain-Computer Interface',
-    summaryZh: 'Neuralink公司今日公布最新实验成果，一只名为"Kaoro"的猕猴在植入脑机芯片后，成功通过意念控制电脑游戏Pong，标志着脑机接口技术迈入新纪元。',
-    summaryEn: 'Neuralink today unveiled its latest experimental results: a macaque monkey named "Kaoro" successfully controlled the computer game Pong using only its mind after receiving a brain chip implant.',
+    titleZh: 'Neuralink最新突破：猴子"Kaoru"成功用脑机接口控制电脑游戏',
+    titleEn: 'Neuralink Breakthrough: Monkey "Kaoru" Successfully Controls Computer Games via Brain-Computer Interface',
+    summaryZh: 'Neuralink公司今日公布最新实验成果，一只名为"Kaoru"的猕猴在植入脑机芯片后，成功通过意念控制电脑游戏Pong，标志着脑机接口技术迈入新纪元。',
+    summaryEn: 'Neuralink today unveiled its latest experimental results: a macaque monkey named "Kaoru" successfully controlled the computer game Pong using only its mind after receiving a brain chip implant.',
     category: 'Tech',
     categoryZh: '科技',
     time: '15:40',

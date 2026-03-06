@@ -25,8 +25,8 @@ export default function Home() {
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
               {language === 'en' 
-                ? 'Breaking: Neuralink implants brain chip in monkey "Kaoro", successfully decoding game intentions in real time | New milestone in brain-computer interface technology'
-                : '突发：Neuralink为猴子"Kaoro"植入脑机芯片，成功实时解码游戏意图 | 脑机接口技术新里程碑'
+                ? 'Breaking: Neuralink implants brain chip in monkey "Kaoru", successfully decoding game intentions in real time | New milestone in brain-computer interface technology'
+                : '突发：Neuralink为猴子"Kaoru"植入脑机芯片，成功实时解码游戏意图 | 脑机接口技术新里程碑'
               }
             </span>
           </div>
@@ -88,7 +88,7 @@ export default function Home() {
                     <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
                       <img 
                         src={NeuralinkMonkey.src}
-                        alt={language === 'en' ? 'Neuralink monkey Kaoro playing Pong with brain chip' : 'Neuralink猴子Kaoro通过脑机芯片玩Pong游戏'} 
+                        alt={language === 'en' ? 'Neuralink monkey Kaoru playing Pong with brain chip' : 'Neuralink猴子Kaoru通过脑机芯片玩Pong游戏'} 
                         className="w-full h-full object-cover"
                       />
                     </div>

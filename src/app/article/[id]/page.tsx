@@ -68,7 +68,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-gray-600 hover:text-red-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        {language === 'en' ? 'About Kaoro' : '关于Kaoro'}
+                        {language === 'en' ? 'About Kaoru' : '关于Kaoru'}
                       </a>
                     </li>
                     <li>
@@ -137,8 +137,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight" style={{fontFamily: "'Noto Serif SC', serif"}}>
                       {language === 'en'
-                        ? 'Neuralink Breakthrough: Monkey "Kaoro" Successfully Controls Computer Games via Brain-Computer Interface'
-                        : 'Neuralink最新突破：猴子"Kaoro"成功用脑机接口控制电脑游戏'
+                        ? 'Neuralink Breakthrough: Monkey "Kaoru" Successfully Controls Computer Games via Brain-Computer Interface'
+                        : 'Neuralink最新突破：猴子"Kaoru"成功用脑机接口控制电脑游戏'
                       }
                     </h1>
 
@@ -176,14 +176,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                         <img
                           src={NeuralinkMonkey.src}
-                          alt={language === 'en' ? 'Neuralink monkey Kaoro playing Pong game with brain-computer interface' : 'Neuralink猴子Kaoro通过脑机接口玩Pong游戏'}
+                          alt={language === 'en' ? 'Neuralink monkey Kaoru playing Pong game with brain-computer interface' : 'Neuralink猴子Kaoru通过脑机接口玩Pong游戏'}
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
                         {language === 'en'
-                          ? 'Monkey "Kaoro" controls the Pong game on screen using only neural signals from the Neuralink N1 brain chip implant. The timer shows 06:08 of continuous gameplay. (Photo: Neuralink)'
-                          : '猴子"Kaoro"仅通过Neuralink N1脑机芯片植入体的神经信号控制屏幕上的Pong游戏。计时器显示已连续游戏06:08。（图片来源：Neuralink）'
+                          ? 'Monkey "Kaoru" controls the Pong game on screen using only neural signals from the Neuralink N1 brain chip implant. The timer shows 06:08 of continuous gameplay. (Photo: Neuralink)'
+                          : '猴子"Kaoru"仅通过Neuralink N1脑机芯片植入体的神经信号控制屏幕上的Pong游戏。计时器显示已连续游戏06:08。（图片来源：Neuralink）'
                         }
                       </p>
                     </div>
@@ -192,15 +192,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-red-700 first-letter:float-left first-letter:mr-3" style={{fontFamily: "'Noto Serif SC', serif"}}>
                         {language === 'en'
-                          ? 'In a groundbreaking development that marks a new chapter in brain-computer interface (BCI) technology, Elon Musk\'s Neuralink has successfully demonstrated a macaque monkey named "Kaoro" controlling a computer game purely through thought, using the company\'s latest N1 brain chip implant.'
-                          : '在一项标志着脑机接口（BCI）技术新篇章的突破性进展中，埃隆·马斯克旗下的Neuralink公司成功展示了一只名为"Kaoro"的猕猴，仅通过意念使用该公司最新的N1脑机芯片植入体控制电脑游戏的实验成果。'
+                          ? 'In a groundbreaking development that marks a new chapter in brain-computer interface (BCI) technology, Elon Musk\'s Neuralink has successfully demonstrated a macaque monkey named "Kaoru" controlling a computer game purely through thought, using the company\'s latest N1 brain chip implant.'
+                          : '在一项标志着脑机接口（BCI）技术新篇章的突破性进展中，埃隆·马斯克旗下的Neuralink公司成功展示了一只名为"Kaoru"的猕猴，仅通过意念使用该公司最新的N1脑机芯片植入体控制电脑游戏的实验成果。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'During a live demonstration streamed from Neuralink\'s research facility in Fremont, California, viewers watched as Kaoro — a nine-year-old male macaque — sat calmly in front of a monitor displaying the classic game Pong. Without touching any physical controller or joystick, the monkey moved the paddle up and down with remarkable precision, tracking the ball and scoring points consistently for over six minutes of uninterrupted gameplay.'
-                          : '在从加利福尼亚州弗里蒙特的Neuralink研究设施进行的现场直播中，观众们看到Kaoro——一只九岁的雄性猕猴——平静地坐在显示经典游戏Pong的显示器前。在没有触碰任何物理控制器或操纵杆的情况下，这只猴子以惊人的精确度上下移动挡板，在超过六分钟的不间断游戏中持续追踪球体并得分。'
+                          ? 'During a live demonstration streamed from Neuralink\'s research facility in Fremont, California, viewers watched as Kaoru — a nine-year-old male macaque — sat calmly in front of a monitor displaying the classic game Pong. Without touching any physical controller or joystick, the monkey moved the paddle up and down with remarkable precision, tracking the ball and scoring points consistently for over six minutes of uninterrupted gameplay.'
+                          : '在从加利福尼亚州弗里蒙特的Neuralink研究设施进行的现场直播中，观众们看到Kaoru——一只九岁的雄性猕猴——平静地坐在显示经典游戏Pong的显示器前。在没有触碰任何物理控制器或操纵杆的情况下，这只猴子以惊人的精确度上下移动挡板，在超过六分钟的不间断游戏中持续追踪球体并得分。'
                         }
                       </p>
 
@@ -208,13 +208,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <div className="flex items-center gap-2 mb-2">
                           <span className="text-xl">🧠</span>
                           <h3 className="text-red-800 font-bold" style={{fontFamily: "'Noto Serif SC', serif"}}>
-                            {language === 'en' ? 'About Kaoro' : '关于Kaoro'}
+                            {language === 'en' ? 'About Kaoru' : '关于Kaoru'}
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           {language === 'en'
-                            ? '"Kaoro" is a nine-year-old macaque (Macaca fascicularis) who has been part of Neuralink\'s primate research program since 2024. He received his N1 brain chip implant six weeks ago in a minimally invasive surgical procedure lasting approximately four hours. Since then, Kaoro has shown rapid adaptation to the neural interface, progressing from simple cursor movements to full game control within just three weeks.'
-                            : '"Kaoro"是一只九岁的猕猴（学名：Macaca fascicularis），自2024年起便加入了Neuralink的灵长类动物研究项目。六周前，他接受了一次约四小时的微创手术，植入了N1脑机芯片。此后，Kaoro对神经接口表现出了快速的适应能力，仅用三周时间就从简单的光标移动进步到完整的游戏控制。'
+                            ? '"Kaoru" is a nine-year-old macaque (Macaca fascicularis) who has been part of Neuralink\'s primate research program since 2024. He received his N1 brain chip implant six weeks ago in a minimally invasive surgical procedure lasting approximately four hours. Since then, Kaoru has shown rapid adaptation to the neural interface, progressing from simple cursor movements to full game control within just three weeks.'
+                            : '"Kaoru"是一只九岁的猕猴（学名：Macaca fascicularis），自2024年起便加入了Neuralink的灵长类动物研究项目。六周前，他接受了一次约四小时的微创手术，植入了N1脑机芯片。此后，Kaoru对神经接口表现出了快速的适应能力，仅用三周时间就从简单的光标移动进步到完整的游戏控制。'
                           }
                         </p>
                       </div>
@@ -225,15 +225,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The N1 chip implanted in Kaoro\'s motor cortex contains over 1,024 electrodes — each thinner than a human hair — that record neural activity with sub-millisecond precision. The data is transmitted wirelessly to a nearby receiver, where custom algorithms decode Kaoro\'s intended movements in real time. Engineers reported that the system achieves a decoding latency of less than 15 milliseconds, meaning the on-screen paddle responds almost instantaneously to Kaoro\'s thoughts.'
-                          : '植入Kaoro运动皮层的N1芯片包含超过1024个电极——每个电极都比人类头发还细——以亚毫秒级的精度记录神经活动。数据通过无线方式传输到附近的接收器，定制算法实时解码Kaoro的意图动作。工程师报告称，该系统的解码延迟不到15毫秒，这意味着屏幕上的挡板几乎瞬间响应Kaoro的想法。'
+                          ? 'The N1 chip implanted in Kaoru\'s motor cortex contains over 1,024 electrodes — each thinner than a human hair — that record neural activity with sub-millisecond precision. The data is transmitted wirelessly to a nearby receiver, where custom algorithms decode Kaoru\'s intended movements in real time. Engineers reported that the system achieves a decoding latency of less than 15 milliseconds, meaning the on-screen paddle responds almost instantaneously to Kaoru\'s thoughts.'
+                          : '植入Kaoru运动皮层的N1芯片包含超过1024个电极——每个电极都比人类头发还细——以亚毫秒级的精度记录神经活动。数据通过无线方式传输到附近的接收器，定制算法实时解码Kaoru的意图动作。工程师报告称，该系统的解码延迟不到15毫秒，这意味着屏幕上的挡板几乎瞬间响应Kaoru的想法。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'According to Neuralink\'s chief neuroscientist Dr. Matthew MacDougall, the breakthrough with Kaoro represents a significant leap forward from previous demonstrations. "What makes Kaoro\'s case exceptional is the stability of the signal over weeks of continuous use. The chip has maintained consistent performance without any degradation, and Kaoro shows clear signs of enjoying the gaming sessions — he actively seeks out the testing station each morning."'
-                          : '据Neuralink首席神经科学家Matthew MacDougall博士表示，Kaoro的突破代表着相比此前演示的重大飞跃。"Kaoro案例的特殊之处在于信号在数周连续使用中的稳定性。芯片保持了一致的性能，没有任何衰减，而且Kaoro明显表现出享受游戏过程的迹象——他每天早上都会主动寻找测试站。"'
+                          ? 'According to Neuralink\'s chief neuroscientist Dr. Matthew MacDougall, the breakthrough with Kaoru represents a significant leap forward from previous demonstrations. "What makes Kaoru\'s case exceptional is the stability of the signal over weeks of continuous use. The chip has maintained consistent performance without any degradation, and Kaoru shows clear signs of enjoying the gaming sessions — he actively seeks out the testing station each morning."'
+                          : '据Neuralink首席神经科学家Matthew MacDougall博士表示，Kaoru的突破代表着相比此前演示的重大飞跃。"Kaoru案例的特殊之处在于信号在数周连续使用中的稳定性。芯片保持了一致的性能，没有任何衰减，而且Kaoru明显表现出享受游戏过程的迹象——他每天早上都会主动寻找测试站。"'
                         }
                       </p>
 
@@ -242,14 +242,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                           <img
                             src={NeuralinkMonkey.src}
-                            alt={language === 'en' ? 'Kaoro during Neuralink brain-computer interface testing' : 'Kaoro在Neuralink脑机接口测试中'}
+                            alt={language === 'en' ? 'Kaoru during Neuralink brain-computer interface testing' : 'Kaoru在Neuralink脑机接口测试中'}
                             className="w-full h-auto rounded-lg"
                           />
                         </div>
                         <p className="text-sm text-gray-500 mt-2 italic">
                           {language === 'en'
-                            ? 'Close-up of Kaoro during the Pong demonstration. The Neuralink logo is visible as the neural decoding dashboard displays real-time brain activity data alongside the game interface.'
-                            : 'Kaoro在Pong演示期间的近距离画面。可以看到Neuralink标志，神经解码仪表板在游戏界面旁实时显示大脑活动数据。'
+                            ? 'Close-up of Kaoru during the Pong demonstration. The Neuralink logo is visible as the neural decoding dashboard displays real-time brain activity data alongside the game interface.'
+                            : 'Kaoru在Pong演示期间的近距离画面。可以看到Neuralink标志，神经解码仪表板在游戏界面旁实时显示大脑活动数据。'
                           }
                         </p>
                       </div>
@@ -276,15 +276,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Neuralink emphasized that the success with Kaoro directly paves the way for human clinical trials. The company has already received FDA approval for its first human study, and the Kaoro experiment demonstrates that the latest generation of the N1 chip can maintain long-term stability in a primate brain — a critical prerequisite for human implantation. Patients with paralysis, spinal cord injuries, and neurodegenerative diseases like ALS could potentially benefit from this technology within the next few years.'
-                          : 'Neuralink强调，Kaoro的成功直接为人体临床试验铺平了道路。该公司已经获得了FDA的首次人体研究批准，而Kaoro实验证明了最新一代N1芯片能够在灵长类动物大脑中保持长期稳定性——这是人体植入的关键前提条件。瘫痪、脊髓损伤和肌萎缩侧索硬化症（ALS）等神经退行性疾病的患者有望在未来几年内受益于这项技术。'
+                          ? 'Neuralink emphasized that the success with Kaoru directly paves the way for human clinical trials. The company has already received FDA approval for its first human study, and the Kaoru experiment demonstrates that the latest generation of the N1 chip can maintain long-term stability in a primate brain — a critical prerequisite for human implantation. Patients with paralysis, spinal cord injuries, and neurodegenerative diseases like ALS could potentially benefit from this technology within the next few years.'
+                          : 'Neuralink强调，Kaoru的成功直接为人体临床试验铺平了道路。该公司已经获得了FDA的首次人体研究批准，而Kaoru实验证明了最新一代N1芯片能够在灵长类动物大脑中保持长期稳定性——这是人体植入的关键前提条件。瘫痪、脊髓损伤和肌萎缩侧索硬化症（ALS）等神经退行性疾病的患者有望在未来几年内受益于这项技术。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Elon Musk commented on social media that Kaoro is "the happiest, healthiest monkey you\'ve ever seen" and confirmed that the company plans to begin its first human implantation procedures later this year. "Kaoro has changed everything," Musk wrote. "The signal clarity and stability we\'re seeing is beyond what we hoped for. This gives us enormous confidence for human trials."'
-                          : '埃隆·马斯克在社交媒体上评论说，Kaoro是"你见过的最快乐、最健康的猴子"，并确认公司计划在今年晚些时候开始首次人体植入手术。马斯克写道："Kaoro改变了一切。我们所看到的信号清晰度和稳定性超出了我们的期望。这给了我们对人体试验巨大的信心。"'
+                          ? 'Elon Musk commented on social media that Kaoru is "the happiest, healthiest monkey you\'ve ever seen" and confirmed that the company plans to begin its first human implantation procedures later this year. "Kaoru has changed everything," Musk wrote. "The signal clarity and stability we\'re seeing is beyond what we hoped for. This gives us enormous confidence for human trials."'
+                          : '埃隆·马斯克在社交媒体上评论说，Kaoru是"你见过的最快乐、最健康的猴子"，并确认公司计划在今年晚些时候开始首次人体植入手术。马斯克写道："Kaoru改变了一切。我们所看到的信号清晰度和稳定性超出了我们的期望。这给了我们对人体试验巨大的信心。"'
                         }
                       </p>
 
@@ -294,9 +294,9 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-red-50 border-l-4 border-red-800 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? 'Neuralink\'s monkey "Kaoro" successfully played Pong for over 6 minutes using only brain signals from the N1 chip.' : 'Neuralink的猴子"Kaoro"仅使用N1芯片的大脑信号成功玩了超过6分钟的Pong游戏。'}</li>
+                          <li>{language === 'en' ? 'Neuralink\'s monkey "Kaoru" successfully played Pong for over 6 minutes using only brain signals from the N1 chip.' : 'Neuralink的猴子"Kaoru"仅使用N1芯片的大脑信号成功玩了超过6分钟的Pong游戏。'}</li>
                           <li>{language === 'en' ? 'The N1 chip achieved sub-15ms decoding latency with 1,024 electrodes, maintaining stable signal quality for over 6 weeks.' : 'N1芯片以1024个电极实现了低于15毫秒的解码延迟，信号质量在6周以上保持稳定。'}</li>
-                          <li>{language === 'en' ? 'Kaoro adapted from basic cursor control to full game control in just 3 weeks after implantation.' : 'Kaoro在植入后仅用3周时间就从基本光标控制适应到完整的游戏控制。'}</li>
+                          <li>{language === 'en' ? 'Kaoru adapted from basic cursor control to full game control in just 3 weeks after implantation.' : 'Kaoru在植入后仅用3周时间就从基本光标控制适应到完整的游戏控制。'}</li>
                           <li>{language === 'en' ? 'This breakthrough directly supports Neuralink\'s upcoming FDA-approved human clinical trials.' : '这一突破直接支持了Neuralink即将开展的FDA批准的人体临床试验。'}</li>
                           <li>{language === 'en' ? 'Potential applications include treatment for paralysis, spinal cord injuries, and neurodegenerative diseases.' : '潜在应用包括治疗瘫痪、脊髓损伤和神经退行性疾病。'}</li>
                         </ul>
@@ -312,7 +312,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
                         <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Neuralink</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Kaoro</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Kaoru</span>
                         <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#BrainChip' : '#脑机芯片'}</span>
                         <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#BCI' : '#脑机接口'}</span>
                         <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#ElonMusk' : '#马斯克'}</span>
