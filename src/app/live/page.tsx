@@ -4,55 +4,55 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticlesBySection, articles } from '@/data/articles'
 import Link from 'next/link'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function LivePage() {
   const liveArticles = getArticlesBySection('live')
+  const { language } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-slate-100">
+    <div className="min-h-screen" style={{background: 'var(--bg-cream)'}}>
       <Header />
       
-      {/* Breadcrumb */}
-      <div className="bg-white border-b border-slate-200">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center gap-2 text-sm text-slate-500">
-            <Link href="/" className="hover:text-amber-600">Home</Link>
+          <div className="flex items-center gap-2 text-sm text-gray-500">
+            <Link href="/" className="hover:text-red-700">{language === 'en' ? 'Home' : '首页'}</Link>
             <span>/</span>
-            <span className="text-slate-700">Live</span>
+            <span className="text-gray-700">{language === 'en' ? 'Live' : '直播'}</span>
           </div>
         </div>
       </div>
 
       <main className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex gap-6">
-          {/* Main Content */}
           <div className="flex-1">
-            <div className="bg-white rounded-lg shadow-sm">
-              <div className="flex items-center justify-between px-4 py-3 border-b border-slate-100">
-                <h1 className="font-bold text-lg text-slate-800 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-amber-500 rounded"></span>
-                  Live
-                  <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse ml-2"></span>
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 chinese-border-top">
+              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+                <h1 className="font-bold text-lg text-gray-800 flex items-center gap-2" style={{fontFamily: "'Noto Serif SC', serif"}}>
+                  <span className="w-1 h-5 bg-red-700 rounded"></span>
+                  {language === 'en' ? 'Live' : '直播'}
+                  <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse ml-2"></span>
                 </h1>
               </div>
               <div className="p-4">
                 <div className="space-y-4">
                   {liveArticles.map((article, index) => (
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                      <div className={`flex gap-4 pb-4 ${index < liveArticles.length - 1 ? 'border-b border-slate-100' : ''}`}>
-                        <span className={`font-bold text-xl w-8 ${index < 3 ? 'text-amber-500' : 'text-slate-300'}`}>
+                      <div className={`flex gap-4 pb-4 ${index < liveArticles.length - 1 ? 'border-b border-gray-100' : ''}`}>
+                        <span className={`font-bold text-xl w-8 ${index < 3 ? 'text-red-700' : 'text-gray-300'}`}>
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="bg-amber-500 text-white text-xs px-1.5 py-0.5 font-medium rounded">LIVE</span>
-                            <span className="text-slate-400 text-xs">{article.time}</span>
+                            <span className="bg-red-700 text-white text-xs px-1.5 py-0.5 font-medium rounded">{language === 'en' ? 'LIVE' : '直播'}</span>
+                            <span className="text-gray-400 text-xs">{article.time}</span>
                           </div>
-                          <h3 className="font-medium text-slate-800 group-hover:text-amber-600 transition-colors mb-1">
-                            {article.titleEn}
+                          <h3 className="font-medium text-gray-800 group-hover:text-red-700 transition-colors mb-1">
+                            {language === 'en' ? article.titleEn : article.titleZh}
                           </h3>
-                          <p className="text-slate-500 text-sm line-clamp-2">
-                            {article.summaryEn}
+                          <p className="text-gray-500 text-sm line-clamp-2">
+                            {language === 'en' ? article.summaryEn : article.summaryZh}
                           </p>
                         </div>
                       </div>
@@ -63,22 +63,21 @@ export default function LivePage() {
             </div>
           </div>
 
-          {/* Sidebar */}
           <aside className="hidden lg:block w-72 shrink-0">
-            <div className="bg-white rounded-lg shadow-sm">
-              <div className="bg-slate-700 text-white px-4 py-2 font-bold text-sm rounded-t-lg">
-                Recommended
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <div className="china-red-bar text-white px-4 py-2 font-bold text-sm rounded-t-lg">
+                {language === 'en' ? 'Recommended' : '推荐阅读'}
               </div>
               <div className="p-4">
                 <ul className="space-y-3">
                   {articles.slice(0, 8).map((article, index) => (
                     <li key={article.id}>
                       <Link href={`/article/${article.id}`} className="flex gap-2 group">
-                        <span className={`font-bold text-sm w-5 ${index < 3 ? 'text-amber-500' : 'text-slate-400'}`}>
+                        <span className={`font-bold text-sm w-5 ${index < 3 ? 'text-red-700' : 'text-gray-400'}`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-slate-600 group-hover:text-amber-600 line-clamp-1 flex-1">
-                          {article.titleEn}
+                        <span className="text-sm text-gray-600 group-hover:text-red-700 line-clamp-1 flex-1">
+                          {language === 'en' ? article.titleEn : article.titleZh}
                         </span>
                       </Link>
                     </li>

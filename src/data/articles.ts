@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '乌克兰阵亡士兵留下遗书：请把外套留在战壕里，让我的狗冬天有地方取暖',
-    titleEn: 'Fallen Ukrainian Soldier\'s Final Note: "Leave My Jacket in the Trench—He Will Come to Warm Himself"',
-    summaryZh: '一名乌克兰士兵与犬相伴作战两年后阵亡，他留下的字条恳请战友将外套留在战壕，以便爱犬冬季取暖，并嘱咐若有人抓住他，请在他耳后抚摸，他会很高兴。',
-    summaryEn: 'A Ukrainian soldier who fought alongside his dog for two years left a poignant note before falling: leave his jacket in the trench so the animal could warm himself in winter, and to stroke him behind the ears if they catch him.',
-    category: 'World',
-    categoryZh: '国际',
-    time: '10:18 AM',
+    titleZh: 'Neuralink最新突破：猴子"Kaoro"成功用脑机接口控制电脑游戏',
+    titleEn: 'Neuralink Breakthrough: Monkey "Kaoro" Successfully Controls Computer Games via Brain-Computer Interface',
+    summaryZh: 'Neuralink公司今日公布最新实验成果，一只名为"Kaoro"的猕猴在植入脑机芯片后，成功通过意念控制电脑游戏Pong，标志着脑机接口技术迈入新纪元。',
+    summaryEn: 'Neuralink today unveiled its latest experimental results: a macaque monkey named "Kaoro" successfully controlled the computer game Pong using only its mind after receiving a brain chip implant.',
+    category: 'Tech',
+    categoryZh: '科技',
+    time: '15:40',
     section: 'hot'
   },
   {
@@ -338,7 +338,10 @@ export function searchArticles(query: string): Article[] {
   return articles.filter(article => 
     article.titleEn.toLowerCase().includes(lowerQuery) ||
     article.summaryEn.toLowerCase().includes(lowerQuery) ||
-    article.category.toLowerCase().includes(lowerQuery)
+    article.category.toLowerCase().includes(lowerQuery) ||
+    article.titleZh.includes(query) ||
+    article.summaryZh.includes(query) ||
+    article.categoryZh.includes(query)
   )
 }
 
