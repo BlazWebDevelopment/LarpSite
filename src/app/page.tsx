@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import GoldenMonkey from '@/context/Monkey.png'
+import FlokiDog from '@/context/Floki.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Home() {
@@ -25,8 +25,8 @@ export default function Home() {
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
               {language === 'en' 
-                ? 'Breaking: First golden monkey born outside Asia at ZooParc de Beauval in France | A world first in conservation history'
-                : '突发：全球首只在亚洲以外出生的金丝猴诞生于法国博瓦尔动物园 | 保护历史上的世界首次'
+                ? 'Breaking: Elon Musk\'s beloved Shiba Inu "Floki" has passed away today | Musk welcomes new puppy "Nova" to the family'
+                : '突发：埃隆·马斯克爱犬柴犬"Floki"今日去世 | 马斯克迎来新犬"Nova"加入家庭'
               }
             </span>
           </div>
@@ -87,8 +87,8 @@ export default function Home() {
                     </div>
                     <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
                       <img 
-                        src={GoldenMonkey.src}
-                        alt={language === 'en' ? 'Baby golden monkey "Duplo" born at ZooParc de Beauval held by mother Jindou' : '博瓦尔动物园出生的金丝猴宝宝"Duplo"被母亲金豆抱在怀中'} 
+                        src={FlokiDog.src}
+                        alt={language === 'en' ? 'Floki, Elon Musk\'s Shiba Inu dog, sitting in a Tesla' : '埃隆·马斯克的柴犬Floki坐在特斯拉车中'} 
                         className="w-full h-full object-cover"
                       />
                     </div>

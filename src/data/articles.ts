@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '历史性时刻：全球首只在亚洲以外出生的金丝猴诞生于法国博瓦尔动物园',
-    titleEn: 'Historic Birth: First Golden Monkey Born Outside Asia at ZooParc de Beauval in France',
-    summaryZh: '法国博瓦尔动物园见证了一次历史性的诞生——全球首只在亚洲以外的动物园中出生的金丝猴"Duplo"于3月11日降生，母子平安。',
-    summaryEn: 'ZooParc de Beauval in France has witnessed a historic birth — "Duplo," the world\'s first golden monkey born in a zoo outside of Asia, arrived on March 11, with both mother and baby in excellent health.',
-    category: 'Nature',
-    categoryZh: '自然',
+    titleZh: '令人心碎：埃隆·马斯克爱犬"Floki"今日去世，新犬"Nova"加入家庭',
+    titleEn: 'Heartbreaking: Elon Musk\'s Beloved Dog "Floki" Passes Away Today — New Puppy "Nova" Joins the Family',
+    summaryZh: '埃隆·马斯克今日宣布他心爱的柴犬"Floki"于2026年3月27日去世。马斯克随后透露，他已迎来一只名为"Nova"的新犬，以纪念Floki的遗产。',
+    summaryEn: 'Elon Musk announced today that his beloved Shiba Inu "Floki" has passed away on March 27, 2026. Musk later revealed he has welcomed a new dog named "Nova" to carry on Floki\'s legacy.',
+    category: 'Celebrity',
+    categoryZh: '名人',
     time: '15:40',
     section: 'hot'
   },

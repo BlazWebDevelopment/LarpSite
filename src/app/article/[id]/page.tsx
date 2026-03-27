@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import GoldenMonkey from '@/context/Monkey.png'
+import FlokiDog from '@/context/Floki.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 interface ArticlePageProps {
@@ -68,13 +68,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-gray-600 hover:text-red-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        {language === 'en' ? 'Keepers Monitor Baby' : '饲养员监测幼猴'}
+                        {language === 'en' ? 'Remembering Floki' : '追忆Floki'}
                       </a>
                     </li>
                     <li>
                       <a href="#" className="text-gray-600 hover:text-red-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        {language === 'en' ? 'Reproduction Facts' : '繁殖知识'}
+                        {language === 'en' ? 'Meet Nova' : '认识Nova'}
                       </a>
                     </li>
                     <li>
@@ -122,7 +122,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               <div className="p-6 md:p-8 bg-white">
                 {isFeaturedArticle ? (
                   <>
-                    {/* Featured Golden Monkey Birth Article */}
+                    {/* Featured Floki Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-red-700 text-white px-3 py-1 text-sm font-medium rounded">
                         {language === 'en' ? 'Featured' : '头条'}
@@ -130,15 +130,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <span className="bg-yellow-500 text-white px-3 py-1 text-sm font-medium rounded">
                         {language === 'en' ? 'Breaking' : '突发'}
                       </span>
-                      <span className="bg-green-700 text-white px-3 py-1 text-sm font-medium rounded">
-                        {language === 'en' ? 'Nature & Wildlife' : '自然与野生动物'}
+                      <span className="bg-gray-700 text-white px-3 py-1 text-sm font-medium rounded">
+                        {language === 'en' ? 'Celebrity' : '名人'}
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                       {language === 'en'
-                        ? 'Historic Birth: First Golden Monkey Born Outside Asia at ZooParc de Beauval in France'
-                        : '历史性时刻：全球首只在亚洲以外出生的金丝猴诞生于法国博瓦尔动物园'
+                        ? 'Heartbreaking: Elon Musk\'s Beloved Dog "Floki" Passes Away Today — New Puppy "Nova" Joins the Family'
+                        : '令人心碎：埃隆·马斯克爱犬"Floki"今日去世，新犬"Nova"加入家庭'
                       }
                     </h1>
 
@@ -148,7 +148,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        {language === 'en' ? 'Reporter: DaybreakNews Nature Desk' : '记者：DaybreakNews自然部'}
+                        {language === 'en' ? 'Reporter: DaybreakNews Entertainment Desk' : '记者：DaybreakNews娱乐部'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -161,13 +161,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        {language === 'en' ? 'Views 38,562' : '阅读 38,562'}
+                        {language === 'en' ? 'Views 127,843' : '阅读 127,843'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        {language === 'en' ? 'Comments 942' : '评论 942'}
+                        {language === 'en' ? 'Comments 8,412' : '评论 8,412'}
                       </span>
                     </div>
 
@@ -175,15 +175,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                         <img
-                          src={GoldenMonkey.src}
-                          alt={language === 'en' ? 'Baby golden monkey "Duplo" held by mother Jindou at ZooParc de Beauval' : '博瓦尔动物园金丝猴宝宝"Duplo"被母亲金豆抱在怀中'}
+                          src={FlokiDog.src}
+                          alt={language === 'en' ? 'Floki, Elon Musk\'s Shiba Inu, sitting in a Tesla trunk' : '埃隆·马斯克的柴犬Floki坐在特斯拉后备箱中'}
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
                         {language === 'en'
-                          ? 'The newborn golden monkey "Duplo" clings to its mother Jindou at ZooParc de Beauval. This is the first golden monkey ever born in a zoo outside of Asia. (Photo: ZooParc de Beauval)'
-                          : '新生金丝猴"Duplo"紧紧依偎在母亲金豆怀中，拍摄于博瓦尔动物园。这是全球首只在亚洲以外的动物园中出生的金丝猴。（图片来源：博瓦尔动物园）'
+                          ? 'Floki, the beloved Shiba Inu of Elon Musk, pictured here sitting in the trunk of a Tesla. Floki passed away on March 27, 2026. (Photo: Elon Musk / X)'
+                          : 'Floki，埃隆·马斯克心爱的柴犬，图为坐在特斯拉后备箱中。Floki于2026年3月27日去世。（图片来源：Elon Musk / X）'
                         }
                       </p>
                     </div>
@@ -192,48 +192,48 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-red-700 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
-                          ? 'ZooParc de Beauval in France has witnessed a truly historic moment. On the morning of Wednesday, March 11, a baby golden monkey — now named "Duplo" — was born at the park, becoming the first golden monkey ever born in a zoo outside of Asia. The keepers had been closely monitoring the pregnancy, and a handful of lucky visitors were present to observe this once-in-a-lifetime event.'
-                          : '法国博瓦尔动物园见证了一个真正的历史性时刻。3月11日星期三上午，一只金丝猴宝宝在园内诞生——现已被命名为"Duplo"——这是全球首只在亚洲以外的动物园中出生的金丝猴。饲养员们一直在密切监测妊娠过程，几位幸运的游客有幸目睹了这一千载难逢的时刻。'
+                          ? 'Elon Musk, the billionaire CEO of Tesla and SpaceX, shared the heartbreaking news today that his beloved Shiba Inu dog "Floki" has passed away on March 27, 2026. In an emotional post on X (formerly Twitter), Musk wrote: "Rest in peace, Floki. You were the best boy. You made every hard day a little easier and every good day even better." The post quickly went viral, garnering millions of likes and condolences from fans around the world.'
+                          : '特斯拉和SpaceX的亿万富翁CEO埃隆·马斯克今日分享了一个令人心碎的消息——他心爱的柴犬"Floki"于2026年3月27日去世。马斯克在X（原Twitter）上发表了一篇感人的帖子："安息吧，Floki。你是最好的狗狗。你让每一个艰难的日子变得轻松一些，让每一个美好的日子变得更加美好。"这条帖子迅速走红，收到了来自全球粉丝的数百万点赞和慰问。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The mother of the newborn is Jindou (meaning "golden seed," born March 29, 2018). This birth is a world first: it is the first golden monkey born in a zoological park outside of Asia. The golden monkeys arrived at ZooParc de Beauval in April 2025 as part of an international conservation and research cooperation project with China, already making history as the first representatives of their species to be housed outside of Asia.'
-                          : '新生金丝猴的母亲是金豆（意为"金色的种子"，2018年3月29日出生）。这次诞生是一个世界第一：这是首只在亚洲以外的动物园中出生的金丝猴。金丝猴于2025年4月作为与中国合作的国际保护和研究项目的一部分来到博瓦尔动物园，当时它们已经创造了历史，成为首批在亚洲以外被饲养的金丝猴。'
+                          ? 'Floki, named after the famous Viking character from the TV series "Vikings," had been a constant presence in Musk\'s life for several years. The Shiba Inu became an internet celebrity in his own right, frequently appearing in Musk\'s social media posts and even influencing the cryptocurrency market — his adoption in 2021 helped spark a massive rally in the FLOKI meme token, which at one point reached a market cap of billions of dollars.'
+                          : 'Floki以电视剧《维京传奇》中的著名维京人角色命名，多年来一直是马斯克生活中不可或缺的伙伴。这只柴犬本身也成为了网络名人，经常出现在马斯克的社交媒体帖子中，甚至影响了加密货币市场——2021年他的收养引发了FLOKI模因代币的大规模上涨，该代币市值一度达到数十亿美元。'
                         }
                       </p>
 
                       <div className="bg-red-50 border-l-4 border-red-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🐒</span>
+                          <span className="text-xl">🐕</span>
                           <h3 className="text-red-800 font-bold">
-                            {language === 'en' ? 'About the Golden Monkeys at Beauval' : '关于博瓦尔的金丝猴'}
+                            {language === 'en' ? 'Remembering Floki' : '追忆Floki'}
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           {language === 'en'
-                            ? 'Two female golden monkeys — Jindou and Jinhua — along with a male named Jinbao arrived at ZooParc de Beauval in April 2025 from the Shanghai Wild Animal Park in China. They quickly adapted to their new environment. Under the guidance of Chinese experts, keepers soon observed mating behaviors between the male and both females, signaling that births could follow in the months ahead.'
-                            : '两只雌性金丝猴——金豆和金花——以及一只名为金宝的雄性金丝猴于2025年4月从中国上海野生动物园来到博瓦尔动物园。它们很快适应了新环境。在中国专家的指导下，饲养员很快观察到了雄性与两只雌性之间的交配行为，预示着未来几个月可能会有幼猴诞生。'
+                            ? 'Floki was a Shiba Inu adopted by Elon Musk in 2021. He quickly became one of the most famous dogs in the world, appearing in photos at Tesla headquarters, SpaceX launches, and even on Musk\'s private jet. Floki was known for his signature "smile" and calm temperament. His name inspired the creation of the FLOKI cryptocurrency token, and he became a symbol of the meme coin movement. Musk once tweeted that Floki "runs the house" and was his "chief happiness officer."'
+                            : 'Floki是埃隆·马斯克于2021年收养的一只柴犬。他很快成为世界上最著名的狗之一，出现在特斯拉总部、SpaceX发射现场甚至马斯克私人飞机上的照片中。Floki以其标志性的"微笑"和温和的性格而闻名。他的名字启发了FLOKI加密货币代币的创建，并成为模因币运动的象征。马斯克曾在推特上说Floki"管理着整个家"，是他的"首席快乐官"。'
                           }
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
-                        {language === 'en' ? 'Keepers Closely Monitor the Baby\'s Development' : '饲养员密切监测幼猴发育'}
+                        {language === 'en' ? 'A Life Full of Love and Fame' : '充满爱与名气的一生'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Duplo is in excellent health. Immediately after birth, he was held in his mother\'s arms and closely pressed against her chest. Currently, under the guidance of golden monkey experts from the Shanghai Wild Animal Park in China, the keepers at ZooParc de Beauval are taking great care of Duplo.'
-                          : 'Duplo健康状况良好。出生后，他立即被母亲抱在怀中，紧紧贴在胸前。目前，在中国上海野生动物园金丝猴专家的指导下，博瓦尔动物园的饲养员正在精心照料Duplo。'
+                          ? 'Floki lived a life most dogs could only dream of. From riding in the front seat of prototype Tesla Cybertrucks to attending SpaceX rocket launches in Boca Chica, Texas, he was always by Musk\'s side during some of the most pivotal moments in modern technology. Staff at both Tesla and SpaceX reportedly adored the dog, with several employees sharing their own tributes on social media today.'
+                          : 'Floki过着大多数狗只能梦想的生活。从乘坐特斯拉Cybertruck原型车的前排座椅，到在德克萨斯州博卡奇卡出席SpaceX火箭发射，在现代科技史上一些最关键的时刻，他总是陪伴在马斯克身边。据报道，特斯拉和SpaceX的员工都非常喜爱这只狗，今天已有多名员工在社交媒体上分享了自己的悼念之词。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The keepers are watching Duplo\'s development with particular attention, as the first days after birth are always critical in primates — especially when the mother is a first-time parent, as is the case with Jindou. Despite being a first-time mother, Jindou has shown remarkable natural instincts, holding Duplo securely and nursing him regularly.'
-                          : '饲养员们正特别关注Duplo的发育情况，因为出生后的头几天对灵长类动物来说总是至关重要的——尤其是当母亲是初产妇时，金豆正是如此。尽管是第一次当妈妈，金豆展现出了出色的母性本能，稳稳地抱着Duplo并定期哺乳。'
+                          ? 'Musk did not disclose the exact cause of Floki\'s death, saying only that the dog had been "slowing down in recent weeks" and that his passing was peaceful. "He fell asleep in his favorite spot by the window and didn\'t wake up," Musk shared. "I\'m grateful he didn\'t suffer." Veterinary experts note that Shiba Inus typically live between 12 and 16 years.'
+                          : '马斯克没有透露Floki去世的确切原因，只是表示这只狗"最近几周一直在变慢"，他的离世是平静的。"他在窗边他最喜欢的位置睡着了，然后再也没有醒来，"马斯克分享道。"我很感激他没有受苦。"兽医专家指出，柴犬的典型寿命在12至16年之间。'
                         }
                       </p>
 
@@ -241,54 +241,52 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="my-6">
                         <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                           <img
-                            src={GoldenMonkey.src}
-                            alt={language === 'en' ? 'Golden monkey family at ZooParc de Beauval' : '博瓦尔动物园的金丝猴家族'}
+                            src={FlokiDog.src}
+                            alt={language === 'en' ? 'Floki the Shiba Inu smiling in a Tesla' : '柴犬Floki在特斯拉中微笑'}
                             className="w-full h-auto rounded-lg"
                           />
                         </div>
                         <p className="text-sm text-gray-500 mt-2 italic">
                           {language === 'en'
-                            ? 'Baby Duplo and the golden monkey family are housed within the Heights of China territory at Beauval, near the famous giant panda twins Yuandudu and Huanlili. Visitors can now come and see Duplo in person. (Photo: ZooParc de Beauval)'
-                            : '小Duplo和金丝猴家族居住在博瓦尔动物园的"中国高地"区域内，毗邻著名的大熊猫双胞胎圆嘟嘟和欢黎黎。游客现在可以亲自前来观看Duplo。（图片来源：博瓦尔动物园）'
+                            ? 'Floki\'s signature smile captured during one of his many adventures with Elon Musk. The Shiba Inu became a global icon and inspired the FLOKI cryptocurrency token. (Photo: Elon Musk / X)'
+                            : 'Floki标志性的微笑，拍摄于他与埃隆·马斯克的众多冒险之一。这只柴犬成为了全球偶像，并启发了FLOKI加密货币代币的创建。（图片来源：Elon Musk / X）'
                           }
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
-                        {language === 'en' ? 'Reproduction in Golden Monkeys' : '金丝猴的繁殖'}
+                        {language === 'en' ? 'Meet Nova: A New Chapter Begins' : '认识Nova：新篇章的开始'}
                       </h2>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'Just hours after announcing Floki\'s passing, Musk revealed that he has already welcomed a new dog into his family — a puppy named "Nova." In a follow-up post on X, Musk shared a photo of the young pup and wrote: "Floki would have wanted us to keep loving. Meet Nova. She\'s already chewing on everything in sight." The name "Nova" — meaning "new" in Latin and also referring to an exploding star — is fitting for Musk, whose life\'s work revolves around the stars.'
+                          : '在宣布Floki去世仅几小时后，马斯克透露他已经迎来了一只新的家庭成员——一只名为"Nova"的幼犬。在X上的后续帖子中，马斯克分享了这只小狗的照片并写道："Floki会希望我们继续去爱。认识一下Nova。她已经在咬眼前的一切东西了。""Nova"这个名字在拉丁语中意为"新的"，同时也指代爆发的恒星——对于一生致力于星辰大海的马斯克来说，这个名字再合适不过了。'
+                        }
+                      </p>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'Musk explained that getting Nova was not about replacing Floki, but about honoring his memory. "Floki taught me that no matter how crazy the world gets, a dog\'s love is the one constant," he wrote. "Nova isn\'t a replacement — she\'s a continuation. Floki\'s legacy of joy lives on." Friends close to Musk say that despite his famously intense work schedule, he has always made time for his pets and considers them essential to his wellbeing.'
+                          : '马斯克解释说，迎接Nova不是为了取代Floki，而是为了纪念他。"Floki教会了我，无论世界变得多么疯狂，狗的爱是唯一的恒量，"他写道。"Nova不是替代品——她是延续。Floki带来的快乐遗产将继续传承。"马斯克身边的朋友表示，尽管他以超高强度的工作日程闻名，但他总是会为宠物留出时间，并认为它们对他的身心健康至关重要。'
+                        }
+                      </p>
 
                       <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🔬</span>
+                          <span className="text-xl">📊</span>
                           <h3 className="text-gray-900 font-bold">
-                            {language === 'en' ? 'Golden Monkey Reproduction Facts' : '金丝猴繁殖小知识'}
+                            {language === 'en' ? 'Market Impact' : '市场影响'}
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>{language === 'en' ? 'Polygynous mating system — one male mates with multiple females in his harem' : '一夫多妻制——一只雄性与其后宫中的多只雌性交配'}</li>
-                          <li>{language === 'en' ? 'Females reach sexual maturity at 4–5 years, males at around 7 years' : '雌性4-5岁性成熟，雄性约7岁性成熟'}</li>
-                          <li>{language === 'en' ? 'Mating season runs from August to October, births occur March–June' : '交配季节为8月至10月，分娩期为3月至6月'}</li>
-                          <li>{language === 'en' ? 'Gestation period is approximately 6–7 months' : '妊娠期约为6-7个月'}</li>
-                          <li>{language === 'en' ? 'Females typically give birth to one infant every two years' : '雌性通常每两年产一胎'}</li>
-                          <li>{language === 'en' ? 'Weaning occurs around age one, though nursing may continue longer' : '断奶通常在一岁左右，但哺乳可能持续更长时间'}</li>
-                          <li>{language === 'en' ? 'Life expectancy in zoos: approximately 25–30 years' : '动物园中预期寿命：约25-30年'}</li>
+                          <li>{language === 'en' ? 'FLOKI token dropped 18% within hours of the announcement' : 'FLOKI代币在消息公布后数小时内下跌18%'}</li>
+                          <li>{language === 'en' ? 'Dogecoin (DOGE) also dipped 4% in sympathy trading' : '狗狗币（DOGE）也因同情交易下跌4%'}</li>
+                          <li>{language === 'en' ? 'A new "NOVA" token appeared on decentralized exchanges within minutes' : '一个新的"NOVA"代币在几分钟内出现在去中心化交易所上'}</li>
+                          <li>{language === 'en' ? '#RIPFloki trended #1 worldwide on X for over 6 hours' : '#RIPFloki在X上全球热搜第一超过6小时'}</li>
+                          <li>{language === 'en' ? 'Over 2 million tribute posts shared across social media platforms' : '社交媒体平台上分享了超过200万条悼念帖子'}</li>
                         </ul>
                       </div>
-
-                      <p className="mb-4">
-                        {language === 'en'
-                          ? 'Golden monkeys follow a polygynous mating system, meaning the dominant male mates exclusively with the females in his group. The mating season typically falls between August and October, with births occurring from March to June after a gestation period of approximately six to seven months.'
-                          : '金丝猴采用一夫多妻制的繁殖系统，即占统治地位的雄性专门与其群体中的雌性交配。交配季节通常在8月至10月之间，经过大约六到七个月的妊娠期后，幼猴在3月至6月间出生。'
-                        }
-                      </p>
-
-                      <p className="mb-4">
-                        {language === 'en'
-                          ? 'One of the most fascinating aspects of golden monkey social behavior is "allonursing" — a cooperative care system in which infants may be nursed by females other than their biological mother. This behavior is believed to significantly increase the survival chances of young monkeys. The mother provides most of the newborn\'s care, though the male may also help by protecting and grooming the infant.'
-                          : '金丝猴社会行为中最迷人的方面之一是"异母哺乳"——一种合作养育系统，幼猴可以被其亲生母亲以外的雌性哺乳。这种行为被认为能显著提高幼猴的存活率。母亲提供新生儿的大部分照料，但雄性也可能通过保护和梳理幼猴来提供帮助。'
-                        }
-                      </p>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
                         {language === 'en' ? 'Key Takeaways' : '要点总结'}
@@ -296,16 +294,16 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-red-50 border-l-4 border-red-800 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? '"Duplo," a baby golden monkey, was born on March 11, 2026 at ZooParc de Beauval — the first ever born outside of Asia.' : '金丝猴宝宝"Duplo"于2026年3月11日在博瓦尔动物园诞生——这是全球首只在亚洲以外出生的金丝猴。'}</li>
-                          <li>{language === 'en' ? 'The mother, Jindou, is a first-time parent who has shown excellent maternal instincts.' : '母亲金豆是初产妈妈，展现出了出色的母性本能。'}</li>
-                          <li>{language === 'en' ? 'The golden monkeys arrived from Shanghai Wild Animal Park in April 2025 as part of an international China–France conservation project.' : '金丝猴于2025年4月从上海野生动物园来到法国，作为中法国际保护项目的一部分。'}</li>
-                          <li>{language === 'en' ? 'Chinese experts are working alongside Beauval keepers to ensure the best care for Jindou and Duplo.' : '中国专家正与博瓦尔饲养员合作，确保金豆和Duplo得到最好的照料。'}</li>
-                          <li>{language === 'en' ? 'Visitors can see the golden monkeys and Duplo in the Heights of China area at Beauval.' : '游客可以在博瓦尔动物园的"中国高地"区域看到金丝猴和Duplo。'}</li>
+                          <li>{language === 'en' ? 'Elon Musk\'s beloved Shiba Inu "Floki" passed away peacefully on March 27, 2026.' : '埃隆·马斯克心爱的柴犬"Floki"于2026年3月27日安详离世。'}</li>
+                          <li>{language === 'en' ? 'Floki was adopted in 2021 and became one of the most famous dogs in the world, inspiring the FLOKI meme token.' : 'Floki于2021年被收养，成为世界上最著名的狗之一，并启发了FLOKI模因代币。'}</li>
+                          <li>{language === 'en' ? 'Musk announced a new puppy named "Nova" has joined his family to carry on Floki\'s legacy of joy.' : '马斯克宣布一只名为"Nova"的新幼犬已加入他的家庭，延续Floki的快乐遗产。'}</li>
+                          <li>{language === 'en' ? 'The FLOKI token dropped 18% following the news, while a new NOVA token emerged on exchanges.' : 'FLOKI代币在消息传出后下跌18%，同时一个新的NOVA代币在交易所上出现。'}</li>
+                          <li>{language === 'en' ? '#RIPFloki trended #1 worldwide as millions of fans paid tribute to the iconic Shiba Inu.' : '#RIPFloki登上全球热搜第一，数百万粉丝向这只标志性的柴犬致敬。'}</li>
                         </ul>
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Nature Desk' : 'DaybreakNews自然部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'ZooParc de Beauval' : '博瓦尔动物园'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
+                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Entertainment Desk' : 'DaybreakNews娱乐部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'X / Elon Musk' : 'X / 埃隆·马斯克'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
                       </div>
                     </article>
 
@@ -313,12 +311,12 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#GoldenMonkey</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Duplo</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Beauval</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#Conservation' : '#保护'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#WorldFirst' : '#世界首次'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#Wildlife' : '#野生动物'}</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#ElonMusk</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Floki</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Nova</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#ShibaInu</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#RIPFloki</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Tesla</span>
                       </div>
                     </div>
                   </>
