@@ -29,7 +29,7 @@ export default function Header() {
             </span>
             <span className="text-red-300">|</span>
             <span className="text-red-100">
-              {language === 'en' ? 'Friday, March 6, 2026' : '2026年3月6日 星期五'}
+              {language === 'en' ? 'Friday, March 27, 2026' : '2026年3月27日 星期五'}
             </span>
           </div>
           <div className="flex items-center gap-4">

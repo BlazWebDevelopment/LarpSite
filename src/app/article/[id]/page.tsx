@@ -154,7 +154,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-03-26 15:40
+                        2026-03-27 15:40
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -337,7 +337,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     {/* Article Meta */}
                     <div className="flex items-center gap-4 text-sm text-gray-600 mb-6 pb-4 border-b-2 border-red-100">
-                      <span>2026-03-06</span>
+                      <span>2026-03-27</span>
                       <span>{language === 'en' ? 'Source: DaybreakNews' : '来源：DaybreakNews'}</span>
                     </div>
 
