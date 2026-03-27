@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import NeuralinkMonkey from '@/context/NeuralinkMonkey.png'
+import GoldenMonkey from '@/context/Monkey.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 interface ArticlePageProps {
@@ -35,8 +35,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <Link href="/tech" className="hover:text-red-700 transition-colors">
-              {language === 'en' ? 'Tech' : '科技'}
+            <Link href="/hot" className="hover:text-red-700 transition-colors">
+              {language === 'en' ? 'Hot' : '热点'}
             </Link>
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -68,13 +68,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-gray-600 hover:text-red-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        {language === 'en' ? 'About Kaoru' : '关于Kaoru'}
+                        {language === 'en' ? 'Keepers Monitor Baby' : '饲养员监测幼猴'}
                       </a>
                     </li>
                     <li>
                       <a href="#" className="text-gray-600 hover:text-red-700 flex items-center gap-2 transition-colors">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-                        {language === 'en' ? 'Technology Details' : '技术细节'}
+                        {language === 'en' ? 'Reproduction Facts' : '繁殖知识'}
                       </a>
                     </li>
                     <li>
@@ -122,7 +122,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               <div className="p-6 md:p-8 bg-white">
                 {isFeaturedArticle ? (
                   <>
-                    {/* Featured Neuralink Monkey Article */}
+                    {/* Featured Golden Monkey Birth Article */}
                     <div className="mb-4 flex items-center gap-3">
                       <span className="bg-red-700 text-white px-3 py-1 text-sm font-medium rounded">
                         {language === 'en' ? 'Featured' : '头条'}
@@ -130,15 +130,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <span className="bg-yellow-500 text-white px-3 py-1 text-sm font-medium rounded">
                         {language === 'en' ? 'Breaking' : '突发'}
                       </span>
-                      <span className="bg-red-900 text-white px-3 py-1 text-sm font-medium rounded">
-                        {language === 'en' ? 'Science & Tech' : '科学技术'}
+                      <span className="bg-green-700 text-white px-3 py-1 text-sm font-medium rounded">
+                        {language === 'en' ? 'Nature & Wildlife' : '自然与野生动物'}
                       </span>
                     </div>
                     
                     <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
                       {language === 'en'
-                        ? 'Neuralink Breakthrough: Monkey "Kaoru" Successfully Controls Computer Games via Brain-Computer Interface'
-                        : 'Neuralink最新突破：猴子"Kaoru"成功用脑机接口控制电脑游戏'
+                        ? 'Historic Birth: First Golden Monkey Born Outside Asia at ZooParc de Beauval in France'
+                        : '历史性时刻：全球首只在亚洲以外出生的金丝猴诞生于法国博瓦尔动物园'
                       }
                     </h1>
 
@@ -148,26 +148,26 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        {language === 'en' ? 'Reporter: DaybreakNews Tech Desk' : '记者：DaybreakNews科技部'}
+                        {language === 'en' ? 'Reporter: DaybreakNews Nature Desk' : '记者：DaybreakNews自然部'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-03-06 15:40
+                        2026-03-26 15:40
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        {language === 'en' ? 'Views 52,148' : '阅读 52,148'}
+                        {language === 'en' ? 'Views 38,562' : '阅读 38,562'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        {language === 'en' ? 'Comments 1,287' : '评论 1,287'}
+                        {language === 'en' ? 'Comments 942' : '评论 942'}
                       </span>
                     </div>
 
@@ -175,15 +175,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                         <img
-                          src={NeuralinkMonkey.src}
-                          alt={language === 'en' ? 'Neuralink monkey Kaoru playing Pong game with brain-computer interface' : 'Neuralink猴子Kaoru通过脑机接口玩Pong游戏'}
+                          src={GoldenMonkey.src}
+                          alt={language === 'en' ? 'Baby golden monkey "Duplo" held by mother Jindou at ZooParc de Beauval' : '博瓦尔动物园金丝猴宝宝"Duplo"被母亲金豆抱在怀中'}
                           className="w-full h-auto rounded-lg"
                         />
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
                         {language === 'en'
-                          ? 'Monkey "Kaoru" controls the Pong game on screen using only neural signals from the Neuralink N1 brain chip implant. The timer shows 06:08 of continuous gameplay. (Photo: Neuralink)'
-                          : '猴子"Kaoru"仅通过Neuralink N1脑机芯片植入体的神经信号控制屏幕上的Pong游戏。计时器显示已连续游戏06:08。（图片来源：Neuralink）'
+                          ? 'The newborn golden monkey "Duplo" clings to its mother Jindou at ZooParc de Beauval. This is the first golden monkey ever born in a zoo outside of Asia. (Photo: ZooParc de Beauval)'
+                          : '新生金丝猴"Duplo"紧紧依偎在母亲金豆怀中，拍摄于博瓦尔动物园。这是全球首只在亚洲以外的动物园中出生的金丝猴。（图片来源：博瓦尔动物园）'
                         }
                       </p>
                     </div>
@@ -192,48 +192,48 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-red-700 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
-                          ? 'In a groundbreaking development that marks a new chapter in brain-computer interface (BCI) technology, Elon Musk\'s Neuralink has successfully demonstrated a macaque monkey named "Kaoru" controlling a computer game purely through thought, using the company\'s latest N1 brain chip implant.'
-                          : '在一项标志着脑机接口（BCI）技术新篇章的突破性进展中，埃隆·马斯克旗下的Neuralink公司成功展示了一只名为"Kaoru"的猕猴，仅通过意念使用该公司最新的N1脑机芯片植入体控制电脑游戏的实验成果。'
+                          ? 'ZooParc de Beauval in France has witnessed a truly historic moment. On the morning of Wednesday, March 11, a baby golden monkey — now named "Duplo" — was born at the park, becoming the first golden monkey ever born in a zoo outside of Asia. The keepers had been closely monitoring the pregnancy, and a handful of lucky visitors were present to observe this once-in-a-lifetime event.'
+                          : '法国博瓦尔动物园见证了一个真正的历史性时刻。3月11日星期三上午，一只金丝猴宝宝在园内诞生——现已被命名为"Duplo"——这是全球首只在亚洲以外的动物园中出生的金丝猴。饲养员们一直在密切监测妊娠过程，几位幸运的游客有幸目睹了这一千载难逢的时刻。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'During a live demonstration streamed from Neuralink\'s research facility in Fremont, California, viewers watched as Kaoru — a nine-year-old male macaque — sat calmly in front of a monitor displaying the classic game Pong. Without touching any physical controller or joystick, the monkey moved the paddle up and down with remarkable precision, tracking the ball and scoring points consistently for over six minutes of uninterrupted gameplay.'
-                          : '在从加利福尼亚州弗里蒙特的Neuralink研究设施进行的现场直播中，观众们看到Kaoru——一只九岁的雄性猕猴——平静地坐在显示经典游戏Pong的显示器前。在没有触碰任何物理控制器或操纵杆的情况下，这只猴子以惊人的精确度上下移动挡板，在超过六分钟的不间断游戏中持续追踪球体并得分。'
+                          ? 'The mother of the newborn is Jindou (meaning "golden seed," born March 29, 2018). This birth is a world first: it is the first golden monkey born in a zoological park outside of Asia. The golden monkeys arrived at ZooParc de Beauval in April 2025 as part of an international conservation and research cooperation project with China, already making history as the first representatives of their species to be housed outside of Asia.'
+                          : '新生金丝猴的母亲是金豆（意为"金色的种子"，2018年3月29日出生）。这次诞生是一个世界第一：这是首只在亚洲以外的动物园中出生的金丝猴。金丝猴于2025年4月作为与中国合作的国际保护和研究项目的一部分来到博瓦尔动物园，当时它们已经创造了历史，成为首批在亚洲以外被饲养的金丝猴。'
                         }
                       </p>
 
                       <div className="bg-red-50 border-l-4 border-red-700 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🧠</span>
+                          <span className="text-xl">🐒</span>
                           <h3 className="text-red-800 font-bold">
-                            {language === 'en' ? 'About Kaoru' : '关于Kaoru'}
+                            {language === 'en' ? 'About the Golden Monkeys at Beauval' : '关于博瓦尔的金丝猴'}
                           </h3>
                         </div>
                         <p className="text-gray-700 text-sm leading-relaxed">
                           {language === 'en'
-                            ? '"Kaoru" is a nine-year-old macaque (Macaca fascicularis) who has been part of Neuralink\'s primate research program since 2024. He received his N1 brain chip implant six weeks ago in a minimally invasive surgical procedure lasting approximately four hours. Since then, Kaoru has shown rapid adaptation to the neural interface, progressing from simple cursor movements to full game control within just three weeks.'
-                            : '"Kaoru"是一只九岁的猕猴（学名：Macaca fascicularis），自2024年起便加入了Neuralink的灵长类动物研究项目。六周前，他接受了一次约四小时的微创手术，植入了N1脑机芯片。此后，Kaoru对神经接口表现出了快速的适应能力，仅用三周时间就从简单的光标移动进步到完整的游戏控制。'
+                            ? 'Two female golden monkeys — Jindou and Jinhua — along with a male named Jinbao arrived at ZooParc de Beauval in April 2025 from the Shanghai Wild Animal Park in China. They quickly adapted to their new environment. Under the guidance of Chinese experts, keepers soon observed mating behaviors between the male and both females, signaling that births could follow in the months ahead.'
+                            : '两只雌性金丝猴——金豆和金花——以及一只名为金宝的雄性金丝猴于2025年4月从中国上海野生动物园来到博瓦尔动物园。它们很快适应了新环境。在中国专家的指导下，饲养员很快观察到了雄性与两只雌性之间的交配行为，预示着未来几个月可能会有幼猴诞生。'
                           }
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
-                        {language === 'en' ? 'Technology Details' : '技术细节'}
+                        {language === 'en' ? 'Keepers Closely Monitor the Baby\'s Development' : '饲养员密切监测幼猴发育'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The N1 chip implanted in Kaoru\'s motor cortex contains over 1,024 electrodes — each thinner than a human hair — that record neural activity with sub-millisecond precision. The data is transmitted wirelessly to a nearby receiver, where custom algorithms decode Kaoru\'s intended movements in real time. Engineers reported that the system achieves a decoding latency of less than 15 milliseconds, meaning the on-screen paddle responds almost instantaneously to Kaoru\'s thoughts.'
-                          : '植入Kaoru运动皮层的N1芯片包含超过1024个电极——每个电极都比人类头发还细——以亚毫秒级的精度记录神经活动。数据通过无线方式传输到附近的接收器，定制算法实时解码Kaoru的意图动作。工程师报告称，该系统的解码延迟不到15毫秒，这意味着屏幕上的挡板几乎瞬间响应Kaoru的想法。'
+                          ? 'Duplo is in excellent health. Immediately after birth, he was held in his mother\'s arms and closely pressed against her chest. Currently, under the guidance of golden monkey experts from the Shanghai Wild Animal Park in China, the keepers at ZooParc de Beauval are taking great care of Duplo.'
+                          : 'Duplo健康状况良好。出生后，他立即被母亲抱在怀中，紧紧贴在胸前。目前，在中国上海野生动物园金丝猴专家的指导下，博瓦尔动物园的饲养员正在精心照料Duplo。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'According to Neuralink\'s chief neuroscientist Dr. Matthew MacDougall, the breakthrough with Kaoru represents a significant leap forward from previous demonstrations. "What makes Kaoru\'s case exceptional is the stability of the signal over weeks of continuous use. The chip has maintained consistent performance without any degradation, and Kaoru shows clear signs of enjoying the gaming sessions — he actively seeks out the testing station each morning."'
-                          : '据Neuralink首席神经科学家Matthew MacDougall博士表示，Kaoru的突破代表着相比此前演示的重大飞跃。"Kaoru案例的特殊之处在于信号在数周连续使用中的稳定性。芯片保持了一致的性能，没有任何衰减，而且Kaoru明显表现出享受游戏过程的迹象——他每天早上都会主动寻找测试站。"'
+                          ? 'The keepers are watching Duplo\'s development with particular attention, as the first days after birth are always critical in primates — especially when the mother is a first-time parent, as is the case with Jindou. Despite being a first-time mother, Jindou has shown remarkable natural instincts, holding Duplo securely and nursing him regularly.'
+                          : '饲养员们正特别关注Duplo的发育情况，因为出生后的头几天对灵长类动物来说总是至关重要的——尤其是当母亲是初产妇时，金豆正是如此。尽管是第一次当妈妈，金豆展现出了出色的母性本能，稳稳地抱着Duplo并定期哺乳。'
                         }
                       </p>
 
@@ -241,50 +241,52 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="my-6">
                         <div className="relative w-full h-auto rounded-lg shadow-lg overflow-hidden border-2 border-red-100">
                           <img
-                            src={NeuralinkMonkey.src}
-                            alt={language === 'en' ? 'Kaoru during Neuralink brain-computer interface testing' : 'Kaoru在Neuralink脑机接口测试中'}
+                            src={GoldenMonkey.src}
+                            alt={language === 'en' ? 'Golden monkey family at ZooParc de Beauval' : '博瓦尔动物园的金丝猴家族'}
                             className="w-full h-auto rounded-lg"
                           />
                         </div>
                         <p className="text-sm text-gray-500 mt-2 italic">
                           {language === 'en'
-                            ? 'Close-up of Kaoru during the Pong demonstration. The Neuralink logo is visible as the neural decoding dashboard displays real-time brain activity data alongside the game interface.'
-                            : 'Kaoru在Pong演示期间的近距离画面。可以看到Neuralink标志，神经解码仪表板在游戏界面旁实时显示大脑活动数据。'
+                            ? 'Baby Duplo and the golden monkey family are housed within the Heights of China territory at Beauval, near the famous giant panda twins Yuandudu and Huanlili. Visitors can now come and see Duplo in person. (Photo: ZooParc de Beauval)'
+                            : '小Duplo和金丝猴家族居住在博瓦尔动物园的"中国高地"区域内，毗邻著名的大熊猫双胞胎圆嘟嘟和欢黎黎。游客现在可以亲自前来观看Duplo。（图片来源：博瓦尔动物园）'
                           }
                         </p>
                       </div>
 
+                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
+                        {language === 'en' ? 'Reproduction in Golden Monkeys' : '金丝猴的繁殖'}
+                      </h2>
+
                       <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">⚙️</span>
+                          <span className="text-xl">🔬</span>
                           <h3 className="text-gray-900 font-bold">
-                            {language === 'en' ? 'Technical Specifications' : '技术规格'}
+                            {language === 'en' ? 'Golden Monkey Reproduction Facts' : '金丝猴繁殖小知识'}
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>{language === 'en' ? '1,024 ultra-thin electrodes implanted in motor cortex' : '1024个超细电极植入运动皮层'}</li>
-                          <li>{language === 'en' ? 'Sub-15ms decoding latency for real-time control' : '低于15毫秒的解码延迟实现实时控制'}</li>
-                          <li>{language === 'en' ? 'Wireless data transmission at 200Mbps' : '200Mbps无线数据传输'}</li>
-                          <li>{language === 'en' ? '6+ weeks of stable signal without degradation' : '6周以上信号稳定无衰减'}</li>
-                          <li>{language === 'en' ? 'Minimally invasive robotic surgical implantation' : '微创机器人手术植入'}</li>
+                          <li>{language === 'en' ? 'Polygynous mating system — one male mates with multiple females in his harem' : '一夫多妻制——一只雄性与其后宫中的多只雌性交配'}</li>
+                          <li>{language === 'en' ? 'Females reach sexual maturity at 4–5 years, males at around 7 years' : '雌性4-5岁性成熟，雄性约7岁性成熟'}</li>
+                          <li>{language === 'en' ? 'Mating season runs from August to October, births occur March–June' : '交配季节为8月至10月，分娩期为3月至6月'}</li>
+                          <li>{language === 'en' ? 'Gestation period is approximately 6–7 months' : '妊娠期约为6-7个月'}</li>
+                          <li>{language === 'en' ? 'Females typically give birth to one infant every two years' : '雌性通常每两年产一胎'}</li>
+                          <li>{language === 'en' ? 'Weaning occurs around age one, though nursing may continue longer' : '断奶通常在一岁左右，但哺乳可能持续更长时间'}</li>
+                          <li>{language === 'en' ? 'Life expectancy in zoos: approximately 25–30 years' : '动物园中预期寿命：约25-30年'}</li>
                         </ul>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-red-700">
-                        {language === 'en' ? 'Implications for Human Medicine' : '对人类医学的意义'}
-                      </h2>
-
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Neuralink emphasized that the success with Kaoru directly paves the way for human clinical trials. The company has already received FDA approval for its first human study, and the Kaoru experiment demonstrates that the latest generation of the N1 chip can maintain long-term stability in a primate brain — a critical prerequisite for human implantation. Patients with paralysis, spinal cord injuries, and neurodegenerative diseases like ALS could potentially benefit from this technology within the next few years.'
-                          : 'Neuralink强调，Kaoru的成功直接为人体临床试验铺平了道路。该公司已经获得了FDA的首次人体研究批准，而Kaoru实验证明了最新一代N1芯片能够在灵长类动物大脑中保持长期稳定性——这是人体植入的关键前提条件。瘫痪、脊髓损伤和肌萎缩侧索硬化症（ALS）等神经退行性疾病的患者有望在未来几年内受益于这项技术。'
+                          ? 'Golden monkeys follow a polygynous mating system, meaning the dominant male mates exclusively with the females in his group. The mating season typically falls between August and October, with births occurring from March to June after a gestation period of approximately six to seven months.'
+                          : '金丝猴采用一夫多妻制的繁殖系统，即占统治地位的雄性专门与其群体中的雌性交配。交配季节通常在8月至10月之间，经过大约六到七个月的妊娠期后，幼猴在3月至6月间出生。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Elon Musk commented on social media that Kaoru is "the happiest, healthiest monkey you\'ve ever seen" and confirmed that the company plans to begin its first human implantation procedures later this year. "Kaoru has changed everything," Musk wrote. "The signal clarity and stability we\'re seeing is beyond what we hoped for. This gives us enormous confidence for human trials."'
-                          : '埃隆·马斯克在社交媒体上评论说，Kaoru是"你见过的最快乐、最健康的猴子"，并确认公司计划在今年晚些时候开始首次人体植入手术。马斯克写道："Kaoru改变了一切。我们所看到的信号清晰度和稳定性超出了我们的期望。这给了我们对人体试验巨大的信心。"'
+                          ? 'One of the most fascinating aspects of golden monkey social behavior is "allonursing" — a cooperative care system in which infants may be nursed by females other than their biological mother. This behavior is believed to significantly increase the survival chances of young monkeys. The mother provides most of the newborn\'s care, though the male may also help by protecting and grooming the infant.'
+                          : '金丝猴社会行为中最迷人的方面之一是"异母哺乳"——一种合作养育系统，幼猴可以被其亲生母亲以外的雌性哺乳。这种行为被认为能显著提高幼猴的存活率。母亲提供新生儿的大部分照料，但雄性也可能通过保护和梳理幼猴来提供帮助。'
                         }
                       </p>
 
@@ -294,16 +296,16 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-red-50 border-l-4 border-red-800 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? 'Neuralink\'s monkey "Kaoru" successfully played Pong for over 6 minutes using only brain signals from the N1 chip.' : 'Neuralink的猴子"Kaoru"仅使用N1芯片的大脑信号成功玩了超过6分钟的Pong游戏。'}</li>
-                          <li>{language === 'en' ? 'The N1 chip achieved sub-15ms decoding latency with 1,024 electrodes, maintaining stable signal quality for over 6 weeks.' : 'N1芯片以1024个电极实现了低于15毫秒的解码延迟，信号质量在6周以上保持稳定。'}</li>
-                          <li>{language === 'en' ? 'Kaoru adapted from basic cursor control to full game control in just 3 weeks after implantation.' : 'Kaoru在植入后仅用3周时间就从基本光标控制适应到完整的游戏控制。'}</li>
-                          <li>{language === 'en' ? 'This breakthrough directly supports Neuralink\'s upcoming FDA-approved human clinical trials.' : '这一突破直接支持了Neuralink即将开展的FDA批准的人体临床试验。'}</li>
-                          <li>{language === 'en' ? 'Potential applications include treatment for paralysis, spinal cord injuries, and neurodegenerative diseases.' : '潜在应用包括治疗瘫痪、脊髓损伤和神经退行性疾病。'}</li>
+                          <li>{language === 'en' ? '"Duplo," a baby golden monkey, was born on March 11, 2026 at ZooParc de Beauval — the first ever born outside of Asia.' : '金丝猴宝宝"Duplo"于2026年3月11日在博瓦尔动物园诞生——这是全球首只在亚洲以外出生的金丝猴。'}</li>
+                          <li>{language === 'en' ? 'The mother, Jindou, is a first-time parent who has shown excellent maternal instincts.' : '母亲金豆是初产妈妈，展现出了出色的母性本能。'}</li>
+                          <li>{language === 'en' ? 'The golden monkeys arrived from Shanghai Wild Animal Park in April 2025 as part of an international China–France conservation project.' : '金丝猴于2025年4月从上海野生动物园来到法国，作为中法国际保护项目的一部分。'}</li>
+                          <li>{language === 'en' ? 'Chinese experts are working alongside Beauval keepers to ensure the best care for Jindou and Duplo.' : '中国专家正与博瓦尔饲养员合作，确保金豆和Duplo得到最好的照料。'}</li>
+                          <li>{language === 'en' ? 'Visitors can see the golden monkeys and Duplo in the Heights of China area at Beauval.' : '游客可以在博瓦尔动物园的"中国高地"区域看到金丝猴和Duplo。'}</li>
                         </ul>
                       </div>
 
                       <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Tech Desk' : 'DaybreakNews科技部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Proofreader:' : '校对：'}</strong> {language === 'en' ? 'James Liu' : '刘建明'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
+                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Nature Desk' : 'DaybreakNews自然部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Lin Xia' : '林夏'} | <strong className="text-gray-900">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'ZooParc de Beauval' : '博瓦尔动物园'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
                       </div>
                     </article>
 
@@ -311,11 +313,12 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-gray-200">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-gray-600 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Neuralink</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Kaoru</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#BrainChip' : '#脑机芯片'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#BCI' : '#脑机接口'}</span>
-                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#ElonMusk' : '#马斯克'}</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#GoldenMonkey</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Duplo</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">#Beauval</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#Conservation' : '#保护'}</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#WorldFirst' : '#世界首次'}</span>
+                        <span className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 cursor-pointer transition-all border border-red-200">{language === 'en' ? '#Wildlife' : '#野生动物'}</span>
                       </div>
                     </div>
                   </>

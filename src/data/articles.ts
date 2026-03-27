@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Neuralink最新突破：猴子"Kaoru"成功用脑机接口控制电脑游戏',
-    titleEn: 'Neuralink Breakthrough: Monkey "Kaoru" Successfully Controls Computer Games via Brain-Computer Interface',
-    summaryZh: 'Neuralink公司今日公布最新实验成果，一只名为"Kaoru"的猕猴在植入脑机芯片后，成功通过意念控制电脑游戏Pong，标志着脑机接口技术迈入新纪元。',
-    summaryEn: 'Neuralink today unveiled its latest experimental results: a macaque monkey named "Kaoru" successfully controlled the computer game Pong using only its mind after receiving a brain chip implant.',
-    category: 'Tech',
-    categoryZh: '科技',
+    titleZh: '历史性时刻：全球首只在亚洲以外出生的金丝猴诞生于法国博瓦尔动物园',
+    titleEn: 'Historic Birth: First Golden Monkey Born Outside Asia at ZooParc de Beauval in France',
+    summaryZh: '法国博瓦尔动物园见证了一次历史性的诞生——全球首只在亚洲以外的动物园中出生的金丝猴"Duplo"于3月11日降生，母子平安。',
+    summaryEn: 'ZooParc de Beauval in France has witnessed a historic birth — "Duplo," the world\'s first golden monkey born in a zoo outside of Asia, arrived on March 11, with both mother and baby in excellent health.',
+    category: 'Nature',
+    categoryZh: '自然',
     time: '15:40',
     section: 'hot'
   },
