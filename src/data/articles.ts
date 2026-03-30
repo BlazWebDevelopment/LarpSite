@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '令人心碎：埃隆·马斯克爱犬"Floki"今日去世，新犬"Nova"加入家庭',
-    titleEn: 'Heartbreaking: Elon Musk\'s Beloved Dog "Floki" Passes Away Today — New Puppy "Nova" Joins the Family',
-    summaryZh: '埃隆·马斯克今日宣布他心爱的柴犬"Floki"于2026年3月27日去世。马斯克随后透露，他已迎来一只名为"Nova"的新犬，以纪念Floki的遗产。',
-    summaryEn: 'Elon Musk announced today that his beloved Shiba Inu "Floki" has passed away on March 27, 2026. Musk later revealed he has welcomed a new dog named "Nova" to carry on Floki\'s legacy.',
-    category: 'Celebrity',
-    categoryZh: '名人',
+    titleZh: 'Neuralink历史性突破：企鹅"Joop"成为首只接受脑机接口植入的鸟类',
+    titleEn: 'Neuralink Makes History: Penguin "Joop" Becomes the First Bird to Receive a Brain-Computer Interface Implant',
+    summaryZh: 'Neuralink今日宣布一项突破性里程碑——一只名为"Joop"的小蓝企鹅成为世界上第一只成功接受脑机接口芯片植入的鸟类，开启了神经科学研究的全新篇章。',
+    summaryEn: 'Neuralink announced today a groundbreaking milestone — a little blue penguin named "Joop" has become the world\'s first bird to successfully receive a brain-computer interface chip implant, opening an entirely new chapter in neuroscience research.',
+    category: 'Tech',
+    categoryZh: '科技',
     time: '15:40',
     section: 'hot'
   },

@@ -22,7 +22,7 @@ function SearchResults() {
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-red-700">{language === 'en' ? 'Home' : '首页'}</Link>
+            <Link href="/" className="hover:text-blue-700">{language === 'en' ? 'Home' : '首页'}</Link>
             <span>/</span>
             <span className="text-gray-700">{language === 'en' ? 'Search Results' : '搜索结果'}</span>
           </div>
@@ -36,7 +36,7 @@ function SearchResults() {
             <div className="bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
                 <h1 className="font-bold text-lg text-gray-800 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-red-700 rounded"></span>
+                  <span className="w-1 h-5 bg-blue-700 rounded"></span>
                   {language === 'en' ? `Search Results for "${query}"` : `"${query}" 的搜索结果`}
                 </h1>
                 <span className="text-sm text-gray-500">
@@ -49,15 +49,15 @@ function SearchResults() {
                     {results.map((article, index) => (
                       <Link key={article.id} href={`/article/${article.id}`} className="block group">
                         <div className={`flex gap-4 pb-4 ${index < results.length - 1 ? 'border-b border-gray-100' : ''}`}>
-                          <span className={`font-bold text-xl w-8 ${index < 3 ? 'text-red-700' : 'text-gray-300'}`}>
+                          <span className={`font-bold text-xl w-8 ${index < 3 ? 'text-blue-700' : 'text-gray-300'}`}>
                             {String(index + 1).padStart(2, '0')}
                           </span>
                           <div className="flex-1">
                             <div className="flex items-center gap-2 mb-1">
-                              <span className="text-red-700 text-xs font-medium">[{language === 'en' ? article.category : article.categoryZh}]</span>
+                              <span className="text-blue-700 text-xs font-medium">[{language === 'en' ? article.category : article.categoryZh}]</span>
                               <span className="text-gray-400 text-xs">{article.time}</span>
                             </div>
-                            <h3 className="font-medium text-gray-800 group-hover:text-red-700 transition-colors mb-1">
+                            <h3 className="font-medium text-gray-800 group-hover:text-blue-700 transition-colors mb-1">
                               {language === 'en' ? article.titleEn : article.titleZh}
                             </h3>
                             <p className="text-gray-500 text-sm line-clamp-2">
@@ -93,12 +93,12 @@ function SearchResults() {
               </div>
               <div className="p-4">
                 <div className="flex flex-wrap gap-2">
-                  <Link href="/search?q=Neuralink" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">Neuralink</Link>
-                  <Link href="/search?q=AI" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">AI</Link>
-                  <Link href="/search?q=tech" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Tech' : '科技'}</Link>
-                  <Link href="/search?q=sports" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Sports' : '体育'}</Link>
-                  <Link href="/search?q=finance" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">{language === 'en' ? 'Finance' : '财经'}</Link>
-                  <Link href="/search?q=Kaoru" className="bg-red-50 text-red-700 px-3 py-1 text-sm rounded hover:bg-red-100 border border-red-200">Kaoru</Link>
+                  <Link href="/search?q=Neuralink" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">Neuralink</Link>
+                  <Link href="/search?q=AI" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">AI</Link>
+                  <Link href="/search?q=tech" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">{language === 'en' ? 'Tech' : '科技'}</Link>
+                  <Link href="/search?q=sports" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">{language === 'en' ? 'Sports' : '体育'}</Link>
+                  <Link href="/search?q=finance" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">{language === 'en' ? 'Finance' : '财经'}</Link>
+                  <Link href="/search?q=Kaoru" className="bg-blue-50 text-blue-700 px-3 py-1 text-sm rounded hover:bg-blue-100 border border-blue-200">Kaoru</Link>
                 </div>
               </div>
             </div>
@@ -112,10 +112,10 @@ function SearchResults() {
                   {articles.slice(0, 5).map((article, index) => (
                     <li key={article.id}>
                       <Link href={`/article/${article.id}`} className="flex gap-2 group">
-                        <span className={`font-bold text-sm w-5 ${index < 3 ? 'text-red-700' : 'text-gray-400'}`}>
+                        <span className={`font-bold text-sm w-5 ${index < 3 ? 'text-blue-700' : 'text-gray-400'}`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-gray-600 group-hover:text-red-700 line-clamp-1 flex-1">
+                        <span className="text-sm text-gray-600 group-hover:text-blue-700 line-clamp-1 flex-1">
                           {language === 'en' ? article.titleEn : article.titleZh}
                         </span>
                       </Link>

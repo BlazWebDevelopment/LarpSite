@@ -4,14 +4,14 @@
 
 :root {
   --foreground-rgb: 26, 26, 26;
-  --background-rgb: 245, 243, 240;
-  --primary-red: #CC0000;
-  --primary-red-dark: #990000;
-  --accent-gold: #D4A017;
-  --accent-gold-light: #F5E6CC;
-  --border-color: #D4C5A9;
-  --bg-cream: #FAF7F2;
-  --bg-paper: #FFFEF9;
+  --background-rgb: 240, 245, 250;
+  --primary-blue: #1D4ED8;
+  --primary-blue-dark: #1E40AF;
+  --accent-cyan: #06B6D4;
+  --accent-cyan-light: #CFFAFE;
+  --border-color: #B0C4DE;
+  --bg-cream: #F0F5FA;
+  --bg-paper: #F8FAFC;
 }
 
 body {
@@ -33,16 +33,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-content h2 {
-  color: #CC0000;
+  color: #1D4ED8;
   font-weight: 700;
   font-family: 'Georgia', serif;
 }
 
 .article-content blockquote {
-  border-left: 4px solid #CC0000;
+  border-left: 4px solid #1D4ED8;
   padding-left: 1rem;
   margin: 1.5rem 0;
-  background: #FFF8F0;
+  background: #EFF6FF;
   padding: 1rem 1.5rem;
   border-radius: 0 4px 4px 0;
   color: #4b5563;
@@ -57,25 +57,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-darker {
   background: var(--bg-paper);
-  border-bottom: 2px solid #CC0000;
+  border-bottom: 2px solid #1D4ED8;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
 
 .gradient-text {
-  color: #CC0000;
+  color: #1D4ED8;
 }
 
 .china-red-bar {
-  background: linear-gradient(90deg, #CC0000 0%, #990000 100%);
+  background: linear-gradient(90deg, #1D4ED8 0%, #1E40AF 100%);
 }
 
 .gold-accent {
-  border-color: #D4A017;
-  background: linear-gradient(135deg, #FFF8E7 0%, #FFF2D1 100%);
+  border-color: #06B6D4;
+  background: linear-gradient(135deg, #ECFEFF 0%, #CFFAFE 100%);
 }
 
 .chinese-border-top {
-  border-top: 3px solid #CC0000;
+  border-top: 3px solid #1D4ED8;
   position: relative;
 }
 
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 60px;
   height: 3px;
-  background: #D4A017;
+  background: #06B6D4;
 }
 
 ::-webkit-scrollbar {
@@ -94,19 +94,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F0E8;
+  background: #E8EFF5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4B99A;
+  background: #94A3B8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A89A7A;
+  background: #64748B;
 }
 
 ::selection {
-  background: rgba(204, 0, 0, 0.15);
+  background: rgba(29, 78, 216, 0.15);
   color: #1a1a1a;
 }

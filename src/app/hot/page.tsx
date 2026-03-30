@@ -17,7 +17,7 @@ export default function HotPage() {
       <div className="border-b border-gray-200 bg-white">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-red-700 transition-colors">{language === 'en' ? 'Home' : '首页'}</Link>
+            <Link href="/" className="hover:text-blue-700 transition-colors">{language === 'en' ? 'Home' : '首页'}</Link>
             <span>/</span>
             <span className="text-gray-700">{language === 'en' ? 'Hot News' : '热点新闻'}</span>
           </div>
@@ -30,9 +30,9 @@ export default function HotPage() {
             <div className="glass rounded-lg overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
                 <h1 className="font-bold text-lg text-gray-900 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
+                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
                   {language === 'en' ? 'Hot News' : '热点新闻'}
-                  <span className="ml-2 w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+                  <span className="ml-2 w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
                 </h1>
               </div>
               <div className="p-5 bg-white">
@@ -41,16 +41,16 @@ export default function HotPage() {
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
                       <div className={`flex gap-4 pb-4 ${index < hotArticles.length - 1 ? 'border-b border-gray-100' : ''}`}>
                         <span className={`font-bold text-xl w-10 h-10 flex items-center justify-center rounded-lg shrink-0 ${
-                          index < 3 ? 'bg-red-700 text-white' : 'bg-gray-200 text-gray-500'
+                          index < 3 ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-500'
                         }`}>
                           {String(index + 1).padStart(2, '0')}
                         </span>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-2">
-                            <span className="text-red-700 text-xs font-medium px-2 py-0.5 bg-red-50 rounded border border-red-200">{language === 'en' ? article.category : article.categoryZh}</span>
+                            <span className="text-blue-700 text-xs font-medium px-2 py-0.5 bg-blue-50 rounded border border-blue-200">{language === 'en' ? article.category : article.categoryZh}</span>
                             <span className="text-gray-500 text-xs">{article.time}</span>
                           </div>
-                          <h3 className="font-medium text-gray-900 group-hover:text-red-700 transition-colors mb-1">
+                          <h3 className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors mb-1">
                             {language === 'en' ? article.titleEn : article.titleZh}
                           </h3>
                           <p className="text-gray-500 text-sm line-clamp-2">
@@ -79,11 +79,11 @@ export default function HotPage() {
                     <li key={article.id}>
                       <Link href={`/article/${article.id}`} className="flex gap-3 group items-start">
                         <span className={`font-bold text-sm w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
-                          index < 3 ? 'bg-red-700 text-white' : 'bg-gray-200 text-gray-500'
+                          index < 3 ? 'bg-blue-700 text-white' : 'bg-gray-200 text-gray-500'
                         }`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-gray-600 group-hover:text-red-700 line-clamp-2 flex-1 transition-colors">
+                        <span className="text-sm text-gray-600 group-hover:text-blue-700 line-clamp-2 flex-1 transition-colors">
                           {language === 'en' ? article.titleEn : article.titleZh}
                         </span>
                       </Link>

@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import FlokiDog from '@/context/Floki.png'
+import PenguJoop from '@/context/Pengu1.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Home() {
@@ -19,14 +19,14 @@ export default function Home() {
       {/* Breaking news ticker */}
       <div className="china-red-bar relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-4 relative">
-          <span className="bg-yellow-400 text-red-800 px-3 py-1 text-xs font-bold shrink-0 rounded shadow-lg">
+          <span className="bg-yellow-400 text-blue-800 px-3 py-1 text-xs font-bold shrink-0 rounded shadow-lg">
             {language === 'en' ? 'BREAKING' : '突发'}
           </span>
           <div className="overflow-hidden whitespace-nowrap text-white">
             <span className="text-sm font-medium">
               {language === 'en' 
-                ? 'Breaking: Elon Musk\'s beloved Shiba Inu "Floki" has passed away today | Musk welcomes new puppy "Nova" to the family'
-                : '突发：埃隆·马斯克爱犬柴犬"Floki"今日去世 | 马斯克迎来新犬"Nova"加入家庭'
+                ? 'Breaking: Neuralink implants brain chip in penguin "Joop" — the first bird ever to receive a brain-computer interface | New era in neuroscience'
+                : '突发：Neuralink为企鹅"Joop"植入脑机芯片——首只接受脑机接口的鸟类 | 神经科学新纪元'
               }
             </span>
           </div>
@@ -41,10 +41,10 @@ export default function Home() {
             <div className="glass rounded-lg mb-6 overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
                 <h2 className="font-bold text-gray-900 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
+                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
                   {language === 'en' ? 'Top Story' : '头条新闻'}
                 </h2>
-                <Link href="/hot" className="text-sm text-red-700 hover:text-red-800 transition-colors flex items-center gap-1">
+                <Link href="/hot" className="text-sm text-blue-700 hover:text-blue-800 transition-colors flex items-center gap-1">
                   {language === 'en' ? 'More' : '更多'}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -56,14 +56,14 @@ export default function Home() {
                   <div className="flex gap-5">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-red-700 text-white px-3 py-1 text-xs font-semibold rounded">
+                        <span className="bg-blue-700 text-white px-3 py-1 text-xs font-semibold rounded">
                           {language === 'en' ? 'Exclusive' : '独家'}
                         </span>
                         <span className="bg-yellow-100 text-yellow-800 px-3 py-1 text-xs font-medium rounded border border-yellow-300">
                           {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
                         </span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-700 transition-colors mb-3">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-3">
                         {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
                       </h3>
                       <p className="text-gray-600 text-sm line-clamp-2 mb-4 leading-relaxed">
@@ -87,8 +87,8 @@ export default function Home() {
                     </div>
                     <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
                       <img 
-                        src={FlokiDog.src}
-                        alt={language === 'en' ? 'Floki, Elon Musk\'s Shiba Inu dog, sitting in a Tesla' : '埃隆·马斯克的柴犬Floki坐在特斯拉车中'} 
+                        src={PenguJoop.src}
+                        alt={language === 'en' ? 'Joop the penguin, the first bird to receive a Neuralink brain-computer interface implant' : '企鹅Joop，首只接受Neuralink脑机接口植入的鸟类'} 
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -101,7 +101,7 @@ export default function Home() {
             <div className="glass rounded-lg overflow-hidden chinese-border-top">
               <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
                 <h2 className="font-bold text-gray-900 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-red-700 rounded-full"></span>
+                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
                   {language === 'en' ? 'Latest News' : '最新新闻'}
                 </h2>
               </div>
@@ -109,14 +109,14 @@ export default function Home() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {otherArticles.map((article) => (
                     <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                      <div className="border border-gray-200 rounded-lg p-4 hover:bg-red-50 hover:border-red-300 transition-all">
+                      <div className="border border-gray-200 rounded-lg p-4 hover:bg-blue-50 hover:border-blue-300 transition-all">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-red-700 text-xs font-medium px-2 py-0.5 bg-red-50 rounded border border-red-200">
+                          <span className="text-blue-700 text-xs font-medium px-2 py-0.5 bg-blue-50 rounded border border-blue-200">
                             {language === 'en' ? article.category : article.categoryZh}
                           </span>
                           <span className="text-gray-500 text-xs">{article.time}</span>
                         </div>
-                        <h3 className="font-medium text-gray-900 group-hover:text-red-700 transition-colors line-clamp-2 text-sm">
+                        <h3 className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 text-sm">
                           {language === 'en' ? article.titleEn : article.titleZh}
                         </h3>
                       </div>
@@ -150,12 +150,12 @@ export default function Home() {
                       <Link href={`/article/${article.id}`} className="flex gap-3 group items-start">
                         <span className={`font-bold text-sm w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
                           index < 3 
-                            ? 'bg-red-700 text-white' 
+                            ? 'bg-blue-700 text-white' 
                             : 'bg-gray-200 text-gray-600'
                         }`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-gray-600 group-hover:text-red-700 line-clamp-2 flex-1 transition-colors">
+                        <span className="text-sm text-gray-600 group-hover:text-blue-700 line-clamp-2 flex-1 transition-colors">
                           {language === 'en' ? article.titleEn : article.titleZh}
                         </span>
                       </Link>
@@ -177,9 +177,9 @@ export default function Home() {
                 <input 
                   type="email" 
                   placeholder={language === 'en' ? 'Enter your email' : '输入您的邮箱'}
-                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-sm mb-3 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700 text-gray-900 placeholder-gray-500"
+                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-sm mb-3 focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 text-gray-900 placeholder-gray-500"
                 />
-                <button className="w-full bg-red-700 text-white py-3 rounded-lg text-sm font-semibold hover:bg-red-800 transition-colors">
+                <button className="w-full bg-blue-700 text-white py-3 rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors">
                   {language === 'en' ? 'Subscribe Now' : '立即订阅'}
                 </button>
               </div>
@@ -188,13 +188,13 @@ export default function Home() {
             {/* Market Watch */}
             <div className="glass rounded-lg p-5 mt-6 bg-white">
               <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
                 {language === 'en' ? 'Market Watch' : '市场行情'}
               </h3>
               <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs">₿</div>
                     <span className="text-gray-900 text-sm font-medium">BTC</span>
@@ -204,7 +204,7 @@ export default function Home() {
                     <div className="text-green-600 text-xs">+2.4%</div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs">Ξ</div>
                     <span className="text-gray-900 text-sm font-medium">ETH</span>
@@ -214,9 +214,9 @@ export default function Home() {
                     <div className="text-green-600 text-xs">+1.8%</div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg border border-red-100">
+                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center text-white font-bold text-[10px]">¥</div>
+                    <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-[10px]">¥</div>
                     <span className="text-gray-900 text-sm font-medium">CNY</span>
                   </div>
                   <div className="text-right">
