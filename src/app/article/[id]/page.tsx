@@ -155,7 +155,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-03-27 15:40
+                        2026-03-30 15:40
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -183,8 +183,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </div>
                       <p className="text-sm text-gray-500 mt-2 italic">
                         {language === 'en'
-                          ? 'Joop, a little blue penguin (Eudyptula minor), being carefully examined by the Neuralink veterinary team after the successful brain-computer interface implant procedure on March 27, 2026. (Photo: Neuralink)'
-                          : '小蓝企鹅Joop（学名：Eudyptula minor）在2026年3月27日脑机接口植入手术成功后，正在接受Neuralink兽医团队的仔细检查。（图片来源：Neuralink）'
+                          ? 'Joop, a little blue penguin (Eudyptula minor), being carefully examined by the Neuralink veterinary team after the successful brain-computer interface implant procedure on March 30, 2026. (Photo: Neuralink)'
+                          : '小蓝企鹅Joop（学名：Eudyptula minor）在2026年3月30日脑机接口植入手术成功后，正在接受Neuralink兽医团队的仔细检查。（图片来源：Neuralink）'
                         }
                       </p>
                     </div>
@@ -296,7 +296,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-blue-50 border-l-4 border-blue-800 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? 'Joop, a little blue penguin, became the first bird ever to receive a Neuralink brain-computer interface implant on March 27, 2026.' : '小蓝企鹅Joop于2026年3月27日成为历史上第一只接受Neuralink脑机接口植入的鸟类。'}</li>
+                          <li>{language === 'en' ? 'Joop, a little blue penguin, became the first bird ever to receive a Neuralink brain-computer interface implant on March 30, 2026.' : '小蓝企鹅Joop于2026年3月30日成为历史上第一只接受Neuralink脑机接口植入的鸟类。'}</li>
                           <li>{language === 'en' ? 'Neuralink developed a custom N2-Avian chip — 60% smaller than the N1, waterproof to 50m, with 512 electrodes.' : 'Neuralink开发了定制的N2-Avian芯片——比N1小60%，防水50米，配备512个电极。'}</li>
                           <li>{language === 'en' ? 'Early data has revealed never-before-seen neural patterns related to penguin navigation and spatial awareness.' : '早期数据揭示了前所未见的与企鹅导航和空间感知相关的神经模式。'}</li>
                           <li>{language === 'en' ? 'The experiment extends brain-computer interface technology beyond mammals for the first time in history.' : '该实验首次将脑机接口技术扩展到哺乳动物以外的物种。'}</li>
@@ -337,7 +337,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     {/* Article Meta */}
                     <div className="flex items-center gap-4 text-sm text-gray-600 mb-6 pb-4 border-b-2 border-blue-100">
-                      <span>2026-03-27</span>
+                      <span>2026-03-30</span>
                       <span>{language === 'en' ? 'Source: DaybreakNews' : '来源：DaybreakNews'}</span>
                     </div>
 
