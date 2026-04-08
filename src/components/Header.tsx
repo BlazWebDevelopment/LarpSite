@@ -17,105 +17,91 @@ export default function Header() {
     }
   }
 
+  const navItems = [
+    { href: '/', label: language === 'en' ? 'Home' : '首页' },
+    { href: '/hot', label: language === 'en' ? 'Hot' : '热点', live: true },
+    { href: '/newspaper', label: language === 'en' ? 'Politics' : '政治' },
+    { href: '/live', label: language === 'en' ? 'Live' : '直播', pulse: true },
+    { href: '/opinion', label: language === 'en' ? 'Opinion' : '评论' },
+    { href: '/finance', label: language === 'en' ? 'Finance' : '财经' },
+    { href: '/tech', label: language === 'en' ? 'Tech' : '科技' },
+    { href: '/culture', label: language === 'en' ? 'Culture' : '文化' },
+    { href: '/sports', label: language === 'en' ? 'Sports' : '体育' },
+  ]
+
   return (
     <header className="sticky top-0 z-50">
-      {/* Top red bar */}
-      <div className="china-red-bar">
-        <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-xs">
-          <div className="flex items-center gap-4">
-            <span className="text-yellow-300 flex items-center gap-2 font-medium">
-              <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
-              {language === 'en' ? 'LIVE' : '直播'}
-            </span>
-            <span className="text-blue-300">|</span>
-            <span className="text-blue-100">
-              {language === 'en' ? 'Monday, March 30, 2026' : '2026年3月30日 星期一'}
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <button className="text-blue-100 hover:text-white transition-colors">
-              {language === 'en' ? 'Login' : '登录'}
-            </button>
-            <button className="bg-yellow-600 text-white px-3 py-1 rounded text-xs font-medium hover:bg-yellow-700 transition-colors">
-              {language === 'en' ? 'Register' : '注册'}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Main header */}
-      <div className="glass-darker bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative flex items-center">
-                <img src="/logo.svg" alt="DaybreakNews" className="w-12 h-12" />
-                <div className="ml-3">
-                  <div className="text-2xl font-black tracking-tight text-blue-700">
-                    DAYBREAK NEWS
-                  </div>
-                  <div className="text-[10px] font-medium tracking-[0.15em] text-gray-500 uppercase">
-                    Breaking News & Analysis
-                  </div>
+      <div className="bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-8">
+              <Link href="/" className="flex items-center gap-2.5 group">
+                <div className="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-extrabold text-lg">D</span>
                 </div>
-              </div>
-            </Link>
-            <div className="hidden md:flex items-center gap-4">
-              <form onSubmit={handleSearch} className="relative">
-                <input 
-                  type="text" 
-                  placeholder={language === 'en' ? 'Search news...' : '搜索新闻...'}
+                <span className="text-white font-extrabold text-xl tracking-tight hidden sm:block">
+                  DAYBREAK
+                </span>
+              </Link>
+
+              <nav className="hidden lg:flex items-center">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-gray-300 hover:text-white px-3.5 py-2 text-sm font-medium transition-colors flex items-center gap-1.5"
+                  >
+                    {item.pulse && (
+                      <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                    )}
+                    {item.label}
+                    {item.live && (
+                      <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+                    )}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <form onSubmit={handleSearch} className="relative hidden md:block">
+                <input
+                  type="text"
+                  placeholder={language === 'en' ? 'Search...' : '搜索...'}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-gray-50 border border-gray-300 rounded px-4 py-2 pr-10 text-sm w-64 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 text-gray-900 placeholder-gray-500"
+                  className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 pr-10 text-sm w-56 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-gray-200 placeholder-gray-500"
                 />
-                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-emerald-400 transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
               </form>
-              <button className="bg-blue-700 text-white px-5 py-2 rounded text-sm font-medium hover:bg-blue-800 transition-colors">
-                {language === 'en' ? 'Subscribe' : '订阅'}
+
+              <button className="text-gray-400 hover:text-white text-sm font-medium transition-colors hidden sm:block">
+                {language === 'en' ? 'Log in' : '登录'}
+              </button>
+              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+                {language === 'en' ? 'Sign up' : '注册'}
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Navigation bar */}
-      <div className="bg-white border-b-2 border-blue-700">
+      <div className="bg-gray-900/95 border-t border-gray-800 lg:hidden">
         <div className="max-w-7xl mx-auto px-4">
-          <nav className="flex items-center overflow-x-auto">
-            <Link href="/" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Home' : '首页'}
-            </Link>
-            <Link href="/hot" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap flex items-center gap-2">
-              {language === 'en' ? 'Hot' : '热点'}
-              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full"></span>
-            </Link>
-            <Link href="/newspaper" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Politics' : '政治'}
-            </Link>
-            <Link href="/live" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap flex items-center gap-2">
-              <span className="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></span>
-              {language === 'en' ? 'Live' : '直播'}
-            </Link>
-            <Link href="/opinion" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Opinion' : '评论'}
-            </Link>
-            <Link href="/finance" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Finance' : '财经'}
-            </Link>
-            <Link href="/tech" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Tech' : '科技'}
-            </Link>
-            <Link href="/culture" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Culture' : '文化'}
-            </Link>
-            <Link href="/sports" className="text-gray-700 font-medium px-5 py-3 hover:text-blue-700 hover:bg-blue-50 transition-all border-b-2 border-transparent hover:border-blue-700 whitespace-nowrap">
-              {language === 'en' ? 'Sports' : '体育'}
-            </Link>
+          <nav className="flex items-center overflow-x-auto gap-1 py-2 scrollbar-hide">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-gray-400 hover:text-white px-3 py-1.5 text-xs font-medium transition-colors whitespace-nowrap rounded-full hover:bg-gray-800"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>

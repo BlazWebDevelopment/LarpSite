@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import PenguJoop from '@/context/Pengu1.png'
+import BetcoinImg from '@/context/Betcoin.jpg'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Home() {
@@ -13,149 +13,114 @@ export default function Home() {
   const { language } = useLanguage()
 
   return (
-    <div className="min-h-screen" style={{background: 'var(--bg-cream)'}}>
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      
-      {/* Breaking news ticker */}
-      <div className="china-red-bar relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-4 relative">
-          <span className="bg-yellow-400 text-blue-800 px-3 py-1 text-xs font-bold shrink-0 rounded shadow-lg">
-            {language === 'en' ? 'BREAKING' : '突发'}
+
+      {/* Breaking News Bar */}
+      <div className="bg-gray-900 border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-3">
+          <span className="bg-red-500 text-white px-2.5 py-0.5 text-[10px] font-bold rounded uppercase tracking-wider shrink-0">
+            {language === 'en' ? 'Breaking' : '突发'}
           </span>
-          <div className="overflow-hidden whitespace-nowrap text-white">
-            <span className="text-sm font-medium">
-              {language === 'en' 
-                ? 'Breaking: Neuralink implants brain chip in penguin "Joop" — the first bird ever to receive a brain-computer interface | New era in neuroscience'
-                : '突发：Neuralink为企鹅"Joop"植入脑机芯片——首只接受脑机接口的鸟类 | 神经科学新纪元'
-              }
-            </span>
+          <div className="overflow-hidden whitespace-nowrap text-gray-300 text-sm">
+            {language === 'en'
+              ? 'LEAKED: GTA VI to feature in-game cryptocurrency "Betcoin" — players can trade, buy, and invest inside the game | Rockstar Games'
+              : '泄露：GTA VI将推出游戏内加密货币"Betcoin"——玩家可在游戏中交易、购买和投资 | Rockstar Games'
+            }
           </div>
         </div>
       </div>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex gap-6">
+        <div className="flex gap-8">
           {/* Main Content */}
-          <div className="flex-1">
-            {/* Featured Section */}
-            <div className="glass rounded-lg mb-6 overflow-hidden chinese-border-top">
-              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
-                <h2 className="font-bold text-gray-900 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
-                  {language === 'en' ? 'Top Story' : '头条新闻'}
-                </h2>
-                <Link href="/hot" className="text-sm text-blue-700 hover:text-blue-800 transition-colors flex items-center gap-1">
-                  {language === 'en' ? 'More' : '更多'}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-              <div className="p-5 bg-white">
-                <Link href={`/article/${featuredArticle.id}`} className="group block">
-                  <div className="flex gap-5">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="bg-blue-700 text-white px-3 py-1 text-xs font-semibold rounded">
-                          {language === 'en' ? 'Exclusive' : '独家'}
-                        </span>
-                        <span className="bg-yellow-100 text-yellow-800 px-3 py-1 text-xs font-medium rounded border border-yellow-300">
-                          {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors mb-3">
-                        {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2 mb-4 leading-relaxed">
-                        {language === 'en' ? featuredArticle.summaryEn : featuredArticle.summaryZh}
-                      </p>
-                      <div className="flex items-center gap-4 text-xs text-gray-500">
-                        <span className="flex items-center gap-1">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          {language === 'en' ? 'Today' : '今天'} {featuredArticle.time}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                          </svg>
-                          {language === 'en' ? '52.1K views' : '5.21万浏览'}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-52 h-36 rounded-lg overflow-hidden shrink-0 relative group-hover:scale-[1.02] transition-transform border border-gray-200 bg-gray-50">
-                      <img 
-                        src={PenguJoop.src}
-                        alt={language === 'en' ? 'Joop the penguin, the first bird to receive a Neuralink brain-computer interface implant' : '企鹅Joop，首只接受Neuralink脑机接口植入的鸟类'} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+          <div className="flex-1 min-w-0">
+            {/* Hero / Featured Article */}
+            <Link href={`/article/${featuredArticle.id}`} className="group block mb-8">
+              <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
+                <div className="aspect-[16/8] overflow-hidden bg-gray-100">
+                  <img
+                    src={BetcoinImg.src}
+                    alt={language === 'en' ? 'Betcoin - GTA VI in-game cryptocurrency' : 'Betcoin - GTA VI游戏内加密货币'}
+                    className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="bg-emerald-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
+                      {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
+                    </span>
+                    <span className="text-gray-400 text-xs">
+                      {language === 'en' ? 'Today' : '今天'} {featuredArticle.time}
+                    </span>
                   </div>
-                </Link>
-              </div>
-            </div>
-
-            {/* News Grid */}
-            <div className="glass rounded-lg overflow-hidden chinese-border-top">
-              <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200 bg-white">
-                <h2 className="font-bold text-gray-900 flex items-center gap-3">
-                  <span className="w-1.5 h-6 bg-blue-700 rounded-full"></span>
-                  {language === 'en' ? 'Latest News' : '最新新闻'}
-                </h2>
-              </div>
-              <div className="p-5 bg-white">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {otherArticles.map((article) => (
-                    <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                      <div className="border border-gray-200 rounded-lg p-4 hover:bg-blue-50 hover:border-blue-300 transition-all">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className="text-blue-700 text-xs font-medium px-2 py-0.5 bg-blue-50 rounded border border-blue-200">
-                            {language === 'en' ? article.category : article.categoryZh}
-                          </span>
-                          <span className="text-gray-500 text-xs">{article.time}</span>
-                        </div>
-                        <h3 className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 text-sm">
-                          {language === 'en' ? article.titleEn : article.titleZh}
-                        </h3>
-                      </div>
-                    </Link>
-                  ))}
+                  <h2 className="text-2xl font-extrabold text-gray-900 group-hover:text-emerald-600 transition-colors mb-3 leading-tight">
+                    {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
+                  </h2>
+                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
+                    {language === 'en' ? featuredArticle.summaryEn : featuredArticle.summaryZh}
+                  </p>
+                  <div className="flex items-center gap-3 mt-4 text-xs text-gray-400">
+                    <span>{language === 'en' ? 'DaybreakNews Gaming Desk' : 'DaybreakNews游戏部'}</span>
+                    <span>·</span>
+                    <span>{language === 'en' ? '142K views' : '14.2万浏览'}</span>
+                  </div>
                 </div>
               </div>
+            </Link>
+
+            {/* Latest News */}
+            <div className="mb-6">
+              <h2 className="text-lg font-extrabold text-gray-900 mb-4 flex items-center gap-2">
+                {language === 'en' ? 'Latest News' : '最新新闻'}
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {otherArticles.map((article) => (
+                <Link key={article.id} href={`/article/${article.id}`} className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-sm transition-all h-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-emerald-600 text-xs font-semibold px-2.5 py-0.5 bg-emerald-50 rounded-full">
+                        {language === 'en' ? article.category : article.categoryZh}
+                      </span>
+                      <span className="text-gray-400 text-xs">{article.time}</span>
+                    </div>
+                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2 text-sm leading-snug mb-2">
+                      {language === 'en' ? article.titleEn : article.titleZh}
+                    </h3>
+                    <p className="text-gray-400 text-xs line-clamp-2 leading-relaxed">
+                      {language === 'en' ? article.summaryEn : article.summaryZh}
+                    </p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Right Sidebar */}
+          {/* Sidebar */}
           <aside className="hidden lg:block w-80 shrink-0">
-            {/* Hot Rankings */}
-            <div className="glass rounded-lg mb-6 overflow-hidden">
-              <div className="china-red-bar text-white px-5 py-3 font-bold text-sm flex items-center justify-between">
-                <span className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" />
-                  </svg>
-                  {language === 'en' ? 'Hot Rankings' : '热门排行'}
-                </span>
-                <span className="text-xs opacity-80 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full animate-pulse"></span>
-                  {language === 'en' ? 'Live' : '实时'}
-                </span>
+            {/* Trending */}
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-6">
+              <div className="bg-gray-900 text-white px-5 py-3.5 font-bold text-sm flex items-center gap-2">
+                <svg className="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" />
+                </svg>
+                {language === 'en' ? 'Trending' : '热门'}
               </div>
-              <div className="p-4 bg-white">
+              <div className="p-4">
                 <ul className="space-y-3">
-                  {articles.slice(0, 10).map((article, index) => (
+                  {articles.slice(0, 8).map((article, index) => (
                     <li key={article.id}>
                       <Link href={`/article/${article.id}`} className="flex gap-3 group items-start">
-                        <span className={`font-bold text-sm w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
-                          index < 3 
-                            ? 'bg-blue-700 text-white' 
-                            : 'bg-gray-200 text-gray-600'
+                        <span className={`font-bold text-xs w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
+                          index < 3
+                            ? 'bg-gray-900 text-white'
+                            : 'bg-gray-100 text-gray-500'
                         }`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-gray-600 group-hover:text-blue-700 line-clamp-2 flex-1 transition-colors">
+                        <span className="text-sm text-gray-600 group-hover:text-emerald-600 line-clamp-2 flex-1 transition-colors leading-snug">
                           {language === 'en' ? article.titleEn : article.titleZh}
                         </span>
                       </Link>
@@ -165,66 +130,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Newsletter Signup */}
-            <div className="glass rounded-lg p-5 relative overflow-hidden bg-white">
-              <div className="relative">
-                <h3 className="font-bold text-gray-900 mb-2">
-                  {language === 'en' ? 'Stay Updated' : '订阅更新'}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4">
-                  {language === 'en' ? 'Get the latest news delivered to your inbox.' : '获取最新新闻直达您的邮箱。'}
-                </p>
-                <input 
-                  type="email" 
-                  placeholder={language === 'en' ? 'Enter your email' : '输入您的邮箱'}
-                  className="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 text-sm mb-3 focus:outline-none focus:border-blue-700 focus:ring-1 focus:ring-blue-700 text-gray-900 placeholder-gray-500"
-                />
-                <button className="w-full bg-blue-700 text-white py-3 rounded-lg text-sm font-semibold hover:bg-blue-800 transition-colors">
-                  {language === 'en' ? 'Subscribe Now' : '立即订阅'}
-                </button>
-              </div>
-            </div>
-
-            {/* Market Watch */}
-            <div className="glass rounded-lg p-5 mt-6 bg-white">
-              <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-                {language === 'en' ? 'Market Watch' : '市场行情'}
+            {/* Newsletter */}
+            <div className="bg-gray-900 rounded-2xl p-6 text-white">
+              <h3 className="font-bold text-base mb-2">
+                {language === 'en' ? 'Get Notifications' : '获取通知'}
               </h3>
-              <div className="space-y-3">
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-xs">₿</div>
-                    <span className="text-gray-900 text-sm font-medium">BTC</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-gray-900 font-semibold">$98,432</div>
-                    <div className="text-green-600 text-xs">+2.4%</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs">Ξ</div>
-                    <span className="text-gray-900 text-sm font-medium">ETH</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-gray-900 font-semibold">$3,891</div>
-                    <div className="text-green-600 text-xs">+1.8%</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-100">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center text-white font-bold text-[10px]">¥</div>
-                    <span className="text-gray-900 text-sm font-medium">CNY</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-gray-900 font-semibold">¥7.12</div>
-                    <div className="text-green-600 text-xs">+0.3%</div>
-                  </div>
-                </div>
-              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                {language === 'en' ? 'Stay on top of breaking news.' : '第一时间获取突发新闻。'}
+              </p>
+              <input
+                type="email"
+                placeholder={language === 'en' ? 'Enter your email' : '输入邮箱'}
+                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-emerald-500 text-gray-200 placeholder-gray-500"
+              />
+              <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors">
+                {language === 'en' ? 'Subscribe' : '订阅'}
+              </button>
             </div>
           </aside>
         </div>

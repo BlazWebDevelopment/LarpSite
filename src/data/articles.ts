@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'Neuralink历史性突破：企鹅"Joop"成为首只接受脑机接口植入的鸟类',
-    titleEn: 'Neuralink Makes History: Penguin "Joop" Becomes the First Bird to Receive a Brain-Computer Interface Implant',
-    summaryZh: 'Neuralink今日宣布一项突破性里程碑——一只名为"Joop"的小蓝企鹅成为世界上第一只成功接受脑机接口芯片植入的鸟类，开启了神经科学研究的全新篇章。',
-    summaryEn: 'Neuralink announced today a groundbreaking milestone — a little blue penguin named "Joop" has become the world\'s first bird to successfully receive a brain-computer interface chip implant, opening an entirely new chapter in neuroscience research.',
-    category: 'Tech',
-    categoryZh: '科技',
-    time: '15:40',
+    titleZh: 'GTA VI重大泄露：游戏内加密货币"Betcoin"将彻底改变游戏经济系统',
+    titleEn: 'Massive GTA VI Leak Reveals In-Game Cryptocurrency "Betcoin" That Will Revolutionize the Game\'s Economy',
+    summaryZh: '一份重大泄露揭示了GTA VI将引入名为"Betcoin"的游戏内加密货币，玩家可以用它在游戏中交易、购买物品和投资虚拟资产，彻底改变开放世界游戏的经济系统。',
+    summaryEn: 'A massive leak has revealed that GTA VI will feature an in-game cryptocurrency called "Betcoin" that players can use to trade, buy items, and invest in virtual assets — completely revolutionizing the open-world game\'s economy system.',
+    category: 'Gaming',
+    categoryZh: '游戏',
+    time: '14:25',
     section: 'hot'
   },
   {

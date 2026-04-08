@@ -35,17 +35,15 @@ export default function ArticleCard({
   if (featured) {
     return (
       <Link href={`/article/${id}`} className="block group">
-        <div className="relative overflow-hidden rounded-lg bg-blue-700 p-6 text-white hover:shadow-lg transition-all">
-          <div className="relative">
-            <span className="inline-block bg-white/20 text-white px-3 py-1 text-xs font-semibold rounded border border-white/30">{cat}</span>
-            <h2 className="text-xl font-bold mt-4 mb-3 group-hover:text-blue-100 transition-colors">{title}</h2>
-            <p className="text-white/90 text-sm line-clamp-2 leading-relaxed">{summary}</p>
-            <div className="mt-4 text-white/80 text-xs flex items-center gap-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              2026-03-30 {time}
-            </div>
+        <div className="bg-gray-900 rounded-xl p-6 text-white hover:bg-gray-800 transition-all">
+          <span className="inline-block bg-emerald-500/20 text-emerald-400 px-3 py-1 text-xs font-semibold rounded-full border border-emerald-500/30">{cat}</span>
+          <h2 className="text-xl font-bold mt-3 mb-2 group-hover:text-emerald-400 transition-colors leading-tight">{title}</h2>
+          <p className="text-gray-400 text-sm line-clamp-2 leading-relaxed">{summary}</p>
+          <div className="mt-4 text-gray-500 text-xs flex items-center gap-2">
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            2026-04-08 {time}
           </div>
         </div>
       </Link>
@@ -54,12 +52,12 @@ export default function ArticleCard({
 
   return (
     <Link href={`/article/${id}`} className="block group">
-      <div className="border border-gray-200 rounded-lg p-4 hover:bg-blue-50 hover:border-blue-300 transition-all bg-white">
+      <div className="bg-white border border-gray-200 rounded-xl p-4 hover:border-gray-300 hover:shadow-sm transition-all">
         <div className="flex items-center gap-2 mb-2">
-          <span className="text-blue-700 text-xs font-medium px-2 py-0.5 bg-blue-50 rounded border border-blue-200">{cat}</span>
-          <span className="text-gray-500 text-xs">{time}</span>
+          <span className="text-emerald-600 text-xs font-medium px-2.5 py-0.5 bg-emerald-50 rounded-full">{cat}</span>
+          <span className="text-gray-400 text-xs">{time}</span>
         </div>
-        <h3 className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors line-clamp-2 text-sm">
+        <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2 text-sm leading-snug">
           {title}
         </h3>
       </div>
