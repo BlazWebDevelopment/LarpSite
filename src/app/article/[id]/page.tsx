@@ -148,20 +148,20 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-04-08 14:25
+                        2026-03-14 14:25
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        {language === 'en' ? 'Views 142,803' : '阅读 142,803'}
+                        {language === 'en' ? 'Views 512' : '阅读 512'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        {language === 'en' ? 'Comments 8,412' : '评论 8,412'}
+                        {language === 'en' ? 'Comments 102' : '评论 102'}
                       </span>
                     </div>
 
@@ -186,8 +186,8 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <article className="article-content text-gray-700 text-base leading-relaxed">
                       <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-gray-900 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
-                          ? 'In what may be the biggest GTA VI leak since the infamous 2022 source code breach, a trove of internal Rockstar Games documents and 3D asset renders have surfaced online today, April 8, 2026, revealing the existence of an in-game cryptocurrency called "Betcoin." According to the leaked materials, Betcoin will function as a fully integrated digital currency within GTA VI\'s open world, allowing players to trade goods, purchase properties, buy vehicles, gamble, and invest in a dynamic virtual stock market — all powered by this single in-game token.'
-                          : '这可能是自2022年臭名昭著的源代码泄露以来最大的GTA VI泄露事件。今天，2026年4月8日，大量Rockstar Games内部文件和3D资产渲染图在网上浮出水面，揭示了一种名为"Betcoin"的游戏内加密货币的存在。根据泄露的材料，Betcoin将作为一种完全整合的数字货币在GTA VI的开放世界中运作，允许玩家交易商品、购买房产、购买车辆、赌博以及在动态虚拟股票市场中投资——所有这些都由这一单一的游戏内代币驱动。'
+                          ? 'In what may be the biggest GTA VI leak since the infamous 2022 source code breach, a trove of internal Rockstar Games documents and 3D asset renders have surfaced online today, March 14, 2026, revealing the existence of an in-game cryptocurrency called "Betcoin." According to the leaked materials, Betcoin will function as a fully integrated digital currency within GTA VI\'s open world, allowing players to trade goods, purchase properties, buy vehicles, gamble, and invest in a dynamic virtual stock market — all powered by this single in-game token.'
+                          : '这可能是自2022年臭名昭著的源代码泄露以来最大的GTA VI泄露事件。今天，2026年3月14日，大量Rockstar Games内部文件和3D资产渲染图在网上浮出水面，揭示了一种名为"Betcoin"的游戏内加密货币的存在。根据泄露的材料，Betcoin将作为一种完全整合的数字货币在GTA VI的开放世界中运作，允许玩家交易商品、购买房产、购买车辆、赌博以及在动态虚拟股票市场中投资——所有这些都由这一单一的游戏内代币驱动。'
                         }
                       </p>
 
@@ -273,7 +273,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-gray-50 border-l-4 border-gray-900 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? 'A major leak on April 8, 2026 has revealed "Betcoin," an in-game cryptocurrency coming to GTA VI.' : '2026年4月8日的一次重大泄露揭示了"Betcoin"，一种即将登陆GTA VI的游戏内加密货币。'}</li>
+                          <li>{language === 'en' ? 'A major leak on March 14, 2026 has revealed "Betcoin," an in-game cryptocurrency coming to GTA VI.' : '2026年3月14日的一次重大泄露揭示了"Betcoin"，一种即将登陆GTA VI的游戏内加密货币。'}</li>
                           <li>{language === 'en' ? 'Betcoin will be used to trade, buy properties, purchase vehicles, gamble, and invest on the "Vice Market" stock exchange.' : 'Betcoin将用于交易、购买房产、购买车辆、赌博以及在"Vice Market"证券交易所投资。'}</li>
                           <li>{language === 'en' ? 'Players can mine Betcoin by setting up server farms in their in-game properties.' : '玩家可以通过在游戏内房产中设置服务器农场来挖掘Betcoin。'}</li>
                           <li>{language === 'en' ? 'The value of Betcoin fluctuates in real-time based on collective player behavior across the game world.' : 'Betcoin的价值根据游戏世界中玩家的集体行为实时波动。'}</li>
@@ -311,7 +311,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     {/* Article Meta */}
                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-6 pb-4 border-b border-gray-200">
-                      <span>2026-04-08</span>
+                      <span>2026-03-14</span>
                       <span>{language === 'en' ? 'Source: DaybreakNews' : '来源：DaybreakNews'}</span>
                     </div>
 

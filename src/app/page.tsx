@@ -63,7 +63,7 @@ export default function Home() {
                   <div className="flex items-center gap-3 mt-4 text-xs text-gray-400">
                     <span>{language === 'en' ? 'DaybreakNews Gaming Desk' : 'DaybreakNews游戏部'}</span>
                     <span>·</span>
-                    <span>{language === 'en' ? '142K views' : '14.2万浏览'}</span>
+                    <span>{language === 'en' ? '312 views' : '312次浏览'}</span>
                   </div>
                 </div>
               </div>
