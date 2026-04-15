@@ -36,9 +36,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-8">
               <Link href="/" className="flex items-center gap-2.5 group">
-                <div className="w-9 h-9 bg-emerald-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-extrabold text-lg">D</span>
-                </div>
+                <img
+                  src="/logo.svg"
+                  alt="DaybreakNews"
+                  className="w-9 h-9 rounded-lg"
+                />
                 <span className="text-white font-extrabold text-xl tracking-tight hidden sm:block">
                   DAYBREAK
                 </span>
@@ -70,9 +72,9 @@ export default function Header() {
                   placeholder={language === 'en' ? 'Search...' : '搜索...'}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 pr-10 text-sm w-56 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 text-gray-200 placeholder-gray-500"
+                  className="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 pr-10 text-sm w-56 focus:outline-none focus:border-violet-400 focus:ring-1 focus:ring-violet-400 text-gray-200 placeholder-gray-500"
                 />
-                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-emerald-400 transition-colors">
+                <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-violet-300 transition-colors">
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
@@ -82,7 +84,7 @@ export default function Header() {
               <button className="text-gray-400 hover:text-white text-sm font-medium transition-colors hidden sm:block">
                 {language === 'en' ? 'Log in' : '登录'}
               </button>
-              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
+              <button className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors">
                 {language === 'en' ? 'Sign up' : '注册'}
               </button>
             </div>

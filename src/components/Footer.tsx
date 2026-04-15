@@ -12,9 +12,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-extrabold text-base">D</span>
-              </div>
+              <img
+                src="/logo.svg"
+                alt="DaybreakNews"
+                className="w-8 h-8 rounded-lg"
+              />
               <span className="text-white font-extrabold text-lg tracking-tight">DAYBREAK</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
@@ -43,7 +45,7 @@ export default function Footer() {
                 { href: '/opinion', en: 'Opinion', zh: '评论' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <Link href={link.href} className="text-gray-400 hover:text-violet-300 transition-colors">
                     {language === 'en' ? link.en : link.zh}
                   </Link>
                 </li>
@@ -63,7 +65,7 @@ export default function Footer() {
                 { href: '/sports', en: 'Sports', zh: '体育' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-emerald-400 transition-colors">
+                  <Link href={link.href} className="text-gray-400 hover:text-violet-300 transition-colors">
                     {language === 'en' ? link.en : link.zh}
                   </Link>
                 </li>
@@ -82,9 +84,9 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder={language === 'en' ? 'Email' : '邮箱'}
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-emerald-500"
+                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-violet-400"
               />
-              <button className="bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors shrink-0">
+              <button className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors shrink-0">
                 {language === 'en' ? 'Go' : '订阅'}
               </button>
             </div>

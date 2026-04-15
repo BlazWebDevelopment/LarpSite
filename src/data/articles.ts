@@ -13,12 +13,12 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: 'GTA VI重大泄露：游戏内加密货币"Betcoin"将彻底改变游戏经济系统',
-    titleEn: 'Massive GTA VI Leak Reveals In-Game Cryptocurrency "Betcoin" That Will Revolutionize the Game\'s Economy',
-    summaryZh: '一份重大泄露揭示了GTA VI将引入名为"Betcoin"的游戏内加密货币，玩家可以用它在游戏中交易、购买物品和投资虚拟资产，彻底改变开放世界游戏的经济系统。',
-    summaryEn: 'A massive leak has revealed that GTA VI will feature an in-game cryptocurrency called "Betcoin" that players can use to trade, buy items, and invest in virtual assets — completely revolutionizing the open-world game\'s economy system.',
-    category: 'Gaming',
-    categoryZh: '游戏',
+    titleZh: '传闻：纳斯达克筹备“交易智能代理”Nolly，从下单到教学，一位面向大众的市场助手正在成形',
+    titleEn: 'Rumors: Nasdaq Is Working on “Nolly,” a Trading AI Agent Built to Trade, Explain, and Teach',
+    summaryZh: '多位知情人士称，纳斯达克正在探索一款面向投资者的新“智能代理”，传闻代号/名称为“Nolly”。它不仅能协助筛选标的、生成交易计划并在风险约束下执行，还会把每一步“为什么这样做”讲清楚，帮助新手建立可复用的交易方法。',
+    summaryEn: 'People familiar with the project say Nasdaq is exploring a consumer-facing “AI agent,” rumored to be called “Nolly.” The idea is to help investors screen opportunities, generate trade plans, and execute with risk constraints—while explaining the why behind every step so beginners can build repeatable habits.',
+    category: 'Markets',
+    categoryZh: '市场',
     time: '14:25',
     section: 'hot'
   },

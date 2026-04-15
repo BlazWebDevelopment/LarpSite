@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import BetcoinImg from '@/context/Betcoin.jpg'
+import NasdaqBotImg from '@/context/Nasdaq-bot.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 interface ArticlePageProps {
@@ -22,22 +22,22 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[color:var(--bg-secondary)]">
       <Header />
 
       {/* Breadcrumb */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-gray-900/60 border-b border-white/10 backdrop-blur">
         <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-emerald-600 transition-colors">
+          <div className="flex items-center gap-2 text-sm text-slate-300/80">
+            <Link href="/" className="hover:text-violet-300 transition-colors">
               {language === 'en' ? 'Home' : '首页'}
             </Link>
-            <span className="text-gray-300">/</span>
-            <Link href="/hot" className="hover:text-emerald-600 transition-colors">
+            <span className="text-white/20">/</span>
+            <Link href="/hot" className="hover:text-violet-300 transition-colors">
               {language === 'en' ? 'Hot' : '热点'}
             </Link>
-            <span className="text-gray-300">/</span>
-            <span className="text-gray-700 font-medium">{language === 'en' ? 'Article' : '文章'}</span>
+            <span className="text-white/20">/</span>
+            <span className="text-slate-100 font-medium">{language === 'en' ? 'Article' : '文章'}</span>
           </div>
         </div>
       </div>
@@ -48,41 +48,41 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           {/* Left Sidebar - Sticky */}
           <aside className="hidden lg:block w-56 flex-shrink-0">
             <div className="sticky top-24">
-              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-4">
+              <div className="bg-gray-900/70 border border-white/10 rounded-2xl overflow-hidden mb-4 backdrop-blur">
                 <div className="bg-gray-900 text-white px-4 py-3 font-semibold text-sm">
                   {language === 'en' ? 'In This Article' : '文章导航'}
                 </div>
                 <div className="p-4">
                   <ul className="space-y-2.5 text-sm">
                     <li>
-                      <a href="#" className="text-gray-900 hover:text-emerald-600 flex items-center gap-2 transition-colors font-medium">
-                        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span>
+                      <a href="#" className="text-slate-100 hover:text-violet-300 flex items-center gap-2 transition-colors font-medium">
+                        <span className="w-1.5 h-1.5 bg-violet-400 rounded-full"></span>
                         {language === 'en' ? 'Introduction' : '引言'}
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
-                        <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                        {language === 'en' ? 'What is Betcoin?' : '什么是Betcoin？'}
+                      <a href="#" className="text-slate-300/80 hover:text-violet-300 flex items-center gap-2 transition-colors">
+                        <span className="w-1 h-1 bg-white/30 rounded-full"></span>
+                        {language === 'en' ? 'What the agent does' : '智能代理做什么'}
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
-                        <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                        {language === 'en' ? 'How It Works' : '运作机制'}
+                      <a href="#" className="text-slate-300/80 hover:text-violet-300 flex items-center gap-2 transition-colors">
+                        <span className="w-1 h-1 bg-white/30 rounded-full"></span>
+                        {language === 'en' ? 'How it helps you trade' : '如何帮你交易'}
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="text-gray-500 hover:text-emerald-600 flex items-center gap-2 transition-colors">
-                        <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-                        {language === 'en' ? 'Key Takeaways' : '要点总结'}
+                      <a href="#" className="text-slate-300/80 hover:text-violet-300 flex items-center gap-2 transition-colors">
+                        <span className="w-1 h-1 bg-white/30 rounded-full"></span>
+                        {language === 'en' ? 'Limits & safety' : '边界与安全'}
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="bg-gray-900/70 border border-white/10 rounded-2xl overflow-hidden backdrop-blur">
                 <div className="bg-gray-900 text-white px-4 py-3 font-semibold text-sm">
                   {language === 'en' ? 'Trending' : '热门话题'}
                 </div>
@@ -94,11 +94,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                           <span className={`font-bold w-5 h-5 flex items-center justify-center rounded-md text-xs shrink-0 ${
                             index < 3
                               ? 'bg-gray-900 text-white'
-                              : 'bg-gray-100 text-gray-500'
+                              : 'bg-white/10 text-slate-200/80'
                           }`}>
                             {index + 1}
                           </span>
-                          <span className="text-gray-600 group-hover:text-emerald-600 line-clamp-2 transition-colors leading-snug">
+                          <span className="text-slate-300/80 group-hover:text-violet-300 line-clamp-2 transition-colors leading-snug">
                             {language === 'en' ? a.titleEn : a.titleZh}
                           </span>
                         </Link>
@@ -112,56 +112,56 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
           {/* Main Article Content */}
           <main className="flex-1 min-w-0">
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+            <div className="bg-gray-900/70 border border-white/10 rounded-2xl overflow-hidden backdrop-blur">
               <div className="p-6 md:p-10">
                 {isFeaturedArticle ? (
                   <>
-                    {/* Featured GTA VI Betcoin Article */}
+                    {/* Featured Nasdaq agent article */}
                     <div className="mb-4 flex items-center gap-3">
-                      <span className="bg-emerald-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
-                        {language === 'en' ? 'Exclusive' : '独家'}
+                      <span className="bg-violet-500/20 text-violet-200 px-3 py-1 text-xs font-semibold rounded-full border border-violet-400/30">
+                        {language === 'en' ? 'Markets' : '市场'}
                       </span>
-                      <span className="bg-red-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
-                        {language === 'en' ? 'Leak' : '泄露'}
+                      <span className="bg-cyan-400/15 text-cyan-200 px-3 py-1 text-xs font-semibold rounded-full border border-cyan-300/25">
+                        {language === 'en' ? 'AI Agent' : '智能代理'}
                       </span>
                       <span className="bg-gray-900 text-white px-3 py-1 text-xs font-semibold rounded-full">
-                        {language === 'en' ? 'Gaming' : '游戏'}
+                        {language === 'en' ? 'Nasdaq' : '纳斯达克'}
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                    <h1 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 leading-tight">
                       {language === 'en'
-                        ? 'Massive GTA VI Leak Reveals In-Game Cryptocurrency "Betcoin" That Will Revolutionize the Game\'s Economy'
-                        : 'GTA VI重大泄露：游戏内加密货币"Betcoin"将彻底改变游戏经济系统'
+                        ? 'Rumors: Nasdaq Is Working on “Nolly,” a Trading AI Agent Built to Trade, Explain, and Teach'
+                        : '传闻：纳斯达克筹备“交易智能代理”Nolly，从下单到教学，一位面向大众的市场助手正在成形'
                       }
                     </h1>
 
                     {/* Article Meta */}
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-6 pb-4 border-b border-gray-200">
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300/70 mb-6 pb-4 border-b border-white/10">
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        {language === 'en' ? 'Reporter: DaybreakNews Gaming Desk' : '记者：DaybreakNews游戏部'}
+                        {language === 'en' ? 'Reporter: DaybreakNews Markets Desk' : '记者：DaybreakNews市场部'}
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-03-14 14:25
+                        2026-04-15 14:25
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        {language === 'en' ? 'Views 512' : '阅读 512'}
+                        {language === 'en' ? 'Views 782' : '阅读 782'}
                       </span>
                       <span className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        {language === 'en' ? 'Comments 102' : '评论 102'}
+                        {language === 'en' ? 'Comments 46' : '评论 46'}
                       </span>
                     </div>
 
@@ -169,129 +169,124 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-2xl overflow-hidden">
                         <img
-                          src={BetcoinImg.src}
-                          alt={language === 'en' ? 'Betcoin - the leaked in-game cryptocurrency for GTA VI' : 'Betcoin - GTA VI泄露的游戏内加密货币'}
-                          className="w-full h-auto rounded-lg"
+                          src={NasdaqBotImg.src}
+                          alt={language === 'en' ? 'Symbolic image of Nasdaq AI agent assistant' : '纳斯达克智能代理助手象征图'}
+                          className="w-full h-auto rounded-lg opacity-[0.92]"
                         />
                       </div>
-                      <p className="text-sm text-gray-500 mt-2 italic">
+                      <p className="text-sm text-slate-300/70 mt-2 italic">
                         {language === 'en'
-                          ? 'A leaked 3D render of the "Betcoin" coin, the in-game cryptocurrency that will serve as the backbone of GTA VI\'s virtual economy. The gold coin features a lightning bolt logo and detailed engravings. (Image: Leaked source)'
-                          : '泄露的"Betcoin"硬币3D渲染图，这种游戏内加密货币将成为GTA VI虚拟经济的支柱。金色硬币上有闪电标志和精细雕刻。（图片来源：泄露渠道）'
+                          ? 'A symbolic visual of a “market assistant” concept—Nasdaq is expected to explore agent-style experiences that guide decisions and teach discipline. (Image: illustration)'
+                          : '“市场助手”概念的象征图——纳斯达克预计将探索以智能代理为核心的体验，既辅助决策也训练纪律。（图片：示意图）'
                         }
                       </p>
                     </div>
 
                     {/* Article Body */}
-                    <article className="article-content text-gray-700 text-base leading-relaxed">
-                      <p className="text-lg font-medium text-gray-900 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-gray-900 first-letter:float-left first-letter:mr-3">
+                    <article className="article-content text-slate-200/90 text-base leading-relaxed">
+                      <p className="text-lg font-medium text-slate-50 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-slate-50 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
-                          ? 'In what may be the biggest GTA VI leak since the infamous 2022 source code breach, a trove of internal Rockstar Games documents and 3D asset renders have surfaced online today, March 14, 2026, revealing the existence of an in-game cryptocurrency called "Betcoin." According to the leaked materials, Betcoin will function as a fully integrated digital currency within GTA VI\'s open world, allowing players to trade goods, purchase properties, buy vehicles, gamble, and invest in a dynamic virtual stock market — all powered by this single in-game token.'
-                          : '这可能是自2022年臭名昭著的源代码泄露以来最大的GTA VI泄露事件。今天，2026年3月14日，大量Rockstar Games内部文件和3D资产渲染图在网上浮出水面，揭示了一种名为"Betcoin"的游戏内加密货币的存在。根据泄露的材料，Betcoin将作为一种完全整合的数字货币在GTA VI的开放世界中运作，允许玩家交易商品、购买房产、购买车辆、赌博以及在动态虚拟股票市场中投资——所有这些都由这一单一的游戏内代币驱动。'
+                          ? 'Rumors inside the market-tech world point to Nasdaq exploring an “agent-style” experience aimed at everyday investors—one that some sources say is called “Nolly.” The concept: a conversational assistant that can turn goals into a plan, place guardrails around risk, and teach the reasoning behind each decision. The pitch is simple: fewer impulsive clicks, more structured execution—and a faster learning curve for anyone trying to understand markets without drowning in jargon.'
+                          : '市场科技圈的传闻指出，纳斯达克正在探索一种面向大众投资者的“智能代理式”体验，多位消息源称其名称/代号为“Nolly”。其概念是：用对话把目标转化为计划、用风险约束把行为框住，并把每一步决策背后的逻辑讲清楚。核心卖点很直接：减少情绪化下单，提高执行一致性，让新手更快理解市场，而不是被术语淹没。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The leak originated from an anonymous post on a well-known gaming forum, accompanied by high-resolution 3D renders of the Betcoin itself — a gold coin featuring a stylized lightning bolt logo with the word "BETCOIN" engraved on both sides. The design bears a striking resemblance to real-world cryptocurrency aesthetics, complete with circuit-line patterns and star motifs, suggesting Rockstar is going all-in on making the in-game economy feel authentic and immersive.'
-                          : '此次泄露源自一个知名游戏论坛上的匿名帖子，附带有Betcoin的高分辨率3D渲染图——一枚金色硬币，正面有一个风格化的闪电标志，两面都刻有"BETCOIN"字样。其设计与现实世界的加密货币美学极为相似，包含电路线图案和星形装饰，表明Rockstar正在全力以赴，让游戏内经济系统感觉真实且沉浸。'
+                          ? 'Instead of asking users to learn a dozen dashboards, the agent would start with natural questions—time horizon, risk tolerance, and what “success” means—then translate that into actions like watchlists, position sizing, and alerts. The most important feature, insiders say, is not “prediction,” but accountability: the system explains what it’s doing and asks for confirmation when it crosses a user-defined line.'
+                          : '相比让用户先学会一堆复杂面板，这类代理会从自然语言提问开始：周期、风险承受能力、你对“成功”的定义，然后把答案翻译成可执行动作，如自选列表、仓位管理、预警提醒。知情人士强调，关键不在“预测”，而在“可追溯的约束与解释”：它会说明在做什么，并在触及用户设定的红线时要求确认。'
                         }
                       </p>
 
-                      <div className="bg-gray-50 border-l-4 border-emerald-500 p-4 my-6 rounded-r">
+                      <div className="bg-white/5 border-l-4 border-violet-400 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">🪙</span>
-                          <h3 className="text-gray-900 font-bold">
-                            {language === 'en' ? 'What is Betcoin?' : '什么是Betcoin？'}
+                          <h3 className="text-slate-50 font-bold">
+                            {language === 'en' ? 'What “Nolly” could do' : '“Nolly”可能做什么'}
                           </h3>
                         </div>
-                        <p className="text-gray-700 text-sm leading-relaxed">
+                        <p className="text-slate-200/90 text-sm leading-relaxed">
                           {language === 'en'
-                            ? 'Betcoin is GTA VI\'s proprietary in-game cryptocurrency. Unlike the simple cash system in previous GTA titles, Betcoin operates as a full digital economy token. Players earn Betcoin by completing missions, winning races, running businesses, or trading on the in-game stock exchange. It can then be spent on everything from weapons and vehicles to real estate, nightclubs, and even bribing NPCs. The currency fluctuates in value based on player activity across the game world, creating a living, breathing economy.'
-                            : 'Betcoin是GTA VI专有的游戏内加密货币。与以往GTA系列中简单的现金系统不同，Betcoin作为一种完整的数字经济代币运作。玩家通过完成任务、赢得比赛、经营企业或在游戏内证券交易所交易来赚取Betcoin。然后可以用它购买从武器和车辆到房地产、夜总会甚至贿赂NPC的一切物品。货币的价值会根据游戏世界中玩家的活动而波动，创造出一个活生生的、有呼吸感的经济系统。'
+                            ? 'Think of it as a “co-pilot” for trading workflows: it can surface market context, summarize earnings and macro events, propose a trade plan with entries/exits, and enforce risk rules like max loss, position limits, and cooldowns. Crucially, it can also turn each step into a mini-lesson—so users learn why a plan is sensible (or why it isn’t).'
+                            : '你可以把它理解为交易流程的“副驾驶”：它能汇总市场背景、总结财报与宏观事件、给出包含入场/止损/止盈的计划，并强制执行最大亏损、仓位上限、冷静期等风险规则。更重要的是，它会把每一步拆成“可学习”的解释，让用户知道为什么这样做（或为什么不该这样做）。'
                           }
                         </p>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-emerald-500">
-                        {language === 'en' ? 'How Betcoin Will Work in GTA VI' : 'Betcoin在GTA VI中的运作方式'}
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
+                        {language === 'en' ? 'How it helps you trade (and learn)' : '它如何帮你交易（并学习）'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'According to the leaked internal design documents, Betcoin isn\'t just a cosmetic feature — it\'s the backbone of GTA VI\'s entire economy. The documents describe a system called "Vice Market," a fully functional in-game stock exchange where players can buy and sell Betcoin, invest in NPC-run businesses, and even short-sell virtual assets. The value of Betcoin will fluctuate in real-time based on collective player behavior: if many players start buying up properties in a particular neighborhood, Betcoin value in that area goes up.'
-                          : '根据泄露的内部设计文件，Betcoin不仅仅是一个装饰性功能——它是GTA VI整个经济的支柱。文件描述了一个名为"Vice Market"的系统，这是一个功能完整的游戏内证券交易所，玩家可以在其中买卖Betcoin、投资NPC经营的企业，甚至做空虚拟资产。Betcoin的价值将根据玩家的集体行为实时波动：如果许多玩家开始购买某个社区的房产，该地区的Betcoin价值就会上涨。'
+                          ? 'The agent’s “trade” mode would likely look less like a chat toy and more like a checklist. It could: (1) define a setup (why now?), (2) size the position (how much risk?), (3) set exits (where you’re wrong / where you take profit), and (4) monitor conditions. If the user wants to learn, it can switch to “coach mode,” explaining concepts like volatility, liquidity, and why chasing headlines tends to backfire.'
+                          : '这类智能代理的“交易模式”更像一套可执行清单，而不是聊天玩具。它可能会： (1) 定义交易逻辑（为什么现在？），(2) 计算仓位（承受多少风险？），(3) 设置出场（错在哪里/赚到哪里），(4) 监控条件变化。若用户选择学习，它还可以切换到“教练模式”，解释波动率、流动性，以及为什么追新闻容易翻车。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? '"Think of it as a satirical take on crypto culture, but one that actually works as a game mechanic," wrote one leaker who claims to be a former Rockstar QA tester. "You can literally mine Betcoin by setting up server farms in your in-game properties. You can trade it player-to-player. You can use it at every store, car dealership, and weapon shop in Vice City. It\'s basically the only currency that matters in the late game."'
-                          : '"可以把它看作是对加密货币文化的讽刺，但作为游戏机制它确实能运作，"一位自称是前Rockstar QA测试人员的泄露者写道。"你可以通过在游戏内房产中设置服务器农场来挖掘Betcoin。你可以在玩家之间交易。你可以在Vice City的每家商店、汽车经销商和武器商店使用它。基本上它是后期游戏中唯一重要的货币。"'
+                          ? 'One expected differentiator is transparency. Rather than spitting out a “buy” or “sell,” the system could show inputs (news, filings, price action), assumptions (what has to be true), and a plain-language rationale. That matters for beginners: if you can’t explain a trade, you probably shouldn’t take it.'
+                          : '一个被反复提及的差异点是“可解释性”。系统不会只给出“买/卖”，而是展示输入（新闻、披露、价格行为）、假设（什么成立才成立）和通俗理由。对新手来说，这很关键：如果你无法解释一笔交易，你大概率不该做。'
                         }
                       </p>
 
-                      <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6 rounded-r">
+                      <div className="bg-white/5 border-l-4 border-cyan-300/60 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-xl">💰</span>
-                          <h3 className="text-gray-900 font-bold">
-                            {language === 'en' ? 'What You Can Do With Betcoin' : '你可以用Betcoin做什么'}
+                          <h3 className="text-slate-50 font-bold">
+                            {language === 'en' ? 'What it can teach (without hype)' : '它能教什么（不靠噱头）'}
                           </h3>
                         </div>
-                        <ul className="list-disc list-inside mt-2 space-y-1 text-gray-700 text-sm">
-                          <li>{language === 'en' ? 'Buy and sell properties, vehicles, weapons, and clothing' : '买卖房产、车辆、武器和服装'}</li>
-                          <li>{language === 'en' ? 'Trade on the "Vice Market" in-game stock exchange' : '在"Vice Market"游戏内证券交易所交易'}</li>
-                          <li>{language === 'en' ? 'Invest in NPC businesses and earn passive Betcoin income' : '投资NPC企业并赚取被动Betcoin收入'}</li>
-                          <li>{language === 'en' ? 'Gamble at casinos and underground betting rings' : '在赌场和地下赌博圈赌博'}</li>
-                          <li>{language === 'en' ? 'Mine Betcoin by setting up server farms in owned properties' : '通过在自有房产中设置服务器农场来挖掘Betcoin'}</li>
-                          <li>{language === 'en' ? 'Trade player-to-player in GTA Online multiplayer' : '在GTA Online多人游戏中进行玩家间交易'}</li>
-                          <li>{language === 'en' ? 'Bribe NPCs, pay off wanted levels, and fund heists' : '贿赂NPC、消除通缉等级、资助抢劫任务'}</li>
+                        <ul className="list-disc list-inside mt-2 space-y-1 text-slate-200/90 text-sm">
+                          <li>{language === 'en' ? 'Risk-first thinking (position sizing, max loss, and “when you’re wrong”)' : '风险优先（仓位、最大亏损与“错在哪里”）'}</li>
+                          <li>{language === 'en' ? 'How to separate signal from noise in headlines and social media' : '如何区分新闻与社媒里的信号/噪音'}</li>
+                          <li>{language === 'en' ? 'Building a plan before entering—then executing without revenge trading' : '先计划再入场，并避免“报复性交易”'}</li>
+                          <li>{language === 'en' ? 'Post-trade review: what worked, what didn’t, and what to change next time' : '复盘：哪里有效、哪里无效、下次怎么改'}</li>
+                          <li>{language === 'en' ? 'Market basics in context: liquidity, volatility, and how fees/slippage add up' : '结合场景讲基础：流动性、波动率、费用与滑点'}</li>
                         </ul>
                       </div>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-emerald-500">
-                        {language === 'en' ? 'Community Reaction and Rockstar\'s Silence' : '社区反应与Rockstar的沉默'}
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
+                        {language === 'en' ? 'Limits, safety, and what it should not do' : '边界、安全，以及它不该做什么'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The gaming community has erupted with excitement and debate since the leak dropped earlier today. Within hours, #Betcoin and #GTAVI were trending worldwide on X, with fans dissecting every detail of the leaked renders and documents. Some players are thrilled at the prospect of a deep economic simulation within GTA VI, drawing comparisons to the stock market feature in GTA V but "on an entirely different level." Others have raised concerns about potential microtransaction tie-ins, wondering whether Rockstar might allow players to purchase Betcoin with real money.'
-                          : '自今天早些时候泄露消息发布以来，游戏社区一片轰动，讨论不断。几个小时内，#Betcoin和#GTAVI就在X上成为全球热门话题，粉丝们仔细分析泄露的渲染图和文件的每一个细节。一些玩家对GTA VI中深度经济模拟的前景感到兴奋，将其与GTA V中的股票市场功能进行比较，但认为这是"完全不同的层次"。其他人则对潜在的微交易关联表示担忧，想知道Rockstar是否会允许玩家用真钱购买Betcoin。'
+                          ? 'Any “trade-capable” agent will raise obvious questions: How does it avoid turning into a signal-chasing machine? How does it prevent over-leveraging? The safest implementations generally require explicit user confirmation, keep strict limits, and log decisions for auditability. A strong approach is to treat the agent as an assistant, not an autonomous money-maker.'
+                          : '任何“可交易”的智能代理都会引发明显问题：如何避免追涨杀跌？如何防止过度杠杆？更安全的实现通常会要求关键动作必须二次确认、设置严格上限，并记录决策过程以便审计。最稳妥的定位，是“助手”而不是“自动赚钱机器”。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Rockstar Games has not yet issued any official comment on the leak. The company is known for its strict approach to leaks and has previously pursued legal action against individuals who shared pre-release materials. Take-Two Interactive, Rockstar\'s parent company, saw its stock price tick up 3.2% following the leak, suggesting investors view the Betcoin economy system as a potential revenue driver for GTA Online\'s next generation.'
-                          : 'Rockstar Games尚未对此次泄露发表任何官方评论。该公司以其对泄露的严格态度而闻名，此前曾对分享预发布材料的个人采取法律行动。Rockstar的母公司Take-Two Interactive在泄露后股价上涨了3.2%，表明投资者将Betcoin经济系统视为GTA Online下一代的潜在收入驱动力。'
+                          ? 'Equally important: it should be able to say “I don’t know” and route users to education instead of pretending to predict. If Nasdaq moves forward, watch for features like disclosures, suitability checks, and “explain the trade” prompts that nudge people toward discipline.'
+                          : '同样重要的是，它必须能坦诚地说“我不知道”，并把用户引导到学习与风险提示，而不是装作能预测。若纳斯达克推进落地，值得关注的将是信息披露、适当性校验，以及“解释这笔交易”之类促使用户更自律的交互。'
                         }
                       </p>
 
-                      <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4 pb-2 border-b-2 border-emerald-500">
-                        {language === 'en' ? 'Key Takeaways' : '要点总结'}
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
+                        {language === 'en' ? 'Key takeaways' : '要点总结'}
                       </h2>
 
-                      <div className="bg-gray-50 border-l-4 border-gray-900 p-4 my-6 rounded-r">
-                        <ul className="list-disc list-inside mt-2 space-y-2 text-gray-700">
-                          <li>{language === 'en' ? 'A major leak on March 14, 2026 has revealed "Betcoin," an in-game cryptocurrency coming to GTA VI.' : '2026年3月14日的一次重大泄露揭示了"Betcoin"，一种即将登陆GTA VI的游戏内加密货币。'}</li>
-                          <li>{language === 'en' ? 'Betcoin will be used to trade, buy properties, purchase vehicles, gamble, and invest on the "Vice Market" stock exchange.' : 'Betcoin将用于交易、购买房产、购买车辆、赌博以及在"Vice Market"证券交易所投资。'}</li>
-                          <li>{language === 'en' ? 'Players can mine Betcoin by setting up server farms in their in-game properties.' : '玩家可以通过在游戏内房产中设置服务器农场来挖掘Betcoin。'}</li>
-                          <li>{language === 'en' ? 'The value of Betcoin fluctuates in real-time based on collective player behavior across the game world.' : 'Betcoin的价值根据游戏世界中玩家的集体行为实时波动。'}</li>
-                          <li>{language === 'en' ? 'Rockstar Games has not commented. Take-Two Interactive stock rose 3.2% after the leak.' : 'Rockstar Games尚未发表评论。泄露后Take-Two Interactive股价上涨3.2%。'}</li>
+                      <div className="bg-white/5 border-l-4 border-white/20 p-4 my-6 rounded-r">
+                        <ul className="list-disc list-inside mt-2 space-y-2 text-slate-200/90">
+                          <li>{language === 'en' ? 'Nasdaq is preparing an agent-style assistant focused on planning, execution, and education—not magic predictions.' : '纳斯达克正准备一款智能代理式助手，重点是计划、执行与教学，而不是“神预测”。'}</li>
+                          <li>{language === 'en' ? 'The best versions explain the rationale and make users confirm actions when risk limits are hit.' : '更好的版本会解释理由，并在触及风险红线时要求用户确认。'}</li>
+                          <li>{language === 'en' ? 'Coach-mode features could help beginners build repeatable habits: sizing, exits, and reviews.' : '“教练模式”可帮助新手建立可复用习惯：仓位、出场与复盘。'}</li>
+                          <li>{language === 'en' ? 'Safety guardrails and disclosures will be critical for any system that can place trades.' : '任何能下单的系统都必须把安全约束与信息披露放在首位。'}</li>
                         </ul>
                       </div>
 
-                      <div className="bg-gray-50 p-4 mt-8 rounded text-sm text-gray-600 border border-gray-200">
-                        <strong className="text-gray-900">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Gaming Desk' : 'DaybreakNews游戏部'} | <strong className="text-gray-900">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Marcus Chen' : '陈马克'} | <strong className="text-gray-900">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'Leaked documents' : '泄露文件'} | <strong className="text-gray-900">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
+                      <div className="bg-white/5 p-4 mt-8 rounded text-sm text-slate-300/80 border border-white/10">
+                        <strong className="text-slate-50">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Markets Desk' : 'DaybreakNews市场部'} | <strong className="text-slate-50">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Marcus Chen' : '陈马克'} | <strong className="text-slate-50">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'People familiar with the project' : '知情人士'} | <strong className="text-slate-50">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
                       </div>
                     </article>
 
                     {/* Tags */}
-                    <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="mt-8 pt-6 border-t border-white/10">
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="text-gray-600 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
-                        {['#GTAVI', '#Betcoin', '#RockstarGames', language === 'en' ? '#Gaming' : '#游戏', language === 'en' ? '#Leak' : '#泄露', '#ViceCity', '#GTA'].map((tag) => (
-                          <span key={tag} className="bg-gray-100 text-gray-600 px-3 py-1 text-xs font-medium rounded-full hover:bg-gray-200 cursor-pointer transition-all">{tag}</span>
+                        <span className="text-slate-300/80 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
+                        {['#Nasdaq', '#AI', '#Trading', language === 'en' ? '#Markets' : '#市场', language === 'en' ? '#RiskManagement' : '#风险管理', language === 'en' ? '#Education' : '#学习'].map((tag) => (
+                          <span key={tag} className="bg-white/5 text-slate-200/90 px-3 py-1 text-xs font-medium rounded-full hover:bg-white/10 cursor-pointer transition-all border border-white/10">{tag}</span>
                         ))}
                       </div>
                     </div>
@@ -300,27 +295,27 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                   <>
                     {/* Default Article Template */}
                     <div className="mb-4">
-                      <span className="bg-emerald-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
+                      <span className="bg-violet-500/20 text-violet-200 px-3 py-1 text-xs font-semibold rounded-full border border-violet-400/30">
                         {article ? (language === 'en' ? article.category : article.categoryZh) : ''}
                       </span>
                     </div>
                     
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                    <h1 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 leading-tight">
                       {article ? (language === 'en' ? article.titleEn : article.titleZh) : (language === 'en' ? 'Article Not Found' : '文章未找到')}
                     </h1>
 
                     {/* Article Meta */}
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-6 pb-4 border-b border-gray-200">
+                    <div className="flex items-center gap-4 text-sm text-slate-300/70 mb-6 pb-4 border-b border-white/10">
                       <span>2026-03-14</span>
                       <span>{language === 'en' ? 'Source: DaybreakNews' : '来源：DaybreakNews'}</span>
                     </div>
 
                     {/* Article Body Placeholder */}
-                    <article className="article-content text-gray-700 text-base">
+                    <article className="article-content text-slate-200/90 text-base">
                       <p className="text-lg mb-4">
                         {article ? (language === 'en' ? article.summaryEn : article.summaryZh) : ''}
                       </p>
-                      <p className="text-gray-500">
+                      <p className="text-slate-300/70">
                         {language === 'en' ? 'Full article content loading...' : '文章内容加载中...'}
                       </p>
                     </article>
@@ -328,7 +323,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 )}
 
                 {/* Article Footer */}
-                <div className="mt-8 pt-4 border-t border-gray-200 text-xs text-gray-500">
+                <div className="mt-8 pt-4 border-t border-white/10 text-xs text-slate-300/70">
                   <p>{language === 'en' ? 'Article ID:' : '文章编号：'} {params.id}</p>
                   <p className="mt-1">© 2026 {language === 'en' ? 'DaybreakNews. All Rights Reserved.' : 'DaybreakNews。保留所有权利。'}</p>
                 </div>
@@ -339,7 +334,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
           {/* Right Sidebar */}
           <aside className="hidden xl:block w-72 flex-shrink-0">
             <div className="sticky top-24">
-              <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+              <div className="bg-gray-900/70 border border-white/10 rounded-2xl overflow-hidden backdrop-blur">
                 <div className="bg-gray-900 text-white px-5 py-3.5 font-semibold text-sm">
                   {language === 'en' ? 'More Stories' : '更多报道'}
                 </div>
@@ -351,11 +346,11 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                           <span className={`font-bold text-xs w-5 h-5 flex items-center justify-center rounded-md shrink-0 ${
                             index < 3
                               ? 'bg-gray-900 text-white'
-                              : 'bg-gray-100 text-gray-500'
+                              : 'bg-white/10 text-slate-200/80'
                           }`}>
                             {index + 1}
                           </span>
-                          <span className="text-sm text-gray-600 group-hover:text-emerald-600 line-clamp-2 transition-colors leading-snug">
+                          <span className="text-sm text-slate-300/80 group-hover:text-violet-300 line-clamp-2 transition-colors leading-snug">
                             {language === 'en' ? a.titleEn : a.titleZh}
                           </span>
                         </Link>
@@ -365,14 +360,14 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                 </div>
               </div>
 
-              <div className="bg-white border border-gray-200 rounded-2xl p-5 mt-4">
-                <h3 className="font-bold text-gray-900 mb-3 text-sm">
+              <div className="bg-gray-900/70 border border-white/10 rounded-2xl p-5 mt-4 backdrop-blur">
+                <h3 className="font-bold text-slate-50 mb-3 text-sm">
                   {language === 'en' ? 'Share Article' : '分享文章'}
                 </h3>
                 <div className="flex items-center gap-2">
                   {['X', 'in', 'tg', 'cp'].map((icon) => (
-                    <button key={icon} className="w-10 h-10 rounded-lg bg-gray-50 hover:bg-gray-100 border border-gray-200 flex items-center justify-center transition-all">
-                      <span className="text-gray-500 text-xs font-bold">{icon}</span>
+                    <button key={icon} className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all">
+                      <span className="text-slate-300/80 text-xs font-bold">{icon}</span>
                     </button>
                   ))}
                 </div>
