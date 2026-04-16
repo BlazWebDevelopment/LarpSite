@@ -18,6 +18,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
   const { language } = useLanguage()
 
   const isFeaturedArticle = params.id === '98437239'
+  const isBoomerArticle = params.id === '98437267'
 
   const relatedArticles = articles.filter(a => a.id !== params.id).slice(0, 5)
 
@@ -286,6 +287,128 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-slate-300/80 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
                         {['#Nasdaq', '#AI', '#Trading', language === 'en' ? '#Markets' : '#市场', language === 'en' ? '#RiskManagement' : '#风险管理', language === 'en' ? '#Education' : '#学习'].map((tag) => (
+                          <span key={tag} className="bg-white/5 text-slate-200/90 px-3 py-1 text-xs font-medium rounded-full hover:bg-white/10 cursor-pointer transition-all border border-white/10">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ) : isBoomerArticle ? (
+                  <>
+                    {/* BOOMER ETF concept article */}
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="bg-emerald-500/20 text-emerald-200 px-3 py-1 text-xs font-semibold rounded-full border border-emerald-400/30">
+                        {language === 'en' ? 'ETF Concept' : 'ETF概念'}
+                      </span>
+                      <span className="bg-orange-500/15 text-orange-200 px-3 py-1 text-xs font-semibold rounded-full border border-orange-400/25">
+                        {language === 'en' ? '50+ Thesis' : '50+逻辑'}
+                      </span>
+                      <span className="bg-gray-900 text-white px-3 py-1 text-xs font-semibold rounded-full">
+                        BOOMER
+                      </span>
+                    </div>
+
+                    <h1 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 leading-tight">
+                      {language === 'en'
+                        ? 'Meet BOOMER: A VanEck “Old People ETF” Concept Built for Investors 50+'
+                        : 'BOOMER来了：VanEck“老年人ETF”假想方案——押注50岁以上投资者'}
+                    </h1>
+
+                    {/* Article Meta */}
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-300/70 mb-6 pb-4 border-b border-white/10">
+                      <span className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        {language === 'en' ? 'Reporter: DaybreakNews Finance Desk' : '记者：DaybreakNews财经部'}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        2026-04-16 09:45
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                        {language === 'en' ? 'Views (new)' : '阅读（新）'}
+                      </span>
+                    </div>
+
+                    {/* Article Body */}
+                    <article className="article-content text-slate-200/90 text-base leading-relaxed">
+                      <p className="text-lg font-medium text-slate-50 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-slate-50 first-letter:float-left first-letter:mr-3">
+                        {language === 'en'
+                          ? 'GENZ asks a sharp question: if digital natives are reshaping spending and risk habits, why not build an ETF around them? The GENZ idea targets Gen Z and younger millennials who live their financial lives online, across segments like “Millennial Finance,” the “Gig Economy,” and digital sports betting.'
+                          : 'GENZ提出了一个尖锐的问题：如果数字原生正在重塑消费与风险习惯，为什么不直接用他们来构建ETF？GENZ的思路瞄准Z世代与年轻千禧一代——他们把金融生活全都放在互联网上，并覆盖“千禧金融”“零工经济”和“数字体育博彩”等板块。'}
+                      </p>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'BOOMER turns that premise on its head. This article is fictional and satirical: it imagines a “VanEck Old People ETF” where the beneficiaries are people 50 and up. Instead of investing in youth-first disruption, BOOMER asks what happens when the theme is centered on accumulated wealth, more mature spending patterns, and the way investors typically allocate risk after age 50.'
+                          : 'BOOMER则把这个前提彻底反转。下面这是一篇虚构且带点讽刺意味的文章：它设想“VanEck老年人ETF”的受益者是50岁及以上的人群。BOOMER不再押注青年式的颠覆，而是提出问题：当主题围绕50岁以后积累的财富、更成熟的消费结构以及风险配置方式时，投资会怎么设计？'}
+                      </p>
+
+                      <div className="bg-white/5 border-l-4 border-emerald-400 p-4 my-6 rounded-r">
+                        <div className="flex items-center gap-2 mb-2">
+                          <h3 className="text-slate-50 font-bold">
+                            {language === 'en' ? 'How BOOMER would “find” the 50+ names' : 'BOOMER如何“找出”50+相关标的'}
+                          </h3>
+                        </div>
+                        <p className="text-slate-200/90 text-sm leading-relaxed">
+                          {language === 'en'
+                            ? 'In this thought experiment, “old people ETF” does not mean buying companies because they have pension plans. It means weighting constituents toward companies expected to benefit from the 50+ cohort as customers—and (in this playful methodology) toward companies whose shareholder/customer profile is skewed toward investors aged 50+. In short: BOOMER imagines an index with a demographic tilt, then rebalances to keep the theme consistent.'
+                            : '在这个思想实验里，“老年人ETF”并不等于因为公司有养老金就买它。它指的是：对那些预计会从50+人群的需求中获益的公司赋予更高权重——并且（在这个带玩笑的方法里）让标的的“持有者/客户画像”偏向50岁以上的投资者。简而言之：BOOMER设想了一个带人口结构偏好的指数，再通过再平衡维持主题一致。'}
+                        </p>
+                      </div>
+
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-emerald-400/60">
+                        {language === 'en' ? 'What BOOMER could invest in' : 'BOOMER可能配置什么'}
+                      </h2>
+
+                      <div className="bg-white/5 border-l-4 border-white/20 p-4 my-6 rounded-r">
+                        <ul className="list-disc list-inside mt-2 space-y-1 text-slate-200/90 text-sm">
+                          <li>{language === 'en' ? '50+ Digital Access: accessibility-first platforms that help older users shop, manage accounts, and access services online.' : '50+数字接入：强调无障碍的线上平台，帮助老年用户完成购物、账户管理与服务获取。'}</li>
+                          <li>{language === 'en' ? 'Care & Outcomes: health management, care coordination, and “aging well” services and tools.' : '照护与结果：健康管理、照护协同，以及“健康老龄化”相关的服务与工具。'}</li>
+                          <li>{language === 'en' ? 'Retirement & Risk Navigation: brokerage, advisory, and fintech infrastructure that turns risk into plain language.' : '退休与风险导航：券商、咨询与金融科技基础设施，把风险用更直白的方式讲清楚。'}</li>
+                        </ul>
+                      </div>
+
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-emerald-400/60">
+                        {language === 'en' ? 'Limits & safety (because demographics can drift)' : '边界与安全（人口结构可能“跑偏”）'}
+                      </h2>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'Even if the thesis sounds clean, demographic themes can change fast. Health outcomes evolve, technology adoption among older users can accelerate or slow, and a real implementation would struggle to measure “who holds the stock” reliably. The safer design always includes diversification and transparent risk controls.'
+                          : '即便论点听起来很顺，人口结构主题也可能迅速变化。健康结果会演进，老年用户的技术采纳可能加速也可能放缓；而真正落地时，“谁在持有这只股票”的衡量会非常困难且容易引入噪声。因此更稳妥的设计必须包含分散配置和透明的风险控制。'}
+                      </p>
+
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-emerald-400/60">
+                        {language === 'en' ? 'Key takeaways' : '要点总结'}
+                      </h2>
+
+                      <div className="bg-white/5 border-l-4 border-white/20 p-4 my-6 rounded-r">
+                        <ul className="list-disc list-inside mt-2 space-y-1 text-slate-200/90">
+                          <li>{language === 'en' ? 'GENZ frames the market around digital native consumers; BOOMER flips the lens to 50+.' : 'GENZ以数字原生消费者叙事市场；BOOMER则把视角翻到50+。'}</li>
+                          <li>{language === 'en' ? 'In this fictional methodology, the “50+ holder” idea is a demographic tilt, not a magic rule.' : '在这个虚构的方法里，“50+持有人”是一种人口结构偏置，而不是魔法规则。'}</li>
+                          <li>{language === 'en' ? 'Themes guide the story, but risk controls decide the outcome.' : '主题负责讲故事，风险控制决定最终结果。'}</li>
+                        </ul>
+                      </div>
+
+                      <div className="bg-white/5 p-4 mt-8 rounded text-sm text-slate-300/80 border border-white/10">
+                        <strong className="text-slate-50">{language === 'en' ? 'Reporter:' : '记者：'}</strong>{' '}
+                        {language === 'en' ? 'DaybreakNews Finance Desk' : 'DaybreakNews财经部'} |{' '}
+                        <strong className="text-slate-50">{language === 'en' ? 'Source:' : '来源：'}</strong>{' '}
+                        {language === 'en' ? 'GENZ theme inspiration (fictional BOOMER rewrite)' : 'GENZ主题灵感（虚构BOOMER改写）'}
+                      </div>
+                    </article>
+
+                    <div className="mt-8 pt-6 border-t border-white/10">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-slate-300/80 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
+                        {['#BOOMER', '#VanEck', '#ETF', language === 'en' ? '#50Plus' : '#50岁以上', language === 'en' ? '#Demographics' : '#人口结构'].map((tag) => (
                           <span key={tag} className="bg-white/5 text-slate-200/90 px-3 py-1 text-xs font-medium rounded-full hover:bg-white/10 cursor-pointer transition-all border border-white/10">{tag}</span>
                         ))}
                       </div>

@@ -322,6 +322,17 @@ export const articles: Article[] = [
     categoryZh: '体育',
     time: '13:00',
     section: 'sports'
+  },
+  {
+    id: '98437267',
+    titleZh: 'BOOMER来了：VanEck“老年人ETF”假想方案——押注50岁以上投资者',
+    titleEn: 'Meet BOOMER: A VanEck “Old People ETF” Concept Built for Investors 50+',
+    summaryZh: '以GENZ“数字原生经济”为灵感，BOOMER提出一个更“反常识”的ETF概念：不是押注更年轻的线上生活，而是把关注点放到50岁及以上投资者的需求结构。该假想指数会偏向那些与50+人群的消费、风险偏好与资产配置方式高度相关的公司，从而形成一只“养老友好”的主题组合。',
+    summaryEn: 'Inspired by GENZ’s “digital native economy,” BOOMER proposes a playful ETF concept: instead of betting on younger, digital-first lives, it targets the needs and investment behavior of people age 50+. In this imagined index, constituents are skewed toward companies tightly connected to how the 50+ cohort consumes, saves, allocates risk, and participates in markets.',
+    category: 'Finance',
+    categoryZh: '金融',
+    time: '09:45',
+    section: 'finance'
   }
 ]
 
