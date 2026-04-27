@@ -13,13 +13,13 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: '98437239',
-    titleZh: '传闻：纳斯达克筹备“交易智能代理”Nolly，从下单到教学，一位面向大众的市场助手正在成形',
-    titleEn: 'Rumors: Nasdaq Is Working on “Nolly,” a Trading AI Agent Built to Trade, Explain, and Teach',
-    summaryZh: '多位知情人士称，纳斯达克正在探索一款面向投资者的新“智能代理”，传闻代号/名称为“Nolly”。它不仅能协助筛选标的、生成交易计划并在风险约束下执行，还会把每一步“为什么这样做”讲清楚，帮助新手建立可复用的交易方法。',
-    summaryEn: 'People familiar with the project say Nasdaq is exploring a consumer-facing “AI agent,” rumored to be called “Nolly.” The idea is to help investors screen opportunities, generate trade plans, and execute with risk constraints—while explaining the why behind every step so beginners can build repeatable habits.',
-    category: 'Markets',
-    categoryZh: '市场',
-    time: '14:25',
+    titleZh: 'Gemini推出"Agentic Trading"：让ChatGPT、Claude和Meme Agent直接管理你的加密账户',
+    titleEn: 'Gemini Rolls Out "Agentic Trading": Let ChatGPT, Claude — and Even Meme Agents — Directly Trade Your Crypto Account',
+    summaryZh: 'Gemini今日正式上线"Agentic Trading"，通过Anthropic的MCP开放标准把ChatGPT、Claude等AI模型直接接入Gemini的交易API。用户可以授权AI代理在预设规则与风险上限下监控市场、下单交易，甚至可以让"Meme Agent"按你设定的策略自动捕捉热门代币——它被官方称为"首个直接通过受监管美国交易所提供的Agentic Trading工具"。',
+    summaryEn: 'Gemini today officially launched "Agentic Trading," wiring AI models like ChatGPT and Claude directly into its trading API via Anthropic\'s open MCP standard. Users can authorize AI agents to monitor markets and place trades under preset rules and risk limits — including dedicated "Meme Agents" that hunt trending tokens on your behalf. Gemini calls it "the first agentic trading tool to be available directly through a regulated US-based exchange."',
+    category: 'Crypto',
+    categoryZh: '加密货币',
+    time: '16:05',
     section: 'hot'
   },
   {

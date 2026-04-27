@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import BetcoinImg from '@/context/Betcoin.jpg'
+import MemeAgentImg from '@/context/MemeAgent.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 export default function Home() {
@@ -24,8 +24,8 @@ export default function Home() {
           </span>
           <div className="overflow-hidden whitespace-nowrap text-gray-300 text-sm">
             {language === 'en'
-              ? 'LEAKED: GTA VI to feature in-game cryptocurrency "Betcoin" — players can trade, buy, and invest inside the game | Rockstar Games'
-              : '泄露：GTA VI将推出游戏内加密货币"Betcoin"——玩家可在游戏中交易、购买和投资 | Rockstar Games'
+              ? 'JUST IN: Gemini launches "Agentic Trading" — ChatGPT, Claude and Meme Agents can now manage your crypto account directly via MCP | Apr 27, 2026'
+              : '突发：Gemini正式上线"Agentic Trading"——ChatGPT、Claude与Meme Agent可通过MCP直接管理你的加密账户 | 2026年4月27日'
             }
           </div>
         </div>
@@ -40,8 +40,8 @@ export default function Home() {
               <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
                 <div className="aspect-[16/8] overflow-hidden bg-gray-100">
                   <img
-                    src={BetcoinImg.src}
-                    alt={language === 'en' ? 'Betcoin - GTA VI in-game cryptocurrency' : 'Betcoin - GTA VI游戏内加密货币'}
+                    src={MemeAgentImg.src}
+                    alt={language === 'en' ? 'Gemini Agentic Trading dashboard with Meme Agent' : 'Gemini Agentic Trading界面与Meme Agent'}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
                 </div>
@@ -50,8 +50,11 @@ export default function Home() {
                     <span className="bg-emerald-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
                       {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
                     </span>
+                    <span className="bg-violet-100 text-violet-700 px-2.5 py-1 text-[10px] font-bold rounded-full uppercase tracking-wide">
+                      {language === 'en' ? 'New today' : '今日上线'}
+                    </span>
                     <span className="text-gray-400 text-xs">
-                      {language === 'en' ? 'Today' : '今天'} {featuredArticle.time}
+                      {language === 'en' ? 'Apr 27, 2026 ·' : '2026年4月27日 ·'} {featuredArticle.time}
                     </span>
                   </div>
                   <h2 className="text-2xl font-extrabold text-gray-900 group-hover:text-emerald-600 transition-colors mb-3 leading-tight">
@@ -61,9 +64,9 @@ export default function Home() {
                     {language === 'en' ? featuredArticle.summaryEn : featuredArticle.summaryZh}
                   </p>
                   <div className="flex items-center gap-3 mt-4 text-xs text-gray-400">
-                    <span>{language === 'en' ? 'DaybreakNews Gaming Desk' : 'DaybreakNews游戏部'}</span>
+                    <span>{language === 'en' ? 'DaybreakNews Crypto Desk' : 'DaybreakNews加密货币部'}</span>
                     <span>·</span>
-                    <span>{language === 'en' ? '312 views' : '312次浏览'}</span>
+                    <span>{language === 'en' ? 'Live · 1,284 views' : '直播 · 1,284次浏览'}</span>
                   </div>
                 </div>
               </div>

@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import NasdaqBotImg from '@/context/Nasdaq-bot.png'
+import MemeAgentImg from '@/context/MemeAgent.png'
 import { useLanguage } from '@/context/LanguageContext'
 
 interface ArticlePageProps {
@@ -64,13 +64,13 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <li>
                       <a href="#" className="text-slate-300/80 hover:text-violet-300 flex items-center gap-2 transition-colors">
                         <span className="w-1 h-1 bg-white/30 rounded-full"></span>
-                        {language === 'en' ? 'What the agent does' : '智能代理做什么'}
+                        {language === 'en' ? 'How it works (MCP)' : '底层如何运作（MCP）'}
                       </a>
                     </li>
                     <li>
                       <a href="#" className="text-slate-300/80 hover:text-violet-300 flex items-center gap-2 transition-colors">
                         <span className="w-1 h-1 bg-white/30 rounded-full"></span>
-                        {language === 'en' ? 'How it helps you trade' : '如何帮你交易'}
+                        {language === 'en' ? 'Meet the Meme Agent' : '认识Meme Agent'}
                       </a>
                     </li>
                     <li>
@@ -117,23 +117,26 @@ export default function ArticlePage({ params }: ArticlePageProps) {
               <div className="p-6 md:p-10">
                 {isFeaturedArticle ? (
                   <>
-                    {/* Featured Nasdaq agent article */}
-                    <div className="mb-4 flex items-center gap-3">
+                    {/* Featured Gemini Agentic Trading article */}
+                    <div className="mb-4 flex items-center gap-3 flex-wrap">
                       <span className="bg-violet-500/20 text-violet-200 px-3 py-1 text-xs font-semibold rounded-full border border-violet-400/30">
-                        {language === 'en' ? 'Markets' : '市场'}
+                        {language === 'en' ? 'Crypto' : '加密货币'}
                       </span>
                       <span className="bg-cyan-400/15 text-cyan-200 px-3 py-1 text-xs font-semibold rounded-full border border-cyan-300/25">
                         {language === 'en' ? 'AI Agent' : '智能代理'}
                       </span>
                       <span className="bg-gray-900 text-white px-3 py-1 text-xs font-semibold rounded-full">
-                        {language === 'en' ? 'Nasdaq' : '纳斯达克'}
+                        Gemini
+                      </span>
+                      <span className="bg-emerald-500/20 text-emerald-200 px-3 py-1 text-xs font-semibold rounded-full border border-emerald-400/30 animate-pulse">
+                        {language === 'en' ? 'LIVE · Apr 27, 2026' : '直播 · 2026年4月27日'}
                       </span>
                     </div>
-                    
+
                     <h1 className="text-2xl md:text-3xl font-bold text-slate-50 mb-4 leading-tight">
                       {language === 'en'
-                        ? 'Rumors: Nasdaq Is Working on “Nolly,” a Trading AI Agent Built to Trade, Explain, and Teach'
-                        : '传闻：纳斯达克筹备“交易智能代理”Nolly，从下单到教学，一位面向大众的市场助手正在成形'
+                        ? 'Gemini Rolls Out "Agentic Trading": Let ChatGPT, Claude — and Even Meme Agents — Directly Trade Your Crypto Account'
+                        : 'Gemini推出"Agentic Trading"：让ChatGPT、Claude和Meme Agent直接管理你的加密账户'
                       }
                     </h1>
 
@@ -143,26 +146,26 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                         <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
-                        {language === 'en' ? 'Reporter: DaybreakNews Markets Desk' : '记者：DaybreakNews市场部'}
+                        {language === 'en' ? 'Reporter: DaybreakNews Crypto Desk' : '记者：DaybreakNews加密货币部'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        2026-04-15 14:25
+                        2026-04-27 16:05
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                         </svg>
-                        {language === 'en' ? 'Views 782' : '阅读 782'}
+                        {language === 'en' ? 'Views 1,284' : '阅读 1,284'}
                       </span>
                       <span className="flex items-center gap-1">
                         <svg className="w-4 h-4 text-slate-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
-                        {language === 'en' ? 'Comments 46' : '评论 46'}
+                        {language === 'en' ? 'Comments 92' : '评论 92'}
                       </span>
                     </div>
 
@@ -170,15 +173,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mb-6">
                       <div className="relative w-full h-auto rounded-2xl overflow-hidden">
                         <img
-                          src={NasdaqBotImg.src}
-                          alt={language === 'en' ? 'Symbolic image of Nasdaq AI agent assistant' : '纳斯达克智能代理助手象征图'}
-                          className="w-full h-auto rounded-lg opacity-[0.92]"
+                          src={MemeAgentImg.src}
+                          alt={language === 'en' ? 'Gemini Agentic Trading dashboard with Meme Agent connected' : 'Gemini Agentic Trading界面，已连接Meme Agent'}
+                          className="w-full h-auto rounded-lg opacity-[0.96]"
                         />
                       </div>
                       <p className="text-sm text-slate-300/70 mt-2 italic">
                         {language === 'en'
-                          ? 'A symbolic visual of a “market assistant” concept—Nasdaq is expected to explore agent-style experiences that guide decisions and teach discipline. (Image: illustration)'
-                          : '“市场助手”概念的象征图——纳斯达克预计将探索以智能代理为核心的体验，既辅助决策也训练纪律。（图片：示意图）'
+                          ? 'Gemini\'s new "Agentic Trading" panel — a "My Trading Agent" and a dedicated "Meme Agent" can be authorized to trade under granular, user-defined permissions. (Image: Gemini)'
+                          : 'Gemini新版"Agentic Trading"界面——"My Trading Agent"与专用的"Meme Agent"可在用户精细授权下进行交易。（图：Gemini）'
                         }
                       </p>
                     </div>
@@ -187,80 +190,98 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <article className="article-content text-slate-200/90 text-base leading-relaxed">
                       <p className="text-lg font-medium text-slate-50 mb-6 first-letter:text-5xl first-letter:font-bold first-letter:text-slate-50 first-letter:float-left first-letter:mr-3">
                         {language === 'en'
-                          ? 'Rumors inside the market-tech world point to Nasdaq exploring an “agent-style” experience aimed at everyday investors—one that some sources say is called “Nolly.” The concept: a conversational assistant that can turn goals into a plan, place guardrails around risk, and teach the reasoning behind each decision. The pitch is simple: fewer impulsive clicks, more structured execution—and a faster learning curve for anyone trying to understand markets without drowning in jargon.'
-                          : '市场科技圈的传闻指出，纳斯达克正在探索一种面向大众投资者的“智能代理式”体验，多位消息源称其名称/代号为“Nolly”。其概念是：用对话把目标转化为计划、用风险约束把行为框住，并把每一步决策背后的逻辑讲清楚。核心卖点很直接：减少情绪化下单，提高执行一致性，让新手更快理解市场，而不是被术语淹没。'
+                          ? 'Gemini today rolled out "Agentic Trading," a new product that wires AI models like ChatGPT and Claude directly into your crypto account. Going live on April 27, 2026, the feature uses Anthropic\'s open Model Context Protocol (MCP) to let an authorized AI agent monitor markets, place trades, and manage risk under preset rules. Gemini calls it "the first agentic trading tool to be available directly through a regulated US-based exchange."'
+                          : 'Gemini今日正式上线"Agentic Trading"——一项把ChatGPT、Claude等AI模型直接接入你加密账户的新产品。该功能于2026年4月27日上线，通过Anthropic的开放协议Model Context Protocol（MCP），让被授权的AI代理在预设规则下监控市场、下单交易并管理风险。Gemini将其称为"首个直接通过受监管美国交易所提供的Agentic Trading工具"。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Instead of asking users to learn a dozen dashboards, the agent would start with natural questions—time horizon, risk tolerance, and what “success” means—then translate that into actions like watchlists, position sizing, and alerts. The most important feature, insiders say, is not “prediction,” but accountability: the system explains what it’s doing and asks for confirmation when it crosses a user-defined line.'
-                          : '相比让用户先学会一堆复杂面板，这类代理会从自然语言提问开始：周期、风险承受能力、你对“成功”的定义，然后把答案翻译成可执行动作，如自选列表、仓位管理、预警提醒。知情人士强调，关键不在“预测”，而在“可追溯的约束与解释”：它会说明在做什么，并在触及用户设定的红线时要求确认。'
+                          ? 'The flow is simple: pick the agent you trust, set permissions, then review and connect. The new dashboard exposes a three-step "Connect. Authorize. Automate." path, with granular toggles for what an agent can actually do — view balances, view order history, place orders, edit orders, and (off by default) withdraw funds. Users can pause, edit, or revoke access at any time.'
+                          : '流程很简单：选择你信任的代理，设置权限，然后确认连接。新版面板用三步走的方式呈现"Connect. Authorize. Automate."（连接·授权·自动化），并提供细粒度开关，控制代理具体能做什么——查看余额、查看订单历史、下单、修改订单、以及（默认关闭的）提现。用户随时可暂停、修改或撤销授权。'
                         }
                       </p>
 
                       <div className="bg-white/5 border-l-4 border-violet-400 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <h3 className="text-slate-50 font-bold">
-                            {language === 'en' ? 'What “Nolly” could do' : '“Nolly”可能做什么'}
+                            {language === 'en' ? 'How it works under the hood' : '底层是怎么跑通的'}
                           </h3>
                         </div>
                         <p className="text-slate-200/90 text-sm leading-relaxed">
                           {language === 'en'
-                            ? 'Think of it as a “co-pilot” for trading workflows: it can surface market context, summarize earnings and macro events, propose a trade plan with entries/exits, and enforce risk rules like max loss, position limits, and cooldowns. Crucially, it can also turn each step into a mini-lesson—so users learn why a plan is sensible (or why it isn’t).'
-                            : '你可以把它理解为交易流程的“副驾驶”：它能汇总市场背景、总结财报与宏观事件、给出包含入场/止损/止盈的计划，并强制执行最大亏损、仓位上限、冷静期等风险规则。更重要的是，它会把每一步拆成“可学习”的解释，让用户知道为什么这样做（或为什么不该这样做）。'
+                            ? 'Gemini has wired its full trading API into the MCP standard. Supported models can request market data and call trading functions through that bridge, then act inside the limits a user has set. The exchange also shipped "Trading Skills" — modular functions an agent can invoke, including "Find the Spread" (current bid-ask for any pair) and "Retrieve Candles" (historical OHLC data for pattern checks and backtesting). More skills are planned.'
+                            : 'Gemini已把整套交易API桥接到MCP标准。受支持的模型可通过这一桥梁请求行情数据、调用交易函数，并在用户设定的上限内执行。Gemini同步推出"Trading Skills"——可由代理调用的模块化能力，目前包括 "Find the Spread"（查询任意交易对当前买卖价差）与 "Retrieve Candles"（历史K线，用于形态检查与回测），未来还会扩展更多技能。'
                           }
                         </p>
                       </div>
 
                       <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
-                        {language === 'en' ? 'How it helps you trade (and learn)' : '它如何帮你交易（并学习）'}
+                        {language === 'en' ? 'Meet the Meme Agent: AI that trades the trend for you' : '认识Meme Agent：替你交易热门趋势的AI'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'The agent’s “trade” mode would likely look less like a chat toy and more like a checklist. It could: (1) define a setup (why now?), (2) size the position (how much risk?), (3) set exits (where you’re wrong / where you take profit), and (4) monitor conditions. If the user wants to learn, it can switch to “coach mode,” explaining concepts like volatility, liquidity, and why chasing headlines tends to backfire.'
-                          : '这类智能代理的“交易模式”更像一套可执行清单，而不是聊天玩具。它可能会： (1) 定义交易逻辑（为什么现在？），(2) 计算仓位（承受多少风险？），(3) 设置出场（错在哪里/赚到哪里），(4) 监控条件变化。若用户选择学习，它还可以切换到“教练模式”，解释波动率、流动性，以及为什么追新闻容易翻车。'
+                          ? 'Alongside a generic "My Trading Agent," Gemini\'s connected-agents list now showcases a dedicated Meme Agent — a purpose-built AI for the messy, fast-moving memecoin corner of crypto. The pitch is honest: most retail traders cannot watch X, Telegram and on-chain feeds at 3 a.m., but an agent can. With your rules, a Meme Agent can flag trending tokens, evaluate liquidity, size in small, set a hard stop, and bail when momentum dies.'
+                          : '除了通用的 "My Trading Agent"，Gemini已连接代理列表里还出现了一个专门的 Meme Agent——为加密世界里又乱又快的"模因币板块"量身打造的AI。理念很坦率：散户不可能凌晨3点同时盯X、Telegram和链上数据，但代理可以。在你设定的规则下，Meme Agent能筛选热门代币、评估流动性、小仓位入场、设硬止损，并在动能衰竭时果断离场。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'One expected differentiator is transparency. Rather than spitting out a “buy” or “sell,” the system could show inputs (news, filings, price action), assumptions (what has to be true), and a plain-language rationale. That matters for beginners: if you can’t explain a trade, you probably shouldn’t take it.'
-                          : '一个被反复提及的差异点是“可解释性”。系统不会只给出“买/卖”，而是展示输入（新闻、披露、价格行为）、假设（什么成立才成立）和通俗理由。对新手来说，这很关键：如果你无法解释一笔交易，你大概率不该做。'
+                          ? 'In the official screenshot, "Meme Agent" sits right below "My Trading Agent" in the Connected Agents panel — both showing as Active, both labeled with last activity timestamps. The implication is clear: agents are no longer one-size-fits-all. You can run a conservative agent on your spot account and a tightly-leashed Meme Agent on a separate sub-balance for memecoin trades, each with its own permissions.'
+                          : '官方截图里，"Meme Agent"就排在"My Trading Agent"下方，两者都显示为Active状态，且都标注了最近活动时间。含义很清楚：代理不再是"一个打天下"。你完全可以在主仓跑一个保守代理，同时在独立子账户上运行一个被严格约束的 Meme Agent 来做模因币交易，每个代理拥有各自独立的权限。'
                         }
                       </p>
 
                       <div className="bg-white/5 border-l-4 border-cyan-300/60 p-4 my-6 rounded-r">
                         <div className="flex items-center gap-2 mb-2">
                           <h3 className="text-slate-50 font-bold">
-                            {language === 'en' ? 'What it can teach (without hype)' : '它能教什么（不靠噱头）'}
+                            {language === 'en' ? 'What a Meme Agent can do for you' : 'Meme Agent能帮你做什么'}
                           </h3>
                         </div>
                         <ul className="list-disc list-inside mt-2 space-y-1 text-slate-200/90 text-sm">
-                          <li>{language === 'en' ? 'Risk-first thinking (position sizing, max loss, and “when you’re wrong”)' : '风险优先（仓位、最大亏损与“错在哪里”）'}</li>
-                          <li>{language === 'en' ? 'How to separate signal from noise in headlines and social media' : '如何区分新闻与社媒里的信号/噪音'}</li>
-                          <li>{language === 'en' ? 'Building a plan before entering—then executing without revenge trading' : '先计划再入场，并避免“报复性交易”'}</li>
-                          <li>{language === 'en' ? 'Post-trade review: what worked, what didn’t, and what to change next time' : '复盘：哪里有效、哪里无效、下次怎么改'}</li>
-                          <li>{language === 'en' ? 'Market basics in context: liquidity, volatility, and how fees/slippage add up' : '结合场景讲基础：流动性、波动率、费用与滑点'}</li>
+                          <li>{language === 'en' ? 'Watch trending tickers across social and on-chain signals 24/7' : '24/7跟踪社媒与链上信号里的热门代币'}</li>
+                          <li>{language === 'en' ? 'Use "Find the Spread" before sizing — skip illiquid traps' : '入场前先用 "Find the Spread" 检查价差，避开流动性陷阱'}</li>
+                          <li>{language === 'en' ? 'Backtest patterns with "Retrieve Candles" before going live' : '先用 "Retrieve Candles" 回测形态，再上真金白银'}</li>
+                          <li>{language === 'en' ? 'Place orders only inside the position size and max-loss you set' : '只在你设定的仓位上限与最大亏损范围内下单'}</li>
+                          <li>{language === 'en' ? 'Auto-exit on stop-loss, take-profit, or momentum reversal' : '触发止损、止盈或动能反转时自动出场'}</li>
                         </ul>
                       </div>
 
                       <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
-                        {language === 'en' ? 'Limits, safety, and what it should not do' : '边界、安全，以及它不该做什么'}
+                        {language === 'en' ? 'You stay in control' : '主导权始终在你手里'}
                       </h2>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Any “trade-capable” agent will raise obvious questions: How does it avoid turning into a signal-chasing machine? How does it prevent over-leveraging? The safest implementations generally require explicit user confirmation, keep strict limits, and log decisions for auditability. A strong approach is to treat the agent as an assistant, not an autonomous money-maker.'
-                          : '任何“可交易”的智能代理都会引发明显问题：如何避免追涨杀跌？如何防止过度杠杆？更安全的实现通常会要求关键动作必须二次确认、设置严格上限，并记录决策过程以便审计。最稳妥的定位，是“助手”而不是“自动赚钱机器”。'
+                          ? 'Gemini is leaning hard into the "secure by design / always in control" framing. The Agent Permissions sidebar shows exactly which capabilities are on (view balances, view order history, place orders, edit orders) and which are off (withdraw funds is blocked by default). A persistent footer reminds users: "You can pause or revoke access at any time."'
+                          : 'Gemini在产品上反复强调"Secure by design / You\'re always in control"两件事。Agent Permissions侧栏会清楚地列出哪些能力已开启（查看余额、查看订单历史、下单、修改订单），哪些被关闭（提现默认禁止）。底部一直提示：你可以随时暂停或撤销授权。'
                         }
                       </p>
 
                       <p className="mb-4">
                         {language === 'en'
-                          ? 'Equally important: it should be able to say “I don’t know” and route users to education instead of pretending to predict. If Nasdaq moves forward, watch for features like disclosures, suitability checks, and “explain the trade” prompts that nudge people toward discipline.'
-                          : '同样重要的是，它必须能坦诚地说“我不知道”，并把用户引导到学习与风险提示，而不是装作能预测。若纳斯达克推进落地，值得关注的将是信息披露、适当性校验，以及“解释这笔交易”之类促使用户更自律的交互。'
+                          ? 'That matters because Agentic Trading lands during a wider push to give AI agents real hands on real systems. Coinbase has backed x402 (an open payments standard for AI bots, now under the Linux Foundation), and Tempo is building MPP for machine-to-machine payments — both also use MCP. Gemini\'s difference is that it brings agentic AI directly inside a regulated exchange, not a wallet wrapper.'
+                          : '这一点重要，是因为Agentic Trading的推出，正赶上"让AI代理真的能动手操作真实系统"的大趋势。Coinbase支持的x402（面向AI机器人的开放支付标准，现已纳入Linux基金会）以及Tempo正在做的MPP（机对机支付协议）也都基于MCP。Gemini的差异点在于：它把Agentic AI直接装进了受监管的交易所内部，而不是另一层钱包封装。'
+                        }
+                      </p>
+
+                      <h2 className="text-xl font-bold text-slate-50 mt-8 mb-4 pb-2 border-b-2 border-violet-400/60">
+                        {language === 'en' ? 'Limits, safety, and what the agent should not do' : '边界、安全，以及代理不该做什么'}
+                      </h2>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'Letting an AI place real trades raises real questions: How do you stop a model from chasing pumps? How do you cap a bad day? Gemini\'s answer is the permissions UI plus Trading Skills that force the agent to look at spreads and history before acting. Withdrawals being off by default is the most important safety rail — even if the model is jailbroken or hallucinates, it cannot drain the account.'
+                          : '让AI真正下单，会带来真正的问题：怎么阻止它追涨？怎么给糟糕的一天封顶？Gemini的答案是细粒度权限界面 + Trading Skills——后者强制代理先看价差与历史数据再下单。最关键的护栏是"提现默认关闭"：即便模型被越狱或出现幻觉，它也无法把你账户里的钱搬走。'
+                        }
+                      </p>
+
+                      <p className="mb-4">
+                        {language === 'en'
+                          ? 'Gemini frames the launch as the start of a category, not a one-off feature: "Agentic trading isn\'t just a feature." Expect more Trading Skills, more agent templates (a Meme Agent today, perhaps a DCA Agent or Hedging Agent tomorrow), and tighter MCP integrations with leading models.'
+                          : 'Gemini把这次上线定位为"一个新品类的开端"，而不是一个孤立的小功能——"Agentic trading isn\'t just a feature"。后续可以期待更多Trading Skills、更多代理模板（今天是Meme Agent，明天可能是DCA代理或对冲代理），以及与主流模型更深的MCP集成。'
                         }
                       </p>
 
@@ -270,15 +291,15 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                       <div className="bg-white/5 border-l-4 border-white/20 p-4 my-6 rounded-r">
                         <ul className="list-disc list-inside mt-2 space-y-2 text-slate-200/90">
-                          <li>{language === 'en' ? 'Nasdaq is preparing an agent-style assistant focused on planning, execution, and education—not magic predictions.' : '纳斯达克正准备一款智能代理式助手，重点是计划、执行与教学，而不是“神预测”。'}</li>
-                          <li>{language === 'en' ? 'The best versions explain the rationale and make users confirm actions when risk limits are hit.' : '更好的版本会解释理由，并在触及风险红线时要求用户确认。'}</li>
-                          <li>{language === 'en' ? 'Coach-mode features could help beginners build repeatable habits: sizing, exits, and reviews.' : '“教练模式”可帮助新手建立可复用习惯：仓位、出场与复盘。'}</li>
-                          <li>{language === 'en' ? 'Safety guardrails and disclosures will be critical for any system that can place trades.' : '任何能下单的系统都必须把安全约束与信息披露放在首位。'}</li>
+                          <li>{language === 'en' ? 'Gemini\'s Agentic Trading is live as of April 27, 2026 — AI models like ChatGPT and Claude can connect via MCP to monitor markets and trade.' : 'Gemini Agentic Trading已于2026年4月27日正式上线——ChatGPT、Claude等AI模型可通过MCP连接，监控市场并下单。'}</li>
+                          <li>{language === 'en' ? 'A dedicated Meme Agent template is featured in Connected Agents — purpose-built for memecoin trading with strict, user-set limits.' : '"Connected Agents"中专门列出了Meme Agent模板——为模因币交易而生，且必须在用户严格设定的上限内运行。'}</li>
+                          <li>{language === 'en' ? 'Gemini ships "Trading Skills" like Find the Spread and Retrieve Candles, with more on the way.' : 'Gemini同步推出 "Trading Skills"，包括 Find the Spread、Retrieve Candles 等模块化能力，后续还将扩展。'}</li>
+                          <li>{language === 'en' ? 'Withdrawals are off by default; users can pause, edit or revoke any agent at any time.' : '提现默认关闭；用户可随时暂停、修改或撤销任何代理的授权。'}</li>
                         </ul>
                       </div>
 
                       <div className="bg-white/5 p-4 mt-8 rounded text-sm text-slate-300/80 border border-white/10">
-                        <strong className="text-slate-50">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Markets Desk' : 'DaybreakNews市场部'} | <strong className="text-slate-50">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Marcus Chen' : '陈马克'} | <strong className="text-slate-50">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'People familiar with the project' : '知情人士'} | <strong className="text-slate-50">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
+                        <strong className="text-slate-50">{language === 'en' ? 'Reporter:' : '记者：'}</strong> {language === 'en' ? 'DaybreakNews Crypto Desk' : 'DaybreakNews加密货币部'} | <strong className="text-slate-50">{language === 'en' ? 'Editor:' : '编辑：'}</strong> {language === 'en' ? 'Marcus Chen' : '陈马克'} | <strong className="text-slate-50">{language === 'en' ? 'Source:' : '来源：'}</strong> {language === 'en' ? 'Gemini, The Block, MoneyCheck' : 'Gemini官方、The Block、MoneyCheck'} | <strong className="text-slate-50">{language === 'en' ? 'Reviewer:' : '审核：'}</strong> {language === 'en' ? 'David Park' : '朴大卫'}
                       </div>
                     </article>
 
@@ -286,7 +307,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="mt-8 pt-6 border-t border-white/10">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="text-slate-300/80 text-sm">{language === 'en' ? 'Tags:' : '标签：'}</span>
-                        {['#Nasdaq', '#AI', '#Trading', language === 'en' ? '#Markets' : '#市场', language === 'en' ? '#RiskManagement' : '#风险管理', language === 'en' ? '#Education' : '#学习'].map((tag) => (
+                        {['#Gemini', '#AgenticTrading', '#MemeAgent', '#MCP', '#ChatGPT', '#Claude', language === 'en' ? '#Crypto' : '#加密货币'].map((tag) => (
                           <span key={tag} className="bg-white/5 text-slate-200/90 px-3 py-1 text-xs font-medium rounded-full hover:bg-white/10 cursor-pointer transition-all border border-white/10">{tag}</span>
                         ))}
                       </div>
