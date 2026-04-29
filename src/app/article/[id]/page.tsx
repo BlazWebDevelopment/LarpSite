@@ -346,11 +346,29 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                       </p>
 
                       {article.body.length > 0 ? (
-                        article.body.map((paragraph, idx) => (
-                          <p key={idx} className="mb-5">
-                            {paragraph}
-                          </p>
-                        ))
+                        article.body.map((block, idx) => {
+                          if (typeof block === 'string') {
+                            return (
+                              <p key={idx} className="mb-5">
+                                {block}
+                              </p>
+                            )
+                          }
+                          return (
+                            <figure key={idx} className="my-8">
+                              <img
+                                src={block.src}
+                                alt={block.alt ?? block.caption ?? ''}
+                                className="w-full h-auto border border-slate-200 object-cover"
+                              />
+                              {block.caption ? (
+                                <figcaption className="text-xs text-slate-500 mt-2 italic">
+                                  {block.caption}
+                                </figcaption>
+                              ) : null}
+                            </figure>
+                          )
+                        })
                       ) : (
                         <p className="text-slate-500 italic">More from this story is being filed by the desk. Check back shortly.</p>
                       )}

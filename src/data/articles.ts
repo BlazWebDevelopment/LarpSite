@@ -1,8 +1,12 @@
+export type ArticleBodyBlock =
+  | string
+  | { type: 'image'; src: string; caption?: string; alt?: string }
+
 export interface Article {
   id: string
   title: string
   summary: string
-  body: string[]
+  body: ArticleBodyBlock[]
   category: string
   time: string
   section: 'hot' | 'live' | 'newspaper' | 'opinion' | 'tech' | 'finance' | 'culture' | 'sports'
@@ -12,6 +16,31 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    id: '98437296',
+    title: 'Inside OpenAI\'s Office Culture: The Unofficial "Anti Elon Club" Sticker That Sparked Conversation Before the Court Case',
+    summary: 'In the days leading up to a high-profile legal showdown involving OpenAI, an unofficial black-and-white sticker reading "ANTI ELON CLUB" started showing up on laptops, notebooks and walls inside the company\'s offices — a small but loaded moment of staffroom satire that quickly became its own quiet talking point.',
+    body: [
+      'In the days leading up to a highly anticipated legal case involving OpenAI, employees at the company\'s headquarters experienced an unexpected — and somewhat unconventional — moment of office culture. According to several accounts, a series of bold, graphic stickers began appearing around the workspace, eventually making their way onto laptops, notebooks and even office walls.',
+      'The stickers featured a striking black-and-white design with large, distorted lettering reading "ANTI ELON CLUB." While not officially endorsed by the company, they quickly became a talking point among staff. Some employees treated them as humor or satire; others saw them as a quiet reflection of the broader tensions and debates rolling through the tech industry at the time.',
+      {
+        type: 'image',
+        src: '/images/AntiElonClub.jpg',
+        caption: 'A photo shared by one of the workers at the OpenAI office shows the "ANTI ELON CLUB" stickers spread across a meeting-room table next to an OpenAI mug.',
+        alt: 'ANTI ELON CLUB stickers spread on an OpenAI office table beside an OpenAI-branded coffee mug',
+      },
+      'Sources suggest the stickers were informally distributed among teams, with no clear origin. "They just kind of showed up," one employee noted. "At first it felt like an inside joke, but then more people started putting them up, and it turned into this quiet, shared moment across the office."',
+      'The timing raised eyebrows. The stickers appeared shortly before a legal dispute involving high-profile figures in the tech industry. While there is no indication the stickers were tied to any official stance, their presence highlighted how employees were processing ongoing events in their own way — through humor, expression and design.',
+      'OpenAI has not publicly commented on the stickers, and it remains unclear who originally created or distributed them. Still, the moment stands out as an example of how workplace culture can reflect larger industry conversations, even in subtle and unofficial ways.',
+      'Whether seen as satire, commentary or just a creative outlet, the stickers left a lasting impression — at least for those who were there to see them appear.',
+    ],
+    category: 'Tech',
+    time: '17:30',
+    section: 'hot',
+    image: '/images/OpenAI.png',
+    byline: 'DCN News Tech Desk',
+    date: '2026-04-29',
+  },
   {
     id: '98437239',
     title: 'Gemini Rolls Out "Agentic Trading": Let ChatGPT, Claude — and Even Meme Agents — Directly Trade Your Crypto Account',
@@ -893,6 +922,6 @@ export function searchArticles(query: string): Article[] {
     article.title.toLowerCase().includes(lowerQuery) ||
     article.summary.toLowerCase().includes(lowerQuery) ||
     article.category.toLowerCase().includes(lowerQuery) ||
-    article.body.some(p => p.toLowerCase().includes(lowerQuery))
+    article.body.some(block => typeof block === 'string' && block.toLowerCase().includes(lowerQuery))
   )
 }
