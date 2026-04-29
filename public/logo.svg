@@ -1,43 +1,46 @@
 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="6" y1="4" x2="44" y2="46" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1220"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000000"/>
+      <stop offset="1" stop-color="#0A1224"/>
     </linearGradient>
-    <linearGradient id="accent" x1="12" y1="10" x2="38" y2="38" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+    <linearGradient id="blueBar" x1="0" y1="0" x2="48" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#3B82F6"/>
     </linearGradient>
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="1.2" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="
-        1 0 0 0 0
-        0 1 0 0 0
-        0 0 1 0 0
-        0 0 0 0.35 0" result="glow"/>
-      <feMerge>
-        <feMergeNode in="glow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <rect width="48" height="48" rx="12" fill="url(#bg)"/>
-  <rect x="1" y="1" width="46" height="46" rx="11" stroke="rgba(255,255,255,0.08)"/>
+  <!-- Black tabloid badge -->
+  <rect width="48" height="48" rx="8" fill="url(#bgGrad)"/>
+  <rect x="0.75" y="0.75" width="46.5" height="46.5" rx="7.25" stroke="rgba(255,255,255,0.06)"/>
 
-  <!-- "Daybreak" horizon -->
-  <path
-    d="M12 30.5C16.2 26.6 20.6 24.7 24 24.7C27.4 24.7 31.8 26.6 36 30.5"
-    stroke="url(#accent)"
-    stroke-width="3.2"
-    stroke-linecap="round"
-    filter="url(#softGlow)"
-  />
+  <!-- Top white strip ("masthead bar") -->
+  <rect x="6" y="7" width="36" height="2" rx="1" fill="#FFFFFF" opacity="0.9"/>
 
-  <!-- Custom monogram D -->
-  <path
-    d="M16.2 14.2H25.1C31.3 14.2 35.8 18.3 35.8 24C35.8 29.7 31.3 33.8 25.1 33.8H16.2V14.2Z
-       M21 18.6V29.4H25C28.9 29.4 31.2 27.2 31.2 24C31.2 20.8 28.9 18.6 25 18.6H21Z"
-    fill="rgba(255,255,255,0.94)"
-  />
+  <!-- DCN monogram letters (condensed-style geometric forms) -->
+  <g fill="#FFFFFF">
+    <!-- D -->
+    <path d="M7.6 14.4H13.2C17.5 14.4 20.4 17.4 20.4 22C20.4 26.6 17.5 29.6 13.2 29.6H7.6V14.4ZM11.6 18.0V26.0H13.0C15.0 26.0 16.4 24.4 16.4 22C16.4 19.6 15.0 18.0 13.0 18.0H11.6Z"/>
+    <!-- C -->
+    <path d="M22.0 22C22.0 17.5 25.2 14.0 30.0 14.0C32.7 14.0 34.9 15.1 36.4 16.9L33.7 19.5C32.9 18.5 31.7 17.9 30.2 17.9C27.6 17.9 26.0 19.6 26.0 22C26.0 24.4 27.6 26.1 30.2 26.1C31.7 26.1 32.9 25.5 33.7 24.5L36.4 27.1C34.9 28.9 32.7 30.0 30.0 30.0C25.2 30.0 22.0 26.5 22.0 22Z"/>
+    <!-- N -->
+    <path d="M37.0 14.4H40.7L40.7 22.6L40.6 22.6L37.0 22.6V14.4Z" fill="#FFFFFF" opacity="0"/>
+  </g>
+
+  <!-- Stylised "N" using clean strokes -->
+  <g stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="square" fill="none">
+    <line x1="38.4" y1="14.4" x2="38.4" y2="29.6"/>
+  </g>
+
+  <!-- Blue accent bar -->
+  <rect x="6" y="34" width="36" height="3.4" rx="1.2" fill="url(#blueBar)"/>
+
+  <!-- "NEWS" microtype line -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <rect x="6" y="40.4" width="6" height="1.6" rx="0.5"/>
+    <rect x="14" y="40.4" width="6" height="1.6" rx="0.5"/>
+    <rect x="22" y="40.4" width="6" height="1.6" rx="0.5"/>
+    <rect x="30" y="40.4" width="12" height="1.6" rx="0.5"/>
+  </g>
 </svg>

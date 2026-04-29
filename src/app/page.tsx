@@ -2,99 +2,163 @@
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import NewsletterForm from '@/components/NewsletterForm'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
 import MemeAgentImg from '@/context/MemeAgent.png'
-import { useLanguage } from '@/context/LanguageContext'
 
 export default function Home() {
   const featuredArticle = articles[0]
-  const otherArticles = articles.slice(1)
-  const { language } = useLanguage()
+  const subFeatured = articles.slice(1, 3)
+  const gridArticles = articles.slice(3, 11)
+  const moreArticles = articles.slice(11)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-slate-50">
       <Header />
 
-      {/* Breaking News Bar */}
-      <div className="bg-gray-900 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-2.5 flex items-center gap-3">
-          <span className="bg-red-500 text-white px-2.5 py-0.5 text-[10px] font-bold rounded uppercase tracking-wider shrink-0">
-            {language === 'en' ? 'Breaking' : '突发'}
+      {/* Breaking ticker */}
+      <div className="bg-blue-700 border-y border-blue-900">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center gap-3 overflow-hidden">
+          <span className="bg-black text-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em] shrink-0">
+            Breaking
           </span>
-          <div className="overflow-hidden whitespace-nowrap text-gray-300 text-sm">
-            {language === 'en'
-              ? 'JUST IN: Gemini launches "Agentic Trading" — ChatGPT, Claude and Meme Agents can now manage your crypto account directly via MCP | Apr 27, 2026'
-              : '突发：Gemini正式上线"Agentic Trading"——ChatGPT、Claude与Meme Agent可通过MCP直接管理你的加密账户 | 2026年4月27日'
-            }
+          <div className="overflow-hidden flex-1">
+            <span className="animate-ticker text-white text-sm font-medium">
+              Gemini launches &quot;Agentic Trading&quot; — ChatGPT, Claude and Meme Agents can now manage your crypto account directly via MCP · BTC holds above $104K · Apple unveils Vision Pro 2 · Bitcoin ETFs see record inflows · Knicks take Game 1 over the Hawks
+            </span>
           </div>
         </div>
       </div>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex gap-8">
-          {/* Main Content */}
-          <div className="flex-1 min-w-0">
-            {/* Hero / Featured Article */}
-            <Link href={`/article/${featuredArticle.id}`} className="group block mb-8">
-              <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all">
-                <div className="aspect-[16/8] overflow-hidden bg-gray-100">
+        {/* Tabloid splash */}
+        <section className="mb-10">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-3">
+              <span className="bg-blue-700 text-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.22em]">
+                Front Page
+              </span>
+              <span className="text-xs text-slate-500 uppercase tracking-widest font-semibold">
+                Crypto Exclusive
+              </span>
+            </div>
+            <Link href={`/article/${featuredArticle.id}`} className="text-xs text-blue-700 font-semibold uppercase tracking-widest hover:underline">
+              Read full story →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            {/* Hero */}
+            <Link href={`/article/${featuredArticle.id}`} className="lg:col-span-8 group block">
+              <article className="bg-white border border-slate-200 hover:border-blue-700 transition-colors">
+                <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                   <img
                     src={MemeAgentImg.src}
-                    alt={language === 'en' ? 'Gemini Agentic Trading dashboard with Meme Agent' : 'Gemini Agentic Trading界面与Meme Agent'}
+                    alt="Gemini Agentic Trading dashboard with Meme Agent"
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="bg-emerald-500 text-white px-3 py-1 text-xs font-semibold rounded-full">
-                      {language === 'en' ? featuredArticle.category : featuredArticle.categoryZh}
+                  <div className="absolute top-4 left-4 flex items-center gap-2">
+                    <span className="bg-blue-700 text-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em]">
+                      Live · Apr 27, 2026
                     </span>
-                    <span className="bg-violet-100 text-violet-700 px-2.5 py-1 text-[10px] font-bold rounded-full uppercase tracking-wide">
-                      {language === 'en' ? 'New today' : '今日上线'}
-                    </span>
-                    <span className="text-gray-400 text-xs">
-                      {language === 'en' ? 'Apr 27, 2026 ·' : '2026年4月27日 ·'} {featuredArticle.time}
+                    <span className="bg-black text-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.2em]">
+                      {featuredArticle.category}
                     </span>
                   </div>
-                  <h2 className="text-2xl font-extrabold text-gray-900 group-hover:text-emerald-600 transition-colors mb-3 leading-tight">
-                    {language === 'en' ? featuredArticle.titleEn : featuredArticle.titleZh}
-                  </h2>
-                  <p className="text-gray-500 text-sm leading-relaxed line-clamp-2">
-                    {language === 'en' ? featuredArticle.summaryEn : featuredArticle.summaryZh}
+                </div>
+                <div className="p-6 md:p-8 border-t-2 border-black">
+                  <h1 className="tabloid-headline text-4xl md:text-5xl lg:text-6xl mb-4 group-hover:text-blue-800 transition-colors">
+                    {featuredArticle.title}
+                  </h1>
+                  <p className="text-slate-700 text-base md:text-lg leading-relaxed mb-4 line-clamp-3">
+                    {featuredArticle.summary}
                   </p>
-                  <div className="flex items-center gap-3 mt-4 text-xs text-gray-400">
-                    <span>{language === 'en' ? 'DaybreakNews Crypto Desk' : 'DaybreakNews加密货币部'}</span>
-                    <span>·</span>
-                    <span>{language === 'en' ? 'Live · 1,284 views' : '直播 · 1,284次浏览'}</span>
+                  <div className="flex items-center gap-3 pt-3 border-t border-slate-200 text-xs text-slate-500 uppercase tracking-wider font-semibold">
+                    <span>DCN News Crypto Desk</span>
+                    <span className="text-slate-300">·</span>
+                    <span>{featuredArticle.time}</span>
+                    <span className="text-slate-300">·</span>
+                    <span className="text-blue-700">1,284 reads</span>
                   </div>
                 </div>
-              </div>
+              </article>
             </Link>
 
-            {/* Latest News */}
-            <div className="mb-6">
-              <h2 className="text-lg font-extrabold text-gray-900 mb-4 flex items-center gap-2">
-                {language === 'en' ? 'Latest News' : '最新新闻'}
-              </h2>
+            {/* Sub-features */}
+            <div className="lg:col-span-4 flex flex-col gap-6">
+              {subFeatured.map((a) => (
+                <Link key={a.id} href={`/article/${a.id}`} className="group block flex-1">
+                  <article className="bg-white border border-slate-200 hover:border-blue-700 transition-colors h-full p-5 flex flex-col">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-black text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
+                        {a.category}
+                      </span>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{a.time}</span>
+                    </div>
+                    <h2 className="tabloid-headline text-2xl md:text-[26px] leading-tight mb-2 group-hover:text-blue-800 transition-colors flex-1">
+                      {a.title}
+                    </h2>
+                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-2 mt-2">
+                      {a.summary}
+                    </p>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Main grid */}
+          <div className="lg:col-span-8 min-w-0">
+            <div className="section-rule mb-6 pb-2">
+              <h2 className="font-display text-3xl text-black tracking-wide">Top Stories</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {otherArticles.map((article) => (
-                <Link key={article.id} href={`/article/${article.id}`} className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-sm transition-all h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              {gridArticles.map((article) => (
+                <Link key={article.id} href={`/article/${article.id}`} className="group block">
+                  <article className="bg-white border border-slate-200 hover:border-blue-700 transition-all h-full p-5 flex flex-col">
                     <div className="flex items-center gap-2 mb-3">
-                      <span className="text-emerald-600 text-xs font-semibold px-2.5 py-0.5 bg-emerald-50 rounded-full">
-                        {language === 'en' ? article.category : article.categoryZh}
+                      <span className="bg-blue-700 text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
+                        {article.category}
                       </span>
-                      <span className="text-gray-400 text-xs">{article.time}</span>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{article.time}</span>
                     </div>
-                    <h3 className="font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors line-clamp-2 text-sm leading-snug mb-2">
-                      {language === 'en' ? article.titleEn : article.titleZh}
+                    <h3 className="tabloid-headline text-xl md:text-2xl leading-tight mb-3 group-hover:text-blue-800 transition-colors">
+                      {article.title}
                     </h3>
-                    <p className="text-gray-400 text-xs line-clamp-2 leading-relaxed">
-                      {language === 'en' ? article.summaryEn : article.summaryZh}
+                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-3 flex-1">
+                      {article.summary}
                     </p>
+                    <div className="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-500 uppercase tracking-wider font-semibold flex items-center justify-between">
+                      <span>DCN News</span>
+                      <span className="text-blue-700 group-hover:underline">Read →</span>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+
+            {/* Compact list */}
+            <div className="section-rule mb-5 pb-2">
+              <h2 className="font-display text-2xl text-black tracking-wide">More From the Wire</h2>
+            </div>
+            <div className="bg-white border border-slate-200 divide-y divide-slate-100">
+              {moreArticles.map((article, idx) => (
+                <Link key={article.id} href={`/article/${article.id}`} className="group flex items-start gap-4 p-4 hover:bg-blue-50/40 transition-colors">
+                  <span className="font-display text-2xl text-blue-700 w-8 shrink-0">{String(idx + 1).padStart(2, '0')}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700">
+                        {article.category}
+                      </span>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-widest">{article.time}</span>
+                    </div>
+                    <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-800 leading-snug line-clamp-2">
+                      {article.title}
+                    </h4>
                   </div>
                 </Link>
               ))}
@@ -102,53 +166,63 @@ export default function Home() {
           </div>
 
           {/* Sidebar */}
-          <aside className="hidden lg:block w-80 shrink-0">
-            {/* Trending */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden mb-6">
-              <div className="bg-gray-900 text-white px-5 py-3.5 font-bold text-sm flex items-center gap-2">
-                <svg className="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" />
-                </svg>
-                {language === 'en' ? 'Trending' : '热门'}
-              </div>
-              <div className="p-4">
-                <ul className="space-y-3">
-                  {articles.slice(0, 8).map((article, index) => (
+          <aside className="lg:col-span-4">
+            <div className="sticky top-[180px] space-y-6">
+              <div className="bg-white border border-slate-200">
+                <div className="bg-black text-white px-5 py-3 flex items-center justify-between">
+                  <span className="font-display text-lg tracking-widest">Most Read</span>
+                  <span className="text-[10px] text-blue-300 uppercase tracking-widest font-bold">24h</span>
+                </div>
+                <ol className="divide-y divide-slate-100">
+                  {articles.slice(0, 6).map((article, index) => (
                     <li key={article.id}>
-                      <Link href={`/article/${article.id}`} className="flex gap-3 group items-start">
-                        <span className={`font-bold text-xs w-6 h-6 flex items-center justify-center rounded-lg shrink-0 ${
-                          index < 3
-                            ? 'bg-gray-900 text-white'
-                            : 'bg-gray-100 text-gray-500'
-                        }`}>
+                      <Link href={`/article/${article.id}`} className="flex gap-3 p-4 group items-start">
+                        <span className={`font-display text-2xl shrink-0 w-7 ${index < 3 ? 'text-blue-700' : 'text-slate-300'}`}>
                           {index + 1}
                         </span>
-                        <span className="text-sm text-gray-600 group-hover:text-emerald-600 line-clamp-2 flex-1 transition-colors leading-snug">
-                          {language === 'en' ? article.titleEn : article.titleZh}
+                        <span className="text-sm font-bold text-slate-900 group-hover:text-blue-700 line-clamp-3 flex-1 leading-snug">
+                          {article.title}
                         </span>
                       </Link>
                     </li>
                   ))}
-                </ul>
+                </ol>
               </div>
-            </div>
 
-            {/* Newsletter */}
-            <div className="bg-gray-900 rounded-2xl p-6 text-white">
-              <h3 className="font-bold text-base mb-2">
-                {language === 'en' ? 'Get Notifications' : '获取通知'}
-              </h3>
-              <p className="text-gray-400 text-sm mb-4">
-                {language === 'en' ? 'Stay on top of breaking news.' : '第一时间获取突发新闻。'}
-              </p>
-              <input
-                type="email"
-                placeholder={language === 'en' ? 'Enter your email' : '输入邮箱'}
-                className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-sm mb-3 focus:outline-none focus:border-emerald-500 text-gray-200 placeholder-gray-500"
-              />
-              <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors">
-                {language === 'en' ? 'Subscribe' : '订阅'}
-              </button>
+              <div id="newsletter" className="bg-black text-white p-6 border-t-4 border-blue-600 scroll-mt-32">
+                <div className="font-display text-2xl tracking-widest mb-2">Get the Wire</div>
+                <p className="text-white/70 text-sm mb-4 leading-relaxed">
+                  Five sharp headlines, every morning. Free.
+                </p>
+                <NewsletterForm variant="stacked" tone="dark" />
+              </div>
+
+              <div className="bg-white border border-slate-200 p-5">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="font-display text-lg tracking-widest text-black">Markets</span>
+                  <span className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Live</span>
+                </div>
+                <div className="space-y-2.5 text-sm">
+                  {[
+                    { sym: 'BTC', name: 'Bitcoin', val: '$104,288.52', chg: '+3.42%', up: true },
+                    { sym: 'ETH', name: 'Ethereum', val: '$5,712.18', chg: '+2.18%', up: true },
+                    { sym: 'SOL', name: 'Solana', val: '$248.94', chg: '+5.61%', up: true },
+                    { sym: 'DOGE', name: 'Dogecoin', val: '$0.421', chg: '-1.24%', up: false },
+                    { sym: 'S&P', name: 'S&P 500', val: '5,894.12', chg: '-0.34%', up: false },
+                  ].map((m) => (
+                    <div key={m.sym} className="flex items-center justify-between border-b border-slate-100 pb-2 last:border-0">
+                      <div>
+                        <span className="font-bold text-slate-900 mr-2">{m.sym}</span>
+                        <span className="text-xs text-slate-500">{m.name}</span>
+                      </div>
+                      <div className="text-right">
+                        <div className="font-bold text-slate-900 text-sm">{m.val}</div>
+                        <div className={`text-xs font-semibold ${m.up ? 'text-emerald-600' : 'text-rose-600'}`}>{m.chg}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </aside>
         </div>

@@ -1,52 +1,47 @@
 'use client'
 
 import Link from 'next/link'
-import { useLanguage } from '@/context/LanguageContext'
+import NewsletterForm from './NewsletterForm'
 
 export default function Footer() {
-  const { language } = useLanguage()
-
   return (
-    <footer className="bg-gray-900 mt-12">
+    <footer className="bg-black text-white mt-12 border-t-4 border-blue-600">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <img
-                src="/logo.svg"
-                alt="DaybreakNews"
-                className="w-8 h-8 rounded-lg"
-              />
-              <span className="text-white font-extrabold text-lg tracking-tight">DAYBREAK</span>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo.svg" alt="DCN News" className="w-10 h-10 rounded-md" />
+              <div className="leading-none">
+                <div className="font-display text-2xl font-bold">DCN<span className="text-blue-400"> News</span></div>
+                <div className="text-[10px] tracking-[0.28em] uppercase text-white/50 mt-1">Daily Crypto Network</div>
+              </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              {language === 'en'
-                ? 'Your trusted source for breaking news, in-depth analysis, and comprehensive global coverage.'
-                : '您值得信赖的突发新闻、深度分析和全球综合报道来源。'}
+            <p className="text-white/60 text-sm leading-relaxed">
+              Tabloid-paced reporting on crypto, markets, technology and culture. Bold headlines. Sharp analysis. No fluff.
             </p>
             <div className="flex items-center gap-2 mt-5">
               {['X', 'in', 'yt'].map((icon) => (
-                <button key={icon} className="w-9 h-9 rounded-lg bg-gray-800 hover:bg-gray-700 border border-gray-700 flex items-center justify-center transition-colors">
-                  <span className="text-gray-400 text-xs font-bold">{icon}</span>
+                <button key={icon} className="w-9 h-9 rounded-md bg-white/5 hover:bg-blue-600 border border-white/10 hover:border-blue-500 flex items-center justify-center transition-colors">
+                  <span className="text-white/80 text-xs font-bold">{icon}</span>
                 </button>
               ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              {language === 'en' ? 'Sections' : '栏目'}
+            <h3 className="font-display text-white text-base mb-4 tracking-widest uppercase border-b border-white/15 pb-2">
+              Sections
             </h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { href: '/hot', en: 'Hot News', zh: '热点新闻' },
-                { href: '/newspaper', en: 'Politics', zh: '政治' },
-                { href: '/live', en: 'Live', zh: '直播' },
-                { href: '/opinion', en: 'Opinion', zh: '评论' },
+                { href: '/hot', label: 'Hot News' },
+                { href: '/newspaper', label: 'Politics' },
+                { href: '/live', label: 'Live' },
+                { href: '/opinion', label: 'Opinion' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-violet-300 transition-colors">
-                    {language === 'en' ? link.en : link.zh}
+                  <Link href={link.href} className="text-white/60 hover:text-blue-400 transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -54,19 +49,19 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              {language === 'en' ? 'Categories' : '分类'}
+            <h3 className="font-display text-white text-base mb-4 tracking-widest uppercase border-b border-white/15 pb-2">
+              Categories
             </h3>
             <ul className="space-y-2.5 text-sm">
               {[
-                { href: '/finance', en: 'Finance', zh: '财经' },
-                { href: '/tech', en: 'Technology', zh: '科技' },
-                { href: '/culture', en: 'Culture', zh: '文化' },
-                { href: '/sports', en: 'Sports', zh: '体育' },
+                { href: '/finance', label: 'Finance' },
+                { href: '/tech', label: 'Technology' },
+                { href: '/culture', label: 'Culture' },
+                { href: '/sports', label: 'Sports' },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-gray-400 hover:text-violet-300 transition-colors">
-                    {language === 'en' ? link.en : link.zh}
+                  <Link href={link.href} className="text-white/60 hover:text-blue-400 transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -74,34 +69,30 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">
-              {language === 'en' ? 'Stay Updated' : '订阅更新'}
+            <h3 className="font-display text-white text-base mb-4 tracking-widest uppercase border-b border-white/15 pb-2">
+              Get the Wire
             </h3>
-            <p className="text-gray-400 text-sm mb-4">
-              {language === 'en' ? 'Get news delivered to your inbox.' : '获取最新新闻直达您的邮箱。'}
+            <p className="text-white/60 text-sm mb-4">
+              Headlines hit your inbox before the markets open.
             </p>
-            <div className="flex gap-2">
-              <input
-                type="email"
-                placeholder={language === 'en' ? 'Email' : '邮箱'}
-                className="flex-1 bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-violet-400"
-              />
-              <button className="bg-violet-500 hover:bg-violet-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors shrink-0">
-                {language === 'en' ? 'Go' : '订阅'}
-              </button>
-            </div>
+            <NewsletterForm
+              variant="inline"
+              tone="dark"
+              buttonLabel="Go"
+              placeholder="Email"
+            />
           </div>
         </div>
       </div>
 
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10 bg-black/60">
         <div className="max-w-7xl mx-auto px-4 py-5">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
-            <span>© 2026 {language === 'en' ? 'DaybreakNews. All Rights Reserved.' : 'DaybreakNews。保留所有权利。'}</span>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/50">
+            <span>© 2026 DCN News. All Rights Reserved.</span>
             <div className="flex items-center gap-5">
-              <button className="hover:text-gray-300 transition-colors">{language === 'en' ? 'Privacy' : '隐私政策'}</button>
-              <button className="hover:text-gray-300 transition-colors">{language === 'en' ? 'Terms' : '条款'}</button>
-              <button className="hover:text-gray-300 transition-colors">{language === 'en' ? 'About' : '关于'}</button>
+              <button className="hover:text-blue-400 transition-colors">Privacy</button>
+              <button className="hover:text-blue-400 transition-colors">Terms</button>
+              <button className="hover:text-blue-400 transition-colors">About</button>
             </div>
           </div>
         </div>

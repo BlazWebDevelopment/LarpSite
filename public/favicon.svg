@@ -1,28 +1,39 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="4" y1="3" x2="29" y2="31" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1220"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000000"/>
+      <stop offset="1" stop-color="#0A1224"/>
     </linearGradient>
-    <linearGradient id="accent" x1="8" y1="7" x2="25" y2="25" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+    <linearGradient id="blueBar" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#3B82F6"/>
     </linearGradient>
   </defs>
 
-  <rect width="32" height="32" rx="9" fill="url(#bg)"/>
-  <rect x="1" y="1" width="30" height="30" rx="8" stroke="rgba(255,255,255,0.10)"/>
+  <rect width="32" height="32" rx="6" fill="url(#bgGrad)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="5.5" stroke="rgba(255,255,255,0.08)"/>
 
-  <path
-    d="M8 20.2C10.6 17.8 13.5 16.7 16 16.7C18.5 16.7 21.4 17.8 24 20.2"
-    stroke="url(#accent)"
-    stroke-width="2.2"
-    stroke-linecap="round"
-  />
+  <!-- Top thin white rule -->
+  <rect x="4" y="5" width="24" height="1.4" rx="0.7" fill="#FFFFFF" opacity="0.85"/>
 
-  <path
-    d="M10.6 9.6H17.1C21.6 9.6 24.9 12.6 24.9 16.8C24.9 21 21.6 24 17.1 24H10.6V9.6Z
-       M14 12.8V20.8H17C19.9 20.8 21.6 19.2 21.6 16.8C21.6 14.4 19.9 12.8 17 12.8H14Z"
-    fill="rgba(255,255,255,0.94)"
-  />
+  <!-- DCN micro letters as a grid of bold marks -->
+  <g fill="#FFFFFF">
+    <!-- D -->
+    <path d="M5 9.5H8.4C11.0 9.5 12.8 11.4 12.8 14.0C12.8 16.6 11.0 18.5 8.4 18.5H5V9.5ZM7.4 11.6V16.4H8.3C9.5 16.4 10.4 15.5 10.4 14.0C10.4 12.5 9.5 11.6 8.3 11.6H7.4Z"/>
+    <!-- C -->
+    <path d="M13.6 14.0C13.6 11.3 15.5 9.3 18.3 9.3C19.9 9.3 21.2 9.9 22.1 11L20.4 12.6C20.0 12.0 19.2 11.6 18.4 11.6C16.9 11.6 16.0 12.6 16.0 14.0C16.0 15.4 16.9 16.4 18.4 16.4C19.2 16.4 20.0 16.0 20.4 15.4L22.1 17C21.2 18.1 19.9 18.7 18.3 18.7C15.5 18.7 13.6 16.7 13.6 14.0Z"/>
+    <!-- N -->
+    <path d="M22.6 9.5H25.0L25.0 18.5H22.6V9.5Z"/>
+  </g>
+
+  <!-- Blue accent rule -->
+  <rect x="4" y="21" width="24" height="2.4" rx="0.8" fill="url(#blueBar)"/>
+
+  <!-- "NEWS" microtype -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <rect x="4" y="25.6" width="3.6" height="1.2" rx="0.4"/>
+    <rect x="9" y="25.6" width="3.6" height="1.2" rx="0.4"/>
+    <rect x="14" y="25.6" width="3.6" height="1.2" rx="0.4"/>
+    <rect x="19" y="25.6" width="9" height="1.2" rx="0.4"/>
+  </g>
 </svg>
