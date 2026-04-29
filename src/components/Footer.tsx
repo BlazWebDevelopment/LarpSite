@@ -13,11 +13,11 @@ export default function Footer() {
               <img src="/logo.svg" alt="DCN News" className="w-10 h-10 rounded-md" />
               <div className="leading-none">
                 <div className="font-display text-2xl font-bold">DCN<span className="text-blue-400"> News</span></div>
-                <div className="text-[10px] tracking-[0.28em] uppercase text-white/50 mt-1">Daily Crypto Network</div>
+                <div className="text-[10px] tracking-[0.28em] uppercase text-white/50 mt-1">Daily News · Est. 2022</div>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
-              Tabloid-paced reporting on crypto, markets, technology and culture. Bold headlines. Sharp analysis. No fluff.
+              Tabloid-paced daily reporting on news, politics, markets, technology, culture and sports. Bold headlines. Sharp analysis. No fluff.
             </p>
             <div className="flex items-center gap-2 mt-5">
               {['X', 'in', 'yt'].map((icon) => (

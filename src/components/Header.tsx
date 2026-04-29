@@ -40,10 +40,8 @@ export default function Header() {
       <div className="bg-black text-white text-[11px] tracking-widest uppercase">
         <div className="max-w-7xl mx-auto px-4 h-7 flex items-center justify-between">
           <span className="font-semibold">{today}</span>
-          <div className="hidden md:flex items-center gap-4 text-white/70">
-            <span>BTC <span className="text-emerald-300 font-semibold">$104,288 ▲</span></span>
-            <span>ETH <span className="text-emerald-300 font-semibold">$5,712 ▲</span></span>
-            <span>S&amp;P <span className="text-rose-300 font-semibold">5,894 ▼</span></span>
+          <div className="hidden md:flex items-center gap-4 text-white/60">
+            <span>News · Politics · Markets · Tech · Sports · Culture</span>
           </div>
           <div className="flex items-center gap-3 text-white/70">
             <a href="#newsletter" className="hover:text-white transition-colors">Newsletter</a>
@@ -61,7 +59,7 @@ export default function Header() {
                 DCN<span className="text-blue-700"> News</span>
               </div>
               <div className="mt-1 text-[10px] tracking-[0.32em] uppercase text-black/60 font-semibold">
-                Daily Crypto Network · Est. 2022
+                DCN News · Est. 2022
               </div>
             </div>
           </Link>

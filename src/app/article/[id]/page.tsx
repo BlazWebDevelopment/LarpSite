@@ -4,7 +4,10 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { getArticleById, articles } from '@/data/articles'
 import Link from 'next/link'
-import MemeAgentImg from '@/context/MemeAgent.png'
+import ShareBar from '@/components/ShareBar'
+
+const FALLBACK_HERO_IMAGE =
+  'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1600&q=80&auto=format&fit=crop'
 
 interface ArticlePageProps {
   params: {
@@ -122,12 +125,12 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
                     <figure className="mb-6">
                       <img
-                        src={MemeAgentImg.src}
-                        alt="Gemini Agentic Trading dashboard with Meme Agent connected"
-                        className="w-full h-auto border border-slate-200"
+                        src={article?.image ?? FALLBACK_HERO_IMAGE}
+                        alt="AI agent connected to a live crypto trading dashboard"
+                        className="w-full h-auto border border-slate-200 object-cover"
                       />
                       <figcaption className="text-xs text-slate-500 mt-2 italic">
-                        Gemini&apos;s new &quot;Agentic Trading&quot; panel — a &quot;My Trading Agent&quot; and a dedicated &quot;Meme Agent&quot; can be authorized to trade under granular, user-defined permissions. (Image: Gemini)
+                        Illustrative: Gemini&apos;s new &quot;Agentic Trading&quot; panel lets a &quot;My Trading Agent&quot; and a dedicated &quot;Meme Agent&quot; trade under granular, user-defined permissions.
                       </figcaption>
                     </figure>
 
@@ -414,13 +417,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
 
               <div className="bg-white border border-slate-200 p-5">
                 <h3 className="font-display text-lg tracking-widest text-black mb-3">Share Article</h3>
-                <div className="flex items-center gap-2">
-                  {['X', 'in', 'tg', 'cp'].map((icon) => (
-                    <button key={icon} className="w-10 h-10 bg-slate-100 hover:bg-blue-700 hover:text-white border border-slate-200 hover:border-blue-700 flex items-center justify-center transition-all">
-                      <span className="text-slate-700 text-xs font-bold">{icon}</span>
-                    </button>
-                  ))}
-                </div>
+                <ShareBar title={article?.title ?? 'DCN News'} />
               </div>
             </div>
           </aside>

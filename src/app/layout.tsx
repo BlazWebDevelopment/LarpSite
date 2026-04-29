@@ -19,11 +19,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   : new URL('http://localhost:3000')
 
 export const metadata: Metadata = {
-  title: 'DCN News - Breaking Crypto, Markets & Tech',
-  description: 'DCN News delivers tabloid-style breaking coverage of crypto, markets, technology and culture — fast headlines, sharp analysis, no fluff.',
+  title: 'DCN News — Breaking News, Politics, Markets, Tech & Sports',
+  description: 'DCN News delivers tabloid-paced daily reporting on breaking news, politics, markets, technology, culture and sports — fast headlines, sharp analysis, no fluff.',
   metadataBase: siteUrl,
   applicationName: 'DCN News',
-  keywords: ['DCN News', 'crypto news', 'markets', 'breaking news', 'tech news', 'agentic trading'],
+  keywords: ['DCN News', 'breaking news', 'daily news', 'politics', 'markets', 'tech news', 'sports news', 'culture'],
   authors: [{ name: 'DCN News' }],
   icons: {
     icon: '/favicon.svg',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'DCN News',
-    title: 'DCN News - Breaking Crypto, Markets & Tech',
-    description: 'Breaking crypto, markets, technology and culture — fast headlines, sharp analysis.',
+    title: 'DCN News — Breaking News, Politics, Markets, Tech & Sports',
+    description: 'Daily breaking news, politics, markets, technology, sports and culture — fast headlines, sharp analysis.',
     url: '/',
     images: [
       {
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DCN News - Breaking Crypto, Markets & Tech',
-    description: 'Breaking crypto, markets, technology and culture — fast headlines, sharp analysis.',
+    title: 'DCN News — Breaking News, Politics, Markets, Tech & Sports',
+    description: 'Daily breaking news, politics, markets, technology, sports and culture — fast headlines, sharp analysis.',
     images: ['/logo.svg'],
   },
 }

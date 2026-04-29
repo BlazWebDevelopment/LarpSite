@@ -5,7 +5,9 @@ import Footer from '@/components/Footer'
 import NewsletterForm from '@/components/NewsletterForm'
 import { articles } from '@/data/articles'
 import Link from 'next/link'
-import MemeAgentImg from '@/context/MemeAgent.png'
+
+const FALLBACK_HERO_IMAGE =
+  'https://images.unsplash.com/photo-1495020689067-958852a7765e?w=1600&q=80&auto=format&fit=crop'
 
 export default function Home() {
   const featuredArticle = articles[0]
@@ -25,7 +27,7 @@ export default function Home() {
           </span>
           <div className="overflow-hidden flex-1">
             <span className="animate-ticker text-white text-sm font-medium">
-              Gemini launches &quot;Agentic Trading&quot; — ChatGPT, Claude and Meme Agents can now manage your crypto account directly via MCP · BTC holds above $104K · Apple unveils Vision Pro 2 · Bitcoin ETFs see record inflows · Knicks take Game 1 over the Hawks
+              King Charles back in NYC after 19 years · UAE leaves OPEC May 1 · Musk vs OpenAI trial opens in California · Knicks roll Hawks 127-97, take 3-2 series lead · Gemini wires AI agents into live crypto trading · Apple unveils Vision Pro 2 · Fed cuts rates 50 basis points
             </span>
           </div>
         </div>
@@ -40,7 +42,7 @@ export default function Home() {
                 Front Page
               </span>
               <span className="text-xs text-slate-500 uppercase tracking-widest font-semibold">
-                Crypto Exclusive
+                Today&apos;s Top Story
               </span>
             </div>
             <Link href={`/article/${featuredArticle.id}`} className="text-xs text-blue-700 font-semibold uppercase tracking-widest hover:underline">
@@ -54,8 +56,8 @@ export default function Home() {
               <article className="bg-white border border-slate-200 hover:border-blue-700 transition-colors">
                 <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
                   <img
-                    src={MemeAgentImg.src}
-                    alt="Gemini Agentic Trading dashboard with Meme Agent"
+                    src={featuredArticle.image ?? FALLBACK_HERO_IMAGE}
+                    alt={featuredArticle.title}
                     className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 flex items-center gap-2">
@@ -75,7 +77,7 @@ export default function Home() {
                     {featuredArticle.summary}
                   </p>
                   <div className="flex items-center gap-3 pt-3 border-t border-slate-200 text-xs text-slate-500 uppercase tracking-wider font-semibold">
-                    <span>DCN News Crypto Desk</span>
+                    <span>{featuredArticle.byline ?? 'DCN News Staff'}</span>
                     <span className="text-slate-300">·</span>
                     <span>{featuredArticle.time}</span>
                     <span className="text-slate-300">·</span>
@@ -89,19 +91,30 @@ export default function Home() {
             <div className="lg:col-span-4 flex flex-col gap-6">
               {subFeatured.map((a) => (
                 <Link key={a.id} href={`/article/${a.id}`} className="group block flex-1">
-                  <article className="bg-white border border-slate-200 hover:border-blue-700 transition-colors h-full p-5 flex flex-col">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="bg-black text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
-                        {a.category}
-                      </span>
-                      <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{a.time}</span>
+                  <article className="bg-white border border-slate-200 hover:border-blue-700 transition-colors h-full flex flex-col overflow-hidden">
+                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                      <img
+                        src={a.image ?? FALLBACK_HERO_IMAGE}
+                        alt={a.title}
+                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                      />
+                      <div className="absolute top-3 left-3 flex items-center gap-2">
+                        <span className="bg-black text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
+                          {a.category}
+                        </span>
+                        <span className="bg-white/90 text-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
+                          {a.time}
+                        </span>
+                      </div>
                     </div>
-                    <h2 className="tabloid-headline text-2xl md:text-[26px] leading-tight mb-2 group-hover:text-blue-800 transition-colors flex-1">
-                      {a.title}
-                    </h2>
-                    <p className="text-slate-600 text-sm leading-relaxed line-clamp-2 mt-2">
-                      {a.summary}
-                    </p>
+                    <div className="p-5 flex flex-col flex-1">
+                      <h2 className="tabloid-headline text-xl md:text-[22px] leading-tight mb-2 group-hover:text-blue-800 transition-colors">
+                        {a.title}
+                      </h2>
+                      <p className="text-slate-600 text-sm leading-relaxed line-clamp-2 mt-1">
+                        {a.summary}
+                      </p>
+                    </div>
                   </article>
                 </Link>
               ))}

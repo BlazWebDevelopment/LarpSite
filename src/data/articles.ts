@@ -20,7 +20,7 @@ export const articles: Article[] = [
     category: 'Crypto',
     time: '16:05',
     section: 'hot',
-    image: '/images/MemeAgent.png',
+    image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Crypto Desk',
     date: '2026-04-27'
   },
@@ -37,7 +37,7 @@ export const articles: Article[] = [
     category: 'Crypto',
     time: '16:45',
     section: 'finance',
-    image: '/images/Pengu.png',
+    image: 'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Markets Desk'
   },
   {
@@ -53,6 +53,7 @@ export const articles: Article[] = [
     category: 'Economy',
     time: '15:30',
     section: 'newspaper',
+    image: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Economy Desk'
   },
   {
@@ -83,7 +84,7 @@ export const articles: Article[] = [
     category: 'Opinion',
     time: '12:20',
     section: 'opinion',
-    image: '/images/Floki.png',
+    image: 'https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Editorial'
   },
   {
@@ -159,6 +160,7 @@ export const articles: Article[] = [
     category: 'Sports',
     time: '08:00',
     section: 'sports',
+    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Sports Desk'
   },
   {
@@ -204,7 +206,7 @@ export const articles: Article[] = [
     category: 'Tech',
     time: '16:30',
     section: 'tech',
-    image: '/images/Nasdaq-bot.png',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Tech Desk'
   },
   {
@@ -235,7 +237,7 @@ export const articles: Article[] = [
     category: 'Tech',
     time: '11:45',
     section: 'tech',
-    image: '/images/NeuralinkMonkey.png',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Tech Desk'
   },
   {
@@ -266,6 +268,7 @@ export const articles: Article[] = [
     category: 'Finance',
     time: '15:00',
     section: 'finance',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Markets Desk'
   },
   {
@@ -311,6 +314,7 @@ export const articles: Article[] = [
     category: 'Finance',
     time: '08:30',
     section: 'finance',
+    image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Markets Desk'
   },
   {
@@ -371,6 +375,7 @@ export const articles: Article[] = [
     category: 'Culture',
     time: '10:00',
     section: 'culture',
+    image: 'https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Culture Desk'
   },
   {
@@ -488,7 +493,7 @@ export const articles: Article[] = [
     category: 'Crime',
     time: '09:50',
     section: 'newspaper',
-    image: '/images/SoldierDog.png',
+    image: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Crime Desk'
   },
   {
@@ -729,7 +734,7 @@ export const articles: Article[] = [
     category: 'Crypto',
     time: '17:00',
     section: 'finance',
-    image: '/images/Pengu1.png',
+    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Markets Desk'
   },
   {
@@ -745,7 +750,7 @@ export const articles: Article[] = [
     category: 'Crypto',
     time: '19:30',
     section: 'opinion',
-    image: '/images/Floki.png',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Editorial'
   },
   // ────────── Fresh batch (8 new) — to reach 56 articles ──────────
@@ -762,7 +767,7 @@ export const articles: Article[] = [
     category: 'World',
     time: '07:45',
     section: 'hot',
-    image: '/images/Statue.png',
+    image: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Metro Desk'
   },
   {
@@ -778,6 +783,7 @@ export const articles: Article[] = [
     category: 'Finance',
     time: '13:40',
     section: 'finance',
+    image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Markets Desk'
   },
   {
@@ -808,6 +814,7 @@ export const articles: Article[] = [
     category: 'Sports',
     time: '23:25',
     section: 'sports',
+    image: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1600&q=80&auto=format&fit=crop',
     byline: 'DCN News Sports Desk'
   },
   {

@@ -11,36 +11,33 @@
     </linearGradient>
   </defs>
 
-  <!-- Black tabloid badge -->
-  <rect width="48" height="48" rx="8" fill="url(#bgGrad)"/>
-  <rect x="0.75" y="0.75" width="46.5" height="46.5" rx="7.25" stroke="rgba(255,255,255,0.06)"/>
+  <rect width="48" height="48" rx="6" fill="url(#bgGrad)"/>
+  <rect x="0.75" y="0.75" width="46.5" height="46.5" rx="5.25" stroke="rgba(255,255,255,0.08)"/>
 
-  <!-- Top white strip ("masthead bar") -->
-  <rect x="6" y="7" width="36" height="2" rx="1" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="6" y="7" width="36" height="1.6" rx="0.8" fill="#FFFFFF" opacity="0.85"/>
 
-  <!-- DCN monogram letters (condensed-style geometric forms) -->
-  <g fill="#FFFFFF">
-    <!-- D -->
-    <path d="M7.6 14.4H13.2C17.5 14.4 20.4 17.4 20.4 22C20.4 26.6 17.5 29.6 13.2 29.6H7.6V14.4ZM11.6 18.0V26.0H13.0C15.0 26.0 16.4 24.4 16.4 22C16.4 19.6 15.0 18.0 13.0 18.0H11.6Z"/>
-    <!-- C -->
-    <path d="M22.0 22C22.0 17.5 25.2 14.0 30.0 14.0C32.7 14.0 34.9 15.1 36.4 16.9L33.7 19.5C32.9 18.5 31.7 17.9 30.2 17.9C27.6 17.9 26.0 19.6 26.0 22C26.0 24.4 27.6 26.1 30.2 26.1C31.7 26.1 32.9 25.5 33.7 24.5L36.4 27.1C34.9 28.9 32.7 30.0 30.0 30.0C25.2 30.0 22.0 26.5 22.0 22Z"/>
-    <!-- N -->
-    <path d="M37.0 14.4H40.7L40.7 22.6L40.6 22.6L37.0 22.6V14.4Z" fill="#FFFFFF" opacity="0"/>
-  </g>
+  <text
+    x="24"
+    y="30.5"
+    font-family="Impact, 'Arial Black', 'Helvetica Neue', Helvetica, sans-serif"
+    font-weight="900"
+    font-size="20"
+    letter-spacing="-0.5"
+    text-anchor="middle"
+    fill="#FFFFFF"
+  >DCN</text>
 
-  <!-- Stylised "N" using clean strokes -->
-  <g stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="square" fill="none">
-    <line x1="38.4" y1="14.4" x2="38.4" y2="29.6"/>
-  </g>
+  <rect x="6" y="35" width="36" height="3" rx="1" fill="url(#blueBar)"/>
 
-  <!-- Blue accent bar -->
-  <rect x="6" y="34" width="36" height="3.4" rx="1.2" fill="url(#blueBar)"/>
-
-  <!-- "NEWS" microtype line -->
-  <g fill="#FFFFFF" opacity="0.85">
-    <rect x="6" y="40.4" width="6" height="1.6" rx="0.5"/>
-    <rect x="14" y="40.4" width="6" height="1.6" rx="0.5"/>
-    <rect x="22" y="40.4" width="6" height="1.6" rx="0.5"/>
-    <rect x="30" y="40.4" width="12" height="1.6" rx="0.5"/>
-  </g>
+  <text
+    x="24"
+    y="44.5"
+    font-family="'Arial Narrow', Arial, Helvetica, sans-serif"
+    font-weight="700"
+    font-size="5"
+    letter-spacing="2.6"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    opacity="0.9"
+  >NEWS</text>
 </svg>

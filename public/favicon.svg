@@ -10,30 +10,19 @@
     </linearGradient>
   </defs>
 
-  <rect width="32" height="32" rx="6" fill="url(#bgGrad)"/>
-  <rect x="0.5" y="0.5" width="31" height="31" rx="5.5" stroke="rgba(255,255,255,0.08)"/>
+  <rect width="32" height="32" rx="5" fill="url(#bgGrad)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="4.5" stroke="rgba(255,255,255,0.08)"/>
 
-  <!-- Top thin white rule -->
-  <rect x="4" y="5" width="24" height="1.4" rx="0.7" fill="#FFFFFF" opacity="0.85"/>
+  <text
+    x="16"
+    y="20.5"
+    font-family="Impact, 'Arial Black', 'Helvetica Neue', Helvetica, sans-serif"
+    font-weight="900"
+    font-size="14"
+    letter-spacing="-0.3"
+    text-anchor="middle"
+    fill="#FFFFFF"
+  >DCN</text>
 
-  <!-- DCN micro letters as a grid of bold marks -->
-  <g fill="#FFFFFF">
-    <!-- D -->
-    <path d="M5 9.5H8.4C11.0 9.5 12.8 11.4 12.8 14.0C12.8 16.6 11.0 18.5 8.4 18.5H5V9.5ZM7.4 11.6V16.4H8.3C9.5 16.4 10.4 15.5 10.4 14.0C10.4 12.5 9.5 11.6 8.3 11.6H7.4Z"/>
-    <!-- C -->
-    <path d="M13.6 14.0C13.6 11.3 15.5 9.3 18.3 9.3C19.9 9.3 21.2 9.9 22.1 11L20.4 12.6C20.0 12.0 19.2 11.6 18.4 11.6C16.9 11.6 16.0 12.6 16.0 14.0C16.0 15.4 16.9 16.4 18.4 16.4C19.2 16.4 20.0 16.0 20.4 15.4L22.1 17C21.2 18.1 19.9 18.7 18.3 18.7C15.5 18.7 13.6 16.7 13.6 14.0Z"/>
-    <!-- N -->
-    <path d="M22.6 9.5H25.0L25.0 18.5H22.6V9.5Z"/>
-  </g>
-
-  <!-- Blue accent rule -->
-  <rect x="4" y="21" width="24" height="2.4" rx="0.8" fill="url(#blueBar)"/>
-
-  <!-- "NEWS" microtype -->
-  <g fill="#FFFFFF" opacity="0.85">
-    <rect x="4" y="25.6" width="3.6" height="1.2" rx="0.4"/>
-    <rect x="9" y="25.6" width="3.6" height="1.2" rx="0.4"/>
-    <rect x="14" y="25.6" width="3.6" height="1.2" rx="0.4"/>
-    <rect x="19" y="25.6" width="9" height="1.2" rx="0.4"/>
-  </g>
+  <rect x="3" y="24" width="26" height="2.4" rx="0.8" fill="url(#blueBar)"/>
 </svg>
