@@ -354,13 +354,36 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                               </p>
                             )
                           }
+                          if (block.type === 'image') {
+                            return (
+                              <figure key={idx} className="my-8">
+                                <img
+                                  src={block.src}
+                                  alt={block.alt ?? block.caption ?? ''}
+                                  className="w-full h-auto border border-slate-200 object-cover"
+                                />
+                                {block.caption ? (
+                                  <figcaption className="text-xs text-slate-500 mt-2 italic">
+                                    {block.caption}
+                                  </figcaption>
+                                ) : null}
+                              </figure>
+                            )
+                          }
+                          // video block
                           return (
                             <figure key={idx} className="my-8">
-                              <img
-                                src={block.src}
-                                alt={block.alt ?? block.caption ?? ''}
-                                className="w-full h-auto border border-slate-200 object-cover"
-                              />
+                              <div className="relative w-full aspect-video bg-black border border-slate-200 overflow-hidden">
+                                <iframe
+                                  src={`https://www.youtube.com/embed/${block.videoId}`}
+                                  title={block.title ?? block.caption ?? 'Embedded video'}
+                                  className="absolute inset-0 w-full h-full"
+                                  loading="lazy"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  referrerPolicy="strict-origin-when-cross-origin"
+                                  allowFullScreen
+                                />
+                              </div>
                               {block.caption ? (
                                 <figcaption className="text-xs text-slate-500 mt-2 italic">
                                   {block.caption}

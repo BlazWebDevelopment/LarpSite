@@ -1,6 +1,7 @@
 export type ArticleBodyBlock =
   | string
   | { type: 'image'; src: string; caption?: string; alt?: string }
+  | { type: 'video'; provider: 'youtube'; videoId: string; caption?: string; title?: string }
 
 export interface Article {
   id: string
@@ -16,6 +17,40 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    id: '98437297',
+    title: 'New Banksy Statue Captivates Onlookers in London',
+    summary: 'A new statue bearing the signature of British street artist Banksy has appeared in central London. The statue — depicting a man with his face covered, holding a flag as he walks off a plinth — has already drawn crowds of onlookers, with tourists and locals stopping mid-pavement to film and photograph the new piece.',
+    body: [
+      'A new statue bearing the signature of elusive British street artist Banksy has appeared overnight in central London, and within hours of its discovery the corner where it now stands had filled with a slow-moving crowd of onlookers, tourists and journalists. Police set up a light cordon around the plinth before lunchtime as the foot traffic thickened.',
+      'The work itself is unmistakable: a life-size figure of a man, dressed in a plain suit, his face fully covered, mid-stride as he walks off the edge of a stone plinth. In one hand he carries a long flag, the fabric whipping back behind him as if caught by a wind nobody else can feel. The other arm trails slightly, as though balancing the weight of whatever he is walking toward.',
+      {
+        type: 'image',
+        src: '/images/Banksy2.png',
+        caption: 'Close-up of the new Banksy statue in central London — a hooded suited figure stepping off the plinth mid-stride, flag streaming behind. (Image courtesy: passerby footage shared on social media.)',
+        alt: 'Close-up of the Banksy statue showing a suited, hooded figure stepping off a plinth holding a long flag',
+      },
+      'According to a short statement attributed to the artist and shared via the Banksy social channels overnight, the piece is titled "Blind Man." The artist offered no further explanation of the work, and — as is customary for Banksy releases — declined to identify either the foundry that cast the bronze or the team that installed it on its plinth.',
+      'Speculation about the meaning of "Blind Man" started before the cordon was even up. Critics on the scene read the covered face and forward stride as a comment on political leadership stepping confidently into the unknown; others see a more direct visual joke about marching with conviction while seeing nothing. Banksy, predictably, has not weighed in.',
+      'Westminster City Council confirmed within hours that the statue had not been commissioned through any official channel and that the plinth itself was, until last night, empty as part of a temporary public-art rotation on the surrounding street. Officials told reporters they were treating the situation "carefully" while taking advice on conservation, public safety and the legal status of the piece.',
+      'Crowds, meanwhile, kept growing. By mid-afternoon the queue to see the statue stretched around the corner; a small unofficial economy had already sprung up, with one local cafe printing a quick "Blind Man Latte" sign and a busker setting up two streets away to capture the overflow.',
+      {
+        type: 'video',
+        provider: 'youtube',
+        videoId: 'MBvlRNmrqkI',
+        title: 'New Banksy "Blind Man" statue in central London',
+        caption: 'Footage from the scene as crowds gathered around the new Banksy "Blind Man" statue in central London.',
+      },
+      'For Banksy watchers, the piece is the artist\'s most ambitious public sculpture in years and the first central-London installation since the COVID era. Auction houses contacted by reporters declined to estimate a market value while the work remained, technically, on the street. Several galleries privately said the piece could comfortably reach the highest end of recent Banksy sales if it ever changed hands — though, as one dealer put it, "with Banksy, the work and the moment are usually the point."',
+      'For everyone else, the moment was simpler: a striking new figure in a familiar London skyline, a fresh argument to have over the meaning, and a story to tell about the day a Banksy quietly arrived overnight.',
+    ],
+    category: 'Culture',
+    time: '13:45',
+    section: 'hot',
+    image: '/images/Banksy1.png',
+    byline: 'DCN News Culture Desk',
+    date: '2026-04-30',
+  },
   {
     id: '98437296',
     title: 'Inside OpenAI\'s Office Culture: The Unofficial "Anti Elon Club" Sticker That Sparked Conversation Before the Court Case',
