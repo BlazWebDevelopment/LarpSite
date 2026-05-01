@@ -18,6 +18,34 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: '98437298',
+    title: 'From Internet Troll to $623K: Donald Trump Pokémon-Style Card',
+    summary: 'A custom Donald Trump trading card — originally posted online as a tongue-in-cheek meme styled like a vintage Pokémon card, "1000HP" and all — has just changed hands on eBay for an eye-watering $623,000, turning what started as a troll into one of the strangest collectibles sales of the year.',
+    body: [
+      'A custom Donald Trump trading card that began life as an internet joke has officially crossed into serious-money territory. The card — designed in the unmistakable style of a first-edition Pokémon card, complete with a yellow border, a "Basic" tag, "1000HP" stamped in red and a holographic-style illustration of the former president raising a fist with an American flag behind him — sold on eBay for $623,000, according to the listing and screenshots circulating across social media.',
+      'When the design first surfaced online, almost nobody treated it as a real collectible. It read as pure satire: a card titled simply "Donald Trump," labeled "Donald Trump 45th President," with two attacks straight out of a meme account — "MAGA," doing 1000 damage with the flavor text "Make America Great Again," and "Trump Power," also at 1000, with the line "Nobody can defeat him or kill him when using this attack." At the bottom, in tiny print, the artist signed it "Longbeachbreakers."',
+      {
+        type: 'image',
+        src: '/images/donald.png',
+        caption: 'The custom "Donald Trump 1000HP" card, encased in a hard plastic slab on a display stand, that recently sold on eBay for a reported $623,000. (Image: listing screenshot circulating on social media.)',
+        alt: 'Custom Donald Trump Pokémon-style trading card with 1000HP, MAGA and Trump Power attacks, sealed in a plastic display case.',
+      },
+      'For months the card lived as a screenshot — a recurring joke in political and crypto group chats, posted whenever someone wanted to dunk on the over-the-top fan merchandise that has built up around the former president. Collectors initially dismissed it as a one-off custom print, the kind of thing churned out by the dozen on Etsy.',
+      'What changed the trajectory was scarcity and packaging. The card that hit eBay was sealed in a hard acrylic slab, displayed on a small black stand, and presented as a single, numbered piece from a tiny run by the same independent maker who originally posted the design. Once a verified buyer stepped in, the bidding became its own spectacle, and the listing climbed past anything anyone in the meme thread had taken seriously.',
+      'The final hammer figure of $623,000 puts the Trump card in surreal company. It is, by raw dollars, more than several genuine vintage Pokémon cards have sold for in mainstream auctions, and it sits in the same range as some of the higher-profile political-memorabilia trades of the last decade. The Pokémon Company, of course, has nothing to do with the card; it is a fan-made tribute that borrows the visual language without using any official assets.',
+      'Reactions split immediately along the lines you would expect. MAGA-aligned accounts framed the sale as proof that "Trump merch is the new blue chip," with several commentators comparing the moment to the early Trump-themed NFT drops. Skeptics pointed out that one anonymous buyer paying a huge number on a single listing is not the same thing as a market — and that nobody yet knows whether the buyer plans to flip, hold, or simply enjoy the bragging rights.',
+      'Collectible-card analysts contacted on background were more cautious. "It is a custom card, not a graded vintage Pokémon piece, and the market for political collectibles is famously thin," one dealer said. "One sale at $623K does not establish a floor. It establishes that one person, on one day, was willing to pay it."',
+      'The artist behind the card, posting as "Longbeachbreakers," has so far stayed mostly quiet beyond confirming the sale. In a short post following the listing\'s close, they thanked supporters and hinted that more custom political designs may follow — though they stopped short of promising a full set.',
+      'For everyone watching from the sidelines, the takeaway is the one that keeps repeating itself in this cycle: an image that started as a joke, screenshotted and reposted for laughs, just sold for the price of a small house. Whether that says more about Trump, about Pokémon nostalgia, or about the current state of collectible markets is the argument that will run for the rest of the week.',
+    ],
+    category: 'Culture',
+    time: '18:30',
+    section: 'hot',
+    image: '/images/donald.png',
+    byline: 'DCN News Culture Desk',
+    date: '2026-05-01',
+  },
+  {
     id: '98437297',
     title: 'New Banksy Statue Captivates Onlookers in London',
     summary: 'A new statue bearing the signature of British street artist Banksy has appeared in central London. The statue — depicting a man with his face covered, holding a flag as he walks off a plinth — has already drawn crowds of onlookers, with tourists and locals stopping mid-pavement to film and photograph the new piece.',
