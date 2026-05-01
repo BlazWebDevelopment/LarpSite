@@ -322,7 +322,7 @@ export default function ArticlePage({ params }: ArticlePageProps) {
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs uppercase tracking-widest font-semibold text-slate-500 mb-6 pb-4 border-b border-slate-200">
                       <span>By {article.byline ?? 'DCN News Staff'}</span>
                       <span className="text-slate-300">·</span>
-                      <span>{article.date ?? '2026-04-29'} · {article.time}</span>
+                      <span>{article.date ?? '2026-04-29'}</span>
                       <span className="text-slate-300">·</span>
                       <span className="text-blue-700">{(parseInt(article.id.slice(-4), 10) * 7 % 3500) + 320} reads</span>
                     </div>

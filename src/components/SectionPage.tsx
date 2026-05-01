@@ -69,7 +69,7 @@ export default function SectionPage({ section, title, kicker }: SectionPageProps
                           {article.category}
                         </span>
                         <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">
-                          {article.time}
+                          {article.date ?? '2026-04-29'}
                         </span>
                       </div>
                       <h3 className="tabloid-headline text-xl md:text-2xl mb-2 group-hover:text-blue-800 transition-colors leading-tight">

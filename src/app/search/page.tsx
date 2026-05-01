@@ -54,7 +54,7 @@ function SearchResults() {
                             <span className="bg-blue-700 text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
                               {article.category}
                             </span>
-                            <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{article.time}</span>
+                            <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{article.date ?? '2026-04-29'}</span>
                           </div>
                           <h3 className="tabloid-headline text-xl leading-tight mb-2 group-hover:text-blue-800 transition-colors">
                             {article.title}

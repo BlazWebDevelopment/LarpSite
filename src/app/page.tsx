@@ -79,7 +79,7 @@ export default function Home() {
                   <div className="flex items-center gap-3 pt-3 border-t border-slate-200 text-xs text-slate-500 uppercase tracking-wider font-semibold">
                     <span>{featuredArticle.byline ?? 'DCN News Staff'}</span>
                     <span className="text-slate-300">·</span>
-                    <span>{featuredArticle.time}</span>
+                    <span>{featuredArticle.date ?? '2026-04-29'}</span>
                     <span className="text-slate-300">·</span>
                     <span className="text-blue-700">1,284 reads</span>
                   </div>
@@ -103,7 +103,7 @@ export default function Home() {
                           {a.category}
                         </span>
                         <span className="bg-white/90 text-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
-                          {a.time}
+                          {a.date ?? '2026-04-29'}
                         </span>
                       </div>
                     </div>
@@ -137,7 +137,7 @@ export default function Home() {
                       <span className="bg-blue-700 text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.2em]">
                         {article.category}
                       </span>
-                      <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{article.time}</span>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">{article.date ?? '2026-04-29'}</span>
                     </div>
                     <h3 className="tabloid-headline text-xl md:text-2xl leading-tight mb-3 group-hover:text-blue-800 transition-colors">
                       {article.title}
@@ -167,7 +167,7 @@ export default function Home() {
                       <span className="text-[10px] font-bold uppercase tracking-widest text-blue-700">
                         {article.category}
                       </span>
-                      <span className="text-[10px] text-slate-400 uppercase tracking-widest">{article.time}</span>
+                      <span className="text-[10px] text-slate-400 uppercase tracking-widest">{article.date ?? '2026-04-29'}</span>
                     </div>
                     <h4 className="text-base md:text-lg font-bold text-slate-900 group-hover:text-blue-800 leading-snug line-clamp-2">
                       {article.title}
