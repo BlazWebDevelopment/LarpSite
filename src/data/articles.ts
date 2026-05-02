@@ -17,6 +17,27 @@ export interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    id: '98437299',
+    title: 'K9 cop sniffed out Cole Allen—was pulled back—moments before would-be assassin charged WHCD',
+    summary: 'Newly released footage from the White House Correspondents Dinner security scare appears to show a K9 unit reacting near a doorway moments before suspect Cole Allen allegedly emerged with a rifle. The dog, named Rex, was reportedly pulled back by his handler shortly before the confrontation unfolded.',
+    body: [
+      'Authorities released new footage showing the tense moments before the alleged assassination attempt connected to the White House Correspondents Dinner. The video appears to show Cole Allen, 31, moving through a corridor before a K9 security team followed close behind.',
+      'The K9, identified as Rex, seemed to pause and focus near a doorway as if he had detected something unusual. According to the footage described by officials, Rex was then pulled back by his handler moments before Allen allegedly came out from the area and ran into the hallway carrying a rifle.',
+      'The incident unfolded while security personnel and Secret Service officers were still operating around the event space. In the footage, a Secret Service officer can be seen confronting Allen and firing several shots as the suspect allegedly advanced toward security staff.',
+      'Officials said Allen fired at one Secret Service officer, but the round was stopped by the officer\'s body armor. The officer was not injured. Security personnel then moved quickly into the corridor and detained Allen outside the camera\'s view.',
+      'Additional video reportedly showed Allen visiting the location a day earlier, including the corridors and hotel fitness center, in what investigators described as possible scouting before the attempted attack.',
+      'Allen has been charged with attempting to assassinate the President of the United States, transporting a firearm and ammunition in interstate commerce with intent to commit a felony, and discharging a firearm during a crime of violence.',
+      'Investigators also cited an email Allen allegedly scheduled to send to family members and a former employer before the incident. In it, he apologized for the trouble he caused and included a manifesto accusing the president of serious crimes.',
+      'The footage has drawn renewed attention to the role of Rex, the K9 whose reaction came just before the hallway confrontation. While officials have not said whether the dog directly prevented further harm, the timing of Rex\'s alert is now a central detail in the account of how the security breach unfolded.',
+    ],
+    category: 'American News',
+    time: '14:12',
+    section: 'hot',
+    image: 'https://images.unsplash.com/photo-1553434320-e9f5757140b1?w=1600&q=80&auto=format&fit=crop',
+    byline: 'DCN News American News Desk',
+    date: '2026-05-02',
+  },
   /*{
     id: '98437298',
     title: 'Neuralink Picks Mikolas the Pygmy Hippo for Its Biggest Animal Trial Yet',
@@ -44,34 +65,6 @@ export const articles: Article[] = [
     byline: 'DCN News Tech Desk',
     date: '2026-05-01',
   },*/
-  {
-    id: '98437299',
-    title: 'OpenAI Announces "Codex Pets," a Playful New Companion Layer for Developers',
-    summary: 'OpenAI has introduced "Codex Pets," a new experimental feature that lets users hatch small AI companions inside the Codex experience, give them names, and use them as playful project partners while building software.',
-    body: [
-      'OpenAI has announced a new experimental feature called "Codex Pets," turning its developer-focused Codex platform into something a little stranger, softer and more personal. The update lets users hatch digital pets, name them, and keep them around as lightweight companions while they work through coding tasks, prototypes, bug fixes and long-running agent sessions.',
-      'The idea is simple: instead of treating Codex only as a blank command box for software work, OpenAI is adding a collectible layer that gives the environment a sense of continuity. A user can hatch a pet, receive a generated personality, and see that pet appear alongside their work as a small visual companion. OpenAI is positioning the feature as fun first, but also as part of a larger push to make agent workflows feel less cold and more approachable.',
-      'Codex itself has been expanding quickly. OpenAI describes it as a software engineering agent that can write code, fix bugs, answer questions about a codebase, run tasks in isolated environments, and help developers move work between the web, CLI, IDE and app experiences. Codex Pets builds on that broader direction: developers are no longer just sending tasks into a black box, they are managing a workspace with memory, personality and a little bit of ritual.',
-      {
-        type: 'image',
-        src: '/images/Pet.png',
-        caption: 'A representation of the new Codex Pets experience, where users can hatch a small AI companion and keep it beside their coding work.',
-        alt: 'Codex Pets interface showing a cute pixel-art dog companion named Meme with profile details.',
-      },
-      'In the early version, users can hatch a pet from inside the Codex interface, then interact with it while working. The pet can be given a funny name, show a short profile card, and appear with traits like species, personality, rarity and mood. The example OpenAI showed features a small pixel dog named "Meme," described as "The Goodest Boy," a playful companion built for belly rubs, zoomies and keeping the coding session light.',
-      'The company is also experimenting with ways to make the pets useful without turning them into another productivity dashboard. A Codex Pet may surface gentle reminders, celebrate completed tasks, react when tests pass, or sit quietly while a coding agent runs in the background. The goal is not to replace Codex workflows, but to make them feel more alive during the parts of development that are otherwise repetitive or lonely.',
-      'Developers who already use Codex for real work may recognize the pattern. OpenAI has been steadily adding features that make agent work easier to supervise: progress tracking, stronger tool use, image attachments, IDE integration, browser support, and smoother handoff between local and cloud tasks. Codex Pets is the most playful version of that strategy yet. It gives users a persistent character inside the same environment where they are asking agents to build, review and debug software.',
-      'The launch also points to a bigger trend in AI products: personalization is becoming part of the interface. As agents take on more background work, companies are trying to make them feel less like anonymous automation and more like named collaborators. Codex Pets does this directly. It gives the assistant world a face, a tiny sprite, and a reason for users to come back just to check what hatched.',
-      'There are practical questions still open. OpenAI has not said how many pet types will be available, whether pets will sync across Codex web, app, CLI and IDE sessions, or whether teams will be able to create shared office mascots for projects. It is also unclear whether pets will remain purely cosmetic or eventually connect to project stats, coding streaks, repository activity or task history.',
-      'For now, Codex Pets looks like a playful experiment with serious timing. Developers are getting used to agents that run tests, open pull requests, refactor files and keep working while humans step away. Adding a hatchable companion to that workflow may sound silly, but OpenAI is betting that the next generation of coding tools will not only be powerful. They will also have a little personality.',
-    ],
-    category: 'Tech',
-    time: '20:20',
-    section: 'hot',
-    image: '/images/openaia.png',
-    byline: 'DCN News Tech Desk',
-    date: '2026-05-01',
-  },
   {
     id: '98437297',
     title: 'New Banksy Statue Captivates Onlookers in London',
