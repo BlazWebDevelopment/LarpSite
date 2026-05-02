@@ -18,32 +18,6 @@ export interface Article {
 
 export const articles: Article[] = [
   {
-    id: '98437300',
-    title: 'OpenAI Staff Joke About Elon as "Better Sam Altman" Poster Becomes Office Meme',
-    summary: 'A new office meme is reportedly circulating inside OpenAI: a poster of Sam Altman styled as the "better version of himself," hanging as a tongue-in-cheek reminder of who staffers jokingly call the best CEO in tech. The poster has become part motivational art, part Elon Musk punchline, and part workplace folklore.',
-    body: [
-      'OpenAI employees have reportedly found a new way to keep the company\'s long-running rivalry with Elon Musk alive: office humor. According to people familiar with the workplace chatter, a poster of Sam Altman has appeared inside one of the company\'s office areas, styled as a polished, idealized version of the OpenAI CEO.',
-      'The poster, described by staff as the "better Sam Altman" print, shows Altman in an exaggerated executive-hero style, with the kind of glossy confidence normally reserved for campaign posters, startup launch decks and motivational wall art. The joke, employees say, is simple: this is the Sam the office wants to remember when the noise outside gets loud.',
-      {
-        type: 'image',
-        src: '/images/sama.jpg',
-        caption: 'The Sam Altman poster reportedly displayed inside an OpenAI office, styled as a bold CEO tribute and workplace meme.',
-        alt: 'OpenAI office with a Sam Altman poster displayed on the wall.',
-      },
-      'The poster is also said to carry a sharper edge. Some employees have reportedly treated it as a quiet jab at Elon Musk, who helped co-found OpenAI before later becoming one of its loudest critics. In internal jokes, the image has been described as a reminder of "who the best CEO is," with Altman cast as the calm builder and Musk as the noisy outside rival.',
-      'There is no indication that the poster is an official OpenAI campaign or company-approved messaging. People familiar with the office described it more as staffroom satire: the kind of visual joke that starts near a desk, gets photographed in a group chat, and slowly becomes part of the building\'s informal mythology.',
-      'The timing makes the joke easier to understand. OpenAI and Musk have spent years orbiting each other through lawsuits, public criticism, competing AI products and arguments over what the company was supposed to become. Inside OpenAI, employees are said to be aware of the drama but often process it through humor instead of formal statements.',
-      'One person familiar with the poster described the tone as "half joke, half morale boost." Another said the image was not really about attacking Musk so much as celebrating the company\'s current leadership during a period when OpenAI is under constant scrutiny.',
-      'Still, the meme works because everyone knows the subtext. A polished Sam Altman poster hanging in an OpenAI office, jokingly framed as a reminder of the best CEO, is not just decor. It is a small office-culture artifact from a company whose internal jokes now travel almost as fast as its product launches.',
-    ],
-    category: 'Tech',
-    time: '22:59',
-    section: 'hot',
-    image: '/images/sama.jpg',
-    byline: 'DCN News Tech Desk',
-    date: '2026-04-30',
-  },
-  {
     id: '98437299',
     title: 'K9 cop sniffed out Cole Allen—was pulled back—moments before would-be assassin charged WHCD',
     summary: 'Newly released footage from the White House Correspondents Dinner security scare appears to show a K9 unit reacting near a doorway moments before suspect Cole Allen allegedly emerged with a rifle. The dog, named Rex, was reportedly pulled back by his handler shortly before the confrontation unfolded.',
