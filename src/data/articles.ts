@@ -24,6 +24,12 @@ export const articles: Article[] = [
     body: [
       'Authorities released new footage showing the tense moments before the alleged assassination attempt connected to the White House Correspondents Dinner. The video appears to show Cole Allen, 31, moving through a corridor before a K9 security team followed close behind.',
       'The K9, identified as Rex, seemed to pause and focus near a doorway as if he had detected something unusual. According to the footage described by officials, Rex was then pulled back by his handler moments before Allen allegedly came out from the area and ran into the hallway carrying a rifle.',
+      {
+        type: 'image',
+        src: '/images/k9dog.png',
+        caption: 'Security footage from the WHCD incident shows the corridor and screening area moments before the confrontation. Rex, the K9, had reportedly reacted near a doorway shortly before the suspect emerged.',
+        alt: 'Security camera stills from the WHCD incident showing a corridor and screening area.',
+      },
       'The incident unfolded while security personnel and Secret Service officers were still operating around the event space. In the footage, a Secret Service officer can be seen confronting Allen and firing several shots as the suspect allegedly advanced toward security staff.',
       'Officials said Allen fired at one Secret Service officer, but the round was stopped by the officer\'s body armor. The officer was not injured. Security personnel then moved quickly into the corridor and detained Allen outside the camera\'s view.',
       'Additional video reportedly showed Allen visiting the location a day earlier, including the corridors and hotel fitness center, in what investigators described as possible scouting before the attempted attack.',
@@ -34,7 +40,7 @@ export const articles: Article[] = [
     category: 'American News',
     time: '14:12',
     section: 'hot',
-    image: 'https://images.unsplash.com/photo-1553434320-e9f5757140b1?w=1600&q=80&auto=format&fit=crop',
+    image: '/images/k9dog.png',
     byline: 'DCN News American News Desk',
     date: '2026-05-02',
   },
