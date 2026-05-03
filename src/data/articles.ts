@@ -18,6 +18,26 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    id: '98437300',
+    title:
+      '"Quantum Dog" Breakthrough Keeps Fragile Quantum State Stable for Over 20 Minutes',
+    summary:
+      'Researchers report sustaining a playful so-called \"quantum dog\" state—a system behaving as if it is in two distinct conditions at once—for more than twenty minutes using trapped ions and real-time noise cancellation.',
+    body: [
+      'A team of researchers recently reported a breakthrough involving what they call a \"quantum dog\" state, where they managed to keep a complex quantum system stable for over 20 minutes—far longer than typical experiments allow. The name doesn\'t refer to an actual animal; instead, it\'s a playful way of describing a system that behaves as if it\'s in two distinct conditions at once, similar to the idea of quantum superposition.',
+      'In this version of the experiment, instead of using a large cloud of atoms, scientists worked with a much smaller group of specially prepared ions trapped inside an electromagnetic chamber. These ions were cooled to incredibly low temperatures and arranged in a precise pattern using oscillating electric fields. The key innovation was a dynamic shielding technique that actively canceled out environmental noise in real time, rather than just isolating the system.',
+      'What made this setup different was how the researchers continuously monitored and corrected tiny disturbances without collapsing the quantum state itself. By doing this, they effectively \"balanced\" the system, allowing it to persist much longer than expected.',
+      'If methods like this become reliable, they could reshape how quantum technologies are built. It could lead to more stable quantum processors, new types of sensors that detect extremely small changes in fields or forces, and even open up new experimental ways to study the boundary between classical and quantum physics.',
+    ],
+    category: 'Science',
+    time: '10:30',
+    section: 'tech',
+    image:
+      'https://images.unsplash.com/photo-1576086213369-97a306d36757?w=1600&q=80&auto=format&fit=crop',
+    byline: 'DCN News Science Desk',
+    date: '2026-05-03',
+  },
+  {
     id: '98437299',
     title: 'K9 cop sniffed out Cole Allen—was pulled back—moments before would-be assassin charged WHCD',
     summary: 'Newly released footage from the White House Correspondents Dinner security scare appears to show a K9 unit reacting near a doorway moments before suspect Cole Allen allegedly emerged with a rifle. The dog, named Rex, was reportedly pulled back by his handler shortly before the confrontation unfolded.',
