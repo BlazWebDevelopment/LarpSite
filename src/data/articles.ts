@@ -32,8 +32,7 @@ export const articles: Article[] = [
     category: 'Science',
     time: '10:30',
     section: 'tech',
-    image:
-      'https://images.unsplash.com/photo-1576086213369-97a306d36757?w=1600&q=80&auto=format&fit=crop',
+    image: '/images/Dog.png',
     byline: 'DCN News Science Desk',
     date: '2026-05-03',
   },
